@@ -1,6 +1,6 @@
 {
   "name": "@gctools-components/eslint-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "GCTools .eslintrc based on eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,12 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "babel-eslint": "^8.0.1",
     "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "babel-eslint": "^8.0.1"
+    "eslint-plugin-react": "^7.4.0"
   },
   "devDependencies": {
     "jest": "^21.2.1"

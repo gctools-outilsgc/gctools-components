@@ -1,7 +1,7 @@
 {
   "name": "@gctools-components/recommendation-card",
   "description": "NRC recommendation card component",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -29,36 +29,32 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "@gctools-components/eslint-config": "^1.1.0",
+    "@gctools-components/jest-config": "^1.1.0",
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/addon-info": "^3.2.13",
     "@storybook/addon-links": "^3.2.13",
     "@storybook/addon-storyshots": "^3.2.13",
     "@storybook/react": "^3.3.0-alpha.2",
-    "file-loader": "^1.1.5",
-
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-runtime": "~6.23.0",
     "babel-eslint": "^8.0.1",
+    "babel-plugin-react-docgen": "~1.8.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
-    "babel-plugin-react-docgen": "~1.8.1",
-
-    "@gctools-components/eslint-config": "^1.0.0",
+    "copyfiles": "~1.2.0",
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-
+    "file-loader": "^1.1.5",
     "jest": "^21.2.1",
-    "@gctools-components/jest-config": "^1.0.0",
     "react-test-renderer": "^16.0.0",
-
-    "copyfiles": "~1.2.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@gctools-components/phrase-cloud": "^1.0.0",
+    "@gctools-components/phrase-cloud": "^1.1.0",
     "font-awesome": "^4.7.0",
     "material-ui": "^0.19.4",
     "material-ui-community-icons": "^0.15.0",
