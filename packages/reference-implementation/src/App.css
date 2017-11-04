@@ -1,0 +1,39 @@
+/*
+ * Author: National Research Council Canada
+ * Website: http://www.nrc-cnrc.gc.ca/eng/rd/ict/
+ *
+ * License: MIT
+ * Copyright: Her Majesty the Queen in Right of Canada, as represented by
+ * the Minister of National Research Council, 2017
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.gctools-info-appbar {
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #014c75 !important;
+  padding-left: 0 !important;
+  position: fixed !important;
+  z-index: 1500 !important;
+  color: #fff !important;
+}
+
+.gctools-info-appbar-title {
+  background-repeat: no-repeat;
+  padding-right: 50px;
+  width: 335px;
+  font-family: 'Roboto', sans-serif !important;
+  text-align: right;
+}
+
+.gctools-info-drawer {
+  font-family: 'Roboto', sans-serif !important;
+  padding-top: 70px !important;
+}
+
+.gctools-info-container {
+  font-family: 'Roboto', sans-serif !important;
+  padding-left: 270px;
+  padding-top: 70px;
+  padding-right: 10px;
+}

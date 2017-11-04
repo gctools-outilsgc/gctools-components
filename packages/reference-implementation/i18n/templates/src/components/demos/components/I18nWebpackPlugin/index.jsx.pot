@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/demos/components/I18nWebpackPlugin/index.jsx 13:11
+msgid "I18n translation webpack plugin"
+msgstr ""
+
+#: src/components/demos/components/I18nWebpackPlugin/index.jsx 169:11
+msgid "I have %d key"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/demos/components/I18nWebpackPlugin/index.jsx 172:11
+msgid "%dI have a key"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/demos/components/I18nWebpackPlugin/index.jsx 208:15
+msgid "I have a %1$s %2$s."
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/demos/components/I18nWebpackPlugin/index.jsx 208:42
+msgid "red"
+msgstr ""
+
+#: src/components/demos/components/I18nWebpackPlugin/index.jsx 208:53
+msgid "car"
+msgstr ""
+

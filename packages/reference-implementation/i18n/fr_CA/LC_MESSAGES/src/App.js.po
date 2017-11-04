@@ -1,0 +1,100 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-10-31 18:52-0400\n"
+"PO-Revision-Date: 2017-10-16 14:38-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_CA\n"
+"Language-Team: fr_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: 23:9 src/App.js
+msgid "Reference Implementation"
+msgstr "Implémentation de référence"
+
+#: 24:8 src/App.js
+msgid "description"
+msgstr ""
+"Ce projet affiche des exemples d'implémentation de chaques Composants Web"
+" créé par le conseil national de recherches pour les OutilsGC."
+
+#: 25:8 src/App.js
+msgid "instructions"
+msgstr "Choisissez un composant à gauche pour commencer."
+
+#: 31:9 src/App.js
+msgid "Internationalization"
+msgstr ""
+
+#: 121:17 src/App.js
+msgid "Introduction"
+msgstr ""
+
+#: 131:21 src/App.js
+msgid "Webpack plugin"
+msgstr "Plugin pour webpack"
+
+#: 136:21 src/App.js
+msgid "React helper"
+msgstr "Aide React"
+
+#: 141:21 src/App.js
+msgid "Language selector"
+msgstr "Sélecteur de langue"
+
+#: 148:17 src/App.js
+msgid "Authentication"
+msgstr ""
+
+#: 151:21 src/App.js
+msgid "Single sign-on"
+msgstr "Authentification unique"
+
+#: 156:21 src/App.js
+msgid "Identity server"
+msgstr "Serveur d'identité"
+
+#: 162:17 src/App.js
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: 166:21 src/App.js
+msgid "Phrase cloud"
+msgstr "Nuage d'expression"
+
+#: 171:21 src/App.js
+msgid "Treemap phrase cloud"
+msgstr "Nuage d'expression treemap"
+
+#: 176:21 src/App.js
+msgid "Recommendation card"
+msgstr "Carte de recommandations"
+
+#: 181:21 src/App.js
+msgid "Article recommendations"
+msgstr "Recommandations d'articles"
+
+#: 232:28 src/App.js
+msgid "Web components | <strong>GC</strong>Tools"
+msgstr "Composants Web | Outils<strong>GC</strong>"
+
+#: 159:21 src/App.js
+#, fuzzy
+msgid "Identity Server"
+msgstr "Serveur d'identité"
+
+#~ msgid "Treemap Phrase Cloud"
+#~ msgstr "Nuage d'expression treemap"
+
+#~ msgid "Recommendation Card"
+#~ msgstr "Carte de recommandations"
+
+#~ msgid "Web Components | <strong>GC</strong>Tools"
+#~ msgstr "Composants Web | Outils<strong>GC</strong>"
+

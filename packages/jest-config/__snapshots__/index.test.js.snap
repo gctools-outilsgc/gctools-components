@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match stored snapshot 1`] = `
+Object {
+  "collectCoverage": true,
+  "collectCoverageFrom": Array [
+    "**/*.jsx",
+    "**/*.js",
+    "!coverage/**",
+    "!stories/**",
+    "!dist/**",
+  ],
+  "coverageDirectory": "coverage",
+  "coverageReporters": Array [
+    "text",
+    "json",
+    "json-summary",
+    "lcov",
+  ],
+  "moduleNameMapper": Object {
+    "\\\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$": "<rootDir>/node_modules/@gctools-components/jest-config/mocks/fileMock.js",
+  },
+  "setupFiles": Array [
+    "jest-localstorage-mock",
+    "<rootDir>/node_modules/@gctools-components/jest-config/mocks/raf.js",
+  ],
+  "testResultsProcessor": "jest-bamboo-formatter",
+}
+`;

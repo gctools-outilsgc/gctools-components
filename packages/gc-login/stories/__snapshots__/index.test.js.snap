@@ -1,0 +1,722 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Login Default options 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          Login
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          Default options
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <div>
+        <div
+          className={undefined}
+          style={
+            Object {
+              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+              "backgroundColor": "#ffffff",
+              "borderRadius": 2,
+              "boxShadow": "0 1px 6px rgba(0, 0, 0, 0.12),
+         0 1px 4px rgba(0, 0, 0, 0.12)",
+              "boxSizing": "border-box",
+              "color": "rgba(0, 0, 0, 0.87)",
+              "display": "inline-block",
+              "fontFamily": "Roboto, sans-serif",
+              "minWidth": 88,
+              "muiPrepared": true,
+              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+            }
+          }
+        >
+          <button
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                "backgroundColor": "#00bcd4",
+                "border": 10,
+                "borderRadius": 2,
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "display": "inline-block",
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "inherit",
+                "fontWeight": "inherit",
+                "height": 36,
+                "lineHeight": "36px",
+                "margin": 0,
+                "muiPrepared": true,
+                "outline": "none",
+                "padding": 0,
+                "position": "relative",
+                "textAlign": "center",
+                "textDecoration": "none",
+                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                "verticalAlign": null,
+                "width": "100%",
+              }
+            }
+            tabIndex={0}
+            type="button"
+          >
+            <div
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": false,
+                    "borderRadius": 2,
+                    "height": 36,
+                    "muiPrepared": true,
+                    "top": 0,
+                    "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                  }
+                }
+              >
+                <img
+                  alt="GCTools"
+                  color="#ffffff"
+                  src="stub"
+                  style={
+                    Object {
+                      "marginLeft": 12,
+                      "marginRight": 0,
+                      "verticalAlign": "middle",
+                    }
+                  }
+                  width="20"
+                />
+                <span
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "letterSpacing": 0,
+                      "margin": 0,
+                      "muiPrepared": true,
+                      "opacity": 1,
+                      "paddingLeft": 8,
+                      "paddingRight": 16,
+                      "position": "relative",
+                      "textTransform": "uppercase",
+                      "userSelect": "none",
+                    }
+                  }
+                >
+                  Login
+                </span>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginTop": "50px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderTop": "1px solid #eee",
+            "margin": "20px 0 0 0",
+          }
+        }
+      >
+        <div>
+          <p>
+            The single sign-on component is a drop-in solution to provide SSO for any GCTools, or GoC site.  The component provides a complete client only authentication solution using \`oidc-client\`, and can also be customized to defer authentication to a backend server, or to orchestrate remote authentication using the \`RAP\` protocol using a hybrid client+server design.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            Login
+            " Component
+          </h2>
+          <table
+            style={
+              Object {
+                "borderCollapse": "separate",
+                "borderSpacing": "10px 5px",
+                "marginLeft": -10,
+              }
+            }
+          >
+            <thead>
+              <tr>
+                <th>
+                  property
+                </th>
+                <th>
+                  propType
+                </th>
+                <th>
+                  required
+                </th>
+                <th>
+                  default
+                </th>
+                <th>
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  dumb
+                </td>
+                <td>
+                  bool
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td>
+                  Completely disables built-in OIDC functionality, requiring you to
+    provide your handlers for \`onLoginClick\` and \`onLogoutClick\`
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  profile
+                </td>
+                <td>
+                  object
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Profile object
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  oidcConfig
+                </td>
+                <td>
+                  shape
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    {
+  authority: 'http://localhost:8080',
+  client_i…
+                    "
+                  </span>
+                </td>
+                <td>
+                  Set of configuration parameters to pass to the internal oidc-client
+    instance.  Refer to
+    https://github.com/IdentityModel/oidc-client-js/blob/dev/src/OidcClientSettings.js for more information.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onLoginClick
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Override the action when the login button is clicked.  (If you
+    specify this property, the default \`login\` action will NOT fire, you
+    must do so manually.)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onLogoutClick
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Override the action when the logout button is clicked.  (If you
+    specify this property, the default \`logout\` action will NOT fire, you
+    must do so manually.)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  verifyLoginOnMount
+                </td>
+                <td />
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    true
+                    "
+                  </span>
+                </td>
+                <td>
+                  If \`true\` an automatic check to see if the user is logged occurs on
+mount.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  silentRenewOnMount
+                </td>
+                <td>
+                  enum
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    'not-logged-in'
+                    "
+                  </span>
+                </td>
+                <td>
+                  Controls whether or not a silent review occurs when the component is
+    mounted.  One of:
+    \`always\`: the silent renew endpoint will be hit on every page load,
+    \`not-logged-in\\\`: only attempts to silent review if the user is not known
+      to be logged in,
+    \`never\`: will not attempt to silent-renew.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  synchronizedLogout
+                </td>
+                <td>
+                  bool
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    true
+                    "
+                  </span>
+                </td>
+                <td>
+                  If true, will automatically sign the user out if they sign-out
+    from the identity server (or another SSO enabled site)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onUserLoaded
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised when a user session has been established.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onUserFetched
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised if \`verifyLoginOnMount\` is \`true\` and the user is logged in.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onUserUnloaded
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised when a user session has been terminated.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onUserSignedOut
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised when the user logs out of the identity server.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onAccessTokenExpiring
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised prior to the access token expiring.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onAccessTokenExpired
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised after the access token has expired.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  onSilentRenewError
+                </td>
+                <td>
+                  func
+                </td>
+                <td>
+                  no
+                </td>
+                <td>
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td>
+                  Raised when the automatic silent renew has failed.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

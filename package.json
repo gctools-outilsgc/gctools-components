@@ -1,0 +1,30 @@
+{
+  "name": "gctools-nrc-components",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gctools-outilsgc/gctools-components.git"
+  },
+  "scripts": {
+    "new": "node ./utils/cli-helper.js",
+    "postinstall": "node ./utils/linker.js",
+    "test": "exit 0"
+  },
+  "devDependencies": {
+    "argparse": "^1.0.9",
+    "cz-lerna-changelog": "^1.2.1",
+    "lerna": "^2.5.1",
+    "prompt": "^1.0.0",
+    "yn": "^2.0.0"
+  },
+  "author": "Luc Belliveau <luc.belliveau@nrc-cnrc.gc.ca>",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "dependencies": {
+    "@storybook/cli": "^3.2.14"
+  }
+}

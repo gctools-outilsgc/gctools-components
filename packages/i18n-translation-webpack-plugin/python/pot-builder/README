@@ -1,0 +1,2 @@
+A python package that scans a folder for .pot files, and generates the
+appropriate .po files.

@@ -1,0 +1,46 @@
+{
+  "name": "@gctools-components/eslint-config",
+  "version": "1.0.0",
+  "description": "GCTools .eslintrc based on eslint-config-airbnb",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint": "^4.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "babel-eslint": "^8.0.1"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "peerDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gctools-outilsgc/gctools-components.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "airbnb",
+    "gctools"
+  ],
+  "author": "Luc Belliveau <luc.belliveau@nrc-cnrc.gc.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gctools-outilsgc/gctools-components/issues"
+  },
+  "homepage": "https://github.com/gctools-outilsgc/gctools-components#readme",
+  "eslintConfig": {
+    "extends": "./index.js"
+  }
+}

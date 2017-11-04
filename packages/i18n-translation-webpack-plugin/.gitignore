@@ -1,0 +1,8 @@
+
+/python/pot-builder/dist
+/python/pot-builder/pot_builder.egg-info
+/.node-virtualenv
+/test/i18n
+dist/
+
+

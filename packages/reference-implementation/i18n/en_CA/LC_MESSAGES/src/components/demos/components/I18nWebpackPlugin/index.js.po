@@ -1,0 +1,48 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-11-03 22:34-0300\n"
+"PO-Revision-Date: 2017-11-03 22:34-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: 14:11 src/components/demos/components/I18nWebpackPlugin/index.js
+msgid "I18n translation webpack plugin"
+msgstr ""
+
+#: 192:11 src/components/demos/components/I18nWebpackPlugin/index.js
+#, python-format
+msgid "I have %d key"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 195:11 src/components/demos/components/I18nWebpackPlugin/index.js
+#, python-format
+msgid "%dI have a key"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 231:15 src/components/demos/components/I18nWebpackPlugin/index.js
+msgid "I have a %1$s %2$s."
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 231:42 src/components/demos/components/I18nWebpackPlugin/index.js
+msgid "red"
+msgstr ""
+
+#: 231:53 src/components/demos/components/I18nWebpackPlugin/index.js
+msgid "car"
+msgstr ""
+

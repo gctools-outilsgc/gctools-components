@@ -1,0 +1,122 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-10-30 23:35-0300\n"
+"PO-Revision-Date: 2017-10-30 11:29-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: 413:10
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "User logged in, GCpedia landing page"
+msgstr ""
+
+#: 414:10
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Unknown user, GCpedia landing page"
+msgstr ""
+
+#: 415:10
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "User logged in, reading an article"
+msgstr ""
+
+#: 416:10
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Unknown user, reading an article"
+msgstr ""
+
+#: 417:10
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "User logged in, reading group discussion"
+msgstr ""
+
+#: 418:9
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Unknown user, reading group discussion"
+msgstr ""
+
+#: 480:21
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Next"
+msgstr ""
+
+#: 493:22
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Type part of all of a name"
+msgstr ""
+
+#: 503:21
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Back"
+msgstr ""
+
+#: 549:22
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Type part of all of a title"
+msgstr ""
+
+#: 665:19
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Recommend"
+msgstr ""
+
+#: 671:19
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Reset"
+msgstr ""
+
+#: 714:37
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Context"
+msgstr ""
+
+#: 722:37
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "GCProfile user"
+msgstr ""
+
+#: 728:37
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "GCpedia article"
+msgstr ""
+
+#: 734:37
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "GCconnex discussion"
+msgstr ""
+
+#: 743:39
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Top profile phrases"
+msgstr ""
+
+#~ msgid "Type a GCTools user's name"
+#~ msgstr ""
+
+#~ msgid "No user, GCpedia landing page"
+#~ msgstr ""
+
+#~ msgid "No user, reading an article"
+#~ msgstr ""
+
+#~ msgid "No user, readijng group discussion"
+#~ msgstr ""
+
+#~ msgid "No context has been chosen."
+#~ msgstr ""
+
+#~ msgid "Choose a context above."
+#~ msgstr ""
+
+#~ msgid "User logged in, GCpedia landing page "
+#~ msgstr ""
+

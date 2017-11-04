@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match stored snapshot 1`] = `
+Object {
+  "env": Object {
+    "browser": true,
+    "jest": true,
+    "node": true,
+  },
+  "extends": "airbnb",
+  "globals": Object {
+    "__": true,
+    "___": true,
+    "localizer": true,
+  },
+  "parser": "babel-eslint",
+  "rules": Object {
+    "max-len": Array [
+      2,
+      79,
+      2,
+    ],
+    "no-underscore-dangle": 0,
+    "react/jsx-filename-extension": 0,
+    "react/no-typos": 0,
+  },
+}
+`;

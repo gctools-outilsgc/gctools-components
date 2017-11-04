@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 413:10
+msgid "User logged in, GCpedia landing page"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 414:10
+msgid "Unknown user, GCpedia landing page"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 415:10
+msgid "User logged in, reading an article"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 416:10
+msgid "Unknown user, reading an article"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 417:10
+msgid "User logged in, reading group discussion"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 418:9
+msgid "Unknown user, reading group discussion"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 480:21
+msgid "Next"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 493:22
+msgid "Type part of all of a name"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 503:21
+msgid "Back"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 549:22
+msgid "Type part of all of a title"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 665:19
+msgid "Recommend"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 671:19
+msgid "Reset"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 714:37
+msgid "Context"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 722:37
+msgid "GCProfile user"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 728:37
+msgid "GCpedia article"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 734:37
+msgid "GCconnex discussion"
+msgstr ""
+
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 743:39
+msgid "Top profile phrases"
+msgstr ""
+

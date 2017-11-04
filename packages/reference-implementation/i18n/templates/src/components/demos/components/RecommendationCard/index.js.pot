@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/demos/components/RecommendationCard/index.js 13:74
+msgid "Recommendation Card"
+msgstr ""
+
+#: src/components/demos/components/RecommendationCard/index.js 26:64
+msgid "Card Container"
+msgstr ""
+

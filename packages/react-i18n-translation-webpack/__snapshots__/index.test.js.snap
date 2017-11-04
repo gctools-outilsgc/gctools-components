@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can wrap a React class correctly 1`] = `
+<div>
+  Testing 123
+</div>
+`;
+
+exports[`can wrap a stateless object component 1`] = `
+<div>
+  Testing 234
+</div>
+`;

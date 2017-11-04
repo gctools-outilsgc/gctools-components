@@ -1,0 +1,5 @@
+*
+!dist/**
+!requirements.txt
+!python/**
+!README.md

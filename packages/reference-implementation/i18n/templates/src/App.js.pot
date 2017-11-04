@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/App.js 23:9
+msgid "Reference Implementation"
+msgstr ""
+
+#: src/App.js 24:8
+msgid "description"
+msgstr ""
+
+#: src/App.js 25:8
+msgid "instructions"
+msgstr ""
+
+#: src/App.js 31:9
+msgid "Internationalization"
+msgstr ""
+
+#: src/App.js 121:17
+msgid "Introduction"
+msgstr ""
+
+#: src/App.js 131:21
+msgid "Webpack plugin"
+msgstr ""
+
+#: src/App.js 136:21
+msgid "React helper"
+msgstr ""
+
+#: src/App.js 141:21
+msgid "Language selector"
+msgstr ""
+
+#: src/App.js 148:17
+msgid "Authentication"
+msgstr ""
+
+#: src/App.js 151:21
+msgid "Single sign-on"
+msgstr ""
+
+#: src/App.js 156:21
+msgid "Identity server"
+msgstr ""
+
+#: src/App.js 162:17
+msgid "Recommendations"
+msgstr ""
+
+#: src/App.js 166:21
+msgid "Phrase cloud"
+msgstr ""
+
+#: src/App.js 171:21
+msgid "Treemap phrase cloud"
+msgstr ""
+
+#: src/App.js 176:21
+msgid "Recommendation card"
+msgstr ""
+
+#: src/App.js 181:21
+msgid "Article recommendations"
+msgstr ""
+
+#: src/App.js 232:28
+msgid "Web components | <strong>GC</strong>Tools"
+msgstr ""
+
+#: src/App.js 159:21
+msgid "Identity Server"
+msgstr ""
+

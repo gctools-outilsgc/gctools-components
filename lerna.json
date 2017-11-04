@@ -1,0 +1,22 @@
+{
+  "lerna": "2.5.1",
+  "packages": [
+    "packages/*",
+    "."
+  ],
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    }
+  },
+  "changelog": {
+    "labels": {
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix"
+    },
+    "cacheDir": ".changelog"
+  },
+  "version": "independent",
+  "npmClient": "yarn",
+  "hoist": true
+}

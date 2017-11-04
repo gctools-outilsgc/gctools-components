@@ -1,0 +1,48 @@
+.wordcloud-score-div {
+  width: 100%;
+  display: block;
+}
+
+.heading {
+  font-family: Roboto, arial, sans-serif;
+  border-bottom: 1px solid;
+  padding-right: 25px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: .9em;
+}
+
+.article-title {
+  line-height: 2.5ex;
+  margin: 0;
+}
+
+.score-text {
+  font-family: 'ostrich_black', roboto, sans-serif;
+  align-self: flex-end;
+}
+
+.score-star-rating {
+  margin-top: 10px;
+  display: flex;
+}
+
+.score-large-text {
+  display: inline-flex;
+  font-size: 2.5em;
+  margin-right: 10px;
+}
+
+.star-rating {
+  display: block;
+  font-size: 1.5em;
+}
+
+.star-rating .dv-star-rating > label {
+  margin-right: 3px;
+}
+
+.tooltip {
+  border-radius: 5px !important;
+}
