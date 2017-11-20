@@ -47,6 +47,7 @@ class ArticleRecommendations extends React.Component {
           loaded={this.state.loaded}
           cards={this.state.recommendations.map(rec =>
             (<RecommendationCard
+              className="grid-item"
               key={`article_${rec.articleId}`}
               rank={rec.rank}
               title={rec.title}

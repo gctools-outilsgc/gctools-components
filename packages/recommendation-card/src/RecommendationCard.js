@@ -15,6 +15,7 @@ import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
 import HelpCircle from 'material-ui-community-icons/icons/help-circle';
 import AccountCircle from 'material-ui-community-icons/icons/account-circle';
 import FileDocument from 'material-ui-community-icons/icons/file-document';
+import { RaisedButton } from 'material-ui';
 import StarRatingComponent from 'react-star-rating-component';
 import Dotdotdot from 'react-dotdotdot';
 import ReactTooltip from 'react-tooltip';
@@ -48,52 +49,51 @@ class RecommendationCard extends Component {
 
   render() {
     let header = <span />;
-    const headerStyle = {
-      display: 'flex',
-      alignItems: 'center',
-      fontFamily: 'Roboto, sans-serif',
-    };
     switch (this.props.type) {
       case 'tweet':
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <TwitterCircle
-              color="#00aced"
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              color="#fff"
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>Tweet</h3>
+            <h5>Tweet</h5>
           </div>
         );
         break;
       case 'gcpedia-article':
+        // header = (
+        //   <div className="header">
+        //     <FileDocument
+        //       data-tip="GCPedia Article"
+        //       color="#fff"
+        //       style={{ height: '20px', width: '20px', marginRight: '3px' }}
+        //     />
+        //     <h5>GCPedia Article</h5>
+        //   </div>
+        // );
         header = (
-          <div style={headerStyle}>
-            <FileDocument
-              data-tip="GCPedia Article"
-              color="#1c507f"
-              style={{ height: '50px', width: '50px' }}
-            />
-          </div>
+          <h5 className="header-new">Article Title</h5>
         );
         break;
       case 'gcprofile-user':
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <AccountCircle
-              color="#0375b4"
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              color="#fff"
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>GCprofile User</h3>
+            <h5>GCprofile User</h5>
           </div>
         );
         break;
       default:
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <HelpCircle
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>Unknown</h3>
+            <h5>Unknown</h5>
           </div>
         );
     }
@@ -102,31 +102,29 @@ class RecommendationCard extends Component {
 
     if (typeof this.props.rank === 'number' && showExtra) {
       score = (
-        <div className="score-text">
-          <div className="score-star-rating">
-            <span className="star-rating">
-              <StarRatingComponent
-                name={`star-rating${Math.random * 1000}`}
-                starCount={5}
-                value={
-                  Math
-                    .floor(parseFloat(this.props.rank * 5).toFixed(2) * 2) / 2
-                }
-                starColor="#F49633"
-                renderStarIcon={
-                  (index, value) =>
-                    <FontAwesome name={index <= value ? 'star' : 'star-o'} />
-                }
-                renderStarIconHalf={() => (
-                  <FontAwesome
-                    name="star-half-full"
-                    style={{ color: '#F49633' }}
-                  />
-                )}
-                editing={false}
+        <div className="star-rating">
+          <h5>Overall Rating</h5>
+          <StarRatingComponent
+            name={`star-rating${Math.random * 1000}`}
+            starCount={5}
+            value={
+              Math
+                .floor(parseFloat(this.props.rank * 5).toFixed(2) * 2) / 2
+            }
+            style={{ display: 'inline' }}
+            starColor="#014c75"
+            renderStarIcon={
+              (index, value) =>
+                <FontAwesome name={index <= value ? 'star' : 'star-o'} />
+            }
+            renderStarIconHalf={() => (
+              <FontAwesome
+                name="star-half-full"
+                style={{ color: '#014c75' }}
               />
-            </span>
-          </div>
+            )}
+            editing={false}
+          />
         </div>
       );
     }
@@ -134,7 +132,6 @@ class RecommendationCard extends Component {
     const cardStyle = {
       fontFamily: 'Roboto, helvetica, arial, sans-serif',
       padding: '15px',
-      cursor: (showExtra) ? 'pointer' : '',
     };
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -142,8 +139,8 @@ class RecommendationCard extends Component {
           className={this.props.className}
           style={cardStyle}
           zDepth={1}
-          onClick={this.handleCardClick}
         >
+          {header}
           <div style={{ height: '9ex' }}>
             <Dotdotdot clamp={3}>
               <h3 className="article-title">{this.props.title}</h3>
@@ -152,7 +149,7 @@ class RecommendationCard extends Component {
           <div className="wordcloud-score-div">
             {showExtra
               ?
-                <h3 className="heading">Matching Characteristics</h3>
+                <h5 className="heading">Matching Characteristics</h5>
               :
                 false
             }
@@ -163,13 +160,20 @@ class RecommendationCard extends Component {
                 overflow: 'hidden',
               }}
             >
-              <WordCloud phrases={this.props.phrases} />
+              <WordCloud
+                phrases={this.props.phrases}
+              />
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div style={{ alignSelf: 'flex-end' }}>
+                <RaisedButton onClick={this.handleCardClick} buttonStyle={{ fontSize: 'small' }}>
+                  View Article
+                </RaisedButton>
+              </div>
               {score}
-              {header}
             </div>
           </div>
+          <div className="article-bottom"><h5>GCPedia Article</h5></div>
           <ReactTooltip className="tooltip" effect="solid" />
         </Paper>
       </MuiThemeProvider>

@@ -62,7 +62,6 @@ class WordCloud extends React.Component {
       min -= 1;
     }
     const fontSizeMapper = x => (((b - a) * (x.size - min)) / (max - min)) + a;
-
     return (
       <div
         ref={c => this.setState({ parentNode: c })}
@@ -91,6 +90,11 @@ WordCloud.propTypes = {
     text: PropTypes.string,
     size: PropTypes.number,
   })).isRequired,
+  height: PropTypes.number,
+};
+
+WordCloud.defaultProps = {
+  height: 200,
 };
 
 export default WordCloud;
