@@ -862,7 +862,7 @@ class ArticleRecommendations extends React.Component {
                   phrases={rec.phrases}
                   type={rec.type}
                 />)) :
-              <div className="grid-item">
+              <div className="grid-item" key={`noItems${Math.random * 1000}`}>
                 <h3>No recommendations are available</h3>
               </div>
           }
