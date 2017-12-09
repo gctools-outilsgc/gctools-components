@@ -6,10 +6,10 @@
  * Copyright: Her Majesty the Queen in Right of Canada, as represented by
  * the Minister of National Research Council, 2017
  */
+/* eslint-disable react/no-multi-comp */
+/* eslint-disable react/multi-comp */
 import React from 'react';
-
-import RecommendationCard, { CardContainer, WordCloud }
-  from '@gctools-components/recommendation-card';
+import PropTypes from 'prop-types';
 
 import AutoComplete from 'material-ui/AutoComplete';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
@@ -18,6 +18,23 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import RefreshIndicator from 'material-ui/RefreshIndicator';
 import ErrorIcon from 'material-ui/svg-icons/alert/error';
+
+import RecommendationCard, { CardContainer, WordCloud }
+  from '@gctools-components/recommendation-card';
+
+import { ApolloProvider, graphql } from 'react-apollo';
+import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import gql from 'graphql-tag';
+
+import createTokenForUser from '../../../_utils/fake_token';
+
+const apollo = new ApolloClient({
+  link: new HttpLink({ uri: 'http://localhost:3001/graphql' }),
+  // link: new HttpLink({ uri: 'http://gcrec.lpss.me/graphql' }),
+  cache: new InMemoryCache(),
+});
 
 const cHost = 'http://167.37.33.21:443/';
 
@@ -33,13 +50,84 @@ const discussionSearch
 const discussionResolver
   = `${cHost}/discussions/_design/finder/_view/resolve?key="[term]"&limit=1`;
 
-const couch = `${cHost}/users`;
-const topskilled = '_design/gcrec/_view/users-by-skill-count?descending=true';
+// const couch = `${cHost}/users`;
+// const topskilled='_design/gcrec/_view/users-by-skill-count?descending=true';
 
 const article = 'http://gcrec-db.lpss.me';
 // const article = 'http://132.246.129.105:6543';
 
 const reqwest = require('reqwest');
+
+
+/* **************************************************************************
+  * Components
+  *
+  */
+
+const peopleFinderQuery = gql`
+query TypeAndFindQuery($nameContains: String!) {
+  people(nameContains: $nameContains, limit: 50) {
+    id
+    name {
+      value
+    }
+  }
+}`;
+class PeopleFinder extends React.Component {
+  constructor() {
+    super();
+    this._noFilter = () => true;
+  }
+  render() {
+    const { people } = this.props;
+    return (
+      <AutoComplete
+        hintText={__('Type part of all of a name')}
+        searchText={this.props.searchText}
+        dataSource={people}
+        onUpdateInput={this.props.onUpdateInput}
+        // onNewRequest={this._getUserPC}
+        filter={this._noFilter}
+        openOnFocus
+      />
+    );
+  }
+}
+PeopleFinder.defaultProps = {
+  people: [],
+};
+PeopleFinder.propTypes = {
+  searchText: PropTypes.string.isRequired,
+  onUpdateInput: PropTypes.func.isRequired,
+  people: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+  })),
+};
+
+const PeopleFinderWithData = graphql(peopleFinderQuery, {
+  skip: props => props.searchText.length < 3,
+  props: ({ ownProps, data: { people } }) => ({
+    ...ownProps,
+    people: (people)
+      ? people.map(p => ({ text: p.name.value, value: p.id })) : [],
+  }),
+  options: ({ searchText }) => ({
+    variables: {
+      nameContains: searchText,
+    },
+    pollInterval: 350,
+    context: {
+      headers: {
+        Authorization: createTokenForUser({
+          gcconnex_guid: '-1',
+          email: '',
+          gcconnex_username: '',
+        }),
+      },
+    },
+  }),
+})(PeopleFinder);
 
 const CLOUD_SIZE = {
   article: 10,
@@ -57,7 +145,7 @@ const initialState = {
   profile_loaded: true,
   profile_loaded_error: false,
   userSearchText: '',
-  userSearchResults: [],
+  // userSearchResults: [],
   matchedPhraseCloud: null,
   selectedUser: null,
 
@@ -91,7 +179,7 @@ class ArticleRecommendations extends React.Component {
     this._prev = this._prev.bind(this);
     this._reset = this._reset.bind(this);
     this._recommend = this._recommend.bind(this);
-    this._userDataSourceInit = this._userDataSourceInit.bind(this);
+    // this._userDataSourceInit = this._userDataSourceInit.bind(this);
 
     this._updateDataSource = this._updateDataSource.bind(this);
     this._updateUserList =
@@ -132,11 +220,17 @@ class ArticleRecommendations extends React.Component {
       'discussion_loaded',
     );
 
+    this._updateUserSearch = this._updateUserSearch.bind(this);
+
     this._noFilter = () => true;
   }
 
   componentWillMount() {
     // this._userDataSourceInit();
+  }
+
+  _updateUserSearch(txt) {
+    this.setState({ userSearchText: txt });
   }
 
   _updateDataSource(
@@ -233,29 +327,29 @@ class ArticleRecommendations extends React.Component {
     this._next(e, context);
   }
 
-  _userDataSourceInit() {
-    reqwest({
-      url: `${couch}/${topskilled}&limit=10`,
-      type: 'json',
-    }, (ids) => {
-      let c = 0;
-      const users = [];
-      const getUsers = () => {
-        reqwest({ url: `${couch}/${ids.rows[c].id}`, type: 'json' }, (us) => {
-          users.push({ text: us.name, value: ids.rows[c].id });
-          c += 1;
-          if (c < ids.rows.length) {
-            getUsers();
-          } else {
-            this.setState({
-              userSearchResults: users,
-            });
-          }
-        });
-      };
-      getUsers();
-    });
-  }
+  // _userDataSourceInit() {
+  // reqwest({
+  //   url: `${couch}/${topskilled}&limit=10`,
+  //   type: 'json',
+  // }, (ids) => {
+  //   let c = 0;
+  //   const users = [];
+  //   const getUsers = () => {
+  //     reqwest({ url: `${couch}/${ids.rows[c].id}`, type: 'json' }, (us) => {
+  //       users.push({ text: us.name, value: ids.rows[c].id });
+  //       c += 1;
+  //       if (c < ids.rows.length) {
+  //         getUsers();
+  //       } else {
+  //         // this.setState({
+  //         //   userSearchResults: users,
+  //         // });
+  //       }
+  //     });
+  //   };
+  //   getUsers();
+  // });
+  // }
 
   _reset() {
     this.setState(initialState);
@@ -446,428 +540,435 @@ class ArticleRecommendations extends React.Component {
     };
 
     return (
-      <div>
-        <Stepper activeStep={this.state.stepIndex} orientation="horizontal">
-          <Step>
-            <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
-              Context
-            </StepButton>
-          </Step>
-          <Step disabled={!this._needUser()}>
-            <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
-              User
-            </StepButton>
-          </Step>
-          <Step disabled={!this._needArticle()}>
-            <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
-              Article
-            </StepButton>
-          </Step>
-          <Step disabled={!this._needGroupDiscussion()}>
-            <StepButton onClick={() => this.setState({ stepIndex: 3 })}>
-              Group discussion
-            </StepButton>
-          </Step>
-          <Step>
-            <StepButton onClick={() => this.setState({ stepIndex: 4 })}>
-              Recommendations
-            </StepButton>
-          </Step>
-        </Stepper>
-        <div
-          style={{ display: (this.state.stepIndex === 0) ? 'block' : 'none' }}
-        >
-          <p>
-            Contexts bring situational awareness to the recommendations.
-            Choose a context to see how the recommendations will behave when
-            embedded within GCTools.
-          </p>
-          <RadioButtonGroup
-            name="context"
-            onChange={this.handleContextChange}
-            valueSelected={this.state.context}
-          >
-            {Object.keys(contexts).map(c =>
-              (<RadioButton
-                key={`context_${c}`}
-                value={c}
-                label={contexts[c]}
-              />))}
-          </RadioButtonGroup>
-          <div style={{ marginTop: 12 }}>
-            <RaisedButton
-              label={__('Next')}
-              disabled={!this.state.context}
-              onClick={this._next}
-            />
-          </div>
-        </div>
-        <div
-          style={{ display: (this.state.stepIndex === 1) ? 'block' : 'none' }}
-        >
-          <p>
-            Preview the recommendations as if you were logged into any GCconnex
-            account.  Type the name of the user you would like to simulate
-            below.
-          </p>
-          <AutoComplete
-            hintText={__('Type part of all of a name')}
-            searchText={this.state.userSearchText}
-            dataSource={this.state.userSearchResults}
-            onUpdateInput={this._updateUserList}
-            onNewRequest={this._getUserPC}
-            filter={this._noFilter}
-            openOnFocus
-          />
-          <div style={{ marginTop: 12 }}>
-            <FlatButton
-              label={__('Back')}
-              onClick={this._prev}
-              style={{ marginRight: 12 }}
-              disabled={!this.state.profile_loaded}
-            />
-            <RaisedButton
-              label={__('Next')}
-              onClick={this._next}
-              disabled={!this.state.selectedUser || !this.state.profile_loaded}
-            />
-            {(!this.state.profile_loaded) ?
-              <RefreshIndicator
-                size={25}
-                left={0}
-                top={8}
-                status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
-              />
-            : null }
-            {(this.state.profile_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
-                <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
-                  An error has occured
-                </span>
-              </div>
-            : null }
-
-          </div>
-        </div>
-        <div
-          style={{ display: (this.state.stepIndex === 2) ? 'block' : 'none' }}
-        >
-          <h3>Choose an article</h3>
-          <p>
-            Simulate reading a particular article by choosing one from the
-            search provided below.
-          </p>
-          <AutoComplete
-            hintText={__('Type part of all of a title')}
-            searchText={this.state.articleSearchText}
-            dataSource={this.state.articleSearchResults}
-            onUpdateInput={this._updateArticleList}
-            onNewRequest={this._getArticlePC}
-            filter={this._noFilter}
-            openOnFocus
-            fullWidth
-          />
-          <div style={{ marginTop: 12 }}>
-            <FlatButton
-              label={__('Back')}
-              onClick={this._prev}
-              style={{ marginRight: 12 }}
-              disabled={!this.state.article_loaded}
-            />
-            <RaisedButton
-              label={__('Next')}
-              onClick={this._next}
-              disabled={
-                !this.state.selectedArticle || !this.state.article_loaded
-              }
-            />
-            {(!this.state.article_loaded) ?
-              <RefreshIndicator
-                size={25}
-                left={0}
-                top={8}
-                status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
-              />
-            : null }
-            {(this.state.article_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
-                <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
-                  An error has occured
-                </span>
-              </div>
-            : null }
-          </div>
-        </div>
-        <div
-          style={{ display: (this.state.stepIndex === 3) ? 'block' : 'none' }}
-        >
-          <h3>Choose a group discussion</h3>
-          <p>
-            Simulate reading a particular discussion thread by choosing one
-            from the search provided below.
-          </p>
-          <AutoComplete
-            hintText={__('Type part of all of a title')}
-            searchText={this.state.discussionSearchText}
-            dataSource={this.state.discussionSearchResults}
-            onUpdateInput={this._updateDiscussionList}
-            onNewRequest={this._getDiscussionPC}
-            filter={this._noFilter}
-            openOnFocus
-            fullWidth
-          />
-          <div style={{ marginTop: 12 }}>
-            <FlatButton
-              label={__('Back')}
-              onClick={this._prev}
-              style={{ marginRight: 12 }}
-              disabled={!this.state.discussion_loaded}
-            />
-            <RaisedButton
-              label={__('Next')}
-              onClick={this._next}
-              disabled={
-                !this.state.selectedDiscussion || !this.state.discussion_loaded
-              }
-            />
-            {(!this.state.discussion_loaded) ?
-              <RefreshIndicator
-                size={25}
-                left={0}
-                top={8}
-                status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
-              />
-            : null }
-            {(this.state.discussion_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
-                <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
-                  An error has occured
-                </span>
-              </div>
-            : null }
-          </div>
-        </div>
-        <div
-          style={{ display: (this.state.stepIndex === 4) ? 'block' : 'none' }}
-        >
-          <p>
-            Everything is ready to simulate a call to the article
-            recommendation service, press the button below to see the result.
-          </p>
-          <FlatButton
-            label={__('Back')}
-            onClick={this._prev}
-            style={{ marginRight: 12 }}
-            disabled={!this.state.loaded}
-          />
-          <RaisedButton
-            label={__('Recommend')}
-            primary
-            onClick={this._recommend}
-            disabled={!this.state.loaded}
-          />
-          <FlatButton
-            label={__('Reset')}
-            primary
-            onClick={this._reset}
-            style={{ marginLeft: 22 }}
-            disabled={!this.state.loaded}
-          />
-          {(!this.state.loaded) ?
-            <RefreshIndicator
-              size={25}
-              left={0}
-              top={8}
-              status="loading"
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
-            />
-          : null }
-          {(this.state.recommendation_error) ?
-            <div
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-                color: 'red',
-                verticalAlign: 'middle',
-              }}
-            >
-              <ErrorIcon color="red" />
-              <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
-                An error has occured
-              </span>
-            </div>
-          : null }
-        </div>
-        {this.state.stepIndex > 0
-          ? <hr style={{ border: 0, height: '1px', background: '#ddd' }} />
-          : false
-        }
-        <div style={{ marginTop: 20, padding: 10, marginBottom: 20 }}>
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'flex-start',
+      <ApolloProvider client={apollo}>
+        <div>
+          <Stepper activeStep={this.state.stepIndex} orientation="horizontal">
+            <Step>
+              <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
+                Context
+              </StepButton>
+            </Step>
+            <Step disabled={!this._needUser()}>
+              <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
+                User
+              </StepButton>
+            </Step>
+            <Step disabled={!this._needArticle()}>
+              <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
+                Article
+              </StepButton>
+            </Step>
+            <Step disabled={!this._needGroupDiscussion()}>
+              <StepButton onClick={() => this.setState({ stepIndex: 3 })}>
+                Group discussion
+              </StepButton>
+            </Step>
+            <Step>
+              <StepButton onClick={() => this.setState({ stepIndex: 4 })}>
+                Recommendations
+              </StepButton>
+            </Step>
+          </Stepper>
+          <div style={{
+              display: (this.state.stepIndex === 0) ? 'block' : 'none',
             }}
           >
-            {(this.state.context) ?
-              <div>
-                <h2 style={heading}>{__('Context')}</h2>
-                <div style={padLeft}>{contexts[this.state.context]}</div>
-              </div>
-            :
-              null
-            }
-            {(this._needUser() && this.state.selectedUser) ?
-              <div style={{ marginRight: '25px', order: -1 }}>
-                <h2 style={heading}>{__('GCProfile user')}</h2>
-                <div style={padLeft}>{this.state.selectedUser.name}</div>
-              </div>
-            : null}
-            {(this._needArticle() && this.state.selectedArticle) ?
-              <div style={{ marginRight: '25px', order: -1 }}>
-                <h2 style={heading}>{__('GCpedia article')}</h2>
-                <div style={padLeft}>{this.state.selectedArticle.name}</div>
-              </div>
-            : null}
-            {(this._needGroupDiscussion() && this.state.selectedDiscussion) ?
-              <div style={{ marginRight: '25px', order: -1 }}>
-                <h2 style={heading}>{__('GCconnex discussion')}</h2>
-                <div style={padLeft}>{this.state.selectedDiscussion.name}</div>
-              </div>
-            : null}
-          </div>
-          <div>
-            <div style={{ flexGrow: 1 }}>
-              {(
-                this._needUser()
-                && this.state.selectedUser
-                && this.state.selectedUser.phrase_cloud
-              ) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>{__('Top profile phrases')}</h2>
-                  <div>
-                    <WordCloud
-                      phrases={this.state.selectedUser.phrase_cloud}
-                    />
-                  </div>
-                </div>
-              : false}
-            </div>
-            <div style={{ flexGrow: 1 }}>
-              {(
-                this._needArticle()
-                && this.state.selectedArticle
-                && this.state.selectedArticle.phrase_cloud
-              ) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>Top article phrases</h2>
-                  <div>
-                    <WordCloud
-                      phrases={this.state.selectedArticle.phrase_cloud}
-                    />
-                  </div>
-                </div>
-              : false}
-            </div>
-            <div style={{ flexGrow: 1 }}>
-              {(
-                this._needGroupDiscussion()
-                && this.state.selectedDiscussion
-                && this.state.selectedDiscussion.phrase_cloud
-              ) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>Top discussion phrases</h2>
-                  <div>
-                    <WordCloud
-                      phrases={this.state.selectedDiscussion.phrase_cloud}
-                    />
-                  </div>
-                </div>
-              : false}
-            </div>
-            <div style={{ flexGrow: 1 }}>
-              {(this.state.selectedUser && this.state.matchedPhraseCloud) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>Phrase Matches</h2>
-                  <div>
-                    <WordCloud phrases={this.state.matchedPhraseCloud} />
-                  </div>
-                </div>
-              : false}
+            <p>
+              Contexts bring situational awareness to the recommendations.
+              Choose a context to see how the recommendations will behave when
+              embedded within GCTools.
+            </p>
+            <RadioButtonGroup
+              name="context"
+              onChange={this.handleContextChange}
+              valueSelected={this.state.context}
+            >
+              {Object.keys(contexts).map(c =>
+                (<RadioButton
+                  key={`context_${c}`}
+                  value={c}
+                  label={contexts[c]}
+                />))}
+            </RadioButtonGroup>
+            <div style={{ marginTop: 12 }}>
+              <RaisedButton
+                label={__('Next')}
+                disabled={!this.state.context}
+                onClick={this._next}
+              />
             </div>
           </div>
-        </div>
-        <CardContainer
-          noloader
-          loaded={this.state.loaded}
-          cards={
-            (!this.state.no_recommendations) ?
-              this.state.recommendations.map(rec =>
-                (<RecommendationCard
-                  className="grid-item"
-                  key={`article_${rec.articleId}`}
-                  rank={rec.rank}
-                  title={rec.title}
-                  phrases={rec.phrases}
-                  type={rec.type}
-                />)) :
-              <div className="grid-item">
-                <h3>No recommendations are available</h3>
+          <div style={{
+              display: (this.state.stepIndex === 1) ? 'block' : 'none',
+            }}
+          >
+            <p>
+              Preview the recommendations as if you were logged into any
+              GCconnex account.  Type the name of the user you would like to
+              simulate below.
+            </p>
+            <PeopleFinderWithData
+              searchText={this.state.userSearchText}
+              onUpdateInput={this._updateUserSearch}
+            />
+            <div style={{ marginTop: 12 }}>
+              <FlatButton
+                label={__('Back')}
+                onClick={this._prev}
+                style={{ marginRight: 12 }}
+                disabled={!this.state.profile_loaded}
+              />
+              <RaisedButton
+                label={__('Next')}
+                onClick={this._next}
+                disabled={
+                  !this.state.selectedUser || !this.state.profile_loaded
+                }
+              />
+              {(!this.state.profile_loaded) ?
+                <RefreshIndicator
+                  size={25}
+                  left={0}
+                  top={8}
+                  status="loading"
+                  style={{
+                  marginLeft: 25,
+                  display: 'inline-block',
+                  position: 'relative',
+                  boxShadow: 'none',
+                }}
+                />
+              : null }
+              {(this.state.profile_loaded_error) ?
+                <div
+                  style={{
+                    display: 'inline-block',
+                    position: 'relative',
+                    boxShadow: 'none',
+                    color: 'red',
+                    verticalAlign: 'middle',
+                  }}
+                >
+                  <ErrorIcon color="red" />
+                  <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                    An error has occured
+                  </span>
+                </div>
+              : null }
+
+            </div>
+          </div>
+          <div style={{
+              display: (this.state.stepIndex === 2) ? 'block' : 'none',
+            }}
+          >
+            <h3>Choose an article</h3>
+            <p>
+              Simulate reading a particular article by choosing one from the
+              search provided below.
+            </p>
+            {/* <AutoComplete
+              hintText={__('Type part of all of a title')}
+              searchText={this.state.articleSearchText}
+              dataSource={this.state.articleSearchResults}
+              onUpdateInput={this._updateArticleList}
+              onNewRequest={this._getArticlePC}
+              filter={this._noFilter}
+              openOnFocus
+              fullWidth
+            /> */}
+            <div style={{ marginTop: 12 }}>
+              <FlatButton
+                label={__('Back')}
+                onClick={this._prev}
+                style={{ marginRight: 12 }}
+                disabled={!this.state.article_loaded}
+              />
+              <RaisedButton
+                label={__('Next')}
+                onClick={this._next}
+                disabled={
+                  !this.state.selectedArticle || !this.state.article_loaded
+                }
+              />
+              {(!this.state.article_loaded) ?
+                <RefreshIndicator
+                  size={25}
+                  left={0}
+                  top={8}
+                  status="loading"
+                  style={{
+                  marginLeft: 25,
+                  display: 'inline-block',
+                  position: 'relative',
+                  boxShadow: 'none',
+                }}
+                />
+              : null }
+              {(this.state.article_loaded_error) ?
+                <div
+                  style={{
+                    display: 'inline-block',
+                    position: 'relative',
+                    boxShadow: 'none',
+                    color: 'red',
+                    verticalAlign: 'middle',
+                  }}
+                >
+                  <ErrorIcon color="red" />
+                  <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                    An error has occured
+                  </span>
+                </div>
+              : null }
+            </div>
+          </div>
+          <div style={{
+              display: (this.state.stepIndex === 3) ? 'block' : 'none',
+            }}
+          >
+            <h3>Choose a group discussion</h3>
+            <p>
+              Simulate reading a particular discussion thread by choosing one
+              from the search provided below.
+            </p>
+            {/* <AutoComplete
+              hintText={__('Type part of all of a title')}
+              searchText={this.state.discussionSearchText}
+              dataSource={this.state.discussionSearchResults}
+              onUpdateInput={this._updateDiscussionList}
+              onNewRequest={this._getDiscussionPC}
+              filter={this._noFilter}
+              openOnFocus
+              fullWidth
+            /> */}
+            <div style={{ marginTop: 12 }}>
+              <FlatButton
+                label={__('Back')}
+                onClick={this._prev}
+                style={{ marginRight: 12 }}
+                disabled={!this.state.discussion_loaded}
+              />
+              <RaisedButton
+                label={__('Next')}
+                onClick={this._next}
+                disabled={
+                  !this.state.selectedDiscussion ||
+                  !this.state.discussion_loaded
+                }
+              />
+              {(!this.state.discussion_loaded) ?
+                <RefreshIndicator
+                  size={25}
+                  left={0}
+                  top={8}
+                  status="loading"
+                  style={{
+                  marginLeft: 25,
+                  display: 'inline-block',
+                  position: 'relative',
+                  boxShadow: 'none',
+                }}
+                />
+              : null }
+              {(this.state.discussion_loaded_error) ?
+                <div
+                  style={{
+                    display: 'inline-block',
+                    position: 'relative',
+                    boxShadow: 'none',
+                    color: 'red',
+                    verticalAlign: 'middle',
+                  }}
+                >
+                  <ErrorIcon color="red" />
+                  <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                    An error has occured
+                  </span>
+                </div>
+              : null }
+            </div>
+          </div>
+          <div style={{
+              display: (this.state.stepIndex === 4) ? 'block' : 'none',
+            }}
+          >
+            <p>
+              Everything is ready to simulate a call to the article
+              recommendation service, press the button below to see the result.
+            </p>
+            <FlatButton
+              label={__('Back')}
+              onClick={this._prev}
+              style={{ marginRight: 12 }}
+              disabled={!this.state.loaded}
+            />
+            <RaisedButton
+              label={__('Recommend')}
+              primary
+              onClick={this._recommend}
+              disabled={!this.state.loaded}
+            />
+            <FlatButton
+              label={__('Reset')}
+              primary
+              onClick={this._reset}
+              style={{ marginLeft: 22 }}
+              disabled={!this.state.loaded}
+            />
+            {(!this.state.loaded) ?
+              <RefreshIndicator
+                size={25}
+                left={0}
+                top={8}
+                status="loading"
+                style={{
+                  display: 'inline-block',
+                  position: 'relative',
+                  boxShadow: 'none',
+                }}
+              />
+            : null }
+            {(this.state.recommendation_error) ?
+              <div
+                style={{
+                  display: 'inline-block',
+                  position: 'relative',
+                  boxShadow: 'none',
+                  color: 'red',
+                  verticalAlign: 'middle',
+                }}
+              >
+                <ErrorIcon color="red" />
+                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                  An error has occured
+                </span>
               </div>
+            : null }
+          </div>
+          {this.state.stepIndex > 0
+            ? <hr style={{ border: 0, height: '1px', background: '#ddd' }} />
+            : false
           }
-        />
-      </div>
+          <div style={{ marginTop: 20, padding: 10, marginBottom: 20 }}>
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'flex-start',
+              }}
+            >
+              {(this.state.context) ?
+                <div>
+                  <h2 style={heading}>{__('Context')}</h2>
+                  <div style={padLeft}>{contexts[this.state.context]}</div>
+                </div>
+              :
+                null
+              }
+              {(this._needUser() && this.state.selectedUser) ?
+                <div style={{ marginRight: '25px', order: -1 }}>
+                  <h2 style={heading}>{__('GCProfile user')}</h2>
+                  <div style={padLeft}>{this.state.selectedUser.name}</div>
+                </div>
+              : null}
+              {(this._needArticle() && this.state.selectedArticle) ?
+                <div style={{ marginRight: '25px', order: -1 }}>
+                  <h2 style={heading}>{__('GCpedia article')}</h2>
+                  <div style={padLeft}>{this.state.selectedArticle.name}</div>
+                </div>
+              : null}
+              {(this._needGroupDiscussion() && this.state.selectedDiscussion) ?
+                <div style={{ marginRight: '25px', order: -1 }}>
+                  <h2 style={heading}>{__('GCconnex discussion')}</h2>
+                  <div style={padLeft}>
+                    {this.state.selectedDiscussion.name}
+                  </div>
+                </div>
+              : null}
+            </div>
+            <div>
+              <div style={{ flexGrow: 1 }}>
+                {(
+                  this._needUser()
+                  && this.state.selectedUser
+                  && this.state.selectedUser.phrase_cloud
+                ) ?
+                  <div style={{ position: 'relative', overflow: 'hidden' }}>
+                    <h2 style={heading}>{__('Top profile phrases')}</h2>
+                    <div>
+                      <WordCloud
+                        phrases={this.state.selectedUser.phrase_cloud}
+                      />
+                    </div>
+                  </div>
+                : false}
+              </div>
+              <div style={{ flexGrow: 1 }}>
+                {(
+                  this._needArticle()
+                  && this.state.selectedArticle
+                  && this.state.selectedArticle.phrase_cloud
+                ) ?
+                  <div style={{ position: 'relative', overflow: 'hidden' }}>
+                    <h2 style={heading}>Top article phrases</h2>
+                    <div>
+                      <WordCloud
+                        phrases={this.state.selectedArticle.phrase_cloud}
+                      />
+                    </div>
+                  </div>
+                : false}
+              </div>
+              <div style={{ flexGrow: 1 }}>
+                {(
+                  this._needGroupDiscussion()
+                  && this.state.selectedDiscussion
+                  && this.state.selectedDiscussion.phrase_cloud
+                ) ?
+                  <div style={{ position: 'relative', overflow: 'hidden' }}>
+                    <h2 style={heading}>Top discussion phrases</h2>
+                    <div>
+                      <WordCloud
+                        phrases={this.state.selectedDiscussion.phrase_cloud}
+                      />
+                    </div>
+                  </div>
+                : false}
+              </div>
+              <div style={{ flexGrow: 1 }}>
+                {(this.state.selectedUser && this.state.matchedPhraseCloud) ?
+                  <div style={{ position: 'relative', overflow: 'hidden' }}>
+                    <h2 style={heading}>Phrase Matches</h2>
+                    <div>
+                      <WordCloud phrases={this.state.matchedPhraseCloud} />
+                    </div>
+                  </div>
+                : false}
+              </div>
+            </div>
+          </div>
+          <CardContainer
+            noloader
+            loaded={this.state.loaded}
+            cards={
+              (!this.state.no_recommendations) ?
+                this.state.recommendations.map(rec =>
+                  (<RecommendationCard
+                    className="grid-item"
+                    key={`article_${rec.articleId}`}
+                    rank={rec.rank}
+                    title={rec.title}
+                    phrases={rec.phrases}
+                    type={rec.type}
+                  />)) :
+                <div className="grid-item">
+                  <h3>No recommendations are available</h3>
+                </div>
+            }
+          />
+        </div>
+      </ApolloProvider>
     );
   }
 }
