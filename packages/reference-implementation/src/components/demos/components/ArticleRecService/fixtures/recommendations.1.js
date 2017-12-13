@@ -86,7 +86,7 @@ class PeopleFinder extends React.Component {
         searchText={this.props.searchText}
         dataSource={people}
         onUpdateInput={this.props.onUpdateInput}
-        // onNewRequest={this._getUserPC}
+        onNewRequest={this.props.onSelectUser}
         filter={this._noFilter}
         openOnFocus
       />
@@ -99,6 +99,7 @@ PeopleFinder.defaultProps = {
 PeopleFinder.propTypes = {
   searchText: PropTypes.string.isRequired,
   onUpdateInput: PropTypes.func.isRequired,
+  onSelectUser: PropTypes.func.isRequired,
   people: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
@@ -231,6 +232,10 @@ class ArticleRecommendations extends React.Component {
 
   _updateUserSearch(txt) {
     this.setState({ userSearchText: txt });
+  }
+
+  _selectUser(a, b, c) {
+    console.log({ a, b, c });
   }
 
   _updateDataSource(
@@ -610,6 +615,7 @@ class ArticleRecommendations extends React.Component {
             <PeopleFinderWithData
               searchText={this.state.userSearchText}
               onUpdateInput={this._updateUserSearch}
+              onSelectUser={this._selectUser}
             />
             <div style={{ marginTop: 12 }}>
               <FlatButton

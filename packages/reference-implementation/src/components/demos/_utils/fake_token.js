@@ -10,6 +10,7 @@ import { KJUR } from 'jsrsasign';
 
 const createTokenForUser = (user) => {
   const secret = 'qWxPJrZCLeHZraNTWjEKHdJJxJyho8';
+  // eslint-disable-next-line
   const { email, gcconnex_username, gcconnex_guid } = user;
   // Header
   const header = { alg: 'HS256', typ: 'JWT' };
