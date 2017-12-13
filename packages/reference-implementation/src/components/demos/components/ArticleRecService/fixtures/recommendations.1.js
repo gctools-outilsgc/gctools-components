@@ -82,7 +82,7 @@ class PeopleFinder extends React.Component {
     const { people } = this.props;
     return (
       <AutoComplete
-        hintText={__('Type part of all of a name')}
+        hintText={__('Type part of a name')}
         searchText={this.props.searchText}
         dataSource={people}
         onUpdateInput={this.props.onUpdateInput}

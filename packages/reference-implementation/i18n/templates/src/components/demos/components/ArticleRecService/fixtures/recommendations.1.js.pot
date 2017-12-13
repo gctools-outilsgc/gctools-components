@@ -74,3 +74,7 @@ msgstr ""
 msgid "Top profile phrases"
 msgstr ""
 
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js 85:18
+msgid "Type part of a name"
+msgstr ""
+
