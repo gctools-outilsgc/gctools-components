@@ -22,7 +22,7 @@ import ErrorIcon from 'material-ui/svg-icons/alert/error';
 import RecommendationCard, { CardContainer, WordCloud }
   from '@gctools-components/recommendation-card';
 
-import { ApolloProvider, graphql } from 'react-apollo';
+import { ApolloProvider, graphql, compose } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -31,8 +31,8 @@ import gql from 'graphql-tag';
 import createTokenForUser from '../../../_utils/fake_token';
 
 const apollo = new ApolloClient({
-  link: new HttpLink({ uri: 'http://localhost:3001/graphql' }),
-  // link: new HttpLink({ uri: 'http://gcrec.lpss.me/graphql' }),
+  // link: new HttpLink({ uri: 'http://localhost:3001/graphql' }),
+  link: new HttpLink({ uri: 'http://gcrec.lpss.me/graphql' }),
   cache: new InMemoryCache(),
 });
 
@@ -58,6 +58,11 @@ const article = 'http://gcrec-db.lpss.me';
 
 const reqwest = require('reqwest');
 
+const CLOUD_SIZE = {
+  article: 10,
+  top: 100,
+  match: 100,
+};
 
 /* **************************************************************************
   * Components
@@ -73,10 +78,30 @@ query TypeAndFindQuery($nameContains: String!) {
     }
   }
 }`;
+const peopleLoginMutation = gql`
+mutation loginPerson {
+  enterContext(context: login)
+}`;
 class PeopleFinder extends React.Component {
   constructor() {
     super();
     this._noFilter = () => true;
+    this.selectUser = this.selectUser.bind(this);
+  }
+  selectUser(selection) {
+    const { mutate } = this.props;
+    mutate({
+      context: {
+        headers: {
+          Authorization: createTokenForUser({
+            gcconnex_guid: `${selection.value}`,
+            email: '',
+            gcconnex_username: '',
+          }),
+        },
+      },
+    });
+    this.props.onSelectUser(selection);
   }
   render() {
     const { people } = this.props;
@@ -86,7 +111,7 @@ class PeopleFinder extends React.Component {
         searchText={this.props.searchText}
         dataSource={people}
         onUpdateInput={this.props.onUpdateInput}
-        onNewRequest={this.props.onSelectUser}
+        onNewRequest={this.selectUser}
         filter={this._noFilter}
         openOnFocus
       />
@@ -100,6 +125,7 @@ PeopleFinder.propTypes = {
   searchText: PropTypes.string.isRequired,
   onUpdateInput: PropTypes.func.isRequired,
   onSelectUser: PropTypes.func.isRequired,
+  mutate: PropTypes.func.isRequired,
   people: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
@@ -117,7 +143,6 @@ const PeopleFinderWithData = graphql(peopleFinderQuery, {
     variables: {
       nameContains: searchText,
     },
-    pollInterval: 350,
     context: {
       headers: {
         Authorization: createTokenForUser({
@@ -128,13 +153,243 @@ const PeopleFinderWithData = graphql(peopleFinderQuery, {
       },
     },
   }),
-})(PeopleFinder);
+})(graphql(peopleLoginMutation)(PeopleFinder));
 
-const CLOUD_SIZE = {
-  article: 10,
-  top: 100,
-  match: 100,
+const personDataQuery = gql`
+query PersonDataQuery($hasId: String!) {
+  people(hasId: $hasId) {
+    phraseCloud {
+      text {
+        value
+        source {
+          name
+        }
+      }
+      rank
+    }
+  }
+}`;
+const ProfilePhrases = (props) => {
+  const { phraseCloud, loading } = props;
+  if (loading === true) {
+    return (
+      <RefreshIndicator
+        size={25}
+        left={0}
+        top={8}
+        status="loading"
+        style={{
+          marginLeft: 25,
+          display: 'inline-block',
+          position: 'relative',
+          boxShadow: 'none',
+        }}
+      />);
+  }
+  if (phraseCloud.length === 0) return null;
+  return (
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
+      <h2 style={props.headingStyle}>{__('Top profile phrases')}</h2>
+      <div>
+        <WordCloud
+          phrases={phraseCloud}
+        />
+      </div>
+    </div>
+  );
 };
+
+ProfilePhrases.defaultProps = {
+  headingStyle: {},
+  phraseCloud: [],
+  loading: false,
+};
+
+ProfilePhrases.propTypes = {
+  headingStyle: PropTypes.objectOf(PropTypes.any),
+  phraseCloud: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    size: PropTypes.number.isRequired,
+  })),
+  loading: PropTypes.bool,
+};
+
+const ProfilePhrasesWithData = graphql(personDataQuery, {
+  skip: props => !props.selectedUser.guid,
+  props: ({ ownProps, data: { people, loading } }) => ({
+    ...ownProps,
+    loading,
+    phraseCloud: (people && people[0].phraseCloud)
+      ? people[0].phraseCloud.slice(0, CLOUD_SIZE.top).map(p => (
+        { text: p.text.value, size: p.rank }
+      )) : [],
+  }),
+  options: ({ selectedUser: { guid } }) => ({
+    variables: {
+      hasId: guid,
+    },
+    context: {
+      headers: {
+        Authorization: createTokenForUser({
+          gcconnex_guid: '-1',
+          email: '',
+          gcconnex_username: '',
+        }),
+      },
+    },
+  }),
+})(ProfilePhrases);
+
+ProfilePhrasesWithData.defaultProps = {
+  selectedUser: {},
+};
+
+ProfilePhrasesWithData.propTypes = {
+  selectedUser: PropTypes.shape({
+    guid: PropTypes.string,
+  }).isRequired,
+};
+
+const baseRecommendationQuery = `
+query RecommendationQuery($hasId: String!) {
+  people(hasId: $hasId) {
+    recommendations {
+      context {
+        [root] {
+          [context] {
+            articles {
+              name {
+                value
+              },
+              id
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+const buildContextQuery = (root, context) =>
+  gql(baseRecommendationQuery
+    .replace('[context]', context).replace('[root]', root));
+
+const recommendationQueryC1 = buildContextQuery('GCpedia', 'article_c1');
+const recommendationQueryC2 = buildContextQuery('GCpedia', 'article_c2');
+const recommendationQueryC3 = buildContextQuery('GCpedia', 'article_c3');
+const recommendationQueryC4 = buildContextQuery('GCpedia', 'article_c4');
+const recommendationQueryC5 = buildContextQuery('GCconnex', 'article_c5');
+const recommendationQueryC6 = buildContextQuery('GCconnex', 'article_c6');
+
+const Recommendations = (props) => {
+  const {
+    showRecommendations,
+    loading,
+    recommendations,
+  } = props;
+  console.log(recommendations);
+  console.log(showRecommendations);
+  if (!showRecommendations) return null;
+  if (loading) {
+    return (
+      <RefreshIndicator
+        size={45}
+        left={0}
+        top={8}
+        status="loading"
+        style={{
+          marginLeft: 25,
+          display: 'inline-block',
+          position: 'relative',
+          boxShadow: 'none',
+        }}
+      />);
+  }
+  return (
+    <CardContainer
+      loaded={!loading}
+      cards={
+        (recommendations.length > 0) ?
+          recommendations.map(rec =>
+            (<RecommendationCard
+              className="grid-item"
+              key={`article_${rec.articleId}`}
+              rank={rec.rank}
+              title={rec.title}
+              phrases={rec.phrases}
+              type={rec.type}
+            />)) :
+          <div className="grid-item">
+            <h3>No recommendations are available</h3>
+          </div>
+      }
+    />
+  );
+};
+
+Recommendations.defaultProps = {
+  loading: false,
+  recommendations: [],
+  showRecommendations: false,
+};
+
+Recommendations.propTypes = {
+  loading: PropTypes.bool,
+  showRecommendations: PropTypes.bool,
+  recommendations: PropTypes.arrayOf(PropTypes.shape({
+    articleId: PropTypes.string.isRequired,
+    rank: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    phrases: PropTypes.arrayOf(PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      size: PropTypes.number.isRequired,
+    })),
+  })),
+};
+
+const getOptions = (root, context) => {
+  const defaultOpt = {
+    skip: props =>
+      !props.selectedUser.guid || context.indexOf(props.context) < 0,
+    props: ({ ownProps, data: { loading, people } }) => ({
+      ...ownProps,
+      loading,
+      recommendations: (people && people[0].recommendations && !loading) ?
+        people[0].recommendations.context[root][context].articles.map(a => ({
+          articleId: a.id,
+          title: a.name.value,
+          phrases: [],
+          rank: 1,
+        })) : [],
+    }),
+    options: ({ selectedUser: { guid } }) => ({
+      variables: {
+        hasId: guid,
+      },
+      context: {
+        headers: {
+          Authorization: createTokenForUser({
+            gcconnex_guid: `${guid}`,
+            email: '',
+            gcconnex_username: '',
+          }),
+        },
+      },
+    }),
+  };
+  return defaultOpt;
+};
+
+const RecommendationsWithData = compose(
+  graphql(recommendationQueryC1, getOptions('GCpedia', 'article_c1')),
+  graphql(recommendationQueryC2, getOptions('GCpedia', 'article_c2')),
+  graphql(recommendationQueryC3, getOptions('GCpedia', 'article_c3')),
+  graphql(recommendationQueryC4, getOptions('GCpedia', 'article_c4')),
+  graphql(recommendationQueryC5, getOptions('GCconnex', 'article_c5')),
+  graphql(recommendationQueryC6, getOptions('GCconnex', 'article_c6')),
+)(Recommendations);
+
 
 const initialState = {
   recommendations: [],
@@ -142,13 +397,14 @@ const initialState = {
   no_recommendations: false,
   recommendation_settings: [],
   loaded: true,
+  showRecommendations: false,
 
   profile_loaded: true,
   profile_loaded_error: false,
   userSearchText: '',
   // userSearchResults: [],
   matchedPhraseCloud: null,
-  selectedUser: null,
+  selectedUser: {},
 
   article_loaded: true,
   article_loaded_error: false,
@@ -180,6 +436,7 @@ class ArticleRecommendations extends React.Component {
     this._prev = this._prev.bind(this);
     this._reset = this._reset.bind(this);
     this._recommend = this._recommend.bind(this);
+    this._selectUser = this._selectUser.bind(this);
     // this._userDataSourceInit = this._userDataSourceInit.bind(this);
 
     this._updateDataSource = this._updateDataSource.bind(this);
@@ -234,8 +491,9 @@ class ArticleRecommendations extends React.Component {
     this.setState({ userSearchText: txt });
   }
 
-  _selectUser(a, b, c) {
-    console.log({ a, b, c });
+  _selectUser(selected) {
+    const guid = selected.value;
+    this.setState({ selectedUser: { guid, name: selected.text } });
   }
 
   _updateDataSource(
@@ -325,7 +583,7 @@ class ArticleRecommendations extends React.Component {
   handleContextChange(e, context) {
     this.setState({
       context,
-      recommendations: [],
+      showRecommendations: false,
       matchedPhraseCloud: null,
       loaded: true,
     });
@@ -406,123 +664,122 @@ class ArticleRecommendations extends React.Component {
 
   _recommend() {
     this.setState({
-      loaded: false,
-      recommendation_error: false,
-      no_recommendations: false,
+      showRecommendations: true,
     });
-    const context = this.state.context.toLowerCase();
-    const { selectedArticle, selectedUser, selectedDiscussion } = this.state;
-    let query = '';
-    switch (context) {
-      case 'c1': {
-        query = `${selectedUser.guid}/`;
-        break;
-      }
-      case 'c3': {
-        query = `${selectedUser.guid}/${selectedArticle.guid}/`;
-        break;
-      }
-      case 'c4': {
-        query = `${selectedArticle.guid}/`;
-        break;
-      }
-      case 'c5': {
-        query = `${selectedUser.guid}/${selectedDiscussion.guid}/`;
-        break;
-      }
-      case 'c6': {
-        query = `${selectedDiscussion.guid}/`;
-        break;
-      }
-      default: { } // eslint-disable-line no-empty
-    }
-    reqwest({
-      url: `${article}/recommend/${context}/${query}`,
-      type: 'json',
-      success: (data) => {
-        const [status, results] = data;
-        if (!status) {
-          this.setState({ recommendation_error: true });
-          return false;
-        }
-        if (!results) {
-          this.setState({
-            no_recommendations: true,
-            recommendations: [],
-            loaded: true,
-            matchedPhraseCloud: null,
-          });
-          return false;
-        }
 
-        const sliced
-          = results.slice(0, Math.min(data[1].length, CLOUD_SIZE.article));
-        const recommendations = [];
-        const matchedPhraseCloud = [];
-        const matchedPhraseDupCheck = [];
+    // const context = this.state.context.toLowerCase();
+    // const { selectedArticle, selectedUser, selectedDiscussion } = this.state;
+    // let query = '';
+    // switch (context) {
+    //   case 'c1': {
+    //     query = `${selectedUser.guid}/`;
+    //     break;
+    //   }
+    //   case 'c3': {
+    //     query = `${selectedUser.guid}/${selectedArticle.guid}/`;
+    //     break;
+    //   }
+    //   case 'c4': {
+    //     query = `${selectedArticle.guid}/`;
+    //     break;
+    //   }
+    //   case 'c5': {
+    //     query = `${selectedUser.guid}/${selectedDiscussion.guid}/`;
+    //     break;
+    //   }
+    //   case 'c6': {
+    //     query = `${selectedDiscussion.guid}/`;
+    //     break;
+    //   }
+    //   default: { } // eslint-disable-line no-empty
+    // }
+    // reqwest({
+    //   url: `${article}/recommend/${context}/${query}`,
+    //   type: 'json',
+    //   success: (data) => {
+    //     const [status, results] = data;
+    //     if (!status) {
+    //       this.setState({ recommendation_error: true });
+    //       return false;
+    //     }
+    //     if (!results) {
+    //       this.setState({
+    //         no_recommendations: true,
+    //         recommendations: [],
+    //         loaded: true,
+    //         matchedPhraseCloud: null,
+    //       });
+    //       return false;
+    //     }
 
-        const pcUser = (this.state.selectedUser)
-          ? this.state.selectedUser.complete_phrase_cloud || [] : [];
-        const pcArticle = (this.state.selectedArticle)
-          ? this.state.selectedArticle.complete_phrase_cloud || [] : [];
-        const pcDiscussion = (this.state.selectedDiscussion)
-          ? this.state.selectedDiscussion.complete_phrase_cloud || [] : [];
+    //     const sliced
+    //       = results.slice(0, Math.min(data[1].length, CLOUD_SIZE.article));
+    //     const recommendations = [];
+    //     const matchedPhraseCloud = [];
+    //     const matchedPhraseDupCheck = [];
 
-        // TODO merge scores from profile, article and discussions
-        sliced.map((recdata) => {
-          const [articleId, rank, clusterId, title, ph] = recdata;
-          const phrases = Object.keys(ph).map(p => ({ text: p, size: ph[p] }));
-          if (this.state.selectedUser
-            || this.state.selectedArticle
-            || this.state.selectedDiscussion) {
-            phrases.forEach((p) => {
-              if (matchedPhraseDupCheck.indexOf(p.text) === -1) {
-                matchedPhraseDupCheck.push(p.text);
-                matchedPhraseCloud.push({
-                  text: p.text,
-                  size:
-                    []
-                      .concat(pcUser, pcArticle, pcDiscussion)
-                      .filter(item => item.text === p.text)
-                      .reduce((sum, item, idx, arr) => {
-                        const newSum = sum + item.size;
-                        if (idx === arr.length - 1) {
-                          return newSum / arr.length;
-                        }
-                        return newSum;
-                      }, 0),
-                });
-              }
-            });
-          }
-          recommendations.push({
-            rank,
-            clusterId,
-            title,
-            articleId,
-            phrases,
-            type: 'gcpedia-article',
-          });
-          return null;
-        });
-        matchedPhraseCloud.sort((a, b) => b.size - a.size);
-        this.setState({
-          recommendations,
-          matchedPhraseCloud: matchedPhraseCloud.slice(
-            0,
-            Math.min(matchedPhraseCloud.length, CLOUD_SIZE.match),
-          ),
-          loaded: true,
-        });
-        return true;
-      },
-      error: () => this.setState({
-        recommendation_error: true,
-        loaded: true,
-        recommendations: [],
-        matchedPhraseCloud: null,
-      }),
-    });
+    //     const pcUser = (this.state.selectedUser)
+    //       ? this.state.selectedUser.complete_phrase_cloud || [] : [];
+    //     const pcArticle = (this.state.selectedArticle)
+    //       ? this.state.selectedArticle.complete_phrase_cloud || [] : [];
+    //     const pcDiscussion = (this.state.selectedDiscussion)
+    //       ? this.state.selectedDiscussion.complete_phrase_cloud || [] : [];
+
+    //     // TODO merge scores from profile, article and discussions
+    //     sliced.map((recdata) => {
+    //       const [articleId, rank, clusterId, title, ph] = recdata;
+    //       const phrases = Object.keys(ph).map(p => ({ text: p, size: ph[p] }));
+    //       if (this.state.selectedUser
+    //         || this.state.selectedArticle
+    //         || this.state.selectedDiscussion) {
+    //         phrases.forEach((p) => {
+    //           if (matchedPhraseDupCheck.indexOf(p.text) === -1) {
+    //             matchedPhraseDupCheck.push(p.text);
+    //             matchedPhraseCloud.push({
+    //               text: p.text,
+    //               size:
+    //                 []
+    //                   .concat(pcUser, pcArticle, pcDiscussion)
+    //                   .filter(item => item.text === p.text)
+    //                   .reduce((sum, item, idx, arr) => {
+    //                     const newSum = sum + item.size;
+    //                     if (idx === arr.length - 1) {
+    //                       return newSum / arr.length;
+    //                     }
+    //                     return newSum;
+    //                   }, 0),
+    //             });
+    //           }
+    //         });
+    //       }
+    //       recommendations.push({
+    //         rank,
+    //         clusterId,
+    //         title,
+    //         articleId,
+    //         phrases,
+    //         type: 'gcpedia-article',
+    //       });
+    //       return null;
+    //     });
+    //     matchedPhraseCloud.sort((a, b) => b.size - a.size);
+    //     this.setState({
+    //       recommendations,
+    //       matchedPhraseCloud: matchedPhraseCloud.slice(
+    //         0,
+    //         Math.min(matchedPhraseCloud.length, CLOUD_SIZE.match),
+    //       ),
+    //       loaded: true,
+    //     });
+    //     return true;
+    //   },
+    //   error: () => this.setState({
+    //     recommendation_error: true,
+    //     loaded: true,
+    //     recommendations: [],
+    //     matchedPhraseCloud: null,
+    //   }),
+    // });
   }
 
   render() {
@@ -622,14 +879,11 @@ class ArticleRecommendations extends React.Component {
                 label={__('Back')}
                 onClick={this._prev}
                 style={{ marginRight: 12 }}
-                disabled={!this.state.profile_loaded}
               />
               <RaisedButton
                 label={__('Next')}
                 onClick={this._next}
-                disabled={
-                  !this.state.selectedUser || !this.state.profile_loaded
-                }
+                disabled={!this.state.selectedUser.guid}
               />
               {(!this.state.profile_loaded) ?
                 <RefreshIndicator
@@ -895,20 +1149,13 @@ class ArticleRecommendations extends React.Component {
             </div>
             <div>
               <div style={{ flexGrow: 1 }}>
-                {(
-                  this._needUser()
-                  && this.state.selectedUser
-                  && this.state.selectedUser.phrase_cloud
-                ) ?
-                  <div style={{ position: 'relative', overflow: 'hidden' }}>
-                    <h2 style={heading}>{__('Top profile phrases')}</h2>
-                    <div>
-                      <WordCloud
-                        phrases={this.state.selectedUser.phrase_cloud}
-                      />
-                    </div>
-                  </div>
-                : false}
+                { (this._needUser()) ?
+                  <ProfilePhrasesWithData
+                    headingStyle={heading}
+                    selectedUser={this.state.selectedUser}
+                  />
+                : null
+                }
               </div>
               <div style={{ flexGrow: 1 }}>
                 {(
@@ -954,24 +1201,12 @@ class ArticleRecommendations extends React.Component {
               </div>
             </div>
           </div>
-          <CardContainer
-            noloader
-            loaded={this.state.loaded}
-            cards={
-              (!this.state.no_recommendations) ?
-                this.state.recommendations.map(rec =>
-                  (<RecommendationCard
-                    className="grid-item"
-                    key={`article_${rec.articleId}`}
-                    rank={rec.rank}
-                    title={rec.title}
-                    phrases={rec.phrases}
-                    type={rec.type}
-                  />)) :
-                <div className="grid-item">
-                  <h3>No recommendations are available</h3>
-                </div>
+          <RecommendationsWithData
+            selectedUser={this.state.selectedUser}
+            context={(this.state.context)
+              ? this.state.context.toLowerCase() : null
             }
+            showRecommendations={this.state.showRecommendations}
           />
         </div>
       </ApolloProvider>
