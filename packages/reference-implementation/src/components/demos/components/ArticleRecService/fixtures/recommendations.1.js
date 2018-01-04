@@ -19,6 +19,8 @@ import FlatButton from 'material-ui/FlatButton';
 import RefreshIndicator from 'material-ui/RefreshIndicator';
 import ErrorIcon from 'material-ui/svg-icons/alert/error';
 
+import '../style.css';
+
 const cHost = 'http://167.37.33.21:443/';
 
 const profileSearch
@@ -435,16 +437,6 @@ class ArticleRecommendations extends React.Component {
       C5: __('User logged in, reading group discussion'),
       C6: __('Unknown user, reading group discussion'),
     };
-    const heading = {
-      fontFamily: 'Roboto Condensed, arial, sans-serif',
-      borderBottom: '1px solid',
-      paddingRight: '25px',
-      display: 'inline-block',
-    };
-    const padLeft = {
-      paddingLeft: '15px',
-    };
-
     return (
       <div>
         <Stepper activeStep={this.state.stepIndex} orientation="horizontal">
@@ -475,7 +467,7 @@ class ArticleRecommendations extends React.Component {
           </Step>
         </Stepper>
         <div
-          style={{ display: (this.state.stepIndex === 0) ? 'block' : 'none' }}
+          className={(this.state.stepIndex === 0) ? 'block' : 'none'}
         >
           <p>
             Contexts bring situational awareness to the recommendations.
@@ -494,7 +486,7 @@ class ArticleRecommendations extends React.Component {
                 label={contexts[c]}
               />))}
           </RadioButtonGroup>
-          <div style={{ marginTop: 12 }}>
+          <div className="margin-top">
             <RaisedButton
               label={__('Next')}
               disabled={!this.state.context}
@@ -503,7 +495,7 @@ class ArticleRecommendations extends React.Component {
           </div>
         </div>
         <div
-          style={{ display: (this.state.stepIndex === 1) ? 'block' : 'none' }}
+          className={(this.state.stepIndex === 1) ? 'block' : 'none'}
         >
           <p>
             Preview the recommendations as if you were logged into any GCconnex
@@ -519,11 +511,11 @@ class ArticleRecommendations extends React.Component {
             filter={this._noFilter}
             openOnFocus
           />
-          <div style={{ marginTop: 12 }}>
+          <div className="margin-top">
             <FlatButton
               label={__('Back')}
               onClick={this._prev}
-              style={{ marginRight: 12 }}
+              className="margin-right"
               disabled={!this.state.profile_loaded}
             />
             <RaisedButton
@@ -537,26 +529,13 @@ class ArticleRecommendations extends React.Component {
                 left={0}
                 top={8}
                 status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
+                className="loading"
               />
             : null }
             {(this.state.profile_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
+              <div className="error-container">
                 <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                <span className="error-text">
                   An error has occured
                 </span>
               </div>
@@ -565,7 +544,7 @@ class ArticleRecommendations extends React.Component {
           </div>
         </div>
         <div
-          style={{ display: (this.state.stepIndex === 2) ? 'block' : 'none' }}
+          className={(this.state.stepIndex === 2) ? 'block' : 'none'}
         >
           <h3>Choose an article</h3>
           <p>
@@ -582,11 +561,11 @@ class ArticleRecommendations extends React.Component {
             openOnFocus
             fullWidth
           />
-          <div style={{ marginTop: 12 }}>
+          <div className="margin-top">
             <FlatButton
               label={__('Back')}
               onClick={this._prev}
-              style={{ marginRight: 12 }}
+              className="margin-right"
               disabled={!this.state.article_loaded}
             />
             <RaisedButton
@@ -602,26 +581,13 @@ class ArticleRecommendations extends React.Component {
                 left={0}
                 top={8}
                 status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
+                className="loading"
               />
             : null }
             {(this.state.article_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
+              <div className="error-container">
                 <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                <span className="error-text">
                   An error has occured
                 </span>
               </div>
@@ -629,7 +595,7 @@ class ArticleRecommendations extends React.Component {
           </div>
         </div>
         <div
-          style={{ display: (this.state.stepIndex === 3) ? 'block' : 'none' }}
+          className={(this.state.stepIndex === 3) ? 'block' : 'none'}
         >
           <h3>Choose a group discussion</h3>
           <p>
@@ -646,11 +612,11 @@ class ArticleRecommendations extends React.Component {
             openOnFocus
             fullWidth
           />
-          <div style={{ marginTop: 12 }}>
+          <div className="margin-top">
             <FlatButton
               label={__('Back')}
               onClick={this._prev}
-              style={{ marginRight: 12 }}
+              className="margin-right"
               disabled={!this.state.discussion_loaded}
             />
             <RaisedButton
@@ -666,26 +632,13 @@ class ArticleRecommendations extends React.Component {
                 left={0}
                 top={8}
                 status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
+                className="loading"
               />
             : null }
             {(this.state.discussion_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
+              <div className="error-container">
                 <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                <span className="error-text">
                   An error has occured
                 </span>
               </div>
@@ -693,7 +646,7 @@ class ArticleRecommendations extends React.Component {
           </div>
         </div>
         <div
-          style={{ display: (this.state.stepIndex === 4) ? 'block' : 'none' }}
+          className={(this.state.stepIndex === 4) ? 'block' : 'none'}
         >
           <p>
             Everything is ready to simulate a call to the article
@@ -702,7 +655,7 @@ class ArticleRecommendations extends React.Component {
           <FlatButton
             label={__('Back')}
             onClick={this._prev}
-            style={{ marginRight: 12 }}
+            className="margin-right"
             disabled={!this.state.loaded}
           />
           <RaisedButton
@@ -715,7 +668,6 @@ class ArticleRecommendations extends React.Component {
             label={__('Reset')}
             primary
             onClick={this._reset}
-            style={{ marginLeft: 22 }}
             disabled={!this.state.loaded}
           />
           {(!this.state.loaded) ?
@@ -724,78 +676,64 @@ class ArticleRecommendations extends React.Component {
               left={0}
               top={8}
               status="loading"
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
+              className="loading"
             />
           : null }
           {(this.state.recommendation_error) ?
-            <div
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-                color: 'red',
-                verticalAlign: 'middle',
-              }}
-            >
+            <div className="error-container">
               <ErrorIcon color="red" />
-              <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+              <span className="error-text">
                 An error has occured
               </span>
             </div>
           : null }
         </div>
         {this.state.stepIndex > 0
-          ? <hr style={{ border: 0, height: '1px', background: '#ddd' }} />
+          ? <hr className="horizontal-line" />
           : false
         }
-        <div style={{ marginTop: 20, padding: 10, marginBottom: 20 }}>
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'flex-start',
-            }}
-          >
+        <div className="results-container">
+          <div className="flex-start">
             {(this.state.context) ?
               <div>
-                <h2 style={heading}>{__('Context')}</h2>
-                <div style={padLeft}>{contexts[this.state.context]}</div>
+                <h2 className="heading">{__('Context')}</h2>
+                <div className="pad-left">{contexts[this.state.context]}</div>
               </div>
             :
               null
             }
             {(this._needUser() && this.state.selectedUser) ?
-              <div style={{ marginRight: '25px', order: -1 }}>
-                <h2 style={heading}>{__('GCProfile user')}</h2>
-                <div style={padLeft}>{this.state.selectedUser.name}</div>
+              <div className="margin-right-flex-order">
+                <h2 className="heading">{__('GCProfile user')}</h2>
+                <div className="pad-left">{this.state.selectedUser.name}</div>
               </div>
             : null}
             {(this._needArticle() && this.state.selectedArticle) ?
-              <div style={{ marginRight: '25px', order: -1 }}>
-                <h2 style={heading}>{__('GCpedia article')}</h2>
-                <div style={padLeft}>{this.state.selectedArticle.name}</div>
+              <div className="margin-right-flex-order">
+                <h2 className="heading">{__('GCpedia article')}</h2>
+                <div className="pad-left">
+                  {this.state.selectedArticle.name}
+                </div>
               </div>
             : null}
             {(this._needGroupDiscussion() && this.state.selectedDiscussion) ?
-              <div style={{ marginRight: '25px', order: -1 }}>
-                <h2 style={heading}>{__('GCconnex discussion')}</h2>
-                <div style={padLeft}>{this.state.selectedDiscussion.name}</div>
+              <div className="margin-right-flex-order">
+                <h2 className="heading">{__('GCconnex discussion')}</h2>
+                <div className="pad-left">
+                  {this.state.selectedDiscussion.name}
+                </div>
               </div>
             : null}
           </div>
           <div>
-            <div style={{ flexGrow: 1 }}>
+            <div className="flex-grow">
               {(
                 this._needUser()
                 && this.state.selectedUser
                 && this.state.selectedUser.phrase_cloud
               ) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>{__('Top profile phrases')}</h2>
+                <div className="overflow-hidden">
+                  <h2 className="heading">{__('Top profile phrases')}</h2>
                   <div>
                     <WordCloud
                       phrases={this.state.selectedUser.phrase_cloud}
@@ -804,14 +742,14 @@ class ArticleRecommendations extends React.Component {
                 </div>
               : false}
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div className="flex-grow">
               {(
                 this._needArticle()
                 && this.state.selectedArticle
                 && this.state.selectedArticle.phrase_cloud
               ) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>Top article phrases</h2>
+                <div className="overflow-hidden">
+                  <h2 className="heading">Top article phrases</h2>
                   <div>
                     <WordCloud
                       phrases={this.state.selectedArticle.phrase_cloud}
@@ -820,14 +758,14 @@ class ArticleRecommendations extends React.Component {
                 </div>
               : false}
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div className="flex-grow">
               {(
                 this._needGroupDiscussion()
                 && this.state.selectedDiscussion
                 && this.state.selectedDiscussion.phrase_cloud
               ) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>Top discussion phrases</h2>
+                <div className="overflow-hidden">
+                  <h2 className="heading">Top discussion phrases</h2>
                   <div>
                     <WordCloud
                       phrases={this.state.selectedDiscussion.phrase_cloud}
@@ -836,10 +774,10 @@ class ArticleRecommendations extends React.Component {
                 </div>
               : false}
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div className="flex-grow">
               {(this.state.selectedUser && this.state.matchedPhraseCloud) ?
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <h2 style={heading}>Phrase Matches</h2>
+                <div className="overflow-hidden">
+                  <h2 className="heading">Phrase Matches</h2>
                   <div>
                     <WordCloud phrases={this.state.matchedPhraseCloud} />
                   </div>

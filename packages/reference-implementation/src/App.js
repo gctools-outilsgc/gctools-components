@@ -270,7 +270,7 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
         <BrowserRouter>
-          <div style={{ margin: 0, padding: 0 }}>
+          <div className="no-margin">
             <AppBar
               showMenuIconButton={false}
               title={(
@@ -288,10 +288,13 @@ class App extends Component {
               }
               className="gctools-info-appbar"
             />
-            <Drawer open containerClassName="gctools-info-drawer">
+            <Drawer
+              open
+              containerClassName="gctools-info-drawer"
+              containerStyle={{ overflow: 'hidden' }}
+            >
               <Route render={({ history }) => (
                 <Menu
-                  style={{ width: '80%' }}
                   value={this.state.active}
                   onItemTouchTap={(e, v) => {
                     this.handleMenuClick(e, v.props.item, history);
@@ -307,6 +310,7 @@ class App extends Component {
                       style={{
                           paddingLeft: `${item.padding}px`,
                           display: this._blockOrNone(item),
+                          marginRight: '15px',
                         }}
                     />
                     ))}

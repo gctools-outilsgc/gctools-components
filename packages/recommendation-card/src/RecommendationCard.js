@@ -14,7 +14,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
 import HelpCircle from 'material-ui-community-icons/icons/help-circle';
 import AccountCircle from 'material-ui-community-icons/icons/account-circle';
-import FileDocument from 'material-ui-community-icons/icons/file-document';
 import { RaisedButton } from 'material-ui';
 import StarRatingComponent from 'react-star-rating-component';
 import Dotdotdot from 'react-dotdotdot';
@@ -166,7 +165,10 @@ class RecommendationCard extends Component {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <div style={{ alignSelf: 'flex-end' }}>
-                <RaisedButton onClick={this.handleCardClick} buttonStyle={{ fontSize: 'small' }}>
+                <RaisedButton
+                  onClick={this.handleCardClick}
+                  buttonStyle={{ fontSize: 'small' }}
+                >
                   View Article
                 </RaisedButton>
               </div>

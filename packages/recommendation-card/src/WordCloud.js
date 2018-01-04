@@ -90,11 +90,6 @@ WordCloud.propTypes = {
     text: PropTypes.string,
     size: PropTypes.number,
   })).isRequired,
-  height: PropTypes.number,
-};
-
-WordCloud.defaultProps = {
-  height: 200,
 };
 
 export default WordCloud;
