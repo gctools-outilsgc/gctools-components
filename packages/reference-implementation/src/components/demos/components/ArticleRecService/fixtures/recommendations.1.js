@@ -36,38 +36,11 @@ const apollo = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const cHost = 'http://167.37.33.21:443/';
-
-const profileSearch
-  = `${cHost}/profiles/_design/finder/_view/name?key="[term]"&limit=50`;
-
-const articleSearch
-  = `${cHost}/articles/_design/finder/_view/title?key="[term]"&limit=50`;
-
-const discussionSearch
-  = `${cHost}/discussions/_design/finder/_list/typeahead/title?startkey=` +
-  '"[term]"&endkey="[term]\u9999"&top=20&group_level=1';
-const discussionResolver
-  = `${cHost}/discussions/_design/finder/_view/resolve?key="[term]"&limit=1`;
-
-// const couch = `${cHost}/users`;
-// const topskilled='_design/gcrec/_view/users-by-skill-count?descending=true';
-
-const article = 'http://gcrec-db.lpss.me';
-// const article = 'http://132.246.129.105:6543';
-
-const reqwest = require('reqwest');
-
 const CLOUD_SIZE = {
   article: 10,
   top: 100,
   match: 100,
 };
-
-/* **************************************************************************
-  * Components
-  *
-  */
 
 const peopleFinderQuery = gql`
 query TypeAndFindQuery($nameContains: String!) {
@@ -78,9 +51,9 @@ query TypeAndFindQuery($nameContains: String!) {
     }
   }
 }`;
-const peopleLoginMutation = gql`
-mutation loginPerson {
-  enterContext(context: login)
+const enterContextMutation = gql`
+mutation loginPerson($context: Context!) {
+  enterContext(context: $context)
 }`;
 class PeopleFinder extends React.Component {
   constructor() {
@@ -89,8 +62,8 @@ class PeopleFinder extends React.Component {
     this.selectUser = this.selectUser.bind(this);
   }
   selectUser(selection) {
-    const { mutate } = this.props;
-    mutate({
+    const { mutate, context } = this.props;
+    const options = {
       context: {
         headers: {
           Authorization: createTokenForUser({
@@ -100,7 +73,18 @@ class PeopleFinder extends React.Component {
           }),
         },
       },
-    });
+    };
+    mutate(Object.assign(options, {
+      variables: {
+        context: 'login',
+      },
+    }));
+    const useContext = `article_${context.toLowerCase()}`;
+    mutate(Object.assign(options, {
+      variables: {
+        context: useContext,
+      },
+    }));
     this.props.onSelectUser(selection);
   }
   render() {
@@ -120,12 +104,14 @@ class PeopleFinder extends React.Component {
 }
 PeopleFinder.defaultProps = {
   people: [],
+  context: '',
 };
 PeopleFinder.propTypes = {
   searchText: PropTypes.string.isRequired,
   onUpdateInput: PropTypes.func.isRequired,
   onSelectUser: PropTypes.func.isRequired,
   mutate: PropTypes.func.isRequired,
+  context: PropTypes.string,
   people: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
@@ -153,10 +139,105 @@ const PeopleFinderWithData = graphql(peopleFinderQuery, {
       },
     },
   }),
-})(graphql(peopleLoginMutation)(PeopleFinder));
+})(graphql(enterContextMutation)(PeopleFinder));
+
+const articleFinderQuery = gql`
+query TypeAndFindQuery($nameContains: String!) {
+  people(nameContains: $nameContains, limit: 50) {
+    id
+    name {
+      value
+    }
+  }
+}`;
+class ArticleFinder extends React.Component {
+  constructor() {
+    super();
+    this._noFilter = () => true;
+    this.selectUser = this.selectUser.bind(this);
+  }
+  selectUser(selection) {
+    const { mutate, context } = this.props;
+    const options = {
+      context: {
+        headers: {
+          Authorization: createTokenForUser({
+            gcconnex_guid: `${selection.value}`,
+            email: '',
+            gcconnex_username: '',
+          }),
+        },
+      },
+    };
+    mutate(Object.assign(options, {
+      variables: {
+        context: 'login',
+      },
+    }));
+    const useContext = `article_${context.toLowerCase()}`;
+    mutate(Object.assign(options, {
+      variables: {
+        context: useContext,
+      },
+    }));
+    this.props.onSelectUser(selection);
+  }
+  render() {
+    const { people } = this.props;
+    return (
+      <AutoComplete
+        hintText={__('Type part of a name')}
+        searchText={this.props.searchText}
+        dataSource={people}
+        onUpdateInput={this.props.onUpdateInput}
+        onNewRequest={this.selectUser}
+        filter={this._noFilter}
+        openOnFocus
+      />
+    );
+  }
+}
+ArticleFinder.defaultProps = {
+  people: [],
+  context: '',
+};
+ArticleFinder.propTypes = {
+  searchText: PropTypes.string.isRequired,
+  onUpdateInput: PropTypes.func.isRequired,
+  onSelectUser: PropTypes.func.isRequired,
+  mutate: PropTypes.func.isRequired,
+  context: PropTypes.string,
+  people: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+  })),
+};
+
+const ArticleFinderWithData = graphql(articleFinderQuery, {
+  skip: props => props.searchText.length < 3,
+  props: ({ ownProps, data: { people } }) => ({
+    ...ownProps,
+    people: (people)
+      ? people.map(p => ({ text: p.name.value, value: p.id })) : [],
+  }),
+  options: ({ searchText }) => ({
+    variables: {
+      nameContains: searchText,
+    },
+    context: {
+      headers: {
+        Authorization: createTokenForUser({
+          gcconnex_guid: '-1',
+          email: '',
+          gcconnex_username: '',
+        }),
+      },
+    },
+  }),
+})(graphql(enterContextMutation)(ArticleFinder));
 
 const personDataQuery = gql`
-query PersonDataQuery($hasId: String!) {
+query PersonDataQuery($hasId: ID!) {
   people(hasId: $hasId) {
     phraseCloud {
       text {
@@ -224,6 +305,7 @@ const ProfilePhrasesWithData = graphql(personDataQuery, {
         { text: p.text.value, size: p.rank }
       )) : [],
   }),
+  pollInterval: 1000,
   options: ({ selectedUser: { guid } }) => ({
     variables: {
       hasId: guid,
@@ -251,7 +333,7 @@ ProfilePhrasesWithData.propTypes = {
 };
 
 const baseRecommendationQuery = `
-query RecommendationQuery($hasId: String!) {
+query RecommendationQuery($hasId: ID!) {
   people(hasId: $hasId) {
     recommendations {
       context {
@@ -287,11 +369,29 @@ const Recommendations = (props) => {
     showRecommendations,
     loading,
     recommendations,
+    context,
+    mutate,
   } = props;
-  console.log(recommendations);
-  console.log(showRecommendations);
   if (!showRecommendations) return null;
   if (loading) {
+    if (['c2', 'c4', 'c6'].indexOf(context) >= 0) {
+      const useContext = `article_${context.toLowerCase()}`;
+      mutate({
+        variables: {
+          context: useContext,
+        },
+        context: {
+          headers: {
+            Authorization: createTokenForUser({
+              gcconnex_guid: '-1',
+              email: '',
+              gcconnex_username: '',
+            }),
+          },
+        },
+      });
+    }
+
     return (
       <RefreshIndicator
         size={45}
@@ -321,7 +421,7 @@ const Recommendations = (props) => {
               type={rec.type}
             />)) :
           <div className="grid-item">
-            <h3>No recommendations are available</h3>
+            <h3>Recommendations not yet available...</h3>
           </div>
       }
     />
@@ -332,11 +432,14 @@ Recommendations.defaultProps = {
   loading: false,
   recommendations: [],
   showRecommendations: false,
+  context: '',
 };
 
 Recommendations.propTypes = {
   loading: PropTypes.bool,
   showRecommendations: PropTypes.bool,
+  mutate: PropTypes.func.isRequired,
+  context: PropTypes.string,
   recommendations: PropTypes.arrayOf(PropTypes.shape({
     articleId: PropTypes.string.isRequired,
     rank: PropTypes.number.isRequired,
@@ -355,7 +458,11 @@ const getOptions = (root, context) => {
     props: ({ ownProps, data: { loading, people } }) => ({
       ...ownProps,
       loading,
-      recommendations: (people && people[0].recommendations && !loading) ?
+      recommendations: (people
+        && people[0].recommendations
+        && people[0].recommendations.context[root]
+        && people[0].recommendations.context[root][context]
+        && !loading) ?
         people[0].recommendations.context[root][context].articles.map(a => ({
           articleId: a.id,
           title: a.name.value,
@@ -367,6 +474,7 @@ const getOptions = (root, context) => {
       variables: {
         hasId: guid,
       },
+      pollInterval: 1000,
       context: {
         headers: {
           Authorization: createTokenForUser({
@@ -388,29 +496,27 @@ const RecommendationsWithData = compose(
   graphql(recommendationQueryC4, getOptions('GCpedia', 'article_c4')),
   graphql(recommendationQueryC5, getOptions('GCconnex', 'article_c5')),
   graphql(recommendationQueryC6, getOptions('GCconnex', 'article_c6')),
+  graphql(enterContextMutation),
 )(Recommendations);
 
 
 const initialState = {
+
+  userSearchText: '',
+  selectedUser: {},
+  showRecommendations: false,
+  articleSearchText: '',
+  selectedArticle: {},
+
   recommendations: [],
   recommendation_error: false,
   no_recommendations: false,
   recommendation_settings: [],
   loaded: true,
-  showRecommendations: false,
 
-  profile_loaded: true,
-  profile_loaded_error: false,
-  userSearchText: '',
-  // userSearchResults: [],
   matchedPhraseCloud: null,
-  selectedUser: {},
 
-  article_loaded: true,
-  article_loaded_error: false,
-  articleSearchText: '',
   articleSearchResults: [],
-  selectedArticle: null,
 
   discussion_loaded: true,
   discussion_loaded_error: false,
@@ -436,55 +542,11 @@ class ArticleRecommendations extends React.Component {
     this._prev = this._prev.bind(this);
     this._reset = this._reset.bind(this);
     this._recommend = this._recommend.bind(this);
+
     this._selectUser = this._selectUser.bind(this);
-    // this._userDataSourceInit = this._userDataSourceInit.bind(this);
-
-    this._updateDataSource = this._updateDataSource.bind(this);
-    this._updateUserList =
-      this._updateDataSource.bind(
-        this, 'userSearchText', 'userSearchResults',
-        profileSearch, null,
-      );
-
-    this._updateArticleList =
-      this._updateDataSource.bind(
-        this, 'articleSearchText', 'articleSearchResults',
-        articleSearch, null,
-      );
-
-    this._updateDiscussionList =
-      this._updateDataSource.bind(
-        this, 'discussionSearchText', 'discussionSearchResults',
-        discussionSearch, null,
-      );
-
-    this._updateItemPC = this._updateItemPC.bind(this);
-    this._getUserPC = this._updateItemPC.bind(
-      this,
-      'user',
-      'selectedUser',
-      'profile_loaded',
-    );
-    this._getArticlePC = this._updateItemPC.bind(
-      this,
-      'article',
-      'selectedArticle',
-      'article_loaded',
-    );
-    this._getDiscussionPC = this._updateItemPC.bind(
-      this,
-      'discussion',
-      'selectedDiscussion',
-      'discussion_loaded',
-    );
-
     this._updateUserSearch = this._updateUserSearch.bind(this);
 
     this._noFilter = () => true;
-  }
-
-  componentWillMount() {
-    // this._userDataSourceInit();
   }
 
   _updateUserSearch(txt) {
@@ -496,90 +558,6 @@ class ArticleRecommendations extends React.Component {
     this.setState({ selectedUser: { guid, name: selected.text } });
   }
 
-  _updateDataSource(
-    stateVar, resultStateVar, url,
-    emptyCallback, searchString,
-  ) {
-    const tmpState = {
-      recommendations: [],
-      matchedPhraseCloud: null,
-      loaded: true,
-    };
-    tmpState[stateVar] = searchString;
-    this.setState(tmpState);
-    if (this.searchTimer[url]) clearTimeout(this.searchTimer[url]);
-    if (searchString.trim() !== '') {
-      this.searchTimer[url] = setTimeout(() => {
-        this.searchTimer[url] = undefined;
-        reqwest({
-          url: url.replace(/\[term\]/g, searchString.toLowerCase().trim()),
-          type: 'json',
-        }, (data) => {
-          const newState = {};
-          if (!data.rows) {
-            const resolved = [];
-            let c = data.length;
-            const resolve = (term) => {
-              reqwest({
-                url: discussionResolver
-                  .replace(/\[term\]/g, encodeURIComponent(term)),
-                type: 'json',
-              }, (r) => {
-                resolved.push({ text: r.rows[0].key, value: r.rows[0].value });
-                c -= 1;
-                if (c === 0) {
-                  newState[resultStateVar] = resolved;
-                  this.setState(newState);
-                }
-              }, () => { c -= 1; });
-            };
-            data.forEach(u => setTimeout(() => resolve(u), 0));
-          } else {
-            newState[resultStateVar] = data.rows.map(u =>
-              ({ text: u.value.name || u.value.title, value: u.value.guid }));
-            this.setState(newState);
-          }
-        });
-      }, 350);
-    } else if (emptyCallback) emptyCallback();
-  }
-
-  _updateItemPC(type, stateVar, stateLoaded, item) {
-    const newState = {};
-    newState[stateLoaded] = false;
-    newState[`${stateLoaded}_error`] = false;
-    this.setState(newState);
-    reqwest({
-      url: `${article}/profile/${type}/${item.value}`,
-      type: 'json',
-      success:
-        (ex) => {
-          const sorted =
-            Object.keys(ex[1].pc).map(p => ({ text: p, size: ex[1].pc[p] }));
-          sorted.sort((a, b) => b.size - a.size);
-          const phraseCloud
-            = sorted.slice(0, Math.min(CLOUD_SIZE.top, sorted.length));
-
-          newState[stateLoaded] = true;
-          newState.matched_phraseCloud = null;
-          newState[stateVar] = Object.assign({}, {
-            guid: item.value,
-            name: item.text,
-            phraseCloud,
-            complete_phrase_cloud: sorted,
-          });
-          this.setState(newState);
-          this._next();
-        },
-      error: () => {
-        newState[`${stateLoaded}_error`] = true;
-        newState[stateLoaded] = true;
-        newState[stateVar] = [];
-        newState.matchedPhraseCloud = null;
-      },
-    });
-  }
-
   handleContextChange(e, context) {
     this.setState({
       context,
@@ -589,30 +567,6 @@ class ArticleRecommendations extends React.Component {
     });
     this._next(e, context);
   }
-
-  // _userDataSourceInit() {
-  // reqwest({
-  //   url: `${couch}/${topskilled}&limit=10`,
-  //   type: 'json',
-  // }, (ids) => {
-  //   let c = 0;
-  //   const users = [];
-  //   const getUsers = () => {
-  //     reqwest({ url: `${couch}/${ids.rows[c].id}`, type: 'json' }, (us) => {
-  //       users.push({ text: us.name, value: ids.rows[c].id });
-  //       c += 1;
-  //       if (c < ids.rows.length) {
-  //         getUsers();
-  //       } else {
-  //         // this.setState({
-  //         //   userSearchResults: users,
-  //         // });
-  //       }
-  //     });
-  //   };
-  //   getUsers();
-  // });
-  // }
 
   _reset() {
     this.setState(initialState);
@@ -663,123 +617,12 @@ class ArticleRecommendations extends React.Component {
   }
 
   _recommend() {
-    this.setState({
-      showRecommendations: true,
-    });
-
-    // const context = this.state.context.toLowerCase();
-    // const { selectedArticle, selectedUser, selectedDiscussion } = this.state;
-    // let query = '';
-    // switch (context) {
-    //   case 'c1': {
-    //     query = `${selectedUser.guid}/`;
-    //     break;
-    //   }
-    //   case 'c3': {
-    //     query = `${selectedUser.guid}/${selectedArticle.guid}/`;
-    //     break;
-    //   }
-    //   case 'c4': {
-    //     query = `${selectedArticle.guid}/`;
-    //     break;
-    //   }
-    //   case 'c5': {
-    //     query = `${selectedUser.guid}/${selectedDiscussion.guid}/`;
-    //     break;
-    //   }
-    //   case 'c6': {
-    //     query = `${selectedDiscussion.guid}/`;
-    //     break;
-    //   }
-    //   default: { } // eslint-disable-line no-empty
-    // }
-    // reqwest({
-    //   url: `${article}/recommend/${context}/${query}`,
-    //   type: 'json',
-    //   success: (data) => {
-    //     const [status, results] = data;
-    //     if (!status) {
-    //       this.setState({ recommendation_error: true });
-    //       return false;
-    //     }
-    //     if (!results) {
-    //       this.setState({
-    //         no_recommendations: true,
-    //         recommendations: [],
-    //         loaded: true,
-    //         matchedPhraseCloud: null,
-    //       });
-    //       return false;
-    //     }
-
-    //     const sliced
-    //       = results.slice(0, Math.min(data[1].length, CLOUD_SIZE.article));
-    //     const recommendations = [];
-    //     const matchedPhraseCloud = [];
-    //     const matchedPhraseDupCheck = [];
-
-    //     const pcUser = (this.state.selectedUser)
-    //       ? this.state.selectedUser.complete_phrase_cloud || [] : [];
-    //     const pcArticle = (this.state.selectedArticle)
-    //       ? this.state.selectedArticle.complete_phrase_cloud || [] : [];
-    //     const pcDiscussion = (this.state.selectedDiscussion)
-    //       ? this.state.selectedDiscussion.complete_phrase_cloud || [] : [];
-
-    //     // TODO merge scores from profile, article and discussions
-    //     sliced.map((recdata) => {
-    //       const [articleId, rank, clusterId, title, ph] = recdata;
-    //       const phrases = Object.keys(ph).map(p => ({ text: p, size: ph[p] }));
-    //       if (this.state.selectedUser
-    //         || this.state.selectedArticle
-    //         || this.state.selectedDiscussion) {
-    //         phrases.forEach((p) => {
-    //           if (matchedPhraseDupCheck.indexOf(p.text) === -1) {
-    //             matchedPhraseDupCheck.push(p.text);
-    //             matchedPhraseCloud.push({
-    //               text: p.text,
-    //               size:
-    //                 []
-    //                   .concat(pcUser, pcArticle, pcDiscussion)
-    //                   .filter(item => item.text === p.text)
-    //                   .reduce((sum, item, idx, arr) => {
-    //                     const newSum = sum + item.size;
-    //                     if (idx === arr.length - 1) {
-    //                       return newSum / arr.length;
-    //                     }
-    //                     return newSum;
-    //                   }, 0),
-    //             });
-    //           }
-    //         });
-    //       }
-    //       recommendations.push({
-    //         rank,
-    //         clusterId,
-    //         title,
-    //         articleId,
-    //         phrases,
-    //         type: 'gcpedia-article',
-    //       });
-    //       return null;
-    //     });
-    //     matchedPhraseCloud.sort((a, b) => b.size - a.size);
-    //     this.setState({
-    //       recommendations,
-    //       matchedPhraseCloud: matchedPhraseCloud.slice(
-    //         0,
-    //         Math.min(matchedPhraseCloud.length, CLOUD_SIZE.match),
-    //       ),
-    //       loaded: true,
-    //     });
-    //     return true;
-    //   },
-    //   error: () => this.setState({
-    //     recommendation_error: true,
-    //     loaded: true,
-    //     recommendations: [],
-    //     matchedPhraseCloud: null,
-    //   }),
-    // });
+    const { guid } = this.state.selectedUser;
+    const obj = { showRecommendations: true };
+    if (!guid) {
+      obj.selectedUser = { guid: -1 };
+    }
+    this.setState(obj);
   }
 
   render() {
@@ -873,6 +716,7 @@ class ArticleRecommendations extends React.Component {
               searchText={this.state.userSearchText}
               onUpdateInput={this._updateUserSearch}
               onSelectUser={this._selectUser}
+              context={this.state.context}
             />
             <div style={{ marginTop: 12 }}>
               <FlatButton
@@ -885,37 +729,6 @@ class ArticleRecommendations extends React.Component {
                 onClick={this._next}
                 disabled={!this.state.selectedUser.guid}
               />
-              {(!this.state.profile_loaded) ?
-                <RefreshIndicator
-                  size={25}
-                  left={0}
-                  top={8}
-                  status="loading"
-                  style={{
-                  marginLeft: 25,
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                }}
-                />
-              : null }
-              {(this.state.profile_loaded_error) ?
-                <div
-                  style={{
-                    display: 'inline-block',
-                    position: 'relative',
-                    boxShadow: 'none',
-                    color: 'red',
-                    verticalAlign: 'middle',
-                  }}
-                >
-                  <ErrorIcon color="red" />
-                  <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
-                    An error has occured
-                  </span>
-                </div>
-              : null }
-
             </div>
           </div>
           <div style={{
@@ -927,60 +740,23 @@ class ArticleRecommendations extends React.Component {
               Simulate reading a particular article by choosing one from the
               search provided below.
             </p>
-            {/* <AutoComplete
-              hintText={__('Type part of all of a title')}
+            <ArticleFinderWithData
               searchText={this.state.articleSearchText}
-              dataSource={this.state.articleSearchResults}
-              onUpdateInput={this._updateArticleList}
-              onNewRequest={this._getArticlePC}
-              filter={this._noFilter}
-              openOnFocus
-              fullWidth
-            /> */}
+              onUpdateInput={this._updateArticleSearch}
+              onSelectUser={this._selectArticle}
+              context={this.state.context}
+            />
             <div style={{ marginTop: 12 }}>
               <FlatButton
                 label={__('Back')}
                 onClick={this._prev}
                 style={{ marginRight: 12 }}
-                disabled={!this.state.article_loaded}
               />
               <RaisedButton
                 label={__('Next')}
                 onClick={this._next}
-                disabled={
-                  !this.state.selectedArticle || !this.state.article_loaded
-                }
+                disabled={!this.state.selectedArticle.guid}
               />
-              {(!this.state.article_loaded) ?
-                <RefreshIndicator
-                  size={25}
-                  left={0}
-                  top={8}
-                  status="loading"
-                  style={{
-                  marginLeft: 25,
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                }}
-                />
-              : null }
-              {(this.state.article_loaded_error) ?
-                <div
-                  style={{
-                    display: 'inline-block',
-                    position: 'relative',
-                    boxShadow: 'none',
-                    color: 'red',
-                    verticalAlign: 'middle',
-                  }}
-                >
-                  <ErrorIcon color="red" />
-                  <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
-                    An error has occured
-                  </span>
-                </div>
-              : null }
             </div>
           </div>
           <div style={{
@@ -1203,6 +979,8 @@ class ArticleRecommendations extends React.Component {
           </div>
           <RecommendationsWithData
             selectedUser={this.state.selectedUser}
+            selectedArticle={this.state.selectedArticle}
+            selectedDiscussion={this.state.selectedDiscussion}
             context={(this.state.context)
               ? this.state.context.toLowerCase() : null
             }

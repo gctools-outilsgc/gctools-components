@@ -74,6 +74,8 @@ class LoginExample extends React.Component {
         <Login
           oidcConfig={{
             authority: identityServer,
+            client_id: '369399',
+            scope: 'openid profile email',
             post_logout_redirect_uri: `${url}/#!logout`,
             redirect_uri: `${url}/#!callback`,
             silent_redirect_uri: `${url}/#!silent`,
