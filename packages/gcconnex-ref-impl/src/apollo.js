@@ -4,7 +4,7 @@
  *
  * License: MIT
  * Copyright: Her Majesty the Queen in Right of Canada, as represented by
- * the Minister of National Research Council, 2017
+ * the Minister of National Research Council, 2018
  */
 
 import React from 'react';
@@ -18,7 +18,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { KJUR } from 'jsrsasign';
 
-import GcconnexRefImpl from './index';
+import EventHandlerRefImpl from './event';
 
 const createToken = (user) => {
   const secret = 'qWxPJrZCLeHZraNTWjEKHdJJxJyho8';
@@ -57,6 +57,7 @@ query queryMyRecommendationsC5($context_obj1: String!) {
           article_c5(article: $context_obj1) {
             articles {
               id
+              rank
               name {
                 value
               }
@@ -79,6 +80,27 @@ const ConnectedRefImpl = compose(
   graphql(enterContextMutation, { name: 'enterContext' }),
   graphql(recommendationQueryC5, {
     name: 'recommendationsC5',
+    props: ({
+      ownProps: { context },
+      recommendationsC5: { loading, me, stopPolling },
+    }) => ({
+      loading,
+      context,
+      stopPolling,
+      recommendations: (
+        loading
+        || me.recommendations.context.GCconnex.article_c5 === null)
+        ? null :
+        me.recommendations.context.GCconnex.article_c5.articles.map(a => ({
+          id: a.id,
+          title: a.name.value,
+          rank: a.rank,
+          phraseCloud: a.phraseCloud.map(pc => ({
+            phrase: pc.text.value,
+            rank: parseFloat(pc.rank),
+          })),
+        })),
+    }),
     skip: ownProps => ownProps.context_obj1 === '',
     options: ownProps => ({
       pollInterval: 1000,
@@ -89,7 +111,7 @@ const ConnectedRefImpl = compose(
       },
     }),
   }),
-)(GcconnexRefImpl);
+)(EventHandlerRefImpl);
 
 
 const ApolloRefImpl = props => (
@@ -105,7 +127,7 @@ ApolloRefImpl.propTypes = {
     gcconnex_username: PropTypes.string.isRequired,
     email: PropTypes.string,
   }).isRequired,
-  context: PropTypes.oneOf(['login', 'article_c5', 'article_c6']).isRequired,
+  context: PropTypes.oneOf(['login', 'article_c5']).isRequired,
   context_obj1: PropTypes.string,
   context_obj2: PropTypes.string,
   context_obj3: PropTypes.string,

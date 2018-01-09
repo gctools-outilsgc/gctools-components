@@ -4,9 +4,70 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import GcconnexRefImpl from '../index';
+import GcconnexRefImpl from '../src';
+import exampleRecommendations from './recommendations';
 
 storiesOf('GcconnexRefImpl', module)
+  .add(
+    'with recommendations',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <GcconnexRefImpl recommendations={exampleRecommendations} />
+      </div>
+    )),
+  )
+  .add(
+    'with no available recommendations (recommendations=[])',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <GcconnexRefImpl recommendations={[]} />
+      </div>
+    )),
+  )
+  .add(
+    'with recommendations not ready (recommendations=null)',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <GcconnexRefImpl recommendations={null} />
+      </div>
+    )),
+  )
+  .add(
+    'context=login',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <GcconnexRefImpl context="login" />
+      </div>
+    )),
+  )
+  .add(
+    'loading=true',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <GcconnexRefImpl loading />
+      </div>
+    )),
+  )
   .add(
     'Default options',
     withInfo({
@@ -15,16 +76,7 @@ storiesOf('GcconnexRefImpl', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <GcconnexRefImpl
-          user={{
-            email: 'test@email.com',
-            gcconnex_guid: '12345',
-            gcconnex_username: 'username',
-          }}
-          context="article_c5"
-          
-        />
+        <GcconnexRefImpl />
       </div>
     )),
   );
-
