@@ -10,9 +10,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import GcconnexRefImpl from './index';
-
-class EventHandlerRefImpl extends Component {
+class EventHandler extends Component {
   componentDidMount() {
     const { context, context_obj1, token } = this.props; // eslint-disable-line
     this.props.enterContext({
@@ -30,16 +28,16 @@ class EventHandlerRefImpl extends Component {
 
   componentWillReceiveProps(next) {
     if (!next.loading && next.recommendations !== null) {
-      next.stopPolling();
+      this.props.stopPolling();
     }
   }
 
   render() {
-    return <GcconnexRefImpl {...this.props} />;
+    return null;
   }
 }
 
-EventHandlerRefImpl.propTypes = {
+EventHandler.propTypes = {
   /** Mutation used to trigger context "enter" events. */
   enterContext: PropTypes.func.isRequired,
   /** Stop polling for recommendations */
@@ -49,4 +47,4 @@ EventHandlerRefImpl.propTypes = {
   token: PropTypes.string.isRequired,
 };
 
-export default EventHandlerRefImpl;
+export default EventHandler;

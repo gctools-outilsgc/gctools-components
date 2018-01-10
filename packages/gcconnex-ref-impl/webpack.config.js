@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
   target: 'web',
-  entry: ['./src/apollo.js'],
+  entry: ['babel-polyfill', 'whatwg-fetch', './src/apollo.js'],
   devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(['dist']),

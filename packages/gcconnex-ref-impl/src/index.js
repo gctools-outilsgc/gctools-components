@@ -16,6 +16,7 @@ import PropTypes from 'prop-types';
 // eslint-disable-next-line
 class GcconnexRefImpl extends Component {
   render() {
+    const gcpediaUrl = 'http://gcpedia.gctools.nrc.ca/index.php';
     const { loading, recommendations, context } = this.props;
     let recommendationOutput = null;
     if (!loading) {
@@ -28,7 +29,11 @@ class GcconnexRefImpl extends Component {
           <ul key="rec_article_list">
             {recommendations.map(r => (
               <li key={`rec_article_${r.id}`}>
-                <h4>{r.title}</h4>
+                <h4>
+                  <a target="_blank" href={`${gcpediaUrl}/${r.title}`}>
+                    {r.title}
+                  </a>
+                </h4>
                 {r.rank}<br />
                 {r.phraseCloud.map(pc => pc.phrase).join(', ')}
               </li>
