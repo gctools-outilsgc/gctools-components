@@ -13,6 +13,8 @@ import { withInfo } from '@storybook/addon-info';
 
 import RecommendationCard from '../index';
 import CardContainer from '../src/CardContainer';
+import '../css/card-container-style.css';
+import '../css/card-style.css';
 
 storiesOf('RecommendationCard', module)
   .add(
@@ -22,13 +24,19 @@ storiesOf('RecommendationCard', module)
       inline: true,
       source: false,
     })(() => (
-      <RecommendationCard
-        type="tweet"
-        title="this is a short title"
-        rank={1}
-        phrases={[
-          { text: 'word', size: 0.3 },
-          { text: 'phrase cloud', size: 1 },
+      <CardContainer
+        loaded
+        cards={[
+          <RecommendationCard
+            type="tweet"
+            title="this is a short title"
+            rank={1}
+            key="cardTweet"
+            phrases={[
+              { text: 'word', size: 0.3 },
+              { text: 'phrase cloud', size: 1 },
+            ]}
+          />,
         ]}
       />
     )),

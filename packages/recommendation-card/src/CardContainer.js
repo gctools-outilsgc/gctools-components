@@ -68,7 +68,7 @@ class ContainerLarge extends Component {
           columnWidth: '.grid-sizer',
         }}
       >
-        <div className="grid-sizer" />
+        <div className="grid-sizer" key="masonryKey" />
         {this.props.cards}
       </Masonry>
     );

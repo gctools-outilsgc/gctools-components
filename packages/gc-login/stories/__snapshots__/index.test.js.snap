@@ -104,7 +104,7 @@ exports[`Storyshots Login Default options 1`] = `
             style={
               Object {
                 "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                "backgroundColor": "#00bcd4",
+                "backgroundColor": "#0375b4",
                 "border": 10,
                 "borderRadius": 2,
                 "boxSizing": "border-box",
