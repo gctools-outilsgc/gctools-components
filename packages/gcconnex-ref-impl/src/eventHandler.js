@@ -42,7 +42,14 @@ EventHandler.propTypes = {
   enterContext: PropTypes.func.isRequired,
   /** Stop polling for recommendations */
   stopPolling: PropTypes.func.isRequired,
-  context: PropTypes.oneOf(['login', 'article_c5']).isRequired,
+  context: PropTypes.oneOf([
+    'login',
+    'article_c1',
+    'article_c2',
+    'article_c3',
+    'article_c4',
+    'article_c5',
+  ]).isRequired,
   context_obj1: PropTypes.string.isRequired,
   token: PropTypes.string.isRequired,
 };

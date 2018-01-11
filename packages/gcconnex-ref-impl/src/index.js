@@ -18,19 +18,20 @@ class GcconnexRefImpl extends Component {
   render() {
     const gcpediaUrl = 'http://gcpedia.gctools.nrc.ca/index.php';
     const { loading, recommendations, context } = this.props;
+    const target = (context !== 'article_c5') ? '' : '_blank';
     let recommendationOutput = null;
     if (!loading) {
       if (recommendations === null) {
-        recommendationOutput = <h2>Recommendations not yet available</h2>;
+        recommendationOutput = <strong>Not yet available...</strong>;
       } else if (recommendations.length === 0) {
-        recommendationOutput = <h2>No recommendations</h2>;
+        recommendationOutput = <strong>No recommendations</strong>;
       } else {
         recommendationOutput = (
           <ul key="rec_article_list">
             {recommendations.map(r => (
               <li key={`rec_article_${r.id}`}>
                 <h4>
-                  <a target="_blank" href={`${gcpediaUrl}/${r.title}`}>
+                  <a target={target} href={`${gcpediaUrl}/${r.title}`}>
                     {r.title}
                   </a>
                 </h4>
