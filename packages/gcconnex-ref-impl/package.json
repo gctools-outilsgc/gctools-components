@@ -1,7 +1,6 @@
 {
-  "name": "@gctools-components/phrase-cloud-treemap",
-  "version": "1.1.0",
-  "description": "Phrase cloud SVG based component using d3's treemap layout",
+  "name": "@gctools-components/gcconnex-ref-impl",
+  "description": "Reference Implementation of GCconnex integration",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -9,7 +8,8 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "babel index.js -d dist --copy-files",
+    "build1": "babel index.js -d dist --copy-files",
+    "build": "webpack",
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
@@ -17,74 +17,62 @@
     "build-storybook": "build-storybook"
   },
   "keywords": [
-    "sso",
-    "single sign on",
-    "identity server",
-    "login",
-    "gc",
-    "canada",
-    "oidc",
-    "authentication",
-    "nrc"
+    "gctools",
+    "gctoolscomponent"
   ],
-  "author": {
-    "name": "Luc Belliveau",
-    "email": "luc.belliveau@nrc-cnrc.gc.ca"
-  },
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.0",
-    "@gctools-components/jest-config": "^1.1.0",
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/addon-info": "^3.2.13",
     "@storybook/addon-links": "^3.2.13",
     "@storybook/addon-storyshots": "^3.2.13",
     "@storybook/react": "^3.3.0-alpha.2",
     "babel-cli": "^6.26.0",
-    "babel-plugin-react-docgen": "~1.8.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-plugin-react-docgen": "~1.8.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "@gctools-components/eslint-config": "^1.0.0",
     "eslint": "^4.12.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "jest": "^21.2.1",
-    "rimraf": "^2.6.2"
+    "@gctools-components/jest-config": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1"
   },
   "dependencies": {
-    "d3": "^4.10.0",
-    "deep-equal": "^1.0.1",
-    "fontfaceobserver": "^2.0.13",
+    "jsrsasign": "^8.0.4",
+    "graphql-tag": "^2.6.1",
+    "react": "^16.0.0",
+    "react-apollo": "^2.0.4",
+    "apollo-client": "^2.0.4",
+    "apollo-link-http": "^1.3.2",
+    "apollo-cache-inmemory": "^1.1.4",
+    "babel-polyfill": "^6.26.0",
+    "react-dom": "^16.0.0",
     "material-ui": "^0.19.4",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "svg-path-properties": "^0.4.1"
+    "whatwg-fetch": "^2.0.3"
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions",
-              "ie 11"
-            ]
-          }
-        }
-      ],
+      "env",
       "react"
     ],
     "plugins": [
+      "babel-plugin-transform-runtime",
       "transform-object-rest-spread",
-      "babel-plugin-transform-class-properties",
       [
         "react-docgen",
         {

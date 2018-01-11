@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-10-30 23:35-0300\n"
+"POT-Creation-Date: 2017-12-11 11:50-0400\n"
 "PO-Revision-Date: 2017-10-30 11:29-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -97,6 +97,11 @@ msgstr ""
 #: 743:39
 #: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
 msgid "Top profile phrases"
+msgstr ""
+
+#: 85:18
+#: src/components/demos/components/ArticleRecService/fixtures/recommendations.1.js
+msgid "Type part of a name"
 msgstr ""
 
 #~ msgid "Type a GCTools user's name"

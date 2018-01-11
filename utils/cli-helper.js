@@ -120,7 +120,7 @@ const create_component = (dir, name) => {
       { cwd: dir, stdio: 'inherit' }
     );
 
-    writeSource(path.join(storyPath, 'index.js'),
+    writeSource(path.join(storyPath, 'index.stories.js'),
       component_story_template, name, res.description);
 
     writeSource(path.join(storyPath, 'index.test.js'),
@@ -197,14 +197,14 @@ const component_package_template = {
 
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-runtime": "~6.23.0",
-    "babel-eslint": "^8.0.1",
+    "babel-eslint": "^8.0.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-plugin-react-docgen": "~1.8.1",
 
     "@gctools-components/eslint-config": "^1.0.0",
-    "eslint": "^4.9.0",
+    "eslint": "^4.12.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",

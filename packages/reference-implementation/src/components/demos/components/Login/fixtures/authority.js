@@ -7,5 +7,5 @@
  * the Minister of National Research Council, 2017
  */
 
-const identityServer = 'http://gcidentity.lpss.me';
+const identityServer = 'https://gcidentity.lpss.me/openid';
 export default identityServer;

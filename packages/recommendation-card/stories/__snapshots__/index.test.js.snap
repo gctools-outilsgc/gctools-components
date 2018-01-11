@@ -18,7 +18,8 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -77,7 +78,8 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -109,45 +111,59 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   loaded
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -161,21 +177,33 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   noloader
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -189,21 +217,43 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   cards
                 </td>
-                <td>
-                  node[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        node
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -217,7 +267,9 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
@@ -248,7 +300,8 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -307,7 +360,8 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -339,45 +393,59 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   loaded
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -391,21 +459,33 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   noloader
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -419,21 +499,43 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   cards
                 </td>
-                <td>
-                  node[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        node
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -447,7 +549,9 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
@@ -478,7 +582,8 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -539,7 +644,8 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -571,45 +677,59 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   loaded
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -623,21 +743,33 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   noloader
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -651,21 +783,43 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   cards
                 </td>
-                <td>
-                  node[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        node
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -679,7 +833,9 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
@@ -710,7 +866,8 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -771,7 +928,8 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -803,45 +961,59 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   loaded
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -855,21 +1027,33 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   noloader
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -883,21 +1067,43 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   cards
                 </td>
-                <td>
-                  node[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        node
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -911,7 +1117,9 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   
                 </td>
               </tr>
@@ -942,7 +1150,8 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1350,7 +1559,8 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1382,43 +1592,67 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1432,21 +1666,33 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1460,23 +1706,46 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1490,21 +1759,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1518,22 +1878,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1547,7 +1926,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
@@ -1578,7 +1959,8 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1986,7 +2368,8 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2018,43 +2401,67 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2068,21 +2475,33 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2096,23 +2515,46 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2126,21 +2568,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2154,22 +2687,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2183,7 +2735,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
@@ -2214,7 +2768,8 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2459,7 +3014,8 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2491,43 +3047,67 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2541,21 +3121,33 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2569,23 +3161,46 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2599,21 +3214,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2627,22 +3333,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2656,7 +3381,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
@@ -2687,7 +3414,8 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2932,7 +3660,8 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2964,43 +3693,67 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3014,21 +3767,33 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3042,23 +3807,46 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3072,21 +3860,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3100,22 +3979,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3129,7 +4027,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
@@ -3160,7 +4060,8 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -3592,7 +4493,8 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -3624,43 +4526,67 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3674,21 +4600,33 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3702,23 +4640,46 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3732,21 +4693,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3760,22 +4812,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3789,7 +4860,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
@@ -3820,7 +4893,8 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -3879,7 +4953,8 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -3911,16 +4986,11 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
+<<<<<<< HEAD
                 <th>
                   property
                 </th>
@@ -3936,20 +5006,168 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                 <th>
                   description
                 </th>
+=======
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  title
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    'Default Recommendation'
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Title of the recommendation card, can be simple text or a node.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    'unknown'
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
+                </td>
+>>>>>>> 3d5c237414697341fc19d721c4605e33d38ae5fd
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+<<<<<<< HEAD
                 <td>
                   loaded
                 </td>
                 <td>
                   bool
+=======
+                <td
+                  className="css-1ygfcef"
+                >
+                  rank
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
+>>>>>>> 3d5c237414697341fc19d721c4605e33d38ae5fd
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3963,6 +5181,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     "
                   </span>
                 </td>
+<<<<<<< HEAD
                 <td>
                   
                 </td>
@@ -3973,11 +5192,114 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                 </td>
                 <td>
                   bool
+=======
+                <td
+                  className="css-d52hbj"
+                >
+                  Overall rank of a recommendation within a set of recommendations.
                 </td>
-                <td>
-                  no
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  phrases
                 </td>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+>>>>>>> 3d5c237414697341fc19d721c4605e33d38ae5fd
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3991,6 +5313,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     "
                   </span>
                 </td>
+<<<<<<< HEAD
                 <td>
                   
                 </td>
@@ -4001,11 +5324,43 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                 </td>
                 <td>
                   node[]
+=======
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
-                <td>
-                  no
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  className
                 </td>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+>>>>>>> 3d5c237414697341fc19d721c4605e33d38ae5fd
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -4019,8 +5374,15 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     "
                   </span>
                 </td>
+<<<<<<< HEAD
                 <td>
                   
+=======
+                <td
+                  className="css-d52hbj"
+                >
+                  CSS class name to give the containing Paper element.
+>>>>>>> 3d5c237414697341fc19d721c4605e33d38ae5fd
                 </td>
               </tr>
             </tbody>
@@ -4050,7 +5412,8 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -4482,7 +5845,8 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -4514,43 +5878,67 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -4564,21 +5952,33 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -4592,23 +5992,46 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -4622,21 +6045,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -4650,22 +6164,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -4679,7 +6212,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
@@ -4710,7 +6245,8 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -5142,7 +6678,8 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -5174,43 +6711,67 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   title
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -5224,21 +6785,33 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   type
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -5252,23 +6825,46 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  A string describing what type of resource is being recommended.
-
-Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   rank
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -5282,21 +6878,112 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Overall rank of a recommendation within a set of recommendations.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -5310,22 +6997,41 @@ Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
                     "
                   </span>
                 </td>
-                <td>
-                  Array of objects of the form { text, size } representing a phrase
-cloud, where size is the relative importance of the phrase within the set
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Array of objects of the form { text, size } representing a phrase
+                  </span>
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   className
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -5339,7 +7045,9 @@ cloud, where size is the relative importance of the phrase within the set
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   CSS class name to give the containing Paper element.
                 </td>
               </tr>
