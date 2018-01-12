@@ -71,6 +71,21 @@ function RecommendationsInit($article, &$text) {
   }
 
   $script = <<<DOC
+<style>
+  .nrcRecommendationContainer {
+    overflow: hidden;
+  }
+  .nrcRecommendationContainer:hover {
+    overflow: visible;
+  }
+  .nrcRecommendationContainer ul {
+    border: 1px solid #000;
+    background-color: #eee;
+    width: 500px;
+    z-index: 1;
+    position: relative;
+  }
+</style>
 <script type="text/javascript">
   var NRC_context = {
     context: '$context',

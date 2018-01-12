@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     recBody.appendChild(recLoginContainer);
   }
   const recContainer = document.createElement('div');
+  recContainer.setAttribute('class', 'nrcRecommendationContainer');
   recBody.appendChild(recContainer);
 
   recSec.appendChild(recSecTitle);

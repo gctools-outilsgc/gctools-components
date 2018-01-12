@@ -19,7 +19,7 @@ import { KJUR } from 'jsrsasign';
 
 import EventHandler from './eventHandler';
 import DataProvider from './dataProvider';
-import RecommendationView from './index';
+import RecommendationView from './Container';
 
 const createToken = (user) => {
   const secret = 'qWxPJrZCLeHZraNTWjEKHdJJxJyho8';
@@ -59,7 +59,15 @@ ApolloRefImpl.propTypes = {
     gcconnex_username: PropTypes.string.isRequired,
     email: PropTypes.string,
   }).isRequired,
-  context: PropTypes.oneOf(['login', 'article_c5']).isRequired,
+  context: PropTypes.oneOf([
+    'login',
+    'article_c1',
+    'article_c2',
+    'article_c3',
+    'article_c4',
+    'article_c5',
+  ]).isRequired,
+
   context_obj1: PropTypes.string,
   context_obj2: PropTypes.string,
   context_obj3: PropTypes.string,

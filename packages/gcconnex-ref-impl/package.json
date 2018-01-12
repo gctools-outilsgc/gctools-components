@@ -2,6 +2,7 @@
   "name": "@gctools-components/gcconnex-ref-impl",
   "description": "Reference Implementation of GCconnex integration",
   "main": "dist/index.js",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/gctools-outilsgc/gctools-components.git"
@@ -9,7 +10,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "build-gcpedia": "webpack --config ./webpack.config.gcpedia.js",
-    "build": "webpack",
+    "build-gcconnex": "webpack",
+    "build": "babel src -d dist --copy-files",
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
