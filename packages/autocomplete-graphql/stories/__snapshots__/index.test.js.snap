@@ -1,0 +1,2637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          AutocompletePerson
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          with Full Width option
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "inline-block",
+            "muiPrepared": true,
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "cursor": "auto",
+              "display": "inline-block",
+              "fontFamily": "Roboto, sans-serif",
+              "fontSize": 16,
+              "height": 48,
+              "lineHeight": "24px",
+              "muiPrepared": true,
+              "position": "relative",
+              "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              "width": "100%",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": 12,
+                "color": "rgba(0, 0, 0, 0.3)",
+                "muiPrepared": true,
+                "opacity": 1,
+                "position": "absolute",
+                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              }
+            }
+          >
+            Type part of a name
+          </div>
+          <input
+            autoComplete="off"
+            disabled={false}
+            id="undefined-Typepartofaname-undefined-10294"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            open={false}
+            style={
+              Object {
+                "WebkitOpacity": 1,
+                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                "appearance": "textfield",
+                "backgroundColor": "rgba(0,0,0,0)",
+                "border": "none",
+                "color": "rgba(0, 0, 0, 0.87)",
+                "cursor": "inherit",
+                "font": "inherit",
+                "height": "100%",
+                "muiPrepared": true,
+                "outline": "none",
+                "padding": 0,
+                "position": "relative",
+                "width": "100%",
+              }
+            }
+            type="text"
+            value=""
+          />
+          <div>
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#e0e0e0",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "width": "100%",
+                }
+              }
+            />
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
+                  "borderColor": "#00bcd4",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "transform": "scaleX(0)",
+                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            AutoCompleteGraphQL
+            " Component
+          </h2>
+          <table
+            className="css-1ytzlk7"
+          >
+            <thead>
+              <tr>
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  fullWidth
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  If true, the field receives the property width: 100%.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  searchText
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    ''
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Text being input to auto complete.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onUpdateInput
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when the user updates the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(searchText: string, dataSource: array, params: object) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - searchText: The auto-complete's searchText value.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - dataSource: The auto-complete's dataSource array.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - params:     Additional information linked the update.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onSelectItem
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when a list item is selected, or enter
+                  </span>
+                  <span>
+                    <br />
+                     
+                    is pressed in the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(chosenRequest: string, index: number) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - chosenRequest: Either the TextField input value, if enter is pressed
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       in the TextField, or the dataSource object
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       corresponding to the list item that was selected.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - index:         The index in dataSource of the list item selected,
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       or -1 if enter is pressed in the TextField.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  items
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            value
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    []
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Array of strings or nodes used to populate the list.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots AutocompletePerson with default options 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          AutocompletePerson
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          with default options
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "inline-block",
+            "muiPrepared": true,
+            "position": "relative",
+            "width": 256,
+          }
+        }
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "cursor": "auto",
+              "display": "inline-block",
+              "fontFamily": "Roboto, sans-serif",
+              "fontSize": 16,
+              "height": 48,
+              "lineHeight": "24px",
+              "muiPrepared": true,
+              "position": "relative",
+              "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              "width": 256,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": 12,
+                "color": "rgba(0, 0, 0, 0.3)",
+                "muiPrepared": true,
+                "opacity": 1,
+                "position": "absolute",
+                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              }
+            }
+          >
+            Type part of a name
+          </div>
+          <input
+            autoComplete="off"
+            disabled={false}
+            id="undefined-Typepartofaname-undefined-37598"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            open={false}
+            style={
+              Object {
+                "WebkitOpacity": 1,
+                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                "appearance": "textfield",
+                "backgroundColor": "rgba(0,0,0,0)",
+                "border": "none",
+                "color": "rgba(0, 0, 0, 0.87)",
+                "cursor": "inherit",
+                "font": "inherit",
+                "height": "100%",
+                "muiPrepared": true,
+                "outline": "none",
+                "padding": 0,
+                "position": "relative",
+                "width": "100%",
+              }
+            }
+            type="text"
+            value=""
+          />
+          <div>
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#e0e0e0",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "width": "100%",
+                }
+              }
+            />
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
+                  "borderColor": "#00bcd4",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "transform": "scaleX(0)",
+                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            AutoCompleteGraphQL
+            " Component
+          </h2>
+          <table
+            className="css-1ytzlk7"
+          >
+            <thead>
+              <tr>
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  fullWidth
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  If true, the field receives the property width: 100%.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  searchText
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    ''
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Text being input to auto complete.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onUpdateInput
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when the user updates the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(searchText: string, dataSource: array, params: object) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - searchText: The auto-complete's searchText value.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - dataSource: The auto-complete's dataSource array.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - params:     Additional information linked the update.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onSelectItem
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when a list item is selected, or enter
+                  </span>
+                  <span>
+                    <br />
+                     
+                    is pressed in the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(chosenRequest: string, index: number) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - chosenRequest: Either the TextField input value, if enter is pressed
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       in the TextField, or the dataSource object
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       corresponding to the list item that was selected.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - index:         The index in dataSource of the list item selected,
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       or -1 if enter is pressed in the TextField.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  items
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            value
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    []
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Array of strings or nodes used to populate the list.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          AutocompletePerson
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          with searchText & items
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "inline-block",
+            "muiPrepared": true,
+            "position": "relative",
+            "width": 256,
+          }
+        }
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "cursor": "auto",
+              "display": "inline-block",
+              "fontFamily": "Roboto, sans-serif",
+              "fontSize": 16,
+              "height": 48,
+              "lineHeight": "24px",
+              "muiPrepared": true,
+              "position": "relative",
+              "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              "width": 256,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": 12,
+                "color": "rgba(0, 0, 0, 0.3)",
+                "muiPrepared": true,
+                "opacity": 0,
+                "position": "absolute",
+                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              }
+            }
+          >
+            Type part of a name
+          </div>
+          <input
+            autoComplete="off"
+            disabled={false}
+            id="undefined-Typepartofaname-undefined-61797"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            open={false}
+            style={
+              Object {
+                "WebkitOpacity": 1,
+                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                "appearance": "textfield",
+                "backgroundColor": "rgba(0,0,0,0)",
+                "border": "none",
+                "color": "rgba(0, 0, 0, 0.87)",
+                "cursor": "inherit",
+                "font": "inherit",
+                "height": "100%",
+                "muiPrepared": true,
+                "outline": "none",
+                "padding": 0,
+                "position": "relative",
+                "width": "100%",
+              }
+            }
+            type="text"
+            value="testing 123"
+          />
+          <div>
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#e0e0e0",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "width": "100%",
+                }
+              }
+            />
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
+                  "borderColor": "#00bcd4",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "transform": "scaleX(0)",
+                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            AutoCompleteGraphQL
+            " Component
+          </h2>
+          <table
+            className="css-1ytzlk7"
+          >
+            <thead>
+              <tr>
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  fullWidth
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  If true, the field receives the property width: 100%.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  searchText
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    ''
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Text being input to auto complete.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onUpdateInput
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when the user updates the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(searchText: string, dataSource: array, params: object) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - searchText: The auto-complete's searchText value.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - dataSource: The auto-complete's dataSource array.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - params:     Additional information linked the update.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onSelectItem
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when a list item is selected, or enter
+                  </span>
+                  <span>
+                    <br />
+                     
+                    is pressed in the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(chosenRequest: string, index: number) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - chosenRequest: Either the TextField input value, if enter is pressed
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       in the TextField, or the dataSource object
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       corresponding to the list item that was selected.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - index:         The index in dataSource of the list item selected,
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       or -1 if enter is pressed in the TextField.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  items
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            value
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    []
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Array of strings or nodes used to populate the list.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots AutocompletePerson with searchText 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          AutocompletePerson
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          with searchText
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "inline-block",
+            "muiPrepared": true,
+            "position": "relative",
+            "width": 256,
+          }
+        }
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "cursor": "auto",
+              "display": "inline-block",
+              "fontFamily": "Roboto, sans-serif",
+              "fontSize": 16,
+              "height": 48,
+              "lineHeight": "24px",
+              "muiPrepared": true,
+              "position": "relative",
+              "transition": "height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              "width": 256,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "bottom": 12,
+                "color": "rgba(0, 0, 0, 0.3)",
+                "muiPrepared": true,
+                "opacity": 0,
+                "position": "absolute",
+                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              }
+            }
+          >
+            Type part of a name
+          </div>
+          <input
+            autoComplete="off"
+            disabled={false}
+            id="undefined-Typepartofaname-undefined-55894"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            open={false}
+            style={
+              Object {
+                "WebkitOpacity": 1,
+                "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+                "appearance": "textfield",
+                "backgroundColor": "rgba(0,0,0,0)",
+                "border": "none",
+                "color": "rgba(0, 0, 0, 0.87)",
+                "cursor": "inherit",
+                "font": "inherit",
+                "height": "100%",
+                "muiPrepared": true,
+                "outline": "none",
+                "padding": 0,
+                "position": "relative",
+                "width": "100%",
+              }
+            }
+            type="text"
+            value="testing 123"
+          />
+          <div>
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#e0e0e0",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "width": "100%",
+                }
+              }
+            />
+            <hr
+              aria-hidden="true"
+              style={
+                Object {
+                  "borderBottomStyle": "solid",
+                  "borderBottomWidth": 2,
+                  "borderColor": "#00bcd4",
+                  "borderLeft": "none",
+                  "borderRight": "none",
+                  "borderTop": "none",
+                  "bottom": 8,
+                  "boxSizing": "content-box",
+                  "margin": 0,
+                  "muiPrepared": true,
+                  "position": "absolute",
+                  "transform": "scaleX(0)",
+                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            AutoCompleteGraphQL
+            " Component
+          </h2>
+          <table
+            className="css-1ytzlk7"
+          >
+            <thead>
+              <tr>
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  fullWidth
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  If true, the field receives the property width: 100%.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  searchText
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    ''
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Text being input to auto complete.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onUpdateInput
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when the user updates the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(searchText: string, dataSource: array, params: object) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - searchText: The auto-complete's searchText value.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - dataSource: The auto-complete's dataSource array.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - params:     Additional information linked the update.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onSelectItem
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Callback function that is fired when a list item is selected, or enter
+                  </span>
+                  <span>
+                    <br />
+                     
+                    is pressed in the TextField.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Signature:
+                  </span>
+                  <span>
+                    <br />
+                     
+                    function(chosenRequest: string, index: number) =&gt; void
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - chosenRequest: Either the TextField input value, if enter is pressed
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       in the TextField, or the dataSource object
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       corresponding to the list item that was selected.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                      - index:         The index in dataSource of the list item selected,
+                  </span>
+                  <span>
+                    <br />
+                     
+                                       or -1 if enter is pressed in the TextField.
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  items
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            value
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    []
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Array of strings or nodes used to populate the list.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
