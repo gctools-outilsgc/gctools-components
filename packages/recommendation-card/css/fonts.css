@@ -1,18 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Didact+Gothic');
-@import url('https://fonts.googleapis.com/css?family=Anton|Lato|Oswald|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Anton|Lato|Roboto+Condensed');
 
 @font-face {
-    font-family: 'ostrich';
-    src: url('../fonts/ostrich-regular-webfont.woff2') format('woff2'),
-         url('../fonts/ostrich-regular-webfont.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ostrich_black';
-    src: url('../fonts/ostrichsans-black-webfont.woff2') format('woff2'),
-         url('../fonts/ostrichsans-black-webfont.woff') format('woff');
+    font-family: 'Gotham Ultra';
+    src: url('../fonts/Gotham-Ultra.woff2') format('woff2'),
+         url('../fonts/Gotham-Ultra.woff') format('woff'),
+         url('../fonts/Gotham-Ultra.svg') format('svg'),
+         url('../fonts/Gotham-Ultra.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }

@@ -59,3 +59,88 @@
 .header-new {
   margin-top: 0;
 }
+
+.card {
+  max-width: 400px;
+}
+
+.card-padding {
+  padding: 15px;
+}
+
+.phrases-heading-border-top {
+  border: solid 1px #d4d4d4;
+  border-bottom: 0;
+  text-align: center;
+  position: relative;
+  height: 8px;
+}
+
+.phrases-heading-border-bottom {
+  border: solid 1px #d4d4d4;
+  border-top: 0;
+  position: relative;
+  height: 8px;
+}
+
+.phrases-heading-text {
+  font-family: 'Gotham Ultra', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: scale(1, 1.1);
+  font-size: .7rem;
+  background-color: white;
+  color: #333;
+  padding: 0 7px;
+  display: inline-block;
+  position: relative;
+  top: -11px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.score-circle {
+  width: 50px;
+}
+
+.CircularProgressbar {
+  width: 100%;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #0375b4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #fff;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #333;
+  font-size: 30px;
+  dominant-baseline: mathematical;
+  text-anchor: middle;
+  font-weight: 600;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #0375b4;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}

@@ -1,5 +1,5 @@
 .grid-sizer, .grid-item {
-    width: calc(100% - 15px);
+    width: calc(100% );
 }
 
 @media screen and (min-width: 850px) {
@@ -28,4 +28,33 @@
 
 .grid-item {
     margin-bottom: 15px;
+}
+
+.fieldset-container {
+    border: solid 1px #444;
+    text-align: left;
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 25px;
+}
+
+.fieldset-heading-text {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    transform: scale(1, 1.1);
+    font-size: 1rem;
+    color: #333;
+    padding: 0 7px;
+    display: inline-block;
+    position: relative;
+    top: -11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+.nrc-logo {
+    position: relative;
+    width: 150px;
+    padding: 0 7px;
 }
