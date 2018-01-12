@@ -13,9 +13,10 @@ class AutoCompleteGraphQL extends Component {
     this.props.onSelectItem(selection);
   }
   render() {
-    const { items, fullWidth } = this.props;
+    const { items, fullWidth, id } = this.props;
     return (
       <AutoComplete
+        id={id}
         hintText="Type part of a name"
         searchText={this.props.searchText}
         dataSource={items}
@@ -33,10 +34,15 @@ AutoCompleteGraphQL.defaultProps = {
   items: [],
   fullWidth: false,
   searchText: '',
+  id: undefined,
   onUpdateInput: () => {},
   onSelectItem: () => {},
 };
 AutoCompleteGraphQL.propTypes = {
+  /**
+   * Unique identifier to assign to the underlying DOM elements
+   */
+  id: PropTypes.string,
   /**
    * If true, the field receives the property width: 100%.
    */

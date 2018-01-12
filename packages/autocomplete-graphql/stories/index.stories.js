@@ -20,7 +20,7 @@ storiesOf('AutocompletePerson', module)
     })(() => (
       <div style={{ margin: '20px' }}>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <AutoCompleteGraphQL />
+          <AutoCompleteGraphQL id="test" />
         </MuiThemeProvider>
       </div>
     )),
@@ -35,7 +35,7 @@ storiesOf('AutocompletePerson', module)
     })(() => (
       <div style={{ margin: '20px' }}>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <AutoCompleteGraphQL fullWidth />
+          <AutoCompleteGraphQL fullWidth id="test" />
         </MuiThemeProvider>
       </div>
     )),
@@ -50,7 +50,7 @@ storiesOf('AutocompletePerson', module)
     })(() => (
       <div style={{ margin: '20px' }}>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <AutoCompleteGraphQL searchText="testing 123" />
+          <AutoCompleteGraphQL searchText="testing 123" id="test" />
         </MuiThemeProvider>
       </div>
     )),
@@ -66,6 +66,7 @@ storiesOf('AutocompletePerson', module)
       <div style={{ margin: '20px' }}>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <AutoCompleteGraphQL
+            id="test"
             searchText="testing 123"
             items={[{
               text: 'Item 1',

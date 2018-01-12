@@ -114,7 +114,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
           <input
             autoComplete="off"
             disabled={false}
-            id="undefined-Typepartofaname-undefined-10294"
+            id="test"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -275,6 +275,46 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  id
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Unique identifier to assign to the underlying DOM elements
+                </td>
+              </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
@@ -773,7 +813,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
           <input
             autoComplete="off"
             disabled={false}
-            id="undefined-Typepartofaname-undefined-37598"
+            id="test"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -934,6 +974,46 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  id
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Unique identifier to assign to the underlying DOM elements
+                </td>
+              </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
@@ -1432,7 +1512,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
           <input
             autoComplete="off"
             disabled={false}
-            id="undefined-Typepartofaname-undefined-61797"
+            id="test"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -1593,6 +1673,46 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  id
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Unique identifier to assign to the underlying DOM elements
+                </td>
+              </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
@@ -2091,7 +2211,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
           <input
             autoComplete="off"
             disabled={false}
-            id="undefined-Typepartofaname-undefined-55894"
+            id="test"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -2252,6 +2372,46 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  id
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Unique identifier to assign to the underlying DOM elements
+                </td>
+              </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
