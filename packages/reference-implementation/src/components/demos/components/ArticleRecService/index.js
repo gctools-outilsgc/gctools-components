@@ -38,7 +38,7 @@ const demo = () => (
         {
           label: 'react',
           language: 'javascript',
-          filename: 'recommendations.1.js',
+          filename: 'recommendations.2.js',
           require: require.context('./fixtures', false, /.*/),
           raw: require.context('!!raw-loader!./fixtures', false, /.*/),
         },

@@ -10,6 +10,8 @@
     "@gctools-components/phrase-cloud-treemap": "^1.1.0",
     "@gctools-components/react-i18n-translation-webpack": "^1.1.0",
     "@gctools-components/recommendation-card": "^1.1.0",
+    "@gctools-components/gcconnex-ref-impl": "^0.0.1",
+    "@gctools-components/autocomplete-graphql": "^0.0.1",
     "json-pretty": "~0.0.1",
     "material-ui": "^0.19.4",
     "object-assign": "^4.1.1",
