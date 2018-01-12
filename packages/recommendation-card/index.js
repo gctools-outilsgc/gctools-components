@@ -9,4 +9,5 @@
 /* eslint-disable global-require */
 export const CardContainer = require('./src/CardContainer').default;
 export const WordCloud = require('./src/WordCloud').default;
+export const WordCloudGraphQl = require('./src/WordCloudGraphQl').default;
 export default require('./src/RecommendationCard').default;
