@@ -69,14 +69,45 @@ exports[`Storyshots GcconnexRefImpl Default options 1`] = `
         }
       }
     >
-      <div>
-        <div>
-          <h1>
-            Article recommendations
-          </h1>
-          <strong>
-            No recommendations
-          </strong>
+      <div
+        className="fieldset-container"
+      >
+        <div
+          className="fieldset-heading-text"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          Article Recommendations
+        </div>
+        <h4>
+          An error has occured.
+        </h4>
+        <div
+          style={
+            Object {
+              "bottom": "-15px",
+              "display": "flex",
+              "justifyContent": "flex-end",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "#fff",
+              }
+            }
+          >
+            <img
+              alt="NRC"
+              className="nrc-logo"
+              src="stub"
+            />
+          </span>
         </div>
       </div>
     </div>
@@ -1046,14 +1077,45 @@ exports[`Storyshots GcconnexRefImpl loading=true 1`] = `
         }
       }
     >
-      <div>
-        <div>
-          <h1>
-            Article recommendations
-          </h1>
-          <p>
-            Loading
-          </p>
+      <div
+        className="fieldset-container"
+      >
+        <div
+          className="fieldset-heading-text"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          Article Recommendations
+        </div>
+        <h4>
+          An error has occured.
+        </h4>
+        <div
+          style={
+            Object {
+              "bottom": "-15px",
+              "display": "flex",
+              "justifyContent": "flex-end",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "#fff",
+              }
+            }
+          >
+            <img
+              alt="NRC"
+              className="nrc-logo"
+              src="stub"
+            />
+          </span>
         </div>
       </div>
     </div>
@@ -1540,14 +1602,45 @@ exports[`Storyshots GcconnexRefImpl with no available recommendations (recommend
         }
       }
     >
-      <div>
-        <div>
-          <h1>
-            Article recommendations
-          </h1>
-          <strong>
-            No recommendations
-          </strong>
+      <div
+        className="fieldset-container"
+      >
+        <div
+          className="fieldset-heading-text"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          Article Recommendations
+        </div>
+        <h4>
+          An error has occured.
+        </h4>
+        <div
+          style={
+            Object {
+              "bottom": "-15px",
+              "display": "flex",
+              "justifyContent": "flex-end",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "#fff",
+              }
+            }
+          >
+            <img
+              alt="NRC"
+              className="nrc-logo"
+              src="stub"
+            />
+          </span>
         </div>
       </div>
     </div>
@@ -2034,1300 +2127,45 @@ exports[`Storyshots GcconnexRefImpl with recommendations 1`] = `
         }
       }
     >
-      <div>
-        <div>
-          <h1>
-            Article recommendations
-          </h1>
-          <ul>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Terms of Reference for DFAIT's Technology Advisory Committee"
-                  target=""
-                >
-                  Terms of Reference for DFAIT's Technology Advisory Committee
-                </a>
-              </h4>
-              0.6771106719970703
-              <br />
-              corporate, portfolios, framework, pwgsc don, approaches, requirements, standards, responsibility, clients, application, levels, office, department, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/IT Community Generics/GWD Director, Corporate IM/IT Management"
-                  target=""
-                >
-                  IT Community Generics/GWD Director, Corporate IM/IT Management
-                </a>
-              </h4>
-              0.4814264476299286
-              <br />
-              corporate, portfolios, framework, quality, key, approaches, requirements, administration, standards, responsibility, clients, application, levels, office, department, year, agency, policies, government, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/FOBS Ch 5"
-                  target=""
-                >
-                  FOBS Ch 5
-                </a>
-              </h4>
-              0.5057621598243713
-              <br />
-              fits, housing, elements, states, quality, pwgsc don, space, requirements, standards, responsibility, clients, application, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Change in the Era of Globalization: Implications for Education and Training in Civil and Military Systems"
-                  target=""
-                >
-                  Change in the Era of Globalization: Implications for Education and Training in Civil and Military Systems
-                </a>
-              </h4>
-              0.5377180576324463
-              <br />
-              corporate, elements, states, messages, approaches, requirements, responsibility, workplace, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/What is a Learning Organization"
-                  target=""
-                >
-                  What is a Learning Organization
-                </a>
-              </h4>
-              0.5296993255615234
-              <br />
-              corporate, elements, library, states, framework, quality, key, messages, space, approaches, administration, responsibility, workplace, application, levels, office, sharing, department, year, policies, government, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Organizational Structure - Implications for the design of work, and Learning Organization"
-                  target=""
-                >
-                  Organizational Structure - Implications for the design of work, and Learning Organization
-                </a>
-              </h4>
-              0.6047376394271851
-              <br />
-              corporate, fits, housing, elements, library, states, framework, quality, key, space, approaches, requirements, standards, responsibility, workplace, levels, sharing, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Networked Societies and Foreign Policy Paper"
-                  target=""
-                >
-                  Networked Societies and Foreign Policy Paper
-                </a>
-              </h4>
-              0.4850265383720398
-              <br />
-              corporate, states, space, requirements, responsibility, levels, office, department, agency, policies, government, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Agriculture and Agri-Food Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Agriculture and Agri-Food Canada
-                </a>
-              </h4>
-              0.6282740235328674
-              <br />
-              corporate, fits, elements, framework, quality, approaches, requirements, standards, responsibility, clients, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Canada Border Services Agency"
-                  target=""
-                >
-                  Web of Rules Inventory/Canada Border Services Agency
-                </a>
-              </h4>
-              0.5708804130554199
-              <br />
-              corporate, framework, pwgsc don, approaches, requirements, administration, standards, responsibility, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Canadian Heritage"
-                  target=""
-                >
-                  Web of Rules Inventory/Canadian Heritage
-                </a>
-              </h4>
-              0.5562444925308228
-              <br />
-              corporate, housing, states, framework, approaches, clients, application, levels, office, department, year, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Canadian International Development Agency"
-                  target=""
-                >
-                  Web of Rules Inventory/Canadian International Development Agency
-                </a>
-              </h4>
-              0.599062442779541
-              <br />
-              corporate, framework, quality, approaches, requirements, administration, responsibility, application, levels, office, year, agency, policies, government, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Canadian Space Agency"
-                  target=""
-                >
-                  Web of Rules Inventory/Canadian Space Agency
-                </a>
-              </h4>
-              0.6168149709701538
-              <br />
-              library, space, approaches, requirements, administration, responsibility, clients, application, office, department, year, agency, policies, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Citizenship and Immigration Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Citizenship and Immigration Canada
-                </a>
-              </h4>
-              0.5564041137695312
-              <br />
-              corporate, approaches, requirements, standards, responsibility, clients, application, office, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Department of Fisheries and Oceans Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Department of Fisheries and Oceans Canada
-                </a>
-              </h4>
-              1
-              <br />
-              corporate, housing, elements, framework, quality, pwgsc don, key, space, approaches, requirements, administration, standards, responsibility, clients, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Department of Foreign Affairs and International Trade"
-                  target=""
-                >
-                  Web of Rules Inventory/Department of Foreign Affairs and International Trade
-                </a>
-              </h4>
-              0.6382312774658203
-              <br />
-              corporate, framework, approaches, requirements, standards, responsibility, clients, application, levels, office, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Justice Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Justice Canada
-                </a>
-              </h4>
-              0.5177323222160339
-              <br />
-              corporate, requirements, responsibility, workplace, levels, office, department, year, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Library and Archives Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Library and Archives Canada
-                </a>
-              </h4>
-              0.47909384965896606
-              <br />
-              library, requirements, responsibility, application, levels, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Privy Council Office"
-                  target=""
-                >
-                  Web of Rules Inventory/Privy Council Office
-                </a>
-              </h4>
-              0.5201590657234192
-              <br />
-              corporate, requirements, administration, standards, responsibility, levels, office, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Public Health Agency of Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Public Health Agency of Canada
-                </a>
-              </h4>
-              0.5600271821022034
-              <br />
-              elements, quality, pwgsc don, approaches, key elements, administration, standards, application, levels, office, sharing, agency, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Public Service Commission of Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Public Service Commission of Canada
-                </a>
-              </h4>
-              0.717017650604248
-              <br />
-              corporate, elements, framework, quality, approaches, requirements, standards, responsibility, application, levels, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Web of Rules Inventory/Statistics Canada"
-                  target=""
-                >
-                  Web of Rules Inventory/Statistics Canada
-                </a>
-              </h4>
-              0.9984004497528076
-              <br />
-              corporate, elements, library, framework, quality, pwgsc don, key, approaches, requirements, administration, standards, responsibility, clients, workplace, application, levels, office, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/NORTHERN LAND USE INFORMATION SERIES MAPS"
-                  target=""
-                >
-                  NORTHERN LAND USE INFORMATION SERIES MAPS
-                </a>
-              </h4>
-              0.6389702558517456
-              <br />
-              elements, library, framework, quality, key, approaches, key elements, responsibility, levels, office, department, year, agency, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/International and Global impacts; Final"
-                  target=""
-                >
-                  International and Global impacts; Final
-                </a>
-              </h4>
-              0.7171635031700134
-              <br />
-              elements, portfolios, framework, quality, approaches, requirements, key elements, administration, standards, responsibility, levels, sharing, department, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/DCCP - Discussion Forum for Partners - July 10, 2013"
-                  target=""
-                >
-                  DCCP - Discussion Forum for Partners - July 10, 2013
-                </a>
-              </h4>
-              0.7581897974014282
-              <br />
-              fits, portfolios, states, framework, space, approaches, requirements, standards, responsibility, clients, application, levels, sharing, department, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Compensation/Glossary"
-                  target=""
-                >
-                  Compensation/Glossary
-                </a>
-              </h4>
-              0.6351497769355774
-              <br />
-              corporate, housing, quality, pwgsc don, key, administration, standards, clients, application, office, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Harare Mission Report"
-                  target=""
-                >
-                  Harare Mission Report
-                </a>
-              </h4>
-              0.6716979146003723
-              <br />
-              quantity, corporate, fits, housing, elements, library, states, framework, quality, messages, space, approaches, requirements, administration, standards, responsibility, clients, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/INFC E"
-                  target=""
-                >
-                  Blueprint 2020/INFC E
-                </a>
-              </h4>
-              0.5259588360786438
-              <br />
-              corporate, fits, housing, portfolios, states, key, approaches, administration, standards, responsibility, clients, workplace, application, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/IOGC"
-                  target=""
-                >
-                  Blueprint 2020/IOGC
-                </a>
-              </h4>
-              0.5050439834594727
-              <br />
-              fits, elements, states, space, approaches, requirements, administration, standards, responsibility, clients, workplace, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/DFO"
-                  target=""
-                >
-                  Blueprint 2020/DFO
-                </a>
-              </h4>
-              0.5055860877037048
-              <br />
-              quantity, fits, framework, quality, key, space, approaches, administration, responsibility, clients, workplace, application, levels, office, sharing, department, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/WD E"
-                  target=""
-                >
-                  Blueprint 2020/WD E
-                </a>
-              </h4>
-              0.5316855311393738
-              <br />
-              corporate, states, quality, key, messages, space, approaches, requirements, administration, responsibility, clients, workplace, levels, office, sharing, department, year, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/PCO E"
-                  target=""
-                >
-                  Blueprint 2020/PCO E
-                </a>
-              </h4>
-              0.5535109639167786
-              <br />
-              corporate, elements, library, key, messages, space, approaches, key elements, administration, standards, responsibility, workplace, application, levels, office, sharing, department, year, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/LAC E"
-                  target=""
-                >
-                  Blueprint 2020/LAC E
-                </a>
-              </h4>
-              0.48061901330947876
-              <br />
-              elements, library, states, framework, key, space, approaches, standards, responsibility, clients, workplace, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/PCA E"
-                  target=""
-                >
-                  Blueprint 2020/PCA E
-                </a>
-              </h4>
-              0.5028020143508911
-              <br />
-              corporate, framework, quality, key, messages, approaches, requirements, standards, responsibility, workplace, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/PSC E"
-                  target=""
-                >
-                  Blueprint 2020/PSC E
-                </a>
-              </h4>
-              0.48127758502960205
-              <br />
-              corporate, fits, housing, elements, messages, approaches, standards, responsibility, clients, workplace, levels, office, sharing, department, year, agency, policies, government, government wide, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Public Service Commission Blueprint 2020 Interim Report"
-                  target=""
-                >
-                  Public Service Commission Blueprint 2020 Interim Report
-                </a>
-              </h4>
-              0.8386492133140564
-              <br />
-              corporate, fits, housing, elements, messages, approaches, standards, responsibility, clients, workplace, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/AAFC E"
-                  target=""
-                >
-                  Blueprint 2020/AAFC E
-                </a>
-              </h4>
-              0.5281005501747131
-              <br />
-              quantity, framework, quality, pwgsc don, messages, space, approaches, administration, responsibility, clients, workplace, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/CanNor E"
-                  target=""
-                >
-                  Blueprint 2020/CanNor E
-                </a>
-              </h4>
-              0.4791668653488159
-              <br />
-              elements, key, messages, requirements, key elements, responsibility, clients, workplace, application, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/National Research Council of Canada Blueprint 2020 Interim Progress Report"
-                  target=""
-                >
-                  National Research Council of Canada Blueprint 2020 Interim Progress Report
-                </a>
-              </h4>
-              0.5174342393875122
-              <br />
-              portfolios, framework, quality, approaches, standards, responsibility, clients, workplace, levels, year, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/VRAB Blueprint 2020 Interim Report"
-                  target=""
-                >
-                  VRAB Blueprint 2020 Interim Report
-                </a>
-              </h4>
-              0.755774736404419
-              <br />
-              portfolios, quality, key, messages, approaches, administration, responsibility, clients, workplace, application, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/PSC Blueprint 2020 Interim Report"
-                  target=""
-                >
-                  PSC Blueprint 2020 Interim Report
-                </a>
-              </h4>
-              0.8376825451850891
-              <br />
-              corporate, fits, housing, elements, messages, approaches, standards, responsibility, clients, workplace, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/FIN E"
-                  target=""
-                >
-                  Blueprint 2020/FIN E
-                </a>
-              </h4>
-              0.48418864607810974
-              <br />
-              corporate, framework, quality, key, messages, approaches, requirements, standards, responsibility, workplace, application, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/San José Mission Report"
-                  target=""
-                >
-                  San José Mission Report
-                </a>
-              </h4>
-              0.5273223519325256
-              <br />
-              quantity, housing, elements, library, states, quality, key, space, requirements, standards, responsibility, clients, application, levels, office, sharing, department, year, agency, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Getting Your Views  Elections Canada Interim Report"
-                  target=""
-                >
-                  Getting Your Views  Elections Canada Interim Report
-                </a>
-              </h4>
-              0.7564951181411743
-              <br />
-              fits, housing, library, framework, quality, requirements, standards, clients, application, levels, office, sharing, department, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/StatCan E"
-                  target=""
-                >
-                  Blueprint 2020/StatCan E
-                </a>
-              </h4>
-              0.48058488965034485
-              <br />
-              quality, key, approaches, requirements, administration, standards, responsibility, workplace, application, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Ulaanbaatar Mission Report"
-                  target=""
-                >
-                  Ulaanbaatar Mission Report
-                </a>
-              </h4>
-              0.7167820334434509
-              <br />
-              quantity, housing, library, states, quality, space, administration, responsibility, clients, levels, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Dallas Mission Report"
-                  target=""
-                >
-                  Dallas Mission Report
-                </a>
-              </h4>
-              0.5042615532875061
-              <br />
-              corporate, housing, library, states, quality, space, requirements, administration, standards, responsibility, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Algiers Mission Report"
-                  target=""
-                >
-                  Algiers Mission Report
-                </a>
-              </h4>
-              0.5087581276893616
-              <br />
-              quantity, housing, elements, library, states, framework, quality, space, requirements, administration, responsibility, clients, application, levels, office, sharing, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/ESDC Blueprint 2020/DMday"
-                  target=""
-                >
-                  ESDC Blueprint 2020/DMday
-                </a>
-              </h4>
-              0.7568895220756531
-              <br />
-              elements, portfolios, quality, key, space, approaches, standards, responsibility, clients, workplace, application, levels, office, sharing, department, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Public Works and Government Services Canada's Blueprint 2020 Progress Report - February 2014 (text version)"
-                  target=""
-                >
-                  Public Works and Government Services Canada's Blueprint 2020 Progress Report - February 2014 (text version)
-                </a>
-              </h4>
-              0.5141680836677551
-              <br />
-              elements, quality, pwgsc don, messages, space, approaches, key elements, administration, responsibility, clients, workplace, application, levels, sharing, department, year, agency, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/DMCPI: NSERC examples of using research for policy"
-                  target=""
-                >
-                  DMCPI: NSERC examples of using research for policy
-                </a>
-              </h4>
-              0.5989404320716858
-              <br />
-              states, quality, key, approaches, standards, responsibility, workplace, levels, sharing, department, year, agency, policies, government, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/L'évaluation de l'état actuel des Appareils Technologiques au Milieu de Travail"
-                  target=""
-                >
-                  L'évaluation de l'état actuel des Appareils Technologiques au Milieu de Travail
-                </a>
-              </h4>
-              0.5231917500495911
-              <br />
-              pertinentes, répondre vos, au milieu, ajouter votre, fournir vos, initiative, politiques, aide, des ministères, questions, la direction, group, leur travail
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Dar es Salaam Mission Report"
-                  target=""
-                >
-                  Dar es Salaam Mission Report
-                </a>
-              </h4>
-              0.6875519752502441
-              <br />
-              corporate, fits, housing, library, states, quality, space, approaches, requirements, administration, standards, responsibility, clients, application, levels, office, sharing, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Measuring campaigns and promotions/Measuring Campaigns WG Approach/Recommendations and process improvement"
-                  target=""
-                >
-                  Measuring campaigns and promotions/Measuring Campaigns WG Approach/Recommendations and process improvement
-                </a>
-              </h4>
-              0.4788234829902649
-              <br />
-              quantity, framework, key, messages, approaches, requirements, clients, sharing, department, year, agency, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Project Delivery Office (PDO) / Bureau d'exécution des projects (BEP)"
-                  target=""
-                >
-                  Project Delivery Office (PDO) / Bureau d'exécution des projects (BEP)
-                </a>
-              </h4>
-              0.5182895064353943
-              <br />
-              states, approaches, standards, application, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Disaster risk reduction and gender equality"
-                  target=""
-                >
-                  Disaster risk reduction and gender equality
-                </a>
-              </h4>
-              0.7181975841522217
-              <br />
-              elements, states, framework, key, messages, approaches, requirements, standards, responsibility, application, levels, office, sharing, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/IT Security Awareness for ISS Employees"
-                  target=""
-                >
-                  IT Security Awareness for ISS Employees
-                </a>
-              </h4>
-              0.6338669061660767
-              <br />
-              states, pwgsc don, key, messages, space, requirements, administration, standards, responsibility, clients, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Second Quarter"
-                  target=""
-                >
-                  Second Quarter
-                </a>
-              </h4>
-              0.516142725944519
-              <br />
-              corporate, housing, library, quality, requirements, application, office, sharing, department, year, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Ouagadougou Mission Report"
-                  target=""
-                >
-                  Ouagadougou Mission Report
-                </a>
-              </h4>
-              0.8761502504348755
-              <br />
-              fits, housing, library, states, quality, key, space, requirements, administration, standards, clients, workplace, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Federal Geospatial Platform/Policies and Standards/Validate"
-                  target=""
-                >
-                  Federal Geospatial Platform/Policies and Standards/Validate
-                </a>
-              </h4>
-              0.572421669960022
-              <br />
-              quantity, fits, elements, framework, quality, space, approaches, requirements, administration, standards, application, levels, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Directive on Workforce Planning - CRA"
-                  target=""
-                >
-                  Directive on Workforce Planning - CRA
-                </a>
-              </h4>
-              0.7565624117851257
-              <br />
-              corporate, elements, framework, key, approaches, requirements, standards, responsibility, clients, workplace, application, levels, office, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Certification program test"
-                  target=""
-                >
-                  Certification program test
-                </a>
-              </h4>
-              0.5246889591217041
-              <br />
-              elements, requirements, key elements, administration, standards, responsibility, clients, levels, office, year, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Emergency Geomatics Service (EGS)"
-                  target=""
-                >
-                  Emergency Geomatics Service (EGS)
-                </a>
-              </h4>
-              0.6791933178901672
-              <br />
-              elements, framework, space, requirements, key elements, standards, responsibility, clients, application, levels, office, department, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Reducing Internal Red Tape Initiative/Events/Forum/Projects"
-                  target=""
-                >
-                  Reducing Internal Red Tape Initiative/Events/Forum/Projects
-                </a>
-              </h4>
-              0.6755184531211853
-              <br />
-              framework, pwgsc don, approaches, requirements, standards, responsibility, clients, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/Champions/December 2015 update/Parole Board of Canada"
-                  target=""
-                >
-                  Blueprint 2020/Champions/December 2015 update/Parole Board of Canada
-                </a>
-              </h4>
-              0.6261521577835083
-              <br />
-              elements, portfolios, framework, quality, key, messages, space, approaches, requirements, key elements, standards, responsibility, clients, workplace, application, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Open Government Draft Communications Strategy"
-                  target=""
-                >
-                  Open Government Draft Communications Strategy
-                </a>
-              </h4>
-              0.7182372212409973
-              <br />
-              elements, quality, key, messages, approaches, administration, standards, workplace, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Reducing Internal Red Tape Initiative/Staffing/Nov 3"
-                  target=""
-                >
-                  Reducing Internal Red Tape Initiative/Staffing/Nov 3
-                </a>
-              </h4>
-              0.5568938851356506
-              <br />
-              states, framework, pwgsc don, key, approaches, requirements, standards, responsibility, clients, levels, department, year, policies, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Reducing Internal Red Tape Initiative/Staffing/Nov 17"
-                  target=""
-                >
-                  Reducing Internal Red Tape Initiative/Staffing/Nov 17
-                </a>
-              </h4>
-              0.5964069366455078
-              <br />
-              housing, elements, pwgsc don, approaches, requirements, standards, responsibility, clients, application, levels, sharing, department, agency, government, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/GCMI/PCH Application Development/GCLINKS Documentation/Reference"
-                  target=""
-                >
-                  GCMI/PCH Application Development/GCLINKS Documentation/Reference
-                </a>
-              </h4>
-              0.6422828435897827
-              <br />
-              elements, states, key, messages, space, approaches, requirements, administration, responsibility, clients, application, levels, office, sharing, year, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Reducing Internal Red Tape Initiative/Staffing/Dec 17"
-                  target=""
-                >
-                  Reducing Internal Red Tape Initiative/Staffing/Dec 17
-                </a>
-              </h4>
-              0.5584143400192261
-              <br />
-              framework, quality, messages, approaches, requirements, standards, clients, application, levels, sharing, department, agency, government, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/Champions/December 2015 report/Public Safety/Transcript"
-                  target=""
-                >
-                  Blueprint 2020/Champions/December 2015 report/Public Safety/Transcript
-                </a>
-              </h4>
-              0.48017823696136475
-              <br />
-              states, space, administration, workplace, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/HC-PHAC Quality Assurance and Release Management"
-                  target=""
-                >
-                  HC-PHAC Quality Assurance and Release Management
-                </a>
-              </h4>
-              0.5211898684501648
-              <br />
-              portfolios, quality, space, requirements, responsibility, clients, application, sharing, department, agency, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Global Hub Bold Ideas Fund"
-                  target=""
-                >
-                  Global Hub Bold Ideas Fund
-                </a>
-              </h4>
-              0.5574420690536499
-              <br />
-              space, approaches, responsibility, clients, application, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/AmaTest"
-                  target=""
-                >
-                  AmaTest
-                </a>
-              </h4>
-              0.5985817313194275
-              <br />
-              corporate, elements, library, quality, space, requirements, responsibility, clients, workplace, application, levels, department, policies, government, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/IMSD Portal Employees Corner"
-                  target=""
-                >
-                  IMSD Portal Employees Corner
-                </a>
-              </h4>
-              0.7557412385940552
-              <br />
-              corporate, library, states, framework, messages, space, approaches, administration, responsibility, clients, workplace, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Nanotechology Research Workshop October 5th, 2009"
-                  target=""
-                >
-                  Nanotechology Research Workshop October 5th, 2009
-                </a>
-              </h4>
-              0.5994689464569092
-              <br />
-              quantity, elements, states, framework, approaches, requirements, standards, responsibility, levels, sharing, department, year, policies, government, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Istanbul Mission Report"
-                  target=""
-                >
-                  Istanbul Mission Report
-                </a>
-              </h4>
-              0.7568429708480835
-              <br />
-              fits, housing, library, quality, space, requirements, administration, standards, responsibility, application, levels, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Workforce Competencies"
-                  target=""
-                >
-                  Workforce Competencies
-                </a>
-              </h4>
-              0.4796997606754303
-              <br />
-              fits, framework, key, approaches, requirements, workplace, application, levels, agency, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Central Innovation Hub/Advisory Committee Biographies"
-                  target=""
-                >
-                  Central Innovation Hub/Advisory Committee Biographies
-                </a>
-              </h4>
-              0.5582231283187866
-              <br />
-              states, framework, space, approaches, clients, application, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/CSC:PeopleSoft Codes"
-                  target=""
-                >
-                  CSC:PeopleSoft Codes
-                </a>
-              </h4>
-              0.7557921409606934
-              <br />
-              corporate, fits, elements, states, requirements, administration, standards, responsibility, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Blueprint 2020/Champions/December 2016 update/Immigration and Refugee Board of Canada"
-                  target=""
-                >
-                  Blueprint 2020/Champions/December 2016 update/Immigration and Refugee Board of Canada
-                </a>
-              </h4>
-              0.48339226841926575
-              <br />
-              corporate, elements, quality, messages, space, approaches, requirements, standards, responsibility, clients, workplace, application, levels, office, sharing, department, year, policies, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Global Affairs Canada Culture Wall"
-                  target=""
-                >
-                  Global Affairs Canada Culture Wall
-                </a>
-              </h4>
-              0.5194713473320007
-              <br />
-              elements, messages, space, approaches, key elements, responsibility, workplace, sharing, department, year, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Global Affairs Canada Collaborative Workspace"
-                  target=""
-                >
-                  Global Affairs Canada Collaborative Workspace
-                </a>
-              </h4>
-              0.4786624014377594
-              <br />
-              space, approaches, responsibility, clients, application, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/KZ testing 2"
-                  target=""
-                >
-                  KZ testing 2
-                </a>
-              </h4>
-              0.5955061912536621
-              <br />
-              housing, library, pspc, requirements, administration, standards, responsibility, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/ABW FAQ EN"
-                  target=""
-                >
-                  ABW FAQ EN
-                </a>
-              </h4>
-              0.83830326795578
-              <br />
-              fits, portfolios, pspc, framework, quality, pwgsc don, space, approaches, requirements, standards, responsibility, clients, workplace, office, sharing, department, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Programme"
-                  target=""
-                >
-                  Programme
-                </a>
-              </h4>
-              0.558273434638977
-              <br />
-              library, pspc, space, responsibility, workplace, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Indigenous Reconciliation at ESDC/Skills and Training"
-                  target=""
-                >
-                  Indigenous Reconciliation at ESDC/Skills and Training
-                </a>
-              </h4>
-              0.5976225733757019
-              <br />
-              housing, portfolios, framework, quality, space, approaches, administration, responsibility, clients, levels, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/PHAC Science Glossary"
-                  target=""
-                >
-                  PHAC Science Glossary
-                </a>
-              </h4>
-              0.6770210266113281
-              <br />
-              housing, states, key, approaches, requirements, standards, responsibility, application, levels, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Program review: Experience eliminating the deficit 1994-1999 - A Canadian case study"
-                  target=""
-                >
-                  Program review: Experience eliminating the deficit 1994-1999 - A Canadian case study
-                </a>
-              </h4>
-              0.5990732908248901
-              <br />
-              quantity, corporate, housing, portfolios, states, framework, quality, messages, approaches, requirements, administration, standards, responsibility, clients, levels, office, sharing, department, year, agency, policies, government, government wide, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/PWGSC Leadership Minutes"
-                  target=""
-                >
-                  PWGSC Leadership Minutes
-                </a>
-              </h4>
-              0.5756750106811523
-              <br />
-              corporate, elements, states, framework, quality, pwgsc don, key, messages, approaches, requirements, key elements, responsibility, clients, workplace, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/HRSDC Social Media Tiger Team/Business Potential/7Apr2010"
-                  target=""
-                >
-                  HRSDC Social Media Tiger Team/Business Potential/7Apr2010
-                </a>
-              </h4>
-              0.5512160658836365
-              <br />
-              corporate, fits, housing, portfolios, states, framework, quality, messages, space, approaches, requirements, clients, workplace, application, levels, office, sharing, department, year, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/NCR YPN Action Plan"
-                  target=""
-                >
-                  NCR YPN Action Plan
-                </a>
-              </h4>
-              0.5600533485412598
-              <br />
-              framework, space, approaches, requirements, administration, responsibility, levels, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/StrategYX/Engagement paper"
-                  target=""
-                >
-                  StrategYX/Engagement paper
-                </a>
-              </h4>
-              0.87785804271698
-              <br />
-              housing, elements, quality, key, messages, space, approaches, standards, responsibility, clients, workplace, application, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Weekly North Asia Monitor Archive - August 26 to September 2, 2010"
-                  target=""
-                >
-                  Weekly North Asia Monitor Archive - August 26 to September 2, 2010
-                </a>
-              </h4>
-              0.5961824059486389
-              <br />
-              corporate, states, approaches, administration, standards, responsibility, levels, office, sharing, department, year, agency, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Electronic Forms CIOC Working Group/CIDA reference model"
-                  target=""
-                >
-                  Electronic Forms CIOC Working Group/CIDA reference model
-                </a>
-              </h4>
-              0.5039361119270325
-              <br />
-              housing, elements, states, quality, pwgsc don, messages, approaches, requirements, administration, standards, responsibility, clients, application, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Electronic Forms CIOC Working Group/CIDA business case"
-                  target=""
-                >
-                  Electronic Forms CIOC Working Group/CIDA business case
-                </a>
-              </h4>
-              0.5035470128059387
-              <br />
-              corporate, fits, elements, portfolios, states, quality, key, approaches, requirements, administration, standards, clients, application, office, sharing, department, year, agency, government, government wide, services
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Health Canada's Draft Guidelines on Managing Cabinet Confidences"
-                  target=""
-                >
-                  Health Canada's Draft Guidelines on Managing Cabinet Confidences
-                </a>
-              </h4>
-              0.5979701280593872
-              <br />
-              library, key, requirements, administration, standards, responsibility, levels, office, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/NRCan Knowledge Share Fair/Resources/Open Space Conference"
-                  target=""
-                >
-                  NRCan Knowledge Share Fair/Resources/Open Space Conference
-                </a>
-              </h4>
-              0.6587358117103577
-              <br />
-              corporate, library, states, key, messages, space, approaches, requirements, responsibility, clients, workplace, levels, sharing, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Annotated List of Legislation Related to People Management and the Associated Responsibilities of the Treasury Board"
-                  target=""
-                >
-                  Annotated List of Legislation Related to People Management and the Associated Responsibilities of the Treasury Board
-                </a>
-              </h4>
-              0.48040905594825745
-              <br />
-              corporate, states, framework, key, approaches, requirements, administration, standards, responsibility, workplace, application, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-            <li>
-              <h4>
-                <a
-                  href="http://gcpedia.gctools.nrc.ca/index.php/Community of Practice - Portfolio Coordination: Creating a Model to Suit Your Portfolio, Prepared for the Interdepartmental Portfolio Coordination Forum by Portfolio Affairs, Strategic Policy Branch, Health Canada, December 2010"
-                  target=""
-                >
-                  Community of Practice - Portfolio Coordination: Creating a Model to Suit Your Portfolio, Prepared for the Interdepartmental Portfolio Coordination Forum by Portfolio Affairs, Strategic Policy Branch, Health Canada, December 2010
-                </a>
-              </h4>
-              0.5545589327812195
-              <br />
-              corporate, fits, housing, portfolios, states, quality, pwgsc don, key, approaches, requirements, administration, responsibility, levels, office, sharing, department, year, agency, policies, government, services, canada
-            </li>
-          </ul>
+      <div
+        className="fieldset-container"
+      >
+        <div
+          className="fieldset-heading-text"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          Article Recommendations
+        </div>
+        <h4>
+          An error has occured.
+        </h4>
+        <div
+          style={
+            Object {
+              "bottom": "-15px",
+              "display": "flex",
+              "justifyContent": "flex-end",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "#fff",
+              }
+            }
+          >
+            <img
+              alt="NRC"
+              className="nrc-logo"
+              src="stub"
+            />
+          </span>
         </div>
       </div>
     </div>
@@ -3814,14 +2652,45 @@ exports[`Storyshots GcconnexRefImpl with recommendations not ready (recommendati
         }
       }
     >
-      <div>
-        <div>
-          <h1>
-            Article recommendations
-          </h1>
-          <strong>
-            Not yet available...
-          </strong>
+      <div
+        className="fieldset-container"
+      >
+        <div
+          className="fieldset-heading-text"
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          Article Recommendations
+        </div>
+        <h4>
+          An error has occured.
+        </h4>
+        <div
+          style={
+            Object {
+              "bottom": "-15px",
+              "display": "flex",
+              "justifyContent": "flex-end",
+              "position": "relative",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "backgroundColor": "#fff",
+              }
+            }
+          >
+            <img
+              alt="NRC"
+              className="nrc-logo"
+              src="stub"
+            />
+          </span>
         </div>
       </div>
     </div>

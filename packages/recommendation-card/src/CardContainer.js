@@ -34,10 +34,11 @@ class ContainerLarge extends Component {
   }
 
   render() {
+    let content = null;
     if (!this.props.loaded &&
         !this.state.hasError &&
         (this.props.noloader === false || this.props.noloader === undefined)) {
-      return (
+      content = (
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <div style={{ width: '100%', textAlign: 'center' }}>
             <RefreshIndicator
@@ -54,19 +55,12 @@ class ContainerLarge extends Component {
           </div>
         </MuiThemeProvider>
       );
-    }
-    if (this.state.hasError || !this.props.cards
-      || this.props.cards.length === 0) {
-      return <div />;
-    }
-    return (
-      <div className="fieldset-container">
-        <div
-          className="fieldset-heading-text"
-          style={{ backgroundColor: this.props.bgcolour }}
-        >
-          Article Recommendations
-        </div>
+    } else if (this.state.hasError) {
+      content = <h4>An error has occured.</h4>;
+    } else if (this.props.cards.length === 0) {
+      content = <h4>No recommendations.</h4>;
+    } else {
+      content = (
         <Masonry
           className="recommendations-container"
           options={{
@@ -80,6 +74,17 @@ class ContainerLarge extends Component {
           <div className="grid-sizer" key="masonryKey" />
           {this.props.cards}
         </Masonry>
+      );
+    }
+    return (
+      <div className="fieldset-container">
+        <div
+          className="fieldset-heading-text"
+          style={{ backgroundColor: this.props.bgcolour }}
+        >
+          Article Recommendations
+        </div>
+        {content}
         <div
           style={{
             display: 'flex',
@@ -116,7 +121,7 @@ ContainerLarge.propTypes = {
 
 ContainerLarge.defaultProps = {
   loaded: true,
-  noloader: true,
+  noloader: false,
   cards: [],
   bgcolour: '#fff',
 };

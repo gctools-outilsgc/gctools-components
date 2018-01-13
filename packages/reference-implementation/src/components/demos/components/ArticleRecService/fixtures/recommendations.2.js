@@ -266,7 +266,7 @@ class ArticleRecommendations extends React.Component {
         break;
       }
     }
-    this.setState({ stepIndex });
+    this.setState({ stepIndex, showRecommendations: false });
   }
 
   _next(e, context) {
@@ -515,7 +515,7 @@ class ArticleRecommendations extends React.Component {
                 }}
               >
                 <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                <span className="error-text">
                   An error has occured
                 </span>
               </div>

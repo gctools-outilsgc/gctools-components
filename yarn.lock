@@ -8039,6 +8039,12 @@ react-apollo@^2.0.1:
     lodash.pick "^4.4.0"
     prop-types "^15.5.8"
 
+react-circular-progressbar@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-circular-progressbar/-/react-circular-progressbar-0.6.0.tgz#ce0e6e2c1b1ed5a9e447db9b4efb99d81bf36bcf"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-d3-cloud@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/react-d3-cloud/-/react-d3-cloud-0.5.0.tgz#0060f963ff4f0051a9225d1a6b222919e6b6f2d6"

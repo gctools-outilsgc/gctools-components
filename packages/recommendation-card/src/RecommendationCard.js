@@ -97,11 +97,12 @@ class RecommendationCard extends Component {
 
     if (typeof this.props.rank === 'number' && showExtra) {
       const percentage = parseFloat(this.props.rank * 100).toFixed(0);
+      const rating = parseFloat(percentage / 10).toFixed(0);
       score = (
         <div className="score-circle">
           <CircularProgressbar
             percentage={percentage}
-            textForPercentage={() => `${percentage}%`}
+            textForPercentage={() => `${rating}`}
             strokeWidth={10}
             initialAnimation
           />
