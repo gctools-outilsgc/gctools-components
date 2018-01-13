@@ -14,6 +14,8 @@ import PropTypes from 'prop-types';
 
 import '../css/card-container-style.css';
 
+const nrcLogo = require('../img/nrclogo.png');
+
 const Masonry = require('react-masonry-component');
 
 /**
@@ -58,19 +60,43 @@ class ContainerLarge extends Component {
       return <div />;
     }
     return (
-      <Masonry
-        className="recommendations-container"
-        options={{
-          gutter: 15,
-          transitionDuration: 0,
-          percentPosition: true,
-          itemSelector: '.grid-item',
-          columnWidth: '.grid-sizer',
-        }}
-      >
-        <div className="grid-sizer" />
-        {this.props.cards}
-      </Masonry>
+      <div className="fieldset-container">
+        <div
+          className="fieldset-heading-text"
+          style={{ backgroundColor: this.props.bgcolour }}
+        >
+          Article Recommendations
+        </div>
+        <Masonry
+          className="recommendations-container"
+          options={{
+            gutter: 15,
+            transitionDuration: 0,
+            percentPosition: true,
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+          }}
+        >
+          <div className="grid-sizer" key="masonryKey" />
+          {this.props.cards}
+        </Masonry>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            position: 'relative',
+            bottom: '-15px',
+          }}
+        >
+          <span
+            style={{
+              backgroundColor: this.props.bgcolour,
+            }}
+          >
+            <img className="nrc-logo" src={nrcLogo} alt="NRC" />
+          </span>
+        </div>
+      </div>
     );
   }
 }
@@ -85,12 +111,14 @@ ContainerLarge.propTypes = {
   loaded: PropTypes.bool,
   noloader: PropTypes.bool,
   cards: PropTypes.arrayOf(PropTypes.node),
+  bgcolour: PropTypes.string,
 };
 
 ContainerLarge.defaultProps = {
   loaded: true,
   noloader: true,
   cards: [],
+  bgcolour: '#fff',
 };
 
 export default ContainerLarge;

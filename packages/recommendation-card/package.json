@@ -61,6 +61,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-apollo": "^2.0.1",
+    "react-circular-progressbar": "^0.6.0",
     "react-d3-cloud": "^0.5.0",
     "react-dom": "^16.0.0",
     "react-dotdotdot": "^1.1.0",

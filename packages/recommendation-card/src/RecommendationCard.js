@@ -8,24 +8,23 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Paper from 'material-ui/Paper';
+import { Card, CardHeader }
+  from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
 import HelpCircle from 'material-ui-community-icons/icons/help-circle';
 import AccountCircle from 'material-ui-community-icons/icons/account-circle';
-import FileDocument from 'material-ui-community-icons/icons/file-document';
-import StarRatingComponent from 'react-star-rating-component';
-import Dotdotdot from 'react-dotdotdot';
-import ReactTooltip from 'react-tooltip';
+import { IconButton } from 'material-ui';
+import SocialShare from 'material-ui/svg-icons/social/share';
 import 'font-awesome/css/font-awesome.min.css';
-
+import CircularProgressbar from 'react-circular-progressbar';
 import WordCloud from './WordCloud';
 
 import '../css/fonts.css';
 import '../css/card-style.css';
 
-const FontAwesome = require('react-fontawesome');
+const gcpedia = require('../img/gcpedia.jpg');
 
 /**
  * Recommendation cards provide a consistent interface for recommendations
@@ -48,52 +47,48 @@ class RecommendationCard extends Component {
 
   render() {
     let header = <span />;
-    const headerStyle = {
-      display: 'flex',
-      alignItems: 'center',
-      fontFamily: 'Roboto, sans-serif',
-    };
     switch (this.props.type) {
       case 'tweet':
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <TwitterCircle
-              color="#00aced"
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              color="#fff"
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>Tweet</h3>
+            <h5>Tweet</h5>
           </div>
         );
         break;
       case 'gcpedia-article':
         header = (
-          <div style={headerStyle}>
-            <FileDocument
-              data-tip="GCPedia Article"
-              color="#1c507f"
-              style={{ height: '50px', width: '50px' }}
-            />
-          </div>
+          <CardHeader
+            title={this.props.title}
+            subtitle="GCpedia"
+            avatar={gcpedia}
+            titleStyle={{
+              fontFamily: "'Anton', sans-serif",
+            }}
+          />
         );
         break;
       case 'gcprofile-user':
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <AccountCircle
-              color="#0375b4"
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              color="#fff"
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>GCprofile User</h3>
+            <h5>GCprofile User</h5>
           </div>
         );
         break;
       default:
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <HelpCircle
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>Unknown</h3>
+            <h5>Unknown</h5>
           </div>
         );
     }
@@ -101,77 +96,64 @@ class RecommendationCard extends Component {
     const showExtra = this.props.type !== 'gcprofile-user';
 
     if (typeof this.props.rank === 'number' && showExtra) {
+      const percentage = parseFloat(this.props.rank * 100).toFixed(0);
       score = (
-        <div className="score-text">
-          <div className="score-star-rating">
-            <span className="star-rating">
-              <StarRatingComponent
-                name={`star-rating${Math.random * 1000}`}
-                starCount={5}
-                value={
-                  Math
-                    .floor(parseFloat(this.props.rank * 5).toFixed(2) * 2) / 2
-                }
-                starColor="#F49633"
-                renderStarIcon={
-                  (index, value) =>
-                    <FontAwesome name={index <= value ? 'star' : 'star-o'} />
-                }
-                renderStarIconHalf={() => (
-                  <FontAwesome
-                    name="star-half-full"
-                    style={{ color: '#F49633' }}
-                  />
-                )}
-                editing={false}
-              />
-            </span>
-          </div>
+        <div className="score-circle">
+          <CircularProgressbar
+            percentage={percentage}
+            textForPercentage={() => `${percentage}%`}
+            strokeWidth={10}
+            initialAnimation
+          />
         </div>
       );
     }
-
-    const cardStyle = {
-      fontFamily: 'Roboto, helvetica, arial, sans-serif',
-      padding: '15px',
-      cursor: (showExtra) ? 'pointer' : '',
-    };
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <Paper
-          className={this.props.className}
-          style={cardStyle}
-          zDepth={1}
-          onClick={this.handleCardClick}
-        >
-          <div style={{ height: '9ex' }}>
-            <Dotdotdot clamp={3}>
-              <h3 className="article-title">{this.props.title}</h3>
-            </Dotdotdot>
-          </div>
-          <div className="wordcloud-score-div">
+        <Card className="grid-item card">
+          {header}
+          <div className="card-padding">
             {showExtra
               ?
-                <h3 className="heading">Matching Characteristics</h3>
+                <div className="phrases-heading-border-top">
+                  <div className="phrases-heading-text">
+                    Top Matching Profile Phrases
+                  </div>
+                </div>
               :
                 false
             }
             <div
               style={{
                 textAlign: 'center',
-                marginTop: '15px',
                 overflow: 'hidden',
               }}
             >
-              <WordCloud phrases={this.props.phrases} />
+              <WordCloud
+                phrases={this.props.phrases}
+              />
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div className="phrases-heading-border-bottom" />
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginTop: '10px',
+                }}
+            >
+              <div style={{ alignSelf: 'flex-end' }}>
+                <IconButton
+                  tooltip="Share"
+                  tooltipPosition="top-center"
+                  disableTouchRipple
+                >
+                  <SocialShare />
+                </IconButton>
+              </div>
               {score}
-              {header}
             </div>
           </div>
-          <ReactTooltip className="tooltip" effect="solid" />
-        </Paper>
+        </Card>
       </MuiThemeProvider>
     );
   }
@@ -182,7 +164,6 @@ RecommendationCard.defaultProps = {
   type: 'unknown',
   phrases: [],
   rank: 1,
-  className: '',
 };
 
 RecommendationCard.propTypes = {
@@ -216,7 +197,6 @@ RecommendationCard.propTypes = {
   /**
    * CSS class name to give the containing Paper element.
    */
-  className: PropTypes.string,
 };
 
 export default RecommendationCard;

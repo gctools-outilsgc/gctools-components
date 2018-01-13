@@ -24,6 +24,7 @@ import ExpandLessIcon from 'material-ui/svg-icons/navigation/expand-less';
 
 import SideLoader from './components/SideLoader';
 
+import Theme from './theme';
 import './App.css';
 
 const background = require('./img/flagheader.svg');
@@ -40,7 +41,7 @@ const I18nIntro = () => (
   <div>
     <h2>{__('Internationalization')}</h2>
     <p>
-      NRC has developpped a component, component helper and webpack plugin
+      NRC has developed a component, component helper, and webpack plugin
       designed to faciliate translation of single page architecture
       applications built using Webpack and optionally React.
     </p>
@@ -215,6 +216,10 @@ class App extends Component {
     return true;
   }
 
+  componentWillUnmount() {
+    this.state.focusHandle.disengage();
+  }
+
   _flattenMenu(m, parent = '', pad = 0) {
     let ret = [];
     const newState = {};
@@ -260,13 +265,12 @@ class App extends Component {
     history.push(item.path);
   }
 
-
   render() {
     if (this.state.flatMenu.length === 0) return false;
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
         <BrowserRouter>
-          <div style={{ margin: 0, padding: 0 }}>
+          <div className="no-margin">
             <AppBar
               showMenuIconButton={false}
               title={(
@@ -284,10 +288,13 @@ class App extends Component {
               }
               className="gctools-info-appbar"
             />
-            <Drawer open containerClassName="gctools-info-drawer">
+            <Drawer
+              open
+              containerClassName="gctools-info-drawer"
+              containerStyle={{ overflow: 'hidden' }}
+            >
               <Route render={({ history }) => (
                 <Menu
-                  style={{ width: '80%' }}
                   value={this.state.active}
                   onItemTouchTap={(e, v) => {
                     this.handleMenuClick(e, v.props.item, history);
@@ -303,6 +310,7 @@ class App extends Component {
                       style={{
                           paddingLeft: `${item.padding}px`,
                           display: this._blockOrNone(item),
+                          marginRight: '15px',
                         }}
                     />
                     ))}
@@ -327,6 +335,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default LocalizedComponent(App);

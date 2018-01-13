@@ -643,7 +643,6 @@ class ArticleRecommendations extends React.Component {
     const padLeft = {
       paddingLeft: '15px',
     };
-
     return (
       <ApolloProvider client={apollo}>
         <div>
@@ -876,7 +875,7 @@ class ArticleRecommendations extends React.Component {
                 }}
               >
                 <ErrorIcon color="red" />
-                <span style={{ verticalAlign: 'super', marginLeft: 10 }}>
+                <span className="error-text">
                   An error has occured
                 </span>
               </div>

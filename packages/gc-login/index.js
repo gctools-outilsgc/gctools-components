@@ -275,9 +275,15 @@ class Login extends Component {
   }
 
   render() {
+    const Theme = {
+      palette: {
+        primary1Color: '#0375b4',
+        accent1Color: '#0375b4',
+      },
+    };
     return (
       <div>
-        <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
           <RaisedButton
             onClick={this._click}
             label={this.state.str_login}
