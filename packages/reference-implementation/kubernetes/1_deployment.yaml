@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
       - name: reference-implementation
-        image: localhost:5000/gctools-outilsgc/reference-implementation:0.0.5
+        image: localhost:5000/gctools-outilsgc/reference-implementation:0.0.6
         ports:
         - containerPort: 5000
