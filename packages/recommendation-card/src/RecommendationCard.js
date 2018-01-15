@@ -47,6 +47,7 @@ class RecommendationCard extends Component {
 
   render() {
     let header = <span />;
+    let titleLink;
     switch (this.props.type) {
       case 'tweet':
         header = (
@@ -60,9 +61,19 @@ class RecommendationCard extends Component {
         );
         break;
       case 'gcpedia-article':
+        titleLink = (
+          <a
+            href={`http://gcpedia.gctools.nrc.ca/index.php/
+              ${this.props.title}`}
+            target="__blank"
+            className="card-title-link"
+          >
+            {this.props.title}
+          </a>
+        );
         header = (
           <CardHeader
-            title={this.props.title}
+            title={titleLink}
             subtitle="GCpedia"
             avatar={gcpedia}
             titleStyle={{

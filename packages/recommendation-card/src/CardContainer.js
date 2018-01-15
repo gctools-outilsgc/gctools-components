@@ -47,10 +47,12 @@ class ContainerLarge extends Component {
     if (this.state.cardsShown < this.props.cards.length) {
       loadMore = (
         <div className="load-more">
-          <FlatButton
-            label="Load More"
-            onClick={this.handleLoadMore}
-          />
+          <MuiThemeProvider muiTheme={getMuiTheme()}>
+            <FlatButton
+              label="Load More"
+              onClick={this.handleLoadMore}
+            />
+          </MuiThemeProvider>
         </div>
       );
     }
