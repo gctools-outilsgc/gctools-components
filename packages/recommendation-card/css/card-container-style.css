@@ -1,4 +1,4 @@
-.grid-sizer, .grid-item {
+/* .grid-sizer, .grid-item {
     width: calc(100% );
 }
 
@@ -28,6 +28,10 @@
 
 .grid-item {
     margin-bottom: 15px;
+} */
+.load-more {
+    text-align: center;
+    padding: 10px 0;
 }
 
 .fieldset-container {
@@ -36,6 +40,8 @@
     position: relative;
     padding: 0 15px;
     margin-bottom: 25px;
+    display: inline-block;
+    max-width: 400px;
 }
 
 .fieldset-heading-text {
@@ -57,4 +63,9 @@
     position: relative;
     width: 150px;
     padding: 0 7px;
+}
+
+.full-width {
+    width: 100%;
+    display: inline-block;
 }

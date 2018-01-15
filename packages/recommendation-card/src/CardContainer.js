@@ -11,12 +11,13 @@ import RefreshIndicator from 'material-ui/RefreshIndicator';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
+import FlatButton from 'material-ui/FlatButton';
 
 import '../css/card-container-style.css';
 
 const nrcLogo = require('../img/nrclogo.png');
 
-const Masonry = require('react-masonry-component');
+// const Masonry = require('react-masonry-component');
 
 /**
  * Container component to hold multiple recommendation cards
@@ -26,7 +27,13 @@ class ContainerLarge extends Component {
     super();
     this.state = {
       hasError: false,
+      cardsShown: 3,
     };
+    this.handleLoadMore = this.handleLoadMore.bind(this);
+  }
+
+  handleLoadMore() {
+    this.setState({ cardsShown: this.state.cardsShown + 3 });
   }
 
   componentDidCatch() {
@@ -35,6 +42,20 @@ class ContainerLarge extends Component {
 
   render() {
     let content = null;
+    const cards = this.props.cards.slice(0, this.state.cardsShown);
+    let loadMore;
+    if (this.state.cardsShown < this.props.cards.length) {
+      loadMore = (
+        <div className="load-more">
+          <MuiThemeProvider muiTheme={getMuiTheme()}>
+            <FlatButton
+              label="Load More"
+              onClick={this.handleLoadMore}
+            />
+          </MuiThemeProvider>
+        </div>
+      );
+    }
     if (!this.props.loaded &&
         !this.state.hasError &&
         (this.props.noloader === false || this.props.noloader === undefined)) {
@@ -56,24 +77,29 @@ class ContainerLarge extends Component {
         </MuiThemeProvider>
       );
     } else if (this.state.hasError) {
-      content = <h4>An error has occured.</h4>;
+      content = <h4 className="full-width">An error has occured.</h4>;
     } else if (this.props.cards.length === 0) {
-      content = <h4>No recommendations.</h4>;
+      content = <h4 className="full-width">No recommendations.</h4>;
     } else {
+      // content = (
+      //   <Masonry
+      //     className="recommendations-container"
+      //     options={{
+      //       gutter: 15,
+      //       transitionDuration: 0,
+      //       percentPosition: true,
+      //       itemSelector: '.grid-item',
+      //       columnWidth: '.grid-sizer',
+      //     }}
+      //   >
+      //     <div className="grid-sizer" key="masonryKey" />
+      //     {this.props.cards}
+      //   </Masonry>
+      // );
       content = (
-        <Masonry
-          className="recommendations-container"
-          options={{
-            gutter: 15,
-            transitionDuration: 0,
-            percentPosition: true,
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-          }}
-        >
-          <div className="grid-sizer" key="masonryKey" />
-          {this.props.cards}
-        </Masonry>
+        <div className="recommendations-container">
+          {cards}
+        </div>
       );
     }
     return (
@@ -85,6 +111,7 @@ class ContainerLarge extends Component {
           Article Recommendations
         </div>
         {content}
+        {loadMore}
         <div
           style={{
             display: 'flex',

@@ -62,6 +62,7 @@
 
 .card {
   max-width: 400px;
+  margin-bottom: 15px;
 }
 
 .card-padding {
@@ -143,4 +144,14 @@
 
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
   stroke: transparent;
+}
+
+.card-title-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.card-title-link:hover {
+  text-decoration: underline;
+  color: #333;
 }

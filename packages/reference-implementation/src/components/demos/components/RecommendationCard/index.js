@@ -84,7 +84,46 @@ const demo = () => (
               { text: 'NRC', size: 0.9 },
             ]}
           />,
-      ]}
+          <RecommendationCard
+            className="grid-item"
+            key="4"
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.702876832}
+            phrases={[
+              { text: 'word', size: 0.4 },
+              { text: 'phrase cloud', size: 0.7 },
+              { text: 'GCTools', size: 1 },
+              { text: 'NRC', size: 0.9 },
+            ]}
+          />,
+          <RecommendationCard
+            className="grid-item"
+            key="5"
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.662876832}
+            phrases={[
+              { text: 'word', size: 0.4 },
+              { text: 'phrase cloud', size: 0.7 },
+              { text: 'GCTools', size: 1 },
+              { text: 'NRC', size: 0.9 },
+            ]}
+          />,
+          <RecommendationCard
+            className="grid-item"
+            key="6"
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.622876832}
+            phrases={[
+              { text: 'word', size: 0.4 },
+              { text: 'phrase cloud', size: 0.7 },
+              { text: 'GCTools', size: 1 },
+              { text: 'NRC', size: 0.9 },
+            ]}
+          />,
+        ]}
       />
     </Demo>
   </div>

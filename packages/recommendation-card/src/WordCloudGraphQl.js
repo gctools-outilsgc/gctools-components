@@ -34,7 +34,6 @@ PhraseCloudGraphQL.defaultProps = {
   loadingComponent: <span>Loading</span>,
   phrases: null,
   loading: false,
-  onPhrases: () => {},
 };
 
 PhraseCloudGraphQL.propTypes = {
@@ -61,7 +60,6 @@ PhraseCloudGraphQL.propTypes = {
   /**
    * Event triggered when phrases are loaded.
    */
-  onPhrases: PropTypes.func,
 };
 
 const bindWithQuery = (q, pm, s, vf) => graphql(q, {
