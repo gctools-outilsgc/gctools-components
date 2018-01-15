@@ -7,7 +7,7 @@
  * the Minister of National Research Council, 2018
  */
 
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class EventHandler extends Component {

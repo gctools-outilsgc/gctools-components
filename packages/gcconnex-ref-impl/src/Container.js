@@ -21,9 +21,9 @@ const TEMP_MAX = 3;
 // eslint-disable-next-line
 class GcconnexRefImpl extends Component {
   render() {
-    const gcpediaUrl = 'http://gcpedia.gctools.nrc.ca/index.php';
+    // const gcpediaUrl = 'http://gcpedia.gctools.nrc.ca/index.php';
     const { loading, recommendations, context } = this.props;
-    const target = (context !== 'article_c5') ? '' : '_blank';
+    // const target = (context !== 'article_c5') ? '' : '_blank';
     if (context === 'login') return null;
 
     let loaded = false;
@@ -43,6 +43,8 @@ class GcconnexRefImpl extends Component {
             }
           />
         ));
+      } else if (recommendations !== null) {
+        loaded = true;
       }
     }
     return (
