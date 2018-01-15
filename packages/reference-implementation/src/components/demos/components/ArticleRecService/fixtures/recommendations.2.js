@@ -68,6 +68,20 @@ const AutoCompleteArticle = AutoCompleteGraphQL(gql`
       ? articles.map(p => ({ text: p.name.value, value: p.id })) : [],
   }));
 
+const AutoCompleteDiscussion = AutoCompleteGraphQL(gql`
+  query TypeAndFindQuery($nameContains: String!) {
+    articles (nameContains: $nameContains, limit: 50) {
+      id
+      name {
+        value
+      }
+    }
+  }
+`, ({ ownProps, data: { articles } }) => ({
+    ...ownProps,
+    items: (articles)
+      ? articles.map(p => ({ text: p.name.value, value: p.id })) : [],
+  }));
 
 const CLOUD_SIZE = {
   article: 10,
@@ -130,9 +144,14 @@ const initialState = {
 
   userSearchText: '',
   selectedUser: {},
-  showRecommendations: false,
+
   articleSearchText: '',
   selectedArticle: {},
+
+  discussionSearchText: '',
+  selectedDiscussion: {},
+
+  showRecommendations: false,
 
   recommendations: [],
   recommendation_error: false,
@@ -142,22 +161,16 @@ const initialState = {
 
   matchedPhraseCloud: null,
 
-  articleSearchResults: [],
-
-  discussion_loaded: true,
-  discussion_loaded_error: false,
-  discussionSearchText: '',
-  discussionSearchResults: [],
-  selectedDiscussion: {},
-
   context: null,
   stepIndex: 0,
+
+  userPending: false,
 };
 
 class ArticleRecommendations extends React.Component {
   constructor() {
     super();
-    this.state = initialState;
+    this.state = Object.assign({}, initialState);
     this.state.token = 'invalid';
     this.state.profile = null;
 
@@ -177,10 +190,20 @@ class ArticleRecommendations extends React.Component {
     this._selectArticle = this._selectArticle.bind(this);
     this._updateArticleSearch = this._updateArticleSearch.bind(this);
 
+    this._selectDiscussion = this._selectDiscussion.bind(this);
+    this._updateDiscussionSearch = this._updateDiscussionSearch.bind(this);
+
     this._userLoaded = this._userLoaded.bind(this);
     this._userUnloaded = this._userUnloaded.bind(this);
+    this._userLoginClick = this._userLoginClick.bind(this);
+    this._userLogoutClick = (e, obj) => obj.localLogout();
 
     this._noFilter = () => true;
+  }
+
+  _userLoginClick(e, obj) {
+    this.setState({ userPending: true });
+    obj.login();
   }
 
   _userLoaded(data) {
@@ -190,7 +213,7 @@ class ArticleRecommendations extends React.Component {
       email: profile.email,
       gcconnex_username: profile.gcconnex_username,
     });
-    this.setState({ profile, token });
+    this.setState({ profile, token, userPending: false });
   }
 
   _userUnloaded() {
@@ -217,6 +240,7 @@ class ArticleRecommendations extends React.Component {
       gcconnex_username: selected.text,
     });
     this.setState({ token, selectedUser: { guid, name: selected.text } });
+    this._next();
   }
 
   _updateArticleSearch(txt) {
@@ -237,7 +261,30 @@ class ArticleRecommendations extends React.Component {
       },
     });
     this.setState({ selectedArticle: { guid, name: selected.text } });
+    this._next();
   }
+
+  _updateDiscussionSearch(txt) {
+    this.setState({ discussionSearchText: txt });
+  }
+
+  _selectDiscussion(selected) {
+    const guid = selected.value;
+    this.props.mutate({
+      variables: {
+        context: `article_${this.state.context.toLowerCase()}`,
+        context_obj1: guid,
+      },
+      context: {
+        headers: {
+          Authorization: this.state.token,
+        },
+      },
+    });
+    this.setState({ selectedDiscussion: { guid, name: selected.text } });
+    this._next();
+  }
+
 
   handleContextChange(e, context) {
     this.setState({
@@ -335,9 +382,22 @@ class ArticleRecommendations extends React.Component {
       onUserLoaded={this._userLoaded}
       onUserFetched={this._userLoaded}
       onUserUnloaded={this._userUnloaded}
+      onLoginClick={this._userLoginClick}
+      onLogoutClick={this._userLogoutClick}
     />);
 
-    const NotLoggedIn = <h4>You must login to use this demo.</h4>;
+    const NotLoggedIn = [
+      <h4 key="must-log-in">You must login to use this demo.</h4>,
+    ];
+
+    if (this.state.userPending) {
+      NotLoggedIn.push((
+        <small key="must-log-in-delay">
+          (Due to the temporary link with GCconnex, there may be a delay
+          after authorizing.)
+        </small>
+      ));
+    }
 
     const Demo = (
       <div>
@@ -465,61 +525,25 @@ class ArticleRecommendations extends React.Component {
             Simulate reading a particular discussion thread by choosing one
             from the search provided below.
           </p>
-          {/* <AutoComplete
-            hintText={__('Type part of all of a title')}
-            searchText={this.state.discussionSearchText}
-            dataSource={this.state.discussionSearchResults}
-            onUpdateInput={this._updateDiscussionList}
-            onNewRequest={this._getDiscussionPC}
-            filter={this._noFilter}
-            openOnFocus
+          <AutoCompleteDiscussion
             fullWidth
-          /> */}
+            profile={this.state.profile}
+            token={this.state.token}
+            searchText={this.state.discussionSearchText}
+            onUpdateInput={this._updateDiscussionSearch}
+            onSelectItem={this._selectDiscussion}
+          />
           <div style={{ marginTop: 12 }}>
             <FlatButton
               label={__('Back')}
               onClick={this._prev}
               style={{ marginRight: 12 }}
-              disabled={!this.state.discussion_loaded}
             />
             <RaisedButton
               label={__('Next')}
               onClick={this._next}
-              disabled={
-                !this.state.selectedDiscussion ||
-                !this.state.discussion_loaded
-              }
+              disabled={!this.state.selectedDiscussion.guid}
             />
-            {(!this.state.discussion_loaded) ?
-              <RefreshIndicator
-                size={25}
-                left={0}
-                top={8}
-                status="loading"
-                style={{
-                marginLeft: 25,
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
-              />
-            : null }
-            {(this.state.discussion_loaded_error) ?
-              <div
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  boxShadow: 'none',
-                  color: 'red',
-                  verticalAlign: 'middle',
-                }}
-              >
-                <ErrorIcon color="red" />
-                <span className="error-text">
-                  An error has occured
-                </span>
-              </div>
-            : null }
           </div>
         </div>
         <div style={{

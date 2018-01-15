@@ -127,7 +127,7 @@ class Login extends Component {
               throw new Error('Unsupported callback');
             }
           }
-          document.open();
+          // document.open();
         }
       }
     }
