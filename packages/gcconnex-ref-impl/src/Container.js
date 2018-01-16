@@ -13,30 +13,29 @@ import PropTypes from 'prop-types';
 import RecommendationCard, { CardContainer }
   from '@gctools-components/recommendation-card';
 
-const TEMP_MAX = 3;
-
 /**
  * Reference Implementation of GCconnex integration
  */
 // eslint-disable-next-line
 class GcconnexRefImpl extends Component {
   render() {
-    // const gcpediaUrl = 'http://gcpedia.gctools.nrc.ca/index.php';
     const { loading, recommendations, context } = this.props;
-    // const target = (context !== 'article_c5') ? '' : '_blank';
     if (context === 'login') return null;
+
+    const appContext = (context === 'article_c5') ? 'gcconnex' : 'gcpedia';
 
     let loaded = false;
     let cards = [];
     if (!loading) {
       if ((recommendations !== null) && (recommendations.length > 0)) {
         loaded = true;
-        cards = recommendations.slice(0, TEMP_MAX).map(r => (
+        cards = recommendations.map(r => (
           <RecommendationCard
             className="grid-item"
             key={`rec_article_${r.id}`}
             type="gcpedia-article"
             title={r.title}
+            context={appContext}
             rank={r.rank}
             phrases={r.phraseCloud.map(pc =>
               ({ text: pc.phrase, size: pc.rank }))

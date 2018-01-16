@@ -14,7 +14,7 @@
   "devDependencies": {
     "argparse": "^1.0.9",
     "cz-lerna-changelog": "^1.2.1",
-    "lerna": "^2.5.1",
+    "lerna": "^2.7.1",
     "prompt": "^1.0.0",
     "yn": "^2.0.0"
   },

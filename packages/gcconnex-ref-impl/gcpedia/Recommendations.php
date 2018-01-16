@@ -74,6 +74,7 @@ function RecommendationsInit($article, &$text) {
 <style>
   .nrcRecommendationContainer {
     overflow: hidden;
+    padding-top: 10px;
   }
   .nrcRecommendationContainer:hover {
     overflow: visible;
@@ -86,7 +87,7 @@ function RecommendationsInit($article, &$text) {
     position: relative;
   }
 </style>
-<link rel="stylesheet" type="text/css" href="/extensions/NRC_Recommendations/static/css/main.2a176efc.css">
+<link rel="stylesheet" type="text/css" href="/extensions/NRC_Recommendations/static/css/main.css">
 <script type="text/javascript">
   var NRC_context = {
     context: '$context',

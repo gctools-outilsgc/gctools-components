@@ -36,13 +36,6 @@ class RecommendationCard extends Component {
     this.cloudElement = false;
     this.cloudLayout = false;
     this.restartCount = 0;
-    this.handleCardClick = this.handleCardClick.bind(this);
-  }
-
-  handleCardClick() {
-    if (this.props.type !== 'gcprofile-user') {
-      window.open(`http://www.gcpedia.gc.ca/wiki/${this.props.title}`);
-    }
   }
 
   render() {
@@ -65,7 +58,7 @@ class RecommendationCard extends Component {
           <a
             href={`http://gcpedia.gctools.nrc.ca/index.php/
               ${this.props.title}`}
-            target="__blank"
+            target={(this.props.context === 'gcpedia') ? '_self' : '_blank'}
             className="card-title-link"
           >
             {this.props.title}
@@ -173,6 +166,7 @@ class RecommendationCard extends Component {
 
 RecommendationCard.defaultProps = {
   title: 'Default Recommendation',
+  context: 'other',
   type: 'unknown',
   phrases: [],
   rank: 1,
@@ -183,6 +177,10 @@ RecommendationCard.propTypes = {
    * Title of the recommendation card, can be simple text or a node.
    */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /**
+   * Context where this card is being displayed
+   */
+  context: PropTypes.oneOf(['gcconnex', 'gcpedia', 'other']),
   /**
    * A string describing what type of resource is being recommended.
    *
@@ -206,9 +204,6 @@ RecommendationCard.propTypes = {
     text: PropTypes.string,
     size: PropTypes.number,
   })),
-  /**
-   * CSS class name to give the containing Paper element.
-   */
 };
 
 export default RecommendationCard;

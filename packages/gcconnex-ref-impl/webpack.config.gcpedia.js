@@ -9,7 +9,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 
 const path = require('path');
 
-const cssFilename = 'static/css/[name].[hash:8].css';
+const cssFilename = 'static/css/[name].css';
 const shouldUseSourceMap = false;
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
   entry: ['babel-polyfill', 'whatwg-fetch', './gcpedia/main.js'],
   devtool: shouldUseSourceMap ? 'source-map' : false,
   plugins: [
-    // new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist']),
     new UglifyJSPlugin({
       sourceMap: shouldUseSourceMap,
     }),
