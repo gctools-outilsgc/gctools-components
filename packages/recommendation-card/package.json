@@ -8,9 +8,9 @@
     "url": "https://github.com/gctools-outilsgc/gctools-components.git"
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "copyfiles img/* css/* fonts/* dist && babel index.js src/* -d dist --copy-files",
-    "prepare": "npm run clean && npm run build",
+    "build2": "copyfiles img/* css/* fonts/* dist && babel index.js src/* -d dist --copy-files",
+    "build": "webpack",
+    "prepare": "npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
     "storybook": "start-storybook -p 6006",
@@ -25,6 +25,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
+    "material-ui": "^0.19.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
@@ -51,19 +52,24 @@
     "file-loader": "^1.1.6",
     "jest": "^21.2.1",
     "react-test-renderer": "^16.0.0",
-    "rimraf": "^2.6.2"
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "clean-webpack-plugin": "^0.1.17",
+    "autoprefixer": "^7.2.5",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "react-dev-utils": "^4.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "material-ui": "^0.19.4",
+    "webpack": "^3.8.1"
   },
   "dependencies": {
     "@gctools-components/phrase-cloud": "^1.1.0",
     "font-awesome": "^4.7.0",
-    "material-ui": "^0.19.4",
     "material-ui-community-icons": "^0.15.0",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
     "react-apollo": "^2.0.4",
     "react-circular-progressbar": "^0.6.0",
     "react-d3-cloud": "^0.5.0",
-    "react-dom": "^16.0.0",
     "react-dotdotdot": "^1.1.0",
     "react-fontawesome": "^1.6.1",
     "react-masonry-component": "^6.0.1",
