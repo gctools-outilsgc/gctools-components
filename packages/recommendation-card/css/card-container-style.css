@@ -53,10 +53,11 @@
     padding: 0 7px;
     display: inline-block;
     position: relative;
-    top: -11px;
+    top: -14px;
     left: 0;
     right: 0;
     margin: auto;
+    font-size: 18px;
   }
 
 .nrc-logo {
