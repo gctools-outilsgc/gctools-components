@@ -91,6 +91,11 @@ const sideLoadRecommendationCard = () =>
     t.s(require('./components/demos/components/RecommendationCard'));
 })}
   />);
+const sideLoadFloatingRecommendationCard = () =>
+  (<SideLoader o={t => require.ensure([], () => {
+    t.s(require('./components/demos/components/FloatingRecommendedCards'));
+})}
+  />);
 const sideLoadArticleRecService = () =>
   (<SideLoader o={t => require.ensure([], () => {
     t.s(require('./components/demos/components/ArticleRecService'));
@@ -177,6 +182,11 @@ class App extends Component {
               label: __('Recommendation card'),
               path: '/recommendations/card',
               component: sideLoadRecommendationCard,
+            },
+            floating_recommendation_card: {
+              label: __('Floating Recommendations'),
+              path: '/recocommendations/floating_cards',
+              component: sideLoadFloatingRecommendationCard,
             },
             article_rec_service: {
               label: __('Article recommendations'),

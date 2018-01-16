@@ -12,8 +12,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import Drawer from 'material-ui/Drawer';
 
 import '../css/card-container-style.css';
+import { fade } from 'material-ui/utils/colorManipulator';
 
 const nrcLogo = require('../img/nrclogo.png');
 
@@ -28,8 +32,11 @@ class ContainerLarge extends Component {
     this.state = {
       hasError: false,
       cardsShown: 3,
+      drawerOpen: false,
     };
     this.handleLoadMore = this.handleLoadMore.bind(this);
+    this.handleOpenDrawer = this.handleOpenDrawer.bind(this);
+    this.handleDrawerClose = this.handleDrawerClose.bind(this);
   }
 
   handleLoadMore() {
@@ -40,9 +47,18 @@ class ContainerLarge extends Component {
     this.setState({ hasError: true });
   }
 
+  handleOpenDrawer() {
+    this.setState({ drawerOpen: true });
+  }
+
+  handleDrawerClose() {
+    this.setState({ drawerOpen: false });
+  }
+
   render() {
     let content = null;
     const cards = this.props.cards.slice(0, this.state.cardsShown);
+
     let loadMore;
     if (this.state.cardsShown < this.props.cards.length) {
       loadMore = (
@@ -80,6 +96,16 @@ class ContainerLarge extends Component {
       content = <h4 className="full-width">An error has occured.</h4>;
     } else if (this.props.cards.length === 0) {
       content = <h4 className="full-width">No recommendations.</h4>;
+    } else if (this.props.floating) {
+      content = (
+        <div className="recommendations-container">
+          {cards.map(card => (
+            <div>
+              {card.title}
+            </div>
+          ))}
+        </div>
+      );
     } else {
       // content = (
       //   <Masonry
@@ -102,37 +128,60 @@ class ContainerLarge extends Component {
         </div>
       );
     }
-    return (
-      <div className="fieldset-container">
-        <div
-          className="fieldset-heading-text"
-          style={{
-            backgroundColor: this.props.bgcolour,
-            fontSize: '18px',
-          }}
-        >
-          Article Recommendations
+    let retVal;
+    if (this.props.floating) {
+      retVal = (
+        <div>
+          <Drawer
+            width={200}
+            openSecondary
+            docked={false}
+            open={this.state.drawerOpen}
+            onRequestChange={this.handleDrawerClose}
+          >
+            yooo
+          </Drawer>
+          <FloatingActionButton
+            onClick={this.handleOpenDrawer}
+            style={{ position: 'absolute', bottom: '15px', right: '15px' }}
+          >
+            <ContentAdd />
+          </FloatingActionButton>
         </div>
-        {content}
-        {loadMore}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            position: 'relative',
-            bottom: '-15px',
-          }}
-        >
-          <span
+      );
+    } else {
+      retVal = (
+        <div className="fieldset-container">
+          <div
+            className="fieldset-heading-text"
             style={{
               backgroundColor: this.props.bgcolour,
             }}
           >
-            <img className="nrc-logo" src={nrcLogo} alt="NRC" />
-          </span>
+            Article Recommendations
+          </div>
+          {content}
+          {loadMore}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              position: 'relative',
+              bottom: '-15px',
+            }}
+          >
+            <span
+              style={{
+                backgroundColor: this.props.bgcolour,
+              }}
+            >
+              <img className="nrc-logo" src={nrcLogo} alt="NRC" />
+            </span>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+    return retVal;
   }
 }
 
@@ -145,8 +194,9 @@ ContainerLarge.styles = {
 ContainerLarge.propTypes = {
   loaded: PropTypes.bool,
   noloader: PropTypes.bool,
-  cards: PropTypes.arrayOf(PropTypes.node),
+  cards: PropTypes.arrayOf(PropTypes.object),
   bgcolour: PropTypes.string,
+  floating: PropTypes.bool,
 };
 
 ContainerLarge.defaultProps = {
@@ -154,6 +204,7 @@ ContainerLarge.defaultProps = {
   noloader: false,
   cards: [],
   bgcolour: '#fff',
+  floating: false,
 };
 
 export default ContainerLarge;
