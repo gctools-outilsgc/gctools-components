@@ -82,8 +82,10 @@ exports[`Storyshots GcconnexRefImpl Default options 1`] = `
         >
           Article Recommendations
         </div>
-        <h4>
-          An error has occured.
+        <h4
+          className="full-width"
+        >
+          No recommendations.
         </h4>
         <div
           style={
@@ -1090,7 +1092,9 @@ exports[`Storyshots GcconnexRefImpl loading=true 1`] = `
         >
           Article Recommendations
         </div>
-        <h4>
+        <h4
+          className="full-width"
+        >
           An error has occured.
         </h4>
         <div
@@ -1615,8 +1619,10 @@ exports[`Storyshots GcconnexRefImpl with no available recommendations (recommend
         >
           Article Recommendations
         </div>
-        <h4>
-          An error has occured.
+        <h4
+          className="full-width"
+        >
+          No recommendations.
         </h4>
         <div
           style={
@@ -2140,7 +2146,9 @@ exports[`Storyshots GcconnexRefImpl with recommendations 1`] = `
         >
           Article Recommendations
         </div>
-        <h4>
+        <h4
+          className="full-width"
+        >
           An error has occured.
         </h4>
         <div
@@ -2665,7 +2673,9 @@ exports[`Storyshots GcconnexRefImpl with recommendations not ready (recommendati
         >
           Article Recommendations
         </div>
-        <h4>
+        <h4
+          className="full-width"
+        >
           An error has occured.
         </h4>
         <div
