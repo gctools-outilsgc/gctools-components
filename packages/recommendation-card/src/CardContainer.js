@@ -106,7 +106,10 @@ class ContainerLarge extends Component {
       <div className="fieldset-container">
         <div
           className="fieldset-heading-text"
-          style={{ backgroundColor: this.props.bgcolour }}
+          style={{
+            backgroundColor: this.props.bgcolour,
+            fontSize: '18px',
+          }}
         >
           Article Recommendations
         </div>

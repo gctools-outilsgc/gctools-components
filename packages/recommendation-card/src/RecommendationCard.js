@@ -78,6 +78,7 @@ class RecommendationCard extends Component {
             avatar={gcpedia}
             titleStyle={{
               fontFamily: "'Anton', sans-serif",
+              fontSize: '16px',
             }}
           />
         );
