@@ -45,25 +45,36 @@
 }
 
 .fieldset-heading-text {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     transform: scale(1, 1.1);
     font-size: 1rem;
     color: #333;
-    padding: 0 7px;
-    display: inline-block;
-    position: relative;
-    top: -14px;
-    left: 0;
-    right: 0;
     margin: auto;
     font-size: 18px;
-  }
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+.fieldset-heading-text > span {
+    padding: 10px;
+    display: inline-block;
+}
+
+.nrc-sticky {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    z-index: 99;
+    text-align: right;
+}
 
 .nrc-logo {
     position: relative;
     width: 150px;
-    padding: 0 7px;
+    padding: 10px;
 }
 
 .full-width {

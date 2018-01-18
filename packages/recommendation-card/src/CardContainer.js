@@ -12,15 +12,18 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
+import IconButton from 'material-ui/IconButton';
+// import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ActionViewHeadline from 'material-ui/svg-icons/action/view-headline';
 import Drawer from 'material-ui/Drawer';
+import { List } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
 
+import RecommendationCard from './RecommendationCard';
 import '../css/card-container-style.css';
-import { fade } from 'material-ui/utils/colorManipulator';
 
 const nrcLogo = require('../img/nrclogo.png');
-
+const canadianFlag = require('../img/canadianflag.png');
 // const Masonry = require('react-masonry-component');
 
 /**
@@ -96,16 +99,6 @@ class ContainerLarge extends Component {
       content = <h4 className="full-width">An error has occured.</h4>;
     } else if (this.props.cards.length === 0) {
       content = <h4 className="full-width">No recommendations.</h4>;
-    } else if (this.props.floating) {
-      content = (
-        <div className="recommendations-container">
-          {cards.map(card => (
-            <div>
-              {card.title}
-            </div>
-          ))}
-        </div>
-      );
     } else {
       // content = (
       //   <Masonry
@@ -130,23 +123,63 @@ class ContainerLarge extends Component {
     }
     let retVal;
     if (this.props.floating) {
+      const styles = {
+        largeIcon: {
+          width: 60,
+          height: 60,
+        },
+      };
       retVal = (
         <div>
           <Drawer
-            width={200}
             openSecondary
             docked={false}
             open={this.state.drawerOpen}
             onRequestChange={this.handleDrawerClose}
+            overlayStyle={{ background: 'none' }}
+            zDepth={4}
+            containerStyle={{ zIndex: 9999 }}
+            width={350}
           >
-            yooo
+            <List style={{ padding: 0 }}>
+              <div key="firstkey" className="fieldset-heading-text">
+                <span>Recommended Articles</span>
+                <Divider />
+              </div>
+              {this.props.cards.map(card => (
+                <RecommendationCard
+                  key={`reccard${Math.random() * 1000}`}
+                  listView
+                  title={card.title}
+                  type="gcpedia-article"
+                  phrases={card.phrases}
+                  rank={card.rank}
+                />
+              ))}
+              <div
+                key="lastkey"
+                className="nrc-sticky"
+                style={{ backgroundImage: `url(${canadianFlag})` }}
+              >
+                <Divider />
+                <img className="nrc-logo" src={nrcLogo} alt="NRC" />
+              </div>
+            </List>
           </Drawer>
-          <FloatingActionButton
+          <IconButton
             onClick={this.handleOpenDrawer}
-            style={{ position: 'absolute', bottom: '15px', right: '15px' }}
+            style={{
+              position: 'fixed',
+              bottom: '15px',
+              right: '15px',
+              width: 120,
+              height: 120,
+              padding: 30,
+            }}
+            iconStyle={styles.largeIcon}
           >
-            <ContentAdd />
-          </FloatingActionButton>
+            <ActionViewHeadline />
+          </IconButton>
         </div>
       );
     } else {

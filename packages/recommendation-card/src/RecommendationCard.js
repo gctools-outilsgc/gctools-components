@@ -16,15 +16,18 @@ import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
 import HelpCircle from 'material-ui-community-icons/icons/help-circle';
 import AccountCircle from 'material-ui-community-icons/icons/account-circle';
 import { IconButton } from 'material-ui';
+import { ListItem } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
+import Avatar from 'material-ui/Avatar';
 import SocialShare from 'material-ui/svg-icons/social/share';
 import 'font-awesome/css/font-awesome.min.css';
-import CircularProgressbar from 'react-circular-progressbar';
 import WordCloud from './WordCloud';
 
 import '../css/fonts.css';
 import '../css/card-style.css';
 
 const gcpedia = require('../img/gcpedia.jpg');
+const Rating = require('react-rating');
 
 /**
  * Recommendation cards provide a consistent interface for recommendations
@@ -36,6 +39,14 @@ class RecommendationCard extends Component {
     this.cloudElement = false;
     this.cloudLayout = false;
     this.restartCount = 0;
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    window.open(
+      `http://gcpedia.gctools.nrc.ca/index.php/${this.props.title}`,
+      (this.props.context === 'gcpedia') ? '_self' : '_blank',
+    );
   }
 
   render() {
@@ -101,21 +112,78 @@ class RecommendationCard extends Component {
     const showExtra = this.props.type !== 'gcprofile-user';
 
     if (typeof this.props.rank === 'number' && showExtra) {
-      const percentage = parseFloat(this.props.rank * 100).toFixed(0);
-      const rating = parseFloat(percentage / 10).toFixed(0);
+      // const percentage = parseFloat(this.props.rank * 100).toFixed(0);
+      // const rating = parseFloat(percentage / 10).toFixed(0);
+      const rating = Math.floor(this.props.rank * 10);
       score = (
-        <div className="score-circle">
-          <CircularProgressbar
-            percentage={percentage}
-            textForPercentage={() => `${rating}`}
-            strokeWidth={10}
-            initialAnimation
-          />
+        <div style={{ alignSelf: 'flex-end' }}>
+          <div className="rating-border">
+            <Rating
+              stop={10}
+              readonly
+              emptySymbol={<div className="rating-empty">&nbsp;</div>}
+              fullSymbol={<div className="rating-full">&nbsp;</div>}
+              initialRating={rating}
+            />
+          </div>
         </div>
       );
     }
-    return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+    let retVal;
+    if (this.props.listView === true) {
+      retVal = (
+        <div>
+          <ListItem
+            leftAvatar={<Avatar src={gcpedia} />}
+            primaryText={<div className="card-title">{this.props.title}</div>}
+            secondaryText={<div className="card-subtitle">GCpedia</div>}
+            hoverColor="none"
+            onClick={this.handleClick}
+          />
+          <div className="card-padding">
+            {showExtra
+              ?
+                <div className="phrases-heading-text">
+                  Top Matching Profile Phrases
+                </div>
+              :
+                false
+            }
+            <div
+              style={{
+                textAlign: 'center',
+                overflow: 'hidden',
+              }}
+            >
+              <WordCloud
+                phrases={this.props.phrases}
+              />
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                height: '20px',
+              }}
+            >
+              <div style={{ alignSelf: 'flex-end' }}>
+                <IconButton
+                  tooltip="Share"
+                  tooltipPosition="top-center"
+                  disableTouchRipple
+                  style={{ bottom: '-13px', left: '-12px' }}
+                >
+                  <SocialShare color="#657786" />
+                </IconButton>
+              </div>
+              {score}
+            </div>
+          </div>
+          <Divider />
+        </div>
+      );
+    } else {
+      retVal = (
         <Card className="grid-item card">
           {header}
           <div className="card-padding">
@@ -160,6 +228,11 @@ class RecommendationCard extends Component {
             </div>
           </div>
         </Card>
+      );
+    }
+    return (
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        {retVal}
       </MuiThemeProvider>
     );
   }
@@ -171,6 +244,7 @@ RecommendationCard.defaultProps = {
   type: 'unknown',
   phrases: [],
   rank: 1,
+  listView: false,
 };
 
 RecommendationCard.propTypes = {
@@ -205,6 +279,7 @@ RecommendationCard.propTypes = {
     text: PropTypes.string,
     size: PropTypes.number,
   })),
+  listView: PropTypes.bool,
 };
 
 export default RecommendationCard;

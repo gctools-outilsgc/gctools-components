@@ -2250,7 +2250,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@^2.2.0, classnames@^2.2.5:
+classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -6111,9 +6111,9 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-lerna@^2.7.1:
+lerna@^2.6.0:
   version "2.7.1"
-  resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.7.1.tgz#abd536376eca5e9f41a6d611da5b744534ef906f"
+  resolved "https://reposrv.dev.lpss.me:4874/lerna/-/lerna-2.7.1.tgz#abd536376eca5e9f41a6d611da5b744534ef906f"
   dependencies:
     async "^1.5.0"
     chalk "^2.1.0"
@@ -8165,6 +8165,10 @@ react-modal@^3.1.10:
     prop-types "^15.5.10"
     warning "^3.0.0"
 
+react-rating@^1.0.4:
+  version "1.0.4"
+  resolved "https://reposrv.dev.lpss.me:4874/react-rating/-/react-rating-1.0.4.tgz#3bbd8bc11b0370460c3eb0c3295ced49af29f073"
+
 react-router-dom@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
@@ -8197,14 +8201,6 @@ react-split-pane@^0.1.74:
     inline-style-prefixer "^3.0.6"
     prop-types "^15.5.10"
     react-style-proptype "^3.0.0"
-
-react-star-rating-component@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/react-star-rating-component/-/react-star-rating-component-1.3.0.tgz#af6c98d6f40bdc6a21e141583578a9dbb10e65bb"
-  dependencies:
-    classnames "^2.2.0"
-    prop-types "^15.5.8"
-    react "^15.4.2"
 
 react-style-proptype@^3.0.0:
   version "3.1.0"
@@ -8256,7 +8252,7 @@ react-treebeard@^2.1.0:
     shallowequal "^0.2.2"
     velocity-react "^1.3.1"
 
-react@^15.0.0, react@^15.4.2:
+react@^15.0.0:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:

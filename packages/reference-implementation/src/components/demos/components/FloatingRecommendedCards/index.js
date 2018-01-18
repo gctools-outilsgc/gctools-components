@@ -25,10 +25,12 @@ const demo = () => (
       title={__('Card Container')}
     >
       <CardContainer
+        key="ccontainer"
         loaded
         floating
         cards={[
           {
+            key: '1',
             type: 'gcpedia-article',
             title: loremIpsum,
             rank: 1,
@@ -40,9 +42,10 @@ const demo = () => (
             ],
           },
           {
+            key: '2',
             type: 'gcpedia-article',
             title: loremIpsum,
-            rank: '.985676',
+            rank: 0.985676,
             phrases: [
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
@@ -51,9 +54,10 @@ const demo = () => (
             ],
           },
           {
+            key: '3',
             type: 'gcpedia-article',
             title: loremIpsum,
-            rank: '.9543',
+            rank: 0.9543,
             phrases: [
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
@@ -62,9 +66,10 @@ const demo = () => (
             ],
           },
           {
+            key: '4',
             type: 'gcpedia-article',
             title: loremIpsum,
-            rank: '.91234',
+            rank: 0.91234,
             phrases: [
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
@@ -73,9 +78,10 @@ const demo = () => (
             ],
           },
           {
+            key: '5',
             type: 'gcpedia-article',
             title: loremIpsum,
-            rank: '.87463',
+            rank: 0.87463,
             phrases: [
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
@@ -84,9 +90,10 @@ const demo = () => (
             ],
           },
           {
+            key: '6',
             type: 'gcpedia-article',
             title: loremIpsum,
-            rank: '.8347',
+            rank: 0.8347,
             phrases: [
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
@@ -95,9 +102,10 @@ const demo = () => (
             ],
           },
           {
+            key: '7',
             type: 'gcpedia-article',
             title: loremIpsum,
-            rank: '.77955',
+            rank: 0.77955,
             phrases: [
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },

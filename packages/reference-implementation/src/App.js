@@ -185,7 +185,7 @@ class App extends Component {
             },
             floating_recommendation_card: {
               label: __('Floating Recommendations'),
-              path: '/recocommendations/floating_cards',
+              path: '/recommendations/floating_cards',
               component: sideLoadFloatingRecommendationCard,
             },
             article_rec_service: {
