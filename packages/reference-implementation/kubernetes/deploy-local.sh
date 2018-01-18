@@ -7,9 +7,10 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  PREVIOUS=`cat $DIR/version.txt | awk -F. -v OFS=. 'NF==1{print --$NF}; NF>1{if(length($NF-1)>length($NF))$(NF+1)--; $NF=sprintf("%0*d", length($NF), ($NF-1)%(10^length($NF))); print}'`
   CURRENT=`cat $DIR/version.txt`
   VERSION=`cat $DIR/version.txt | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{if(length($NF+1)>length($NF))$(NF-1)++; $NF=sprintf("%0*d", length($NF), ($NF+1)%(10^length($NF))); print}'`
-  docker rmi $DOCKER_REPO/$DOCKER_PACKAGE:$CURRENT
+  docker rmi $DOCKER_REPO/$DOCKER_PACKAGE:$PREVIOUS
   (cd $DIR/../ && yarn build && yarn docker-build-local)
   CMD=$(echo sed -i "'s/localhost:5000\/gctools-outilsgc\/reference-implementation:$CURRENT/localhost:5000\/gctools-outilsgc\/reference-implementation:$VERSION/g'" $DIR/1_deployment.yaml)
   eval $CMD

@@ -43,6 +43,7 @@ const AutoCompletePerson = AutoCompleteGraphQL(gql`
   query TypeAndFindQuery($nameContains: String!) {
     people(nameContains: $nameContains, limit: 50) {
       id
+      gcconnex_username
       name {
         value
       }
@@ -50,7 +51,11 @@ const AutoCompletePerson = AutoCompleteGraphQL(gql`
   }`, ({ ownProps, data: { people } }) => ({
     ...ownProps,
     items: (people)
-      ? people.map(p => ({ text: p.name.value, value: p.id })) : [],
+      ? people.map(p => ({
+        text: p.name.value,
+        value: p.id,
+        username: p.gcconnex_username,
+      })) : [],
   }));
 
 const AutoCompleteArticle = AutoCompleteGraphQL(gql`
@@ -70,17 +75,17 @@ const AutoCompleteArticle = AutoCompleteGraphQL(gql`
 
 const AutoCompleteDiscussion = AutoCompleteGraphQL(gql`
   query TypeAndFindQuery($nameContains: String!) {
-    articles (nameContains: $nameContains, limit: 50) {
+    discussions (nameContains: $nameContains, limit: 50) {
       id
       name {
         value
       }
     }
   }
-`, ({ ownProps, data: { articles } }) => ({
+`, ({ ownProps, data: { discussions } }) => ({
     ...ownProps,
-    items: (articles)
-      ? articles.map(p => ({ text: p.name.value, value: p.id })) : [],
+    items: (discussions)
+      ? discussions.map(p => ({ text: p.name.value, value: p.id })) : [],
   }));
 
 const CLOUD_SIZE = {
@@ -239,7 +244,10 @@ class ArticleRecommendations extends React.Component {
       email: '',
       gcconnex_username: selected.text,
     });
-    this.setState({ token, selectedUser: { guid, name: selected.text } });
+    this.setState({
+      token,
+      selectedUser: { guid, name: selected.text, username: selected.username },
+    });
     this._next();
   }
 
@@ -397,6 +405,23 @@ class ArticleRecommendations extends React.Component {
           after authorizing.)
         </small>
       ));
+    }
+
+    let profileUrl = false;
+    let articleUrl = false;
+    let discussionUrl = false;
+
+    if (this._needUser() && this.state.selectedUser) {
+      profileUrl = 'http://gcconnex.gctools.nrc.ca/' +
+        `profile/${this.state.selectedUser.username}`;
+    }
+    if (this._needArticle() && this.state.selectedArticle) {
+      articleUrl = 'http://gcpedia.gctools.nrc.ca/' +
+        `index.php/${this.state.selectedArticle.name}`;
+    }
+    if (this._needGroupDiscussion() && this.state.selectedDiscussion) {
+      discussionUrl = 'http://gcconnex.gctools.nrc.ca/discussion/' +
+        `view/${this.state.selectedDiscussion.guid}`;
     }
 
     const Demo = (
@@ -626,20 +651,30 @@ class ArticleRecommendations extends React.Component {
             {(this._needUser() && this.state.selectedUser) ?
               <div style={{ marginRight: '25px', order: -1 }}>
                 <h2 style={heading}>{__('GCProfile user')}</h2>
-                <div style={padLeft}>{this.state.selectedUser.name}</div>
+                <div style={padLeft}>
+                  <a target="_blank" href={profileUrl}>
+                    {this.state.selectedUser.name}
+                  </a>
+                </div>
               </div>
             : null}
             {(this._needArticle() && this.state.selectedArticle) ?
               <div style={{ marginRight: '25px', order: -1 }}>
                 <h2 style={heading}>{__('GCpedia article')}</h2>
-                <div style={padLeft}>{this.state.selectedArticle.name}</div>
+                <div style={padLeft}>
+                  <a target="_blank" href={articleUrl}>
+                    {this.state.selectedArticle.name}
+                  </a>
+                </div>
               </div>
             : null}
             {(this._needGroupDiscussion() && this.state.selectedDiscussion) ?
               <div style={{ marginRight: '25px', order: -1 }}>
                 <h2 style={heading}>{__('GCconnex discussion')}</h2>
                 <div style={padLeft}>
-                  {this.state.selectedDiscussion.name}
+                  <a target="_blank" href={discussionUrl}>
+                    {this.state.selectedDiscussion.name}
+                  </a>
                 </div>
               </div>
             : null}
