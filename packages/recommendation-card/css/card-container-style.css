@@ -54,19 +54,15 @@
     font-size: 18px;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #f5f8fa;
     z-index: 99;
-}
-
-.fieldset-heading-text > span {
-    padding: 10px;
-    display: inline-block;
+    display: block;
 }
 
 .nrc-sticky {
     position: sticky;
     bottom: 0;
-    background-color: white;
+    background-color: #f5f8fa;
     z-index: 99;
     text-align: right;
 }

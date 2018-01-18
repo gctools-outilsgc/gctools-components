@@ -13,8 +13,9 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
-// import FloatingActionButton from 'material-ui/FloatingActionButton';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ActionViewHeadline from 'material-ui/svg-icons/action/view-headline';
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import Drawer from 'material-ui/Drawer';
 import { List } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
@@ -125,8 +126,8 @@ class ContainerLarge extends Component {
     if (this.props.floating) {
       const styles = {
         largeIcon: {
-          width: 60,
-          height: 60,
+          width: 48,
+          height: 48,
         },
       };
       retVal = (
@@ -143,7 +144,23 @@ class ContainerLarge extends Component {
           >
             <List style={{ padding: 0 }}>
               <div key="firstkey" className="fieldset-heading-text">
-                <span>Recommended Articles</span>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between'
+                  }}
+                >
+                  <span style={{ alignSelf: 'center', paddingLeft: '15px' }}>
+                    Recommended Articles
+                  </span>
+                  <span>
+                    <IconButton
+                      onClick={this.handleDrawerClose}
+                    >
+                      <NavigationClose />
+                    </IconButton>
+                  </span>
+                </div>
                 <Divider />
               </div>
               {this.props.cards.map(card => (
@@ -166,20 +183,17 @@ class ContainerLarge extends Component {
               </div>
             </List>
           </Drawer>
-          <IconButton
+          <FloatingActionButton
             onClick={this.handleOpenDrawer}
             style={{
               position: 'fixed',
               bottom: '15px',
               right: '15px',
-              width: 120,
-              height: 120,
-              padding: 30,
             }}
             iconStyle={styles.largeIcon}
           >
             <ActionViewHeadline />
-          </IconButton>
+          </FloatingActionButton>
         </div>
       );
     } else {

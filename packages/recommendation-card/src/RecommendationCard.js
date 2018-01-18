@@ -20,6 +20,9 @@ import { ListItem } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import SocialShare from 'material-ui/svg-icons/social/share';
+import ToggleStar from 'material-ui/svg-icons/toggle/star';
+import ToggleStarBorder from 'material-ui/svg-icons/toggle/star-border';
+import Toggle from 'material-ui/Toggle';
 import 'font-awesome/css/font-awesome.min.css';
 import WordCloud from './WordCloud';
 
@@ -36,10 +39,14 @@ const Rating = require('react-rating');
 class RecommendationCard extends Component {
   constructor() {
     super();
+    this.state = {
+      expanded: false,
+    }
     this.cloudElement = false;
     this.cloudLayout = false;
     this.restartCount = 0;
     this.handleClick = this.handleClick.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleClick() {
@@ -47,6 +54,10 @@ class RecommendationCard extends Component {
       `http://gcpedia.gctools.nrc.ca/index.php/${this.props.title}`,
       (this.props.context === 'gcpedia') ? '_self' : '_blank',
     );
+  }
+
+  handleToggle() {
+    this.setState({ expanded: !this.state.expanded });
   }
 
   render() {
@@ -114,16 +125,45 @@ class RecommendationCard extends Component {
     if (typeof this.props.rank === 'number' && showExtra) {
       // const percentage = parseFloat(this.props.rank * 100).toFixed(0);
       // const rating = parseFloat(percentage / 10).toFixed(0);
-      const rating = Math.floor(this.props.rank * 10);
+      const rating = (this.props.rank * 10) / 2;
+      console.log(rating);
       score = (
-        <div style={{ alignSelf: 'flex-end' }}>
+        <div style={{ alignSelf: 'flex-end', marginBottom: '-7px' }}>
           <div className="rating-border">
             <Rating
-              stop={10}
+              stop={5}
               readonly
-              emptySymbol={<div className="rating-empty">&nbsp;</div>}
-              fullSymbol={<div className="rating-full">&nbsp;</div>}
+              // emptySymbol={<div className="rating-empty">&nbsp;</div>}
+              // fullSymbol={<div className="rating-full">&nbsp;</div>}
+              emptySymbol={<ToggleStarBorder color="#0375b4" style={{ width: '15px' }} />}
+              fullSymbol={<ToggleStar color="#0375b4" style={{ width: '15px' }} />}
+              fractions={2}
               initialRating={rating}
+            />
+          </div>
+        </div>
+      );
+    }
+    let phraseCloud;
+    if (this.state.expanded) {
+      phraseCloud = (
+        <div>
+          {showExtra
+            ?
+              <div className="phrases-heading-text">
+                {/* Top Matching Profile Phrases */}
+              </div>
+            :
+              false
+          }
+          <div
+            style={{
+              textAlign: 'center',
+              overflow: 'hidden',
+            }}
+          >
+            <WordCloud
+              phrases={this.props.phrases}
             />
           </div>
         </div>
@@ -141,24 +181,16 @@ class RecommendationCard extends Component {
             onClick={this.handleClick}
           />
           <div className="card-padding">
-            {showExtra
-              ?
-                <div className="phrases-heading-text">
-                  Top Matching Profile Phrases
-                </div>
-              :
-                false
-            }
-            <div
-              style={{
-                textAlign: 'center',
-                overflow: 'hidden',
-              }}
-            >
-              <WordCloud
-                phrases={this.props.phrases}
-              />
+            <div style={{ padding: '0 0 15px 0' }}>
+            <Toggle
+              toggled={this.state.expanded}
+              onToggle={this.handleToggle}
+              labelPosition="left"
+              label="Show Top Matching Profile Phrases"
+              labelStyle={{ fontSize: "13px" }}
+            />
             </div>
+            {phraseCloud}
             <div
               style={{
                 display: 'flex',
@@ -168,12 +200,10 @@ class RecommendationCard extends Component {
             >
               <div style={{ alignSelf: 'flex-end' }}>
                 <IconButton
-                  tooltip="Share"
-                  tooltipPosition="top-center"
                   disableTouchRipple
                   style={{ bottom: '-13px', left: '-12px' }}
                 >
-                  <SocialShare color="#657786" />
+                  <SocialShare color="#0375b4" />
                 </IconButton>
               </div>
               {score}
