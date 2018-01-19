@@ -29,9 +29,11 @@
 .grid-item {
     margin-bottom: 15px;
 } */
+
 .load-more {
     text-align: center;
     padding: 10px 0;
+    margin-bottom: -20px;
 }
 
 .fieldset-container {
@@ -47,8 +49,19 @@
 .fieldset-heading-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    transform: scale(1, 1.1);
-    font-size: 1rem;
+    color: #333;
+    margin: auto;
+    font-size: 18px;
+    background-color: #f5f8fa;
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    padding: 0 7px;
+}
+
+.fieldset-heading-text-drawer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     color: #333;
     margin: auto;
     font-size: 18px;
@@ -63,6 +76,8 @@
     position: sticky;
     bottom: 0;
     background-color: #f5f8fa;
+    background-repeat: no-repeat;
+    background-position-y: center;
     z-index: 99;
     text-align: right;
 }

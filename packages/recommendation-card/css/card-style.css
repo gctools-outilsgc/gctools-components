@@ -66,6 +66,10 @@
 }
 
 .card-padding {
+  padding: 15px;
+}
+
+.card-padding-listview {
   padding: 0 15px 15px 15px;
 }
 
@@ -75,6 +79,13 @@
   text-align: center;
   position: relative;
   height: 8px;
+}
+
+.wordcloud-container {
+  text-align: center;
+  overflow: hidden;
+  margin-top: 7px;
+  margin-bottom: -10px;
 }
 
 .phrases-heading-border-bottom {
@@ -88,7 +99,25 @@
   color: #333;
   font-weight: 900;
   font-size: 14px;
+  position: relative;
+  top: -11px;
+  background-color: white;
+  padding: 0 7px;
+  text-align: center;
+  display: inline-block;
 }
+
+.phrases-heading-text-listview {
+  color: #333;
+  font-weight: 900;
+  font-size: 14px;
+  position: relative;
+  top: -11px;
+  background-color: white;
+  padding: 0 7px;
+  text-align: center;
+}
+
 .score-circle {
   width: 50px;
 }
@@ -154,7 +183,6 @@
 }
 
 .card-subtitle {
-  font-family: "'Montserrat', sans-serif";
   font-size: 11px !important;
 }
 

@@ -8,8 +8,7 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardHeader }
-  from 'material-ui/Card';
+import { Card } from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
@@ -41,7 +40,7 @@ class RecommendationCard extends Component {
     super();
     this.state = {
       expanded: false,
-    }
+    };
     this.cloudElement = false;
     this.cloudLayout = false;
     this.restartCount = 0;
@@ -62,7 +61,6 @@ class RecommendationCard extends Component {
 
   render() {
     let header = <span />;
-    let titleLink;
     switch (this.props.type) {
       case 'tweet':
         header = (
@@ -76,25 +74,13 @@ class RecommendationCard extends Component {
         );
         break;
       case 'gcpedia-article':
-        titleLink = (
-          <a
-            href={`http://gcpedia.gctools.nrc.ca/index.php/
-              ${this.props.title}`}
-            target={(this.props.context === 'gcpedia') ? '_self' : '_blank'}
-            className="card-title-link"
-          >
-            {this.props.title}
-          </a>
-        );
         header = (
-          <CardHeader
-            title={titleLink}
-            subtitle="GCpedia"
-            avatar={gcpedia}
-            titleStyle={{
-              fontFamily: "'Anton', sans-serif",
-              fontSize: '16px',
-            }}
+          <ListItem
+            leftAvatar={<Avatar src={gcpedia} />}
+            primaryText={<div className="card-title">{this.props.title}</div>}
+            secondaryText={<div className="card-subtitle">GCpedia</div>}
+            hoverColor="none"
+            onClick={this.handleClick}
           />
         );
         break;
@@ -123,10 +109,7 @@ class RecommendationCard extends Component {
     const showExtra = this.props.type !== 'gcprofile-user';
 
     if (typeof this.props.rank === 'number' && showExtra) {
-      // const percentage = parseFloat(this.props.rank * 100).toFixed(0);
-      // const rating = parseFloat(percentage / 10).toFixed(0);
       const rating = (this.props.rank * 10) / 2;
-      console.log(rating);
       score = (
         <div style={{ alignSelf: 'flex-end', marginBottom: '-7px' }}>
           <div className="rating-border">
@@ -135,8 +118,18 @@ class RecommendationCard extends Component {
               readonly
               // emptySymbol={<div className="rating-empty">&nbsp;</div>}
               // fullSymbol={<div className="rating-full">&nbsp;</div>}
-              emptySymbol={<ToggleStarBorder color="#0375b4" style={{ width: '15px' }} />}
-              fullSymbol={<ToggleStar color="#0375b4" style={{ width: '15px' }} />}
+              emptySymbol={
+                <ToggleStarBorder
+                  color="#0375b4"
+                  style={{ width: '15px' }}
+                />
+              }
+              fullSymbol={
+                <ToggleStar
+                  color="#0375b4"
+                  style={{ width: '15px' }}
+                />
+              }
               fractions={2}
               initialRating={rating}
             />
@@ -144,18 +137,13 @@ class RecommendationCard extends Component {
         </div>
       );
     }
-    let phraseCloud;
+    let phraseCloud; // for non list view mode
     if (this.state.expanded) {
       phraseCloud = (
-        <div>
-          {showExtra
-            ?
-              <div className="phrases-heading-text">
-                {/* Top Matching Profile Phrases */}
-              </div>
-            :
-              false
-          }
+        <div style={{ marginTop: '30px' }}>
+          <div className="phrases-heading-text-listview">
+            Top Matching Profile Phrases
+          </div>
           <div
             style={{
               textAlign: 'center',
@@ -169,45 +157,42 @@ class RecommendationCard extends Component {
         </div>
       );
     }
+    const cardBottom = (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          height: '35px',
+        }}
+      >
+        <div style={{ alignSelf: 'flex-end' }}>
+          <IconButton
+            disableTouchRipple
+            style={{ bottom: '-13px', left: '-12px' }}
+          >
+            <SocialShare color="#0375b4" />
+          </IconButton>
+        </div>
+        {score}
+      </div>
+    );
     let retVal;
     if (this.props.listView === true) {
       retVal = (
         <div>
-          <ListItem
-            leftAvatar={<Avatar src={gcpedia} />}
-            primaryText={<div className="card-title">{this.props.title}</div>}
-            secondaryText={<div className="card-subtitle">GCpedia</div>}
-            hoverColor="none"
-            onClick={this.handleClick}
-          />
-          <div className="card-padding">
-            <div style={{ padding: '0 0 15px 0' }}>
-            <Toggle
-              toggled={this.state.expanded}
-              onToggle={this.handleToggle}
-              labelPosition="left"
-              label="Show Top Matching Profile Phrases"
-              labelStyle={{ fontSize: "13px" }}
-            />
+          {header}
+          <div className="card-padding-listview">
+            <div>
+              <Toggle
+                toggled={this.state.expanded}
+                onToggle={this.handleToggle}
+                labelPosition="left"
+                label="Why this article?"
+                labelStyle={{ fontSize: '13px' }}
+              />
             </div>
             {phraseCloud}
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                height: '20px',
-              }}
-            >
-              <div style={{ alignSelf: 'flex-end' }}>
-                <IconButton
-                  disableTouchRipple
-                  style={{ bottom: '-13px', left: '-12px' }}
-                >
-                  <SocialShare color="#0375b4" />
-                </IconButton>
-              </div>
-              {score}
-            </div>
+            {cardBottom}
           </div>
           <Divider />
         </div>
@@ -227,35 +212,13 @@ class RecommendationCard extends Component {
               :
                 false
             }
-            <div
-              style={{
-                textAlign: 'center',
-                overflow: 'hidden',
-              }}
-            >
+            <div className="wordcloud-container">
               <WordCloud
                 phrases={this.props.phrases}
               />
             </div>
             <div className="phrases-heading-border-bottom" />
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                marginTop: '10px',
-                }}
-            >
-              <div style={{ alignSelf: 'flex-end' }}>
-                <IconButton
-                  tooltip="Share"
-                  tooltipPosition="top-center"
-                  disableTouchRipple
-                >
-                  <SocialShare />
-                </IconButton>
-              </div>
-              {score}
-            </div>
+            {cardBottom}
           </div>
         </Card>
       );

@@ -27,7 +27,7 @@ const demo = () => (
       <CardContainer
         key="ccontainer"
         loaded
-        floating
+        drawerView
         cards={[
           {
             key: '1',

@@ -123,7 +123,7 @@ class ContainerLarge extends Component {
       );
     }
     let retVal;
-    if (this.props.floating) {
+    if (this.props.drawerView) {
       const styles = {
         largeIcon: {
           width: 48,
@@ -142,15 +142,20 @@ class ContainerLarge extends Component {
             containerStyle={{ zIndex: 9999 }}
             width={350}
           >
-            <List style={{ padding: 0 }}>
-              <div key="firstkey" className="fieldset-heading-text">
+            <List
+              style={{
+                padding: 0,
+                height: '100%',
+              }}
+            >
+              <div key="firstkey" className="fieldset-heading-text-drawer">
                 <div
                   style={{
                     display: 'flex',
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-between',
                   }}
                 >
-                  <span style={{ alignSelf: 'center', paddingLeft: '15px' }}>
+                  <span style={{ alignSelf: 'center', paddingLeft: '7px' }}>
                     Recommended Articles
                   </span>
                   <span>
@@ -205,7 +210,7 @@ class ContainerLarge extends Component {
               backgroundColor: this.props.bgcolour,
             }}
           >
-            Article Recommendations
+            Recommended Articles
           </div>
           {content}
           {loadMore}
@@ -214,7 +219,7 @@ class ContainerLarge extends Component {
               display: 'flex',
               justifyContent: 'flex-end',
               position: 'relative',
-              bottom: '-15px',
+              bottom: '-25px',
             }}
           >
             <span
@@ -243,7 +248,7 @@ ContainerLarge.propTypes = {
   noloader: PropTypes.bool,
   cards: PropTypes.arrayOf(PropTypes.object),
   bgcolour: PropTypes.string,
-  floating: PropTypes.bool,
+  drawerView: PropTypes.bool,
 };
 
 ContainerLarge.defaultProps = {
@@ -251,7 +256,7 @@ ContainerLarge.defaultProps = {
   noloader: false,
   cards: [],
   bgcolour: '#fff',
-  floating: false,
+  drawerView: false,
 };
 
 export default ContainerLarge;
