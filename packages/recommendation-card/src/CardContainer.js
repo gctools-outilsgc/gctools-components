@@ -13,8 +13,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ActionViewHeadline from 'material-ui/svg-icons/action/view-headline';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import NavigationChevronRight
   from 'material-ui/svg-icons/navigation/chevron-right';
@@ -126,12 +124,6 @@ class ContainerLarge extends Component {
     }
     let retVal;
     if (this.props.drawerView) {
-      const styles = {
-        largeIcon: {
-          width: 48,
-          height: 48,
-        },
-      };
       retVal = (
         <div>
           <Drawer
@@ -183,14 +175,9 @@ class ContainerLarge extends Component {
               ))}
             </List>
             <div
-              key="lastkey"
               className="nrc-sticky"
               style={{
                 backgroundImage: `url(${canadianFlag})`,
-                // position: 'fixed',
-                // display: 'inline-block',
-                // width: '100%',
-                // overflow: 'hidden',
                 height: '45px',
                 overflow: 'hidden',
               }}

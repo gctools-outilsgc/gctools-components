@@ -76,6 +76,7 @@ class RecommendationCard extends Component {
       case 'gcpedia-article':
         header = (
           <ListItem
+            key="listKeyTitle"
             leftAvatar={<Avatar src={gcpedia} />}
             primaryText={<div className="card-title">{this.props.title}</div>}
             secondaryText={<div className="card-subtitle">GCpedia</div>}
