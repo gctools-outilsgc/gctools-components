@@ -92,3 +92,69 @@
     width: 100%;
     display: inline-block;
 }
+
+.btn-2 {
+    background-color: #0375b4;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 53px 12px 23px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-2 span {
+    position: relative;
+    z-index: 3;
+}
+
+.btn-2 .round {
+    background-color: #2e9dd9;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    transition: all 0.3s ease-out;
+    z-index: 2;
+}
+
+.btn-2 .round .icon {
+    position: absolute;
+    top: 35%;
+    margin-top: -6px;
+    left: 35%;
+    margin-left: -4px;
+    transition: all 0.3s;
+  }
+
+.txt {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.floating-button .btn-2:hover {
+    padding-left: 48px;
+    padding-right: 28px;
+}
+
+.floating-button .btn-2:hover .round {
+    width: calc(100% - 6px);
+    border-radius: 30px;
+}
+
+.floating-button .btn-2:hover .round .icon {
+    left: 12%;
+}

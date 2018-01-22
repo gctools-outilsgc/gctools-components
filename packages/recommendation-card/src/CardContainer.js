@@ -16,6 +16,8 @@ import IconButton from 'material-ui/IconButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ActionViewHeadline from 'material-ui/svg-icons/action/view-headline';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import NavigationChevronRight
+  from 'material-ui/svg-icons/navigation/chevron-right';
 import Drawer from 'material-ui/Drawer';
 import { List } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
@@ -145,7 +147,8 @@ class ContainerLarge extends Component {
             <List
               style={{
                 padding: 0,
-                height: '100%',
+                minHeight: '100%',
+                marginBottom: '-45px',
               }}
             >
               <div key="firstkey" className="fieldset-heading-text-drawer">
@@ -178,17 +181,39 @@ class ContainerLarge extends Component {
                   rank={card.rank}
                 />
               ))}
-              <div
-                key="lastkey"
-                className="nrc-sticky"
-                style={{ backgroundImage: `url(${canadianFlag})` }}
-              >
-                <Divider />
-                <img className="nrc-logo" src={nrcLogo} alt="NRC" />
-              </div>
             </List>
+            <div
+              key="lastkey"
+              className="nrc-sticky"
+              style={{
+                backgroundImage: `url(${canadianFlag})`,
+                // position: 'fixed',
+                // display: 'inline-block',
+                // width: '100%',
+                // overflow: 'hidden',
+                height: '45px',
+                overflow: 'hidden',
+              }}
+            >
+              <Divider />
+              <img className="nrc-logo" src={nrcLogo} alt="NRC" />
+            </div>
           </Drawer>
-          <FloatingActionButton
+          <div
+            className="floating-button"
+            onClick={this.handleOpenDrawer}
+            role="button"
+            tabIndex={0}
+            onKeyPress={this.handleOpenDrawer}
+          >
+            <div className="btn btn-2">
+              <span className="txt">Articles</span>
+              <span className="round">
+                <NavigationChevronRight className="icon" color="white" />
+              </span>
+            </div>
+          </div>
+          {/* <FloatingActionButton
             onClick={this.handleOpenDrawer}
             style={{
               position: 'fixed',
@@ -198,7 +223,7 @@ class ContainerLarge extends Component {
             iconStyle={styles.largeIcon}
           >
             <ActionViewHeadline />
-          </FloatingActionButton>
+          </FloatingActionButton> */}
         </div>
       );
     } else {
