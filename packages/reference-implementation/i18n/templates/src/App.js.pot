@@ -78,3 +78,11 @@ msgstr ""
 msgid "Identity Server"
 msgstr ""
 
+#: src/App.js 187:21
+msgid "Floating Recommendation cards"
+msgstr ""
+
+#: src/App.js 187:21
+msgid "Floating Recommendations"
+msgstr ""
+

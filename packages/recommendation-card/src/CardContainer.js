@@ -12,11 +12,19 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PropTypes from 'prop-types';
 import FlatButton from 'material-ui/FlatButton';
+import IconButton from 'material-ui/IconButton';
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import NavigationChevronRight
+  from 'material-ui/svg-icons/navigation/chevron-right';
+import Drawer from 'material-ui/Drawer';
+import { List } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
 
+import RecommendationCard from './RecommendationCard';
 import '../css/card-container-style.css';
 
 const nrcLogo = require('../img/nrclogo.png');
-
+const canadianFlag = require('../img/canadianflag.png');
 // const Masonry = require('react-masonry-component');
 
 /**
@@ -28,8 +36,11 @@ class ContainerLarge extends Component {
     this.state = {
       hasError: false,
       cardsShown: 3,
+      drawerOpen: false,
     };
     this.handleLoadMore = this.handleLoadMore.bind(this);
+    this.handleOpenDrawer = this.handleOpenDrawer.bind(this);
+    this.handleDrawerClose = this.handleDrawerClose.bind(this);
   }
 
   handleLoadMore() {
@@ -40,9 +51,18 @@ class ContainerLarge extends Component {
     this.setState({ hasError: true });
   }
 
+  handleOpenDrawer() {
+    this.setState({ drawerOpen: true });
+  }
+
+  handleDrawerClose() {
+    this.setState({ drawerOpen: false });
+  }
+
   render() {
     let content = null;
     const cards = this.props.cards.slice(0, this.state.cardsShown);
+
     let loadMore;
     if (this.state.cardsShown < this.props.cards.length) {
       loadMore = (
@@ -102,37 +122,130 @@ class ContainerLarge extends Component {
         </div>
       );
     }
-    return (
-      <div className="fieldset-container">
-        <div
-          className="fieldset-heading-text"
-          style={{
-            backgroundColor: this.props.bgcolour,
-            fontSize: '18px',
-          }}
-        >
-          Article Recommendations
+    let retVal;
+    if (this.props.drawerView) {
+      retVal = (
+        <div>
+          <Drawer
+            openSecondary
+            docked={false}
+            open={this.state.drawerOpen}
+            onRequestChange={this.handleDrawerClose}
+            overlayStyle={{ background: 'none' }}
+            zDepth={4}
+            containerStyle={{ zIndex: 9999 }}
+            width={350}
+          >
+            <List
+              style={{
+                padding: 0,
+                minHeight: '100%',
+                marginBottom: '-45px',
+              }}
+            >
+              <div key="firstkey" className="fieldset-heading-text-drawer">
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <span style={{ alignSelf: 'center', paddingLeft: '7px' }}>
+                    Recommended Articles
+                  </span>
+                  <span>
+                    <IconButton
+                      onClick={this.handleDrawerClose}
+                    >
+                      <NavigationClose />
+                    </IconButton>
+                  </span>
+                </div>
+                <Divider />
+              </div>
+              {this.props.cards.map(card => (
+                <RecommendationCard
+                  key={`reccard${Math.random() * 1000}`}
+                  listView
+                  title={card.title}
+                  type="gcpedia-article"
+                  phrases={card.phrases}
+                  rank={card.rank}
+                />
+              ))}
+            </List>
+            <div
+              className="nrc-sticky"
+              style={{
+                backgroundImage: `url(${canadianFlag})`,
+                height: '45px',
+                overflow: 'hidden',
+              }}
+            >
+              <Divider />
+              <img className="nrc-logo" src={nrcLogo} alt="NRC" />
+            </div>
+          </Drawer>
+          <div
+            className="floating-button"
+            onClick={this.handleOpenDrawer}
+            role="button"
+            tabIndex={0}
+            onKeyPress={this.handleOpenDrawer}
+          >
+            <div className="btn btn-2">
+              <span className="txt">Articles</span>
+              <span className="round">
+                <NavigationChevronRight className="icon" color="white" />
+              </span>
+            </div>
+          </div>
+          {/* <FloatingActionButton
+            onClick={this.handleOpenDrawer}
+            style={{
+              position: 'fixed',
+              bottom: '15px',
+              right: '15px',
+            }}
+            iconStyle={styles.largeIcon}
+          >
+            <ActionViewHeadline />
+          </FloatingActionButton> */}
         </div>
-        {content}
-        {loadMore}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            position: 'relative',
-            bottom: '-15px',
-          }}
-        >
-          <span
+      );
+    } else {
+      retVal = (
+        <div className="fieldset-container">
+          <div
+            className="fieldset-heading-text"
             style={{
               backgroundColor: this.props.bgcolour,
             }}
           >
-            <img className="nrc-logo" src={nrcLogo} alt="NRC" />
-          </span>
+            Recommended Articles
+          </div>
+          {content}
+          {loadMore}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              position: 'relative',
+              bottom: '-25px',
+            }}
+          >
+            <span
+              style={{
+                backgroundColor: this.props.bgcolour,
+              }}
+            >
+              <img className="nrc-logo" src={nrcLogo} alt="NRC" />
+            </span>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+    return retVal;
   }
 }
 
@@ -145,8 +258,9 @@ ContainerLarge.styles = {
 ContainerLarge.propTypes = {
   loaded: PropTypes.bool,
   noloader: PropTypes.bool,
-  cards: PropTypes.arrayOf(PropTypes.node),
+  cards: PropTypes.arrayOf(PropTypes.object),
   bgcolour: PropTypes.string,
+  drawerView: PropTypes.bool,
 };
 
 ContainerLarge.defaultProps = {
@@ -154,6 +268,7 @@ ContainerLarge.defaultProps = {
   noloader: false,
   cards: [],
   bgcolour: '#fff',
+  drawerView: false,
 };
 
 export default ContainerLarge;

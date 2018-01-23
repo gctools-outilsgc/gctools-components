@@ -71,7 +71,7 @@ class WordCloud extends React.Component {
             data={phrases}
             fontSizeMapper={fontSizeMapper}
             width={this.state.width}
-            height={150}
+            height={100}
             font="Roboto Condensed"
           />
         : null

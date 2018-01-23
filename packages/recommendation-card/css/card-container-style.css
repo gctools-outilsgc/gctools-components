@@ -29,9 +29,11 @@
 .grid-item {
     margin-bottom: 15px;
 } */
+
 .load-more {
     text-align: center;
     padding: 10px 0;
+    margin-bottom: -20px;
 }
 
 .fieldset-container {
@@ -45,28 +47,114 @@
 }
 
 .fieldset-heading-text {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    transform: scale(1, 1.1);
-    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     color: #333;
-    padding: 0 7px;
-    display: inline-block;
-    position: relative;
-    top: -14px;
-    left: 0;
-    right: 0;
     margin: auto;
     font-size: 18px;
-  }
+    background-color: #f5f8fa;
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    padding: 0 7px;
+}
+
+.fieldset-heading-text-drawer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #333;
+    margin: auto;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    background-color: #f5f8fa;
+    z-index: 99;
+    display: block;
+}
+
+.nrc-sticky {
+    position: sticky;
+    bottom: 0;
+    background-color: #f5f8fa;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    z-index: 99;
+    text-align: right;
+}
 
 .nrc-logo {
     position: relative;
     width: 150px;
-    padding: 0 7px;
+    padding: 10px;
 }
 
 .full-width {
     width: 100%;
     display: inline-block;
+}
+
+.btn-2 {
+    background-color: #0375b4;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 53px 12px 23px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-2 span {
+    position: relative;
+    z-index: 3;
+}
+
+.btn-2 .round {
+    background-color: #2e9dd9;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    transition: all 0.3s ease-out;
+    z-index: 2;
+}
+
+.btn-2 .round .icon {
+    position: absolute;
+    top: 35%;
+    margin-top: -6px;
+    left: 35%;
+    margin-left: -4px;
+    transition: all 0.3s;
+  }
+
+.txt {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.floating-button .btn-2:hover {
+    padding-left: 48px;
+    padding-right: 28px;
+}
+
+.floating-button .btn-2:hover .round {
+    width: calc(100% - 6px);
+    border-radius: 30px;
+}
+
+.floating-button .btn-2:hover .round .icon {
+    left: 12%;
 }

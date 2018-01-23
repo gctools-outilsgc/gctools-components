@@ -69,12 +69,23 @@
   padding: 15px;
 }
 
+.card-padding-listview {
+  padding: 0 15px 15px 15px;
+}
+
 .phrases-heading-border-top {
   border: solid 1px #d4d4d4;
   border-bottom: 0;
   text-align: center;
   position: relative;
   height: 8px;
+}
+
+.wordcloud-container {
+  text-align: center;
+  overflow: hidden;
+  margin-top: 7px;
+  margin-bottom: -10px;
 }
 
 .phrases-heading-border-bottom {
@@ -85,21 +96,28 @@
 }
 
 .phrases-heading-text {
-  font-family: 'Gotham Ultra', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  transform: scale(1, 1.1);
-  font-size: 11px;
-  background-color: white;
   color: #333;
-  padding: 0 7px;
-  display: inline-block;
+  font-weight: 900;
+  font-size: 14px;
   position: relative;
   top: -11px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  background-color: white;
+  padding: 0 7px;
+  text-align: center;
+  display: inline-block;
 }
+
+.phrases-heading-text-listview {
+  color: #333;
+  font-weight: 900;
+  font-size: 14px;
+  position: relative;
+  top: -11px;
+  background-color: white;
+  padding: 0 7px;
+  text-align: center;
+}
+
 .score-circle {
   width: 50px;
 }
@@ -155,3 +173,37 @@
   text-decoration: underline;
   color: #333;
 }
+
+.card-title {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 800;
+}
+
+.card-subtitle {
+  font-size: 11px !important;
+}
+
+.rating-empty {
+  width: 6px;
+  height: 17px;
+  background-color: #ccc;
+  margin: 2px;
+  border-radius: 3px;
+}
+
+.rating-full {
+  width: 6px;
+  height: 17px;
+  background-color: #0375b4;
+  margin: 2px;
+  border-radius: 3px;
+}
+
+/* .rating-border {
+  border: 2px solid #0375b4;
+  border-radius: 5px;
+  padding: 1px;
+} */
