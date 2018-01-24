@@ -8331,153 +8331,191 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
     style={Object {}}
   >
     <div
-      className="fieldset-container"
+      className="grid-item card"
+      style={
+        Object {
+          "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+          "backgroundColor": "#ffffff",
+          "borderRadius": 2,
+          "boxShadow": "0 1px 6px rgba(0, 0, 0, 0.12),
+         0 1px 4px rgba(0, 0, 0, 0.12)",
+          "boxSizing": "border-box",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "fontFamily": "Roboto, sans-serif",
+          "muiPrepared": true,
+          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+          "zIndex": 1,
+        }
+      }
     >
       <div
-        className="fieldset-heading-text"
         style={
           Object {
-            "backgroundColor": "#fff",
+            "paddingBottom": 0,
           }
         }
       >
-        Recommended Articles
-      </div>
-      <div
-        className="recommendations-container"
-      >
-        <h4>
-          1969
-        </h4>
         <div
-          className="grid-item card"
-          style={
-            Object {
-              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-              "backgroundColor": "#ffffff",
-              "borderRadius": 2,
-              "boxShadow": "0 1px 6px rgba(0, 0, 0, 0.12),
-         0 1px 4px rgba(0, 0, 0, 0.12)",
-              "boxSizing": "border-box",
-              "color": "rgba(0, 0, 0, 0.87)",
-              "fontFamily": "Roboto, sans-serif",
-              "muiPrepared": true,
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "zIndex": 1,
-            }
-          }
+          className="header"
         >
+          <svg
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, 0.87)",
+                "display": "inline-block",
+                "fill": "#fff",
+                "height": "20px",
+                "marginRight": "3px",
+                "muiPrepared": true,
+                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                "userSelect": "none",
+                "width": "20px",
+              }
+            }
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z"
+            />
+          </svg>
+          <h5>
+            Tweet
+          </h5>
+        </div>
+        <div
+          className="card-padding"
+        >
+          <div
+            className="phrases-heading-border-top"
+          >
+            <div
+              className="phrases-heading-text"
+            >
+              Top Matching Profile Phrases
+            </div>
+          </div>
+          <div
+            className="wordcloud-container"
+          >
+            <div />
+          </div>
+          <div
+            className="phrases-heading-border-bottom"
+          />
           <div
             style={
               Object {
-                "paddingBottom": 0,
+                "display": "flex",
+                "height": "35px",
+                "justifyContent": "space-between",
               }
             }
           >
             <div
-              className="header"
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                }
+              }
             >
-              <svg
+              <button
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                onMouseOut={[Function]}
+                onTouchStart={[Function]}
                 style={
                   Object {
-                    "color": "rgba(0, 0, 0, 0.87)",
+                    "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                    "background": "none",
+                    "border": 10,
+                    "bottom": "-13px",
+                    "boxSizing": "border-box",
+                    "cursor": "pointer",
                     "display": "inline-block",
-                    "fill": "#fff",
-                    "height": "20px",
-                    "marginRight": "3px",
+                    "fontFamily": "Roboto, sans-serif",
+                    "fontSize": 0,
+                    "fontWeight": "inherit",
+                    "height": 48,
+                    "left": "-12px",
+                    "margin": 0,
                     "muiPrepared": true,
+                    "outline": "none",
+                    "overflow": "visible",
+                    "padding": 12,
+                    "position": "relative",
+                    "textDecoration": "none",
                     "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                    "userSelect": "none",
-                    "width": "20px",
+                    "verticalAlign": null,
+                    "width": 48,
                   }
                 }
-                viewBox="0 0 24 24"
+                tabIndex={0}
+                type="button"
               >
-                <path
-                  d="M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z"
-                />
-              </svg>
-              <h5>
-                Tweet
-              </h5>
-            </div>
-            <div
-              className="card-padding"
-            >
-              <div
-                className="phrases-heading-border-top"
-              >
-                <div
-                  className="phrases-heading-text"
-                >
-                  Top Matching Profile Phrases
-                </div>
-              </div>
-              <div
-                className="wordcloud-container"
-              >
-                <div />
-              </div>
-              <div
-                className="phrases-heading-border-bottom"
-              />
-              <div
-                style={
-                  Object {
-                    "display": "flex",
-                    "height": "35px",
-                    "justifyContent": "space-between",
-                  }
-                }
-              >
-                <div
+                <svg
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   style={
                     Object {
-                      "alignSelf": "flex-end",
+                      "color": "rgba(0, 0, 0, 0.87)",
+                      "display": "inline-block",
+                      "fill": "#0375b4",
+                      "height": 24,
+                      "muiPrepared": true,
+                      "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                      "userSelect": "none",
+                      "width": 24,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                  "marginBottom": "-7px",
+                }
+              }
+            >
+              <div
+                className="rating-border"
+              >
+                <span
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "direction": "ltr",
+                      "display": "inline-block",
                     }
                   }
                 >
-                  <button
-                    disabled={false}
-                    onBlur={[Function]}
+                  <span
                     onClick={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyUp={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    onMouseOut={[Function]}
-                    onTouchStart={[Function]}
+                    onMouseMove={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
                     style={
                       Object {
-                        "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                        "background": "none",
-                        "border": 10,
-                        "bottom": "-13px",
-                        "boxSizing": "border-box",
-                        "cursor": "pointer",
+                        "cursor": "auto",
                         "display": "inline-block",
-                        "fontFamily": "Roboto, sans-serif",
-                        "fontSize": 0,
-                        "fontWeight": "inherit",
-                        "height": 48,
-                        "left": "-12px",
-                        "margin": 0,
-                        "muiPrepared": true,
-                        "outline": "none",
-                        "overflow": "visible",
-                        "padding": 12,
                         "position": "relative",
-                        "textDecoration": "none",
-                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "verticalAlign": null,
-                        "width": 48,
                       }
                     }
-                    tabIndex={0}
-                    type="button"
                   >
                     <svg
                       onMouseEnter={[Function]}
@@ -8491,414 +8529,331 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                           "muiPrepared": true,
                           "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
                           "userSelect": "none",
-                          "width": 24,
+                          "width": "15px",
                         }
                       }
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
+                        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                       />
                     </svg>
-                  </button>
-                </div>
-                <div
-                  style={
-                    Object {
-                      "alignSelf": "flex-end",
-                      "marginBottom": "-7px",
-                    }
-                  }
-                >
-                  <div
-                    className="rating-border"
-                  >
                     <span
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "left": 0,
+                          "overflow": "hidden",
+                          "position": "absolute",
+                          "top": 0,
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <svg
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "display": "inline-block",
+                            "fill": "#0375b4",
+                            "height": 24,
+                            "muiPrepared": true,
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "width": "15px",
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    onClick={[Function]}
+                    onMouseMove={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    style={
+                      Object {
+                        "cursor": "auto",
+                        "display": "inline-block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <svg
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                       style={
                         Object {
-                          "direction": "ltr",
+                          "color": "rgba(0, 0, 0, 0.87)",
                           "display": "inline-block",
+                          "fill": "#0375b4",
+                          "height": 24,
+                          "muiPrepared": true,
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "width": "15px",
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                      />
+                    </svg>
+                    <span
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "left": 0,
+                          "overflow": "hidden",
+                          "position": "absolute",
+                          "top": 0,
+                          "width": "100%",
                         }
                       }
                     >
-                      <span
-                        onClick={[Function]}
-                        onMouseMove={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
+                      <svg
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "color": "rgba(0, 0, 0, 0.87)",
                             "display": "inline-block",
-                            "position": "relative",
+                            "fill": "#0375b4",
+                            "height": 24,
+                            "muiPrepared": true,
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "width": "15px",
                           }
                         }
+                        viewBox="0 0 24 24"
                       >
-                        <svg
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.87)",
-                              "display": "inline-block",
-                              "fill": "#0375b4",
-                              "height": 24,
-                              "muiPrepared": true,
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "width": "15px",
-                            }
-                          }
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                          />
-                        </svg>
-                        <span
-                          style={
-                            Object {
-                              "display": "inline-block",
-                              "left": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                            }
-                          }
-                        >
-                          <svg
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.87)",
-                                "display": "inline-block",
-                                "fill": "#0375b4",
-                                "height": 24,
-                                "muiPrepared": true,
-                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                "userSelect": "none",
-                                "width": "15px",
-                              }
-                            }
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            />
-                          </svg>
-                        </span>
-                      </span>
-                      <span
-                        onClick={[Function]}
-                        onMouseMove={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        style={
-                          Object {
-                            "cursor": "auto",
-                            "display": "inline-block",
-                            "position": "relative",
-                          }
-                        }
-                      >
-                        <svg
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.87)",
-                              "display": "inline-block",
-                              "fill": "#0375b4",
-                              "height": 24,
-                              "muiPrepared": true,
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "width": "15px",
-                            }
-                          }
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                          />
-                        </svg>
-                        <span
-                          style={
-                            Object {
-                              "display": "inline-block",
-                              "left": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                            }
-                          }
-                        >
-                          <svg
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.87)",
-                                "display": "inline-block",
-                                "fill": "#0375b4",
-                                "height": 24,
-                                "muiPrepared": true,
-                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                "userSelect": "none",
-                                "width": "15px",
-                              }
-                            }
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            />
-                          </svg>
-                        </span>
-                      </span>
-                      <span
-                        onClick={[Function]}
-                        onMouseMove={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        style={
-                          Object {
-                            "cursor": "auto",
-                            "display": "inline-block",
-                            "position": "relative",
-                          }
-                        }
-                      >
-                        <svg
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.87)",
-                              "display": "inline-block",
-                              "fill": "#0375b4",
-                              "height": 24,
-                              "muiPrepared": true,
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "width": "15px",
-                            }
-                          }
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                          />
-                        </svg>
-                        <span
-                          style={
-                            Object {
-                              "display": "inline-block",
-                              "left": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                            }
-                          }
-                        >
-                          <svg
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.87)",
-                                "display": "inline-block",
-                                "fill": "#0375b4",
-                                "height": 24,
-                                "muiPrepared": true,
-                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                "userSelect": "none",
-                                "width": "15px",
-                              }
-                            }
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            />
-                          </svg>
-                        </span>
-                      </span>
-                      <span
-                        onClick={[Function]}
-                        onMouseMove={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        style={
-                          Object {
-                            "cursor": "auto",
-                            "display": "inline-block",
-                            "position": "relative",
-                          }
-                        }
-                      >
-                        <svg
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.87)",
-                              "display": "inline-block",
-                              "fill": "#0375b4",
-                              "height": 24,
-                              "muiPrepared": true,
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "width": "15px",
-                            }
-                          }
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                          />
-                        </svg>
-                        <span
-                          style={
-                            Object {
-                              "display": "inline-block",
-                              "left": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                            }
-                          }
-                        >
-                          <svg
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.87)",
-                                "display": "inline-block",
-                                "fill": "#0375b4",
-                                "height": 24,
-                                "muiPrepared": true,
-                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                "userSelect": "none",
-                                "width": "15px",
-                              }
-                            }
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            />
-                          </svg>
-                        </span>
-                      </span>
-                      <span
-                        onClick={[Function]}
-                        onMouseMove={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        style={
-                          Object {
-                            "cursor": "auto",
-                            "display": "inline-block",
-                            "position": "relative",
-                          }
-                        }
-                      >
-                        <svg
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.87)",
-                              "display": "inline-block",
-                              "fill": "#0375b4",
-                              "height": 24,
-                              "muiPrepared": true,
-                              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                              "userSelect": "none",
-                              "width": "15px",
-                            }
-                          }
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                          />
-                        </svg>
-                        <span
-                          style={
-                            Object {
-                              "display": "inline-block",
-                              "left": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                            }
-                          }
-                        >
-                          <svg
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.87)",
-                                "display": "inline-block",
-                                "fill": "#0375b4",
-                                "height": 24,
-                                "muiPrepared": true,
-                                "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                                "userSelect": "none",
-                                "width": "15px",
-                              }
-                            }
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            />
-                          </svg>
-                        </span>
-                      </span>
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                      </svg>
                     </span>
-                  </div>
-                </div>
+                  </span>
+                  <span
+                    onClick={[Function]}
+                    onMouseMove={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    style={
+                      Object {
+                        "cursor": "auto",
+                        "display": "inline-block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <svg
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "display": "inline-block",
+                          "fill": "#0375b4",
+                          "height": 24,
+                          "muiPrepared": true,
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "width": "15px",
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                      />
+                    </svg>
+                    <span
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "left": 0,
+                          "overflow": "hidden",
+                          "position": "absolute",
+                          "top": 0,
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <svg
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "display": "inline-block",
+                            "fill": "#0375b4",
+                            "height": 24,
+                            "muiPrepared": true,
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "width": "15px",
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    onClick={[Function]}
+                    onMouseMove={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    style={
+                      Object {
+                        "cursor": "auto",
+                        "display": "inline-block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <svg
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "display": "inline-block",
+                          "fill": "#0375b4",
+                          "height": 24,
+                          "muiPrepared": true,
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "width": "15px",
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                      />
+                    </svg>
+                    <span
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "left": 0,
+                          "overflow": "hidden",
+                          "position": "absolute",
+                          "top": 0,
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <svg
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "display": "inline-block",
+                            "fill": "#0375b4",
+                            "height": 24,
+                            "muiPrepared": true,
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "width": "15px",
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    onClick={[Function]}
+                    onMouseMove={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchMove={[Function]}
+                    style={
+                      Object {
+                        "cursor": "auto",
+                        "display": "inline-block",
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <svg
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "display": "inline-block",
+                          "fill": "#0375b4",
+                          "height": 24,
+                          "muiPrepared": true,
+                          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                          "userSelect": "none",
+                          "width": "15px",
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                      />
+                    </svg>
+                    <span
+                      style={
+                        Object {
+                          "display": "inline-block",
+                          "left": 0,
+                          "overflow": "hidden",
+                          "position": "absolute",
+                          "top": 0,
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <svg
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        style={
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.87)",
+                            "display": "inline-block",
+                            "fill": "#0375b4",
+                            "height": 24,
+                            "muiPrepared": true,
+                            "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+                            "userSelect": "none",
+                            "width": "15px",
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        style={
-          Object {
-            "bottom": "-25px",
-            "display": "flex",
-            "justifyContent": "flex-end",
-            "position": "relative",
-          }
-        }
-      >
-        <span
-          style={
-            Object {
-              "backgroundColor": "#fff",
-            }
-          }
-        >
-          <img
-            alt="NRC"
-            className="nrc-logo"
-            src="stub"
-          />
-        </span>
       </div>
     </div>
   </div>
@@ -8947,7 +8902,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
             }
           >
             "
-            ContainerLarge
+            RecommendationCard
             " Component
           </h2>
           <table
@@ -8987,13 +8942,21 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                 <td
                   className="css-1ygfcef"
                 >
-                  loaded
+                  title
                 </td>
                 <td
                   className="css-1ygfcef"
                 >
                   <span>
-                    bool
+                    <span>
+                      string
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      node
+                    </span>
                   </span>
                 </td>
                 <td
@@ -9013,27 +8976,27 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     }
                   >
                     "
-                    true
+                    'Default Recommendation'
                     "
                   </span>
                 </td>
                 <td
                   className="css-d52hbj"
                 >
-                  
+                  Title of the recommendation card, can be simple text or a node.
                 </td>
               </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
                 >
-                  noloader
+                  context
                 </td>
                 <td
                   className="css-1ygfcef"
                 >
                   <span>
-                    bool
+                    'gcconnex' | 'gcpedia' | 'other'
                   </span>
                 </td>
                 <td
@@ -9053,21 +9016,154 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     }
                   >
                     "
-                    false
+                    'other'
                     "
                   </span>
                 </td>
                 <td
                   className="css-d52hbj"
                 >
-                  
+                  Context where this card is being displayed
                 </td>
               </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
                 >
-                  cards
+                  touched
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    0
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Timestamp of latest modification
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'gcprofile-user' | 'gcpedia-article' | 'tweet' | 'unknown'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    'unknown'
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    A string describing what type of resource is being recommended.
+                  </span>
+                  <span>
+                    <br />
+                     
+                    
+                  </span>
+                  <span>
+                    <br />
+                     
+                    Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  rank
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    1
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Overall rank of a recommendation within a set of recommendations.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  phrases
                 </td>
                 <td
                   className="css-1ygfcef"
@@ -9077,7 +9173,78 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       [
                     </span>
                     <span>
-                      <span />
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
                     </span>
                     <span>
                       ]
@@ -9108,54 +9275,22 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                 <td
                   className="css-d52hbj"
                 >
-                  
-                </td>
-              </tr>
-              <tr>
-                <td
-                  className="css-1ygfcef"
-                >
-                  bgcolour
-                </td>
-                <td
-                  className="css-1ygfcef"
-                >
                   <span>
-                    string
+                     
+                    Array of objects of the form { text, size } representing a phrase
                   </span>
-                </td>
-                <td
-                  className="css-d52hbj"
-                >
-                  -
-                </td>
-                <td
-                  className="css-d52hbj"
-                >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
-                    "
-                    '#fff'
-                    "
+                  <span>
+                    <br />
+                     
+                    cloud, where size is the relative importance of the phrase within the set
                   </span>
-                </td>
-                <td
-                  className="css-d52hbj"
-                >
-                  
                 </td>
               </tr>
               <tr>
                 <td
                   className="css-1ygfcef"
                 >
-                  drawerView
+                  listView
                 </td>
                 <td
                   className="css-1ygfcef"

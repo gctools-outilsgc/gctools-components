@@ -24,19 +24,14 @@ storiesOf('RecommendationCard', module)
       inline: true,
       source: false,
     })(() => (
-      <CardContainer
-        loaded
-        cards={[
-          <RecommendationCard
-            type="tweet"
-            title="this is a short title"
-            rank={1}
-            key="cardTweet"
-            phrases={[
-              { text: 'word', size: 0.3 },
-              { text: 'phrase cloud', size: 1 },
-            ]}
-          />,
+      <RecommendationCard
+        type="tweet"
+        title="this is a short title"
+        rank={1}
+        key="cardTweet"
+        phrases={[
+          { text: 'word', size: 0.3 },
+          { text: 'phrase cloud', size: 1 },
         ]}
       />
     )),

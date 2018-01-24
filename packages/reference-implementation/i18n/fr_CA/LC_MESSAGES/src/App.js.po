@@ -84,27 +84,6 @@ msgstr "Recommandations d'articles"
 msgid "Web components | <strong>GC</strong>Tools"
 msgstr "Composants Web | Outils<strong>GC</strong>"
 
-#: 159:21 src/App.js
-#, fuzzy
-msgid "Identity Server"
-msgstr "Serveur d'identité"
-
 #: 187:21 src/App.js
-#, fuzzy
-msgid "Floating Recommendation cards"
-msgstr "Carte de recommandations"
-
-#: 187:21 src/App.js
-#, fuzzy
 msgid "Floating Recommendations"
-msgstr "Carte de recommandations"
-
-#~ msgid "Treemap Phrase Cloud"
-#~ msgstr "Nuage d'expression treemap"
-
-#~ msgid "Recommendation Card"
-#~ msgstr "Carte de recommandations"
-
-#~ msgid "Web Components | <strong>GC</strong>Tools"
-#~ msgstr "Composants Web | Outils<strong>GC</strong>"
-
+msgstr "Carte flotante"
