@@ -61,7 +61,18 @@ class ContainerLarge extends Component {
 
   render() {
     let content = null;
+    let lastYear = false;
     const cards = this.props.cards.slice(0, this.state.cardsShown);
+
+    const cardOutput = [];
+    cards.forEach((c) => {
+      const year = new Date(parseInt(c.props.touched, 0) * 1000).getFullYear();
+      if (year !== lastYear) {
+        cardOutput.push(<h4 key={`recommendations_${year}`}>{year}</h4>);
+        lastYear = year;
+      }
+      cardOutput.push(c);
+    });
 
     let loadMore;
     if (this.state.cardsShown < this.props.cards.length) {
@@ -118,7 +129,7 @@ class ContainerLarge extends Component {
       // );
       content = (
         <div className="recommendations-container">
-          {cards}
+          {cardOutput}
         </div>
       );
     }

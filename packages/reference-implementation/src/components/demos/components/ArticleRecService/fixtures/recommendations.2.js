@@ -231,18 +231,18 @@ class ArticleRecommendations extends React.Component {
 
   _selectUser(selected) {
     const guid = selected.value;
-    this.props.mutate({
-      variables: { context: 'login' },
-      context: {
-        headers: {
-          Authorization: this.state.token,
-        },
-      },
-    });
     const token = createTokenForUser({
       gcconnex_guid: guid,
       email: '',
       gcconnex_username: selected.text,
+    });
+    this.props.mutate({
+      variables: { context: 'login' },
+      context: {
+        headers: {
+          Authorization: token,
+        },
+      },
     });
     this.setState({
       token,

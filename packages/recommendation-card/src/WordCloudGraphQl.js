@@ -6,8 +6,21 @@ import { graphql } from 'react-apollo';
 import WordCloud from './WordCloud';
 
 class PhraseCloudGraphQL extends Component {
+  constructor() {
+    super();
+    this.state = {
+      fetched: false,
+    };
+  }
   componentWillReceiveProps(next) {
-    if (next.phrases !== null) {
+    if (
+      (this.phrases !== null) &&
+      (next.phrases === null) &&
+      this.state.fetched) {
+      next.startPolling(1000);
+      this.setState({ fetched: false });
+    } else if (next.phrases !== null) {
+      this.setState({ fetched: true });
       next.stopPolling();
     }
   }
@@ -22,10 +35,9 @@ class PhraseCloudGraphQL extends Component {
     return false;
   }
   render() {
-    if (this.props.loading) {
+    if (this.props.loading || (this.props.phrases === null)) {
       return this.props.loadingComponent;
     }
-    if (this.props.phrases === null) return null;
     return <WordCloud phrases={this.props.phrases} />;
   }
 }
@@ -66,6 +78,7 @@ const bindWithQuery = (q, pm, s, vf) => graphql(q, {
   skip: s,
   props: props => Object.assign({
     stopPolling: props.data.stopPolling,
+    startPolling: props.data.startPolling,
   }, pm(props)),
   options: (props) => {
     const { token } = props;

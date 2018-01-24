@@ -26,9 +26,10 @@ query queryMyRecommendationsC1 {
       context {
         GCpedia {
           article_c1 {
-            articles {
+            articles(groupBy: "year" rankGreaterThan: 0.5) {
               id
               rank
+              touched
               name {
                 value
               }
@@ -53,9 +54,10 @@ query queryMyRecommendationsC2 {
       context {
         GCpedia {
           article_c2 {
-            articles {
+            articles(groupBy: "year" rankGreaterThan: 0.5) {
               id
               rank
+              touched
               name {
                 value
               }
@@ -80,9 +82,10 @@ query queryMyRecommendationsC3($context_obj1: String!) {
       context {
         GCpedia {
           article_c3(article: $context_obj1) {
-            articles {
+            articles(groupBy: "year" rankGreaterThan: 0.5) {
               id
               rank
+              touched
               name {
                 value
               }
@@ -108,9 +111,10 @@ query queryMyRecommendationsC4($context_obj1: String!) {
       context {
         GCpedia {
           article_c4(article: $context_obj1) {
-            articles {
+            articles(groupBy: "year" rankGreaterThan: 0.5) {
               id
               rank
+              touched
               name {
                 value
               }
@@ -136,9 +140,10 @@ query queryMyRecommendationsC5($context_obj1: String!) {
       context {
         GCconnex {
           article_c5(article: $context_obj1) {
-            articles {
+            articles(groupBy: "year" rankGreaterThan: 0.5) {
               id
               rank
+              touched
               name {
                 value
               }
@@ -191,6 +196,7 @@ const ConnectedRefImpl = compose(
           id: a.id,
           title: a.name.value,
           rank: a.rank,
+          touched: a.touched,
           phraseCloud: a.phraseCloud.map(pc => ({
             phrase: pc.text.value,
             rank: parseFloat(pc.rank),
@@ -224,6 +230,7 @@ const ConnectedRefImpl = compose(
           id: a.id,
           title: a.name.value,
           rank: a.rank,
+          touched: a.touched,
           phraseCloud: a.phraseCloud.map(pc => ({
             phrase: pc.text.value,
             rank: parseFloat(pc.rank),
@@ -257,6 +264,7 @@ const ConnectedRefImpl = compose(
           id: a.id,
           title: a.name.value,
           rank: a.rank,
+          touched: a.touched,
           phraseCloud: a.phraseCloud.map(pc => ({
             phrase: pc.text.value,
             rank: parseFloat(pc.rank),
@@ -291,6 +299,7 @@ const ConnectedRefImpl = compose(
           id: a.id,
           title: a.name.value,
           rank: a.rank,
+          touched: a.touched,
           phraseCloud: a.phraseCloud.map(pc => ({
             phrase: pc.text.value,
             rank: parseFloat(pc.rank),
@@ -325,6 +334,7 @@ const ConnectedRefImpl = compose(
           id: a.id,
           title: a.name.value,
           rank: a.rank,
+          touched: a.touched,
           phraseCloud: a.phraseCloud.map(pc => ({
             phrase: pc.text.value,
             rank: parseFloat(pc.rank),

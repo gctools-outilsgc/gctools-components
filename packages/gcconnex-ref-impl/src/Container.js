@@ -18,8 +18,34 @@ import RecommendationCard, { CardContainer }
  */
 // eslint-disable-next-line
 class GcconnexRefImpl extends Component {
+  constructor() {
+    super();
+    this.state = {
+      recommendations: null,
+    };
+  }
+  componentWillReceiveProps(next) {
+    if (next.loading) {
+      this.setState({ recommendations: null });
+    } else if (!next.loading && this.props.loading) {
+      let lastBin = '';
+      let filter = 0.5;
+      const nextRecommendations = next.recommendations;
+      const recommendations = [];
+      nextRecommendations.forEach((r) => {
+        const year = new Date(parseInt(r.touched, 2) * 1000).getFullYear();
+        if (lastBin !== year) {
+          filter = r.rank / 2;
+          lastBin = year;
+        }
+        if (r.rank > filter) recommendations.push(r);
+      });
+      this.setState({ recommendations });
+    }
+  }
   render() {
-    const { loading, recommendations, context } = this.props;
+    const { loading, context } = this.props;
+    const { recommendations } = this.state;
     if (context === 'login') return null;
 
     const appContext = (context === 'article_c5') ? 'gcconnex' : 'gcpedia';
@@ -36,6 +62,7 @@ class GcconnexRefImpl extends Component {
             type="gcpedia-article"
             title={r.title}
             context={appContext}
+            touched={r.touched}
             rank={r.rank}
             phrases={r.phraseCloud.map(pc =>
               ({ text: pc.phrase, size: pc.rank }))
@@ -59,7 +86,7 @@ GcconnexRefImpl.defaultProps = {
 
 GcconnexRefImpl.propTypes = {
   /** Array of recommended articles */
-  recommendations: PropTypes.arrayOf(PropTypes.shape({
+  recommendations: PropTypes.arrayOf(PropTypes.shape({ // eslint-disable-line
     id: PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.string,

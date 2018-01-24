@@ -117,8 +117,6 @@ class RecommendationCard extends Component {
             <Rating
               stop={5}
               readonly
-              // emptySymbol={<div className="rating-empty">&nbsp;</div>}
-              // fullSymbol={<div className="rating-full">&nbsp;</div>}
               emptySymbol={
                 <ToggleStarBorder
                   color="#0375b4"
@@ -239,6 +237,7 @@ RecommendationCard.defaultProps = {
   phrases: [],
   rank: 1,
   listView: false,
+  touched: 0,
 };
 
 RecommendationCard.propTypes = {
@@ -250,6 +249,8 @@ RecommendationCard.propTypes = {
    * Context where this card is being displayed
    */
   context: PropTypes.oneOf(['gcconnex', 'gcpedia', 'other']),
+  /** Timestamp of latest modification */
+  touched: PropTypes.number, // eslint-disable-line react/no-unused-prop-types
   /**
    * A string describing what type of resource is being recommended.
    *
