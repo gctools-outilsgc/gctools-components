@@ -15,6 +15,7 @@
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
+    "test-update": "npm run test -- -u",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -28,11 +29,11 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.13",
-    "@storybook/addon-info": "^3.2.13",
-    "@storybook/addon-links": "^3.2.13",
-    "@storybook/addon-storyshots": "^3.2.13",
-    "@storybook/react": "^3.3.0-alpha.2",
+    "@storybook/addon-actions": "^3.3.10",
+    "@storybook/addon-info": "^3.3.10",
+    "@storybook/addon-links": "^3.3.10",
+    "@storybook/addon-storyshots": "^3.3.10",
+    "@storybook/react": "^3.3.10",
     "autoprefixer": "^7.2.5",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-runtime": "~6.23.0",

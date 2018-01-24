@@ -76,6 +76,7 @@
     "docker-build": "docker build . -t gctools-outilsgc/reference-implementation:latest",
     "docker-build-local": "docker build -f ./Dockerfile.local . -t gctools-outilsgc/reference-implementation:latest",
     "test": "jest --env=jsdom",
+    "test-update": "npm run test -- -u",
     "lint": "eslint ."
   },
   "license": "MIT",
