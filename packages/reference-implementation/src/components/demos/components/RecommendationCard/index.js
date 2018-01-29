@@ -25,7 +25,6 @@ const demo = () => (
       title={__('Recommendation Card')}
     >
       <RecommendationCard
-        className="grid-item"
         type="gcpedia-article"
         title={loremIpsum}
         rank={1}
@@ -46,7 +45,6 @@ const demo = () => (
         loaded
         cards={[
           <RecommendationCard
-            className="grid-item"
             key="1"
             type="gcpedia-article"
             title={loremIpsum}
@@ -59,7 +57,6 @@ const demo = () => (
             ]}
           />,
           <RecommendationCard
-            className="grid-item"
             key="2"
             type="gcpedia-article"
             title={loremIpsum}
@@ -72,7 +69,6 @@ const demo = () => (
             ]}
           />,
           <RecommendationCard
-            className="grid-item"
             key="3"
             type="gcpedia-article"
             title={loremIpsum}
@@ -85,7 +81,6 @@ const demo = () => (
             ]}
           />,
           <RecommendationCard
-            className="grid-item"
             key="4"
             type="gcpedia-article"
             title={loremIpsum}
@@ -98,7 +93,6 @@ const demo = () => (
             ]}
           />,
           <RecommendationCard
-            className="grid-item"
             key="5"
             type="gcpedia-article"
             title={loremIpsum}
@@ -111,7 +105,6 @@ const demo = () => (
             ]}
           />,
           <RecommendationCard
-            className="grid-item"
             key="6"
             type="gcpedia-article"
             title={loremIpsum}

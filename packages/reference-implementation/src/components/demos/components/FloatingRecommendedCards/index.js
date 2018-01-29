@@ -10,7 +10,7 @@ import React from 'react';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import { CardContainer }
+import RecommendationCard, { CardContainer }
   from '@gctools-components/recommendation-card';
 
 import Demo from '../../demo';
@@ -29,90 +29,84 @@ const demo = () => (
         loaded
         drawerView
         cards={[
-          {
-            key: '1',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 1,
-            phrases: [
+          <RecommendationCard
+            key="1"
+            listView
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={1}
+            phrases={[
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
               { text: 'GCTools', size: 1 },
               { text: 'NRC', size: 0.9 },
-            ],
-          },
-          {
-            key: '2',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 0.985676,
-            phrases: [
+            ]}
+          />,
+          <RecommendationCard
+            key="2"
+            listView
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.98453}
+            phrases={[
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
               { text: 'GCTools', size: 1 },
               { text: 'NRC', size: 0.9 },
-            ],
-          },
-          {
-            key: '3',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 0.9543,
-            phrases: [
+            ]}
+          />,
+          <RecommendationCard
+            key="3"
+            listView
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.732876832}
+            phrases={[
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
               { text: 'GCTools', size: 1 },
               { text: 'NRC', size: 0.9 },
-            ],
-          },
-          {
-            key: '4',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 0.91234,
-            phrases: [
+            ]}
+          />,
+          <RecommendationCard
+            key="4"
+            listView
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.702876832}
+            phrases={[
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
               { text: 'GCTools', size: 1 },
               { text: 'NRC', size: 0.9 },
-            ],
-          },
-          {
-            key: '5',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 0.87463,
-            phrases: [
+            ]}
+          />,
+          <RecommendationCard
+            key="5"
+            listView
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.662876832}
+            phrases={[
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
               { text: 'GCTools', size: 1 },
               { text: 'NRC', size: 0.9 },
-            ],
-          },
-          {
-            key: '6',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 0.8347,
-            phrases: [
+            ]}
+          />,
+          <RecommendationCard
+            key="6"
+            listView
+            type="gcpedia-article"
+            title={loremIpsum}
+            rank={0.622876832}
+            phrases={[
               { text: 'word', size: 0.4 },
               { text: 'phrase cloud', size: 0.7 },
               { text: 'GCTools', size: 1 },
               { text: 'NRC', size: 0.9 },
-            ],
-          },
-          {
-            key: '7',
-            type: 'gcpedia-article',
-            title: loremIpsum,
-            rank: 0.77955,
-            phrases: [
-              { text: 'word', size: 0.4 },
-              { text: 'phrase cloud', size: 0.7 },
-              { text: 'GCTools', size: 1 },
-              { text: 'NRC', size: 0.9 },
-            ],
-          },
+            ]}
+          />,
         ]}
       />
     </Demo>

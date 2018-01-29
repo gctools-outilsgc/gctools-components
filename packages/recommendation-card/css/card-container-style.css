@@ -158,3 +158,13 @@
 .floating-button .btn-2:hover .round .icon {
     left: 12%;
 }
+
+.drawer-view-year {
+    font-size: 12px;
+    padding: 2px 7px;
+    display: inline-block;
+}
+
+.recommendations-container:last-child {
+    margin-bottom: 45px;
+}

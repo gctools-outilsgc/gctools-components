@@ -20,12 +20,10 @@ import Drawer from 'material-ui/Drawer';
 import { List } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 
-import RecommendationCard from './RecommendationCard';
 import '../css/card-container-style.css';
 
 const nrcLogo = require('../img/nrclogo.png');
 const canadianFlag = require('../img/canadianflag.png');
-// const Masonry = require('react-masonry-component');
 
 /**
  * Container component to hold multiple recommendation cards
@@ -62,31 +60,25 @@ class ContainerLarge extends Component {
   render() {
     let content = null;
     let lastYear = false;
-    const cards = this.props.cards.slice(0, this.state.cardsShown);
-
+    const cards = (this.props.drawerView) ?
+      this.props.cards :
+      this.props.cards.slice(0, this.state.cardsShown);
     const cardOutput = [];
     cards.forEach((c) => {
       const year = new Date(parseInt(c.props.touched, 0) * 1000).getFullYear();
       if (year !== lastYear) {
-        cardOutput.push(<h4 key={`recommendations_${year}`}>{year}</h4>);
+        cardOutput.push(<div
+          style={{ backgroundColor: '#f5f8fa' }}
+          key={`recommendations_${year}`}
+        >
+          <span className="drawer-view-year">{year}</span>
+          <Divider />
+                        </div>);
         lastYear = year;
       }
       cardOutput.push(c);
     });
 
-    let loadMore;
-    if (this.state.cardsShown < this.props.cards.length) {
-      loadMore = (
-        <div className="load-more">
-          <MuiThemeProvider muiTheme={getMuiTheme()}>
-            <FlatButton
-              label="Load More"
-              onClick={this.handleLoadMore}
-            />
-          </MuiThemeProvider>
-        </div>
-      );
-    }
     if (!this.props.loaded &&
         !this.state.hasError &&
         (this.props.noloader === false || this.props.noloader === undefined)) {
@@ -112,31 +104,29 @@ class ContainerLarge extends Component {
     } else if (this.props.cards.length === 0) {
       content = <h4 className="full-width">No recommendations.</h4>;
     } else {
-      // content = (
-      //   <Masonry
-      //     className="recommendations-container"
-      //     options={{
-      //       gutter: 15,
-      //       transitionDuration: 0,
-      //       percentPosition: true,
-      //       itemSelector: '.grid-item',
-      //       columnWidth: '.grid-sizer',
-      //     }}
-      //   >
-      //     <div className="grid-sizer" key="masonryKey" />
-      //     {this.props.cards}
-      //   </Masonry>
-      // );
       content = (
         <div className="recommendations-container">
           {cardOutput}
         </div>
       );
     }
+    let loadMore;
+    if (this.state.cardsShown < this.props.cards.length) {
+      loadMore = (
+        <div className="load-more">
+          <MuiThemeProvider muiTheme={getMuiTheme()}>
+            <FlatButton
+              label="Load More"
+              onClick={this.handleLoadMore}
+            />
+          </MuiThemeProvider>
+        </div>
+      );
+    }
     let retVal;
     if (this.props.drawerView) {
       retVal = (
-        <div>
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
           <Drawer
             openSecondary
             docked={false}
@@ -174,16 +164,7 @@ class ContainerLarge extends Component {
                 </div>
                 <Divider />
               </div>
-              {this.props.cards.map(card => (
-                <RecommendationCard
-                  key={`reccard${Math.random() * 1000}`}
-                  listView
-                  title={card.title}
-                  type="gcpedia-article"
-                  phrases={card.phrases}
-                  rank={card.rank}
-                />
-              ))}
+              {content}
             </List>
             <div
               className="nrc-sticky"
@@ -211,18 +192,7 @@ class ContainerLarge extends Component {
               </span>
             </div>
           </div>
-          {/* <FloatingActionButton
-            onClick={this.handleOpenDrawer}
-            style={{
-              position: 'fixed',
-              bottom: '15px',
-              right: '15px',
-            }}
-            iconStyle={styles.largeIcon}
-          >
-            <ActionViewHeadline />
-          </FloatingActionButton> */}
-        </div>
+        </MuiThemeProvider>
       );
     } else {
       retVal = (

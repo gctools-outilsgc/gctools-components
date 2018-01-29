@@ -19,6 +19,7 @@ import { ListItem } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import SocialShare from 'material-ui/svg-icons/social/share';
+import ActionHelp from 'material-ui/svg-icons/action/help';
 import ToggleStar from 'material-ui/svg-icons/toggle/star';
 import ToggleStarBorder from 'material-ui/svg-icons/toggle/star-border';
 import Toggle from 'material-ui/Toggle';
@@ -62,17 +63,6 @@ class RecommendationCard extends Component {
   render() {
     let header = <span />;
     switch (this.props.type) {
-      case 'tweet':
-        header = (
-          <div className="header">
-            <TwitterCircle
-              color="#fff"
-              style={{ height: '20px', width: '20px', marginRight: '3px' }}
-            />
-            <h5>Tweet</h5>
-          </div>
-        );
-        break;
       case 'gcpedia-article':
         header = (
           <ListItem
@@ -85,57 +75,47 @@ class RecommendationCard extends Component {
           />
         );
         break;
-      case 'gcprofile-user':
-        header = (
-          <div className="header">
-            <AccountCircle
-              color="#fff"
-              style={{ height: '20px', width: '20px', marginRight: '3px' }}
-            />
-            <h5>GCprofile User</h5>
-          </div>
-        );
-        break;
       default:
         header = (
-          <div className="header">
-            <HelpCircle
-              style={{ height: '20px', width: '20px', marginRight: '3px' }}
-            />
-            <h5>Unknown</h5>
-          </div>
+          <ListItem
+            key="listKeyTitle"
+            leftAvatar={<Avatar icon={<ActionHelp />} />}
+            primaryText={<div className="card-title">{this.props.title}</div>}
+            secondaryText={<div className="card-subtitle">Unknown</div>}
+            hoverColor="none"
+            onClick={this.handleClick}
+          />
         );
     }
-    let score = null;
     const showExtra = this.props.type !== 'gcprofile-user';
-
-    if (typeof this.props.rank === 'number' && showExtra) {
-      const rating = (this.props.rank * 10) / 2;
-      score = (
-        <div style={{ alignSelf: 'flex-end', marginBottom: '-7px' }}>
-          <div className="rating-border">
-            <Rating
-              stop={5}
-              readonly
-              emptySymbol={
-                <ToggleStarBorder
-                  color="#0375b4"
-                  style={{ width: '15px' }}
-                />
-              }
-              fullSymbol={
-                <ToggleStar
-                  color="#0375b4"
-                  style={{ width: '15px' }}
-                />
-              }
-              fractions={2}
-              initialRating={rating}
-            />
-          </div>
-        </div>
-      );
-    }
+    // let score = null;
+    // if (typeof this.props.rank === 'number' && showExtra) {
+    //   const rating = (this.props.rank * 10) / 2;
+    //   score = (
+    //     <div style={{ alignSelf: 'flex-end', marginBottom: '-7px' }}>
+    //       <div className="rating-border">
+    //         <Rating
+    //           stop={5}
+    //           readonly
+    //           emptySymbol={
+    //             <ToggleStarBorder
+    //               color="#0375b4"
+    //               style={{ width: '15px' }}
+    //             />
+    //           }
+    //           fullSymbol={
+    //             <ToggleStar
+    //               color="#0375b4"
+    //               style={{ width: '15px' }}
+    //             />
+    //           }
+    //           fractions={2}
+    //           initialRating={rating}
+    //         />
+    //       </div>
+    //     </div>
+    //   );
+    // }
     let phraseCloud; // for non list view mode
     if (this.state.expanded) {
       phraseCloud = (
@@ -172,7 +152,7 @@ class RecommendationCard extends Component {
             <SocialShare color="#0375b4" />
           </IconButton>
         </div>
-        {score}
+        {/* {score} */}
       </div>
     );
     let retVal;
@@ -244,7 +224,7 @@ RecommendationCard.propTypes = {
   /**
    * Title of the recommendation card, can be simple text or a node.
    */
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  title: PropTypes.string,
   /**
    * Context where this card is being displayed
    */
@@ -257,9 +237,7 @@ RecommendationCard.propTypes = {
    * Accepted values: 'gcprofile-user', 'gcpedia-article', 'tweet', 'unknown'
    */
   type: PropTypes.oneOf([
-    'gcprofile-user',
     'gcpedia-article',
-    'tweet',
     'unknown',
   ]),
   /**
