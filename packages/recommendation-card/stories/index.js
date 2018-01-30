@@ -109,7 +109,7 @@ storiesOf('CardContainer', module)
         cards={[
           <RecommendationCard
             key="card0"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             phrases={[
@@ -274,12 +274,15 @@ storiesOf('CardContainer', module)
     })(() => (
       <CardContainer
         loaded
+        drawerView
         cards={[
           <RecommendationCard
             key="card0"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
+            touched={new Date('01/01/2018') / 1000}
+            listView
             phrases={[
             { text: 'word', size: 0.3 },
             { text: 'phrase cloud', size: 1 },
@@ -296,7 +299,7 @@ storiesOf('CardContainer', module)
       inline: true,
       source: false,
     })(() => (
-      <CardContainer loaded />
+      <CardContainer loaded drawerView/>
     )),
   )
   .add(

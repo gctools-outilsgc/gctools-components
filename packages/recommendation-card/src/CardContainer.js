@@ -67,13 +67,23 @@ class ContainerLarge extends Component {
     cards.forEach((c) => {
       const year = new Date(parseInt(c.props.touched, 0) * 1000).getFullYear();
       if (year !== lastYear) {
-        cardOutput.push(<div
-          style={{ backgroundColor: '#f5f8fa' }}
-          key={`recommendations_${year}`}
-        >
-          <span className="drawer-view-year">{year}</span>
-          <Divider />
-                        </div>);
+        cardOutput.push(
+          <div
+            style={{
+              backgroundColor: (this.props.drawerView) ? "#f5f8fa" : "" 
+            }}
+            key={`recommendations_${year}`}
+          >
+            <span
+              className={
+                (this.props.drawerView) ? "drawer-view-year" : "view-year"
+              }
+            >
+              {year}
+            </span>
+            <Divider className="divider" />
+          </div>
+        );
         lastYear = year;
       }
       cardOutput.push(c);
@@ -83,26 +93,24 @@ class ContainerLarge extends Component {
         !this.state.hasError &&
         (this.props.noloader === false || this.props.noloader === undefined)) {
       content = (
-        <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <div style={{ width: '100%', textAlign: 'center' }}>
-            <RefreshIndicator
-              size={40}
-              left={10}
-              top={0}
-              status="loading"
-              style={{
-                display: 'inline-block',
-                position: 'relative',
-                boxShadow: 'none',
-              }}
-            />
-          </div>
-        </MuiThemeProvider>
+        <div style={{ width: '100%', textAlign: 'center' }}>
+          <RefreshIndicator
+            size={40}
+            left={10}
+            top={0}
+            status="loading"
+            style={{
+              display: 'inline-block',
+              position: 'relative',
+              boxShadow: 'none',
+            }}
+          />
+        </div>
       );
     } else if (this.state.hasError) {
-      content = <h4 className="full-width">An error has occured.</h4>;
+      content = <div className="error-message">An error has occured</div>;
     } else if (this.props.cards.length === 0) {
-      content = <h4 className="full-width">No recommendations.</h4>;
+      content = <div className="none-message">No recommendations</div>;
     } else {
       content = (
         <div className="recommendations-container">
@@ -114,19 +122,17 @@ class ContainerLarge extends Component {
     if (this.state.cardsShown < this.props.cards.length) {
       loadMore = (
         <div className="load-more">
-          <MuiThemeProvider muiTheme={getMuiTheme()}>
-            <FlatButton
-              label="Load More"
-              onClick={this.handleLoadMore}
-            />
-          </MuiThemeProvider>
+          <FlatButton
+            label="Load More"
+            onClick={this.handleLoadMore}
+          />
         </div>
       );
     }
     let retVal;
     if (this.props.drawerView) {
       retVal = (
-        <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <div>
           <Drawer
             openSecondary
             docked={false}
@@ -140,7 +146,7 @@ class ContainerLarge extends Component {
             <List
               style={{
                 padding: 0,
-                minHeight: '100%',
+                minHeight: 'calc(100% - 45px)',
                 marginBottom: '-45px',
               }}
             >
@@ -192,7 +198,7 @@ class ContainerLarge extends Component {
               </span>
             </div>
           </div>
-        </MuiThemeProvider>
+        </div>
       );
     } else {
       retVal = (
@@ -226,7 +232,11 @@ class ContainerLarge extends Component {
         </div>
       );
     }
-    return retVal;
+    return (
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        {retVal}
+      </MuiThemeProvider>
+    );
   }
 }
 
