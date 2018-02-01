@@ -62,7 +62,6 @@ class WordCloud extends React.Component {
       min -= 1;
     }
     const fontSizeMapper = x => (((b - a) * (x.size - min)) / (max - min)) + a;
-
     return (
       <div
         ref={c => this.setState({ parentNode: c })}
@@ -72,7 +71,7 @@ class WordCloud extends React.Component {
             data={phrases}
             fontSizeMapper={fontSizeMapper}
             width={this.state.width}
-            height={150}
+            height={100}
             font="Roboto Condensed"
           />
         : null

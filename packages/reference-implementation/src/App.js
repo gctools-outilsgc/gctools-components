@@ -24,6 +24,7 @@ import ExpandLessIcon from 'material-ui/svg-icons/navigation/expand-less';
 
 import SideLoader from './components/SideLoader';
 
+import Theme from './theme';
 import './App.css';
 
 const background = require('./img/flagheader.svg');
@@ -40,7 +41,7 @@ const I18nIntro = () => (
   <div>
     <h2>{__('Internationalization')}</h2>
     <p>
-      NRC has developpped a component, component helper and webpack plugin
+      NRC has developed a component, component helper, and webpack plugin
       designed to faciliate translation of single page architecture
       applications built using Webpack and optionally React.
     </p>
@@ -88,6 +89,11 @@ const sideLoadPhraseCloudTreeMap = () =>
 const sideLoadRecommendationCard = () =>
   (<SideLoader o={t => require.ensure([], () => {
     t.s(require('./components/demos/components/RecommendationCard'));
+})}
+  />);
+const sideLoadFloatingRecommendationCard = () =>
+  (<SideLoader o={t => require.ensure([], () => {
+    t.s(require('./components/demos/components/FloatingRecommendedCards'));
 })}
   />);
 const sideLoadArticleRecService = () =>
@@ -177,6 +183,11 @@ class App extends Component {
               path: '/recommendations/card',
               component: sideLoadRecommendationCard,
             },
+            floating_recommendation_card: {
+              label: __('Floating Recommendations'),
+              path: '/recommendations/floating_cards',
+              component: sideLoadFloatingRecommendationCard,
+            },
             article_rec_service: {
               label: __('Article recommendations'),
               path: '/recommendations/article_service',
@@ -213,6 +224,10 @@ class App extends Component {
       this.setState(newState);
     }
     return true;
+  }
+
+  componentWillUnmount() {
+    this.state.focusHandle.disengage();
   }
 
   _flattenMenu(m, parent = '', pad = 0) {
@@ -260,13 +275,12 @@ class App extends Component {
     history.push(item.path);
   }
 
-
   render() {
     if (this.state.flatMenu.length === 0) return false;
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
         <BrowserRouter>
-          <div style={{ margin: 0, padding: 0 }}>
+          <div className="no-margin">
             <AppBar
               showMenuIconButton={false}
               title={(
@@ -284,10 +298,13 @@ class App extends Component {
               }
               className="gctools-info-appbar"
             />
-            <Drawer open containerClassName="gctools-info-drawer">
+            <Drawer
+              open
+              containerClassName="gctools-info-drawer"
+              containerStyle={{ overflow: 'hidden' }}
+            >
               <Route render={({ history }) => (
                 <Menu
-                  style={{ width: '80%' }}
                   value={this.state.active}
                   onItemTouchTap={(e, v) => {
                     this.handleMenuClick(e, v.props.item, history);
@@ -303,6 +320,7 @@ class App extends Component {
                       style={{
                           paddingLeft: `${item.padding}px`,
                           display: this._blockOrNone(item),
+                          marginRight: '15px',
                         }}
                     />
                     ))}
@@ -327,6 +345,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default LocalizedComponent(App);

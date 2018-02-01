@@ -56,6 +56,7 @@ class LoginExample extends React.Component {
         <Login
           oidcConfig={{
             authority: identityServer,
+            client_id: '369399',
           }}
           profile={this.state.profile}
           onLoginClick={this.loginClick}

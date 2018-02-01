@@ -7,6 +7,7 @@
  * the Minister of National Research Council, 2017
  */
 /* eslint-disable global-require */
-export const CardContainer = require('./src/CardContainer').default;
-export const WordCloud = require('./src/WordCloud').default;
-export default require('./src/RecommendationCard').default;
+export const CardContainer = require('./CardContainer').default;
+export const WordCloud = require('./WordCloud').default;
+export const WordCloudGraphQl = require('./WordCloudGraphQl').default;
+export default require('./RecommendationCard').default;

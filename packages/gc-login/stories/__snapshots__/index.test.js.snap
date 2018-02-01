@@ -18,7 +18,8 @@ exports[`Storyshots Login Default options 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -104,7 +105,7 @@ exports[`Storyshots Login Default options 1`] = `
             style={
               Object {
                 "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                "backgroundColor": "#00bcd4",
+                "backgroundColor": "#0375b4",
                 "border": 10,
                 "borderRadius": 2,
                 "boxSizing": "border-box",
@@ -205,7 +206,8 @@ exports[`Storyshots Login Default options 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -250,45 +252,59 @@ exports[`Storyshots Login Default options 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   dumb
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -302,22 +318,39 @@ exports[`Storyshots Login Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Completely disables built-in OIDC functionality, requiring you to
-    provide your handlers for \`onLoginClick\` and \`onLogoutClick\`
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Completely disables built-in OIDC functionality, requiring you to
+                  </span>
+                  <span>
+                    <br />
+                     
+                        provide your handlers for \`onLoginClick\` and \`onLogoutClick\`
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   profile
                 </td>
-                <td>
-                  object
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span />
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -331,21 +364,54 @@ exports[`Storyshots Login Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Profile object
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   oidcConfig
                 </td>
-                <td>
-                  shape
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <button
+                      className="css-5gtpmt"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      {
+                    </button>
+                    <button
+                      className="css-5gtpmt"
+                      onClick={[Function]}
+                    >
+                      ...
+                    </button>
+                    <button
+                      className="css-5gtpmt"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      }
+                    </button>
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -361,23 +427,46 @@ exports[`Storyshots Login Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Set of configuration parameters to pass to the internal oidc-client
-    instance.  Refer to
-    https://github.com/IdentityModel/oidc-client-js/blob/dev/src/OidcClientSettings.js for more information.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Set of configuration parameters to pass to the internal oidc-client
+                  </span>
+                  <span>
+                    <br />
+                     
+                        instance.  Refer to
+                  </span>
+                  <span>
+                    <br />
+                     
+                        https://github.com/IdentityModel/oidc-client-js/blob/dev/src/OidcClientSettings.js for more information.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onLoginClick
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -391,23 +480,46 @@ exports[`Storyshots Login Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Override the action when the login button is clicked.  (If you
-    specify this property, the default \`login\` action will NOT fire, you
-    must do so manually.)
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Override the action when the login button is clicked.  (If you
+                  </span>
+                  <span>
+                    <br />
+                     
+                        specify this property, the default \`login\` action will NOT fire, you
+                  </span>
+                  <span>
+                    <br />
+                     
+                        must do so manually.)
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onLogoutClick
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -421,21 +533,54 @@ exports[`Storyshots Login Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Override the action when the logout button is clicked.  (If you
-    specify this property, the default \`logout\` action will NOT fire, you
-    must do so manually.)
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Override the action when the logout button is clicked.  (If you
+                  </span>
+                  <span>
+                    <br />
+                     
+                        specify this property, the default \`logout\` action will NOT fire, you
+                  </span>
+                  <span>
+                    <br />
+                     
+                        must do so manually.)
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   verifyLoginOnMount
                 </td>
-                <td />
-                <td>
-                  no
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      bool
+                    </span>
+                    <span>
+                       | 
+                    </span>
+                    <span>
+                      func
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -449,22 +594,41 @@ exports[`Storyshots Login Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  If \`true\` an automatic check to see if the user is logged occurs on
-mount.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If \`true\` an automatic check to see if the user is logged occurs on
+                  </span>
+                  <span>
+                    <br />
+                     
+                    mount.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   silentRenewOnMount
                 </td>
-                <td>
-                  enum
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    'always' | 'not-logged-in' | 'never'
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -478,26 +642,61 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
-                  Controls whether or not a silent review occurs when the component is
-    mounted.  One of:
-    \`always\`: the silent renew endpoint will be hit on every page load,
-    \`not-logged-in\\\`: only attempts to silent review if the user is not known
-      to be logged in,
-    \`never\`: will not attempt to silent-renew.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Controls whether or not a silent review occurs when the component is
+                  </span>
+                  <span>
+                    <br />
+                     
+                        mounted.  One of:
+                  </span>
+                  <span>
+                    <br />
+                     
+                        \`always\`: the silent renew endpoint will be hit on every page load,
+                  </span>
+                  <span>
+                    <br />
+                     
+                        \`not-logged-in\\\`: only attempts to silent review if the user is not known
+                  </span>
+                  <span>
+                    <br />
+                     
+                          to be logged in,
+                  </span>
+                  <span>
+                    <br />
+                     
+                        \`never\`: will not attempt to silent-renew.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   synchronizedLogout
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -511,22 +710,41 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
-                  If true, will automatically sign the user out if they sign-out
-    from the identity server (or another SSO enabled site)
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If true, will automatically sign the user out if they sign-out
+                  </span>
+                  <span>
+                    <br />
+                     
+                        from the identity server (or another SSO enabled site)
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onUserLoaded
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -540,21 +758,33 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised when a user session has been established.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onUserFetched
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -568,21 +798,33 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised if \`verifyLoginOnMount\` is \`true\` and the user is logged in.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onUserUnloaded
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -596,21 +838,33 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised when a user session has been terminated.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onUserSignedOut
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -624,21 +878,33 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised when the user logs out of the identity server.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onAccessTokenExpiring
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -652,21 +918,33 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised prior to the access token expiring.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onAccessTokenExpired
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -680,21 +958,33 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised after the access token has expired.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   onSilentRenewError
                 </td>
-                <td>
-                  func
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -708,7 +998,9 @@ mount.
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Raised when the automatic silent renew has failed.
                 </td>
               </tr>

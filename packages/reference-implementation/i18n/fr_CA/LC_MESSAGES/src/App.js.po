@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-10-31 18:52-0400\n"
+"POT-Creation-Date: 2018-01-16 16:01-0400\n"
 "PO-Revision-Date: 2017-10-16 14:38-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -84,17 +84,6 @@ msgstr "Recommandations d'articles"
 msgid "Web components | <strong>GC</strong>Tools"
 msgstr "Composants Web | Outils<strong>GC</strong>"
 
-#: 159:21 src/App.js
-#, fuzzy
-msgid "Identity Server"
-msgstr "Serveur d'identité"
-
-#~ msgid "Treemap Phrase Cloud"
-#~ msgstr "Nuage d'expression treemap"
-
-#~ msgid "Recommendation Card"
-#~ msgstr "Carte de recommandations"
-
-#~ msgid "Web Components | <strong>GC</strong>Tools"
-#~ msgstr "Composants Web | Outils<strong>GC</strong>"
-
+#: 187:21 src/App.js
+msgid "Floating Recommendations"
+msgstr "Carte flotante"
