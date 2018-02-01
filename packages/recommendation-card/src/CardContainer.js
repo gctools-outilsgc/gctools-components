@@ -67,23 +67,22 @@ class ContainerLarge extends Component {
     cards.forEach((c) => {
       const year = new Date(parseInt(c.props.touched, 0) * 1000).getFullYear();
       if (year !== lastYear) {
-        cardOutput.push(
+        cardOutput.push( // eslint-disable-line
           <div
             style={{
-              backgroundColor: (this.props.drawerView) ? "#f5f8fa" : "" 
-            }}
+                backgroundColor: (this.props.drawerView) ? '#f5f8fa' : '',
+              }}
             key={`recommendations_${year}`}
           >
             <span
               className={
-                (this.props.drawerView) ? "drawer-view-year" : "view-year"
-              }
+                  (this.props.drawerView) ? 'drawer-view-year' : 'view-year'
+                }
             >
               {year}
             </span>
             <Divider className="divider" />
-          </div>
-        );
+          </div>);
         lastYear = year;
       }
       cardOutput.push(c);

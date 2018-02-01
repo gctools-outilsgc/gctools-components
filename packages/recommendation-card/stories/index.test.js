@@ -12,6 +12,7 @@ const jest = require('jest');
 
 jest.mock('material-ui/RefreshIndicator');
 jest.mock('material-ui/internal/Tooltip');
+jest.mock('material-ui/internal/EnhancedSwitch');
 jest.mock('react-dotdotdot');
 
 initStoryshots();

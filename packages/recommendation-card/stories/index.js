@@ -154,7 +154,7 @@ storiesOf('CardContainer', module)
         cards={[
           <RecommendationCard
             key="card1"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             touched={new Date() / 1000}
@@ -176,7 +176,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card3"
-            type="gcprofile-user"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             touched={new Date('01/01/2017') / 1000}
@@ -198,7 +198,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card5"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             touched={new Date('01/01/2017') / 1000}
@@ -220,7 +220,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card7"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             touched={new Date('01/01/2016') / 1000}
@@ -242,7 +242,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card9"
-            type="gcprofile-user"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             touched={new Date('01/01/2014') / 1000}
@@ -299,7 +299,7 @@ storiesOf('CardContainer', module)
       inline: true,
       source: false,
     })(() => (
-      <CardContainer loaded drawerView/>
+      <CardContainer loaded drawerView />
     )),
   )
   .add(
@@ -315,7 +315,7 @@ storiesOf('CardContainer', module)
         cards={[
           <RecommendationCard
             key="card1"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             listView
@@ -339,7 +339,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card3"
-            type="gcprofile-user"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             listView
@@ -363,7 +363,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card5"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             listView
@@ -387,7 +387,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card7"
-            type="tweet"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             listView
@@ -411,7 +411,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card9"
-            type="gcprofile-user"
+            type="gcpedia-article"
             title="this is a short title"
             rank={1}
             listView

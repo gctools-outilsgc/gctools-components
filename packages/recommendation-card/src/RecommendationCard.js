@@ -11,17 +11,14 @@ import PropTypes from 'prop-types';
 import { Card } from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
-import HelpCircle from 'material-ui-community-icons/icons/help-circle';
-import AccountCircle from 'material-ui-community-icons/icons/account-circle';
 import { IconButton } from 'material-ui';
 import { ListItem } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Avatar from 'material-ui/Avatar';
 import SocialShare from 'material-ui/svg-icons/social/share';
 import ActionHelp from 'material-ui/svg-icons/action/help';
-import ToggleStar from 'material-ui/svg-icons/toggle/star';
-import ToggleStarBorder from 'material-ui/svg-icons/toggle/star-border';
+// import ToggleStar from 'material-ui/svg-icons/toggle/star';
+// import ToggleStarBorder from 'material-ui/svg-icons/toggle/star-border';
 import Toggle from 'material-ui/Toggle';
 import 'font-awesome/css/font-awesome.min.css';
 import WordCloud from './WordCloud';
@@ -30,7 +27,7 @@ import '../css/fonts.css';
 import '../css/card-style.css';
 
 const gcpedia = require('../img/gcpedia.jpg');
-const Rating = require('react-rating');
+// const Rating = require('react-rating');
 
 /**
  * Recommendation cards provide a consistent interface for recommendations
@@ -243,7 +240,7 @@ RecommendationCard.propTypes = {
   /**
    * Overall rank of a recommendation within a set of recommendations.
    */
-  rank: PropTypes.number,
+  rank: PropTypes.number, // eslint-disable-line
   /**
    * Array of objects of the form { text, size } representing a phrase
    * cloud, where size is the relative importance of the phrase within the set
