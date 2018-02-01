@@ -112,6 +112,7 @@ storiesOf('CardContainer', module)
             type="gcpedia-article"
             title="this is a short title"
             rank={1}
+            touched={new Date() / 1000}
             phrases={[
             { text: 'word', size: 0.3 },
             { text: 'phrase cloud', size: 1 },

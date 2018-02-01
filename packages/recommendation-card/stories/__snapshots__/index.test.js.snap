@@ -85,11 +85,15 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
             }
           }
         >
-          <span
+          <div
             className="view-year"
           >
-            1969
-          </span>
+            <span
+              className="underline"
+            >
+              2018
+            </span>
+          </div>
           <hr
             className="divider"
             style={
@@ -256,6 +260,11 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
               >
                 <div
                   className="phrases-heading-text"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   Top Matching Profile Phrases
                 </div>
@@ -919,11 +928,15 @@ exports[`Storyshots CardContainer Container with 1 card in Drawer View Mode 1`] 
                   }
                 }
               >
-                <span
+                <div
                   className="drawer-view-year"
                 >
-                  2018
-                </span>
+                  <span
+                    className="underline"
+                  >
+                    2018
+                  </span>
+                </div>
                 <hr
                   className="divider"
                   style={
@@ -1618,11 +1631,15 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
             }
           }
         >
-          <span
+          <div
             className="view-year"
           >
-            2018
-          </span>
+            <span
+              className="underline"
+            >
+              2018
+            </span>
+          </div>
           <hr
             className="divider"
             style={
@@ -1789,6 +1806,11 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
               >
                 <div
                   className="phrases-heading-text"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   Top Matching Profile Phrases
                 </div>
@@ -2035,6 +2057,11 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
               >
                 <div
                   className="phrases-heading-text"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   Top Matching Profile Phrases
                 </div>
@@ -2137,11 +2164,15 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
             }
           }
         >
-          <span
+          <div
             className="view-year"
           >
-            2017
-          </span>
+            <span
+              className="underline"
+            >
+              2017
+            </span>
+          </div>
           <hr
             className="divider"
             style={
@@ -2308,6 +2339,11 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
               >
                 <div
                   className="phrases-heading-text"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   Top Matching Profile Phrases
                 </div>
@@ -3043,11 +3079,15 @@ exports[`Storyshots CardContainer Container with 10 cards in Drawer View Mode 1`
                   }
                 }
               >
-                <span
+                <div
                   className="drawer-view-year"
                 >
-                  2018
-                </span>
+                  <span
+                    className="underline"
+                  >
+                    2018
+                  </span>
+                </div>
                 <hr
                   className="divider"
                   style={
@@ -3506,11 +3546,15 @@ exports[`Storyshots CardContainer Container with 10 cards in Drawer View Mode 1`
                   }
                 }
               >
-                <span
+                <div
                   className="drawer-view-year"
                 >
-                  2017
-                </span>
+                  <span
+                    className="underline"
+                  >
+                    2017
+                  </span>
+                </div>
                 <hr
                   className="divider"
                   style={
@@ -4187,11 +4231,15 @@ exports[`Storyshots CardContainer Container with 10 cards in Drawer View Mode 1`
                   }
                 }
               >
-                <span
+                <div
                   className="drawer-view-year"
                 >
-                  2016
-                </span>
+                  <span
+                    className="underline"
+                  >
+                    2016
+                  </span>
+                </div>
                 <hr
                   className="divider"
                   style={
@@ -4650,11 +4698,15 @@ exports[`Storyshots CardContainer Container with 10 cards in Drawer View Mode 1`
                   }
                 }
               >
-                <span
+                <div
                   className="drawer-view-year"
                 >
-                  2015
-                </span>
+                  <span
+                    className="underline"
+                  >
+                    2015
+                  </span>
+                </div>
                 <hr
                   className="divider"
                   style={
@@ -4895,11 +4947,15 @@ exports[`Storyshots CardContainer Container with 10 cards in Drawer View Mode 1`
                   }
                 }
               >
-                <span
+                <div
                   className="drawer-view-year"
                 >
-                  2014
-                </span>
+                  <span
+                    className="underline"
+                  >
+                    2014
+                  </span>
+                </div>
                 <hr
                   className="divider"
                   style={
@@ -7361,6 +7417,11 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
           >
             <div
               className="phrases-heading-text"
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
             >
               Top Matching Profile Phrases
             </div>
@@ -8914,6 +8975,11 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
           >
             <div
               className="phrases-heading-text"
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
             >
               Top Matching Profile Phrases
             </div>

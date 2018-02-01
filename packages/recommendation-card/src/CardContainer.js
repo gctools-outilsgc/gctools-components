@@ -74,13 +74,13 @@ class ContainerLarge extends Component {
               }}
             key={`recommendations_${year}`}
           >
-            <span
+            <div
               className={
                   (this.props.drawerView) ? 'drawer-view-year' : 'view-year'
                 }
             >
-              {year}
-            </span>
+              <span className="underline">{year}</span>
+            </div>
             <Divider className="divider" />
           </div>);
         lastYear = year;

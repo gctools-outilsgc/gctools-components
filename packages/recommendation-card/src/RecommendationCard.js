@@ -117,7 +117,7 @@ class RecommendationCard extends Component {
     if (this.state.expanded) {
       phraseCloud = (
         <div style={{ marginTop: '30px' }}>
-          <div className="phrases-heading-text-listview">
+          <div className="phrases-heading-text">
             Top Matching Profile Phrases
           </div>
           <div
@@ -181,7 +181,10 @@ class RecommendationCard extends Component {
             {showExtra
               ?
                 <div className="phrases-heading-border-top">
-                  <div className="phrases-heading-text">
+                  <div
+                    className="phrases-heading-text"
+                    style={{ display: 'inline-block' }}
+                  >
                     Top Matching Profile Phrases
                   </div>
                 </div>

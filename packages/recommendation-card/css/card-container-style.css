@@ -99,7 +99,7 @@
     background-color: #0375b4;
     text-decoration: none;
     border-radius: 30px;
-    padding: 12px 53px 10px 23px;
+    padding: 12px 53px 12px 23px;
     color: #fff;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
@@ -168,19 +168,21 @@
     display: inline-block;
 }
 
-.drawer-view-year {
-    background-color: #f5f8fa;
-}
-
 .view-year {
-    display: block;
     text-align: center;
     padding: 15px 0;
+    font-family: 'Gotham Ultra', sans-serif;
+    margin-bottom: 10px;
+}
+
+.view-year .underline {
+    border-bottom: 1px black solid;
+    padding: 0 20px 5px 20px;
 }
 
 .none-message, .error-message {
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     text-transform: lowercase;
     color: #555;
     padding: 15px 0;
