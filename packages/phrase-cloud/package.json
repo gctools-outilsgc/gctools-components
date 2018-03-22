@@ -1,6 +1,6 @@
 {
   "name": "@gctools-components/phrase-cloud",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Phrase cloud SVG based component",
   "main": "dist/index.js",
   "private": true,
@@ -39,8 +39,8 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.0",
-    "@gctools-components/jest-config": "^1.1.0",
+    "@gctools-components/eslint-config": "^1.1.1",
+    "@gctools-components/jest-config": "^1.1.1",
     "@storybook/addon-actions": "^3.3.10",
     "@storybook/addon-info": "^3.3.10",
     "@storybook/addon-links": "^3.3.10",

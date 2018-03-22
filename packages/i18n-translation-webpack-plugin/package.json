@@ -1,6 +1,6 @@
 {
   "name": "@gctools-components/i18n-translation-webpack-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Complete i18n translation solution for webpack, including code-splitting and automatic generation of translation files",
   "main": "dist/plugin.js",
   "repository": {
@@ -30,7 +30,7 @@
     "webpack": "^3.8.1"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.0",
+    "@gctools-components/eslint-config": "^1.1.1",
     "babel-cli": "^6.26.0",
     "babel-plugin-react-docgen": "~1.8.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
