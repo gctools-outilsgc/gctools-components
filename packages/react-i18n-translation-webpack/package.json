@@ -12,7 +12,7 @@
     "build": "babel index.js -d dist --copy-files",
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
-    "postinstall": "rimraf ../../node_modules/material-ui-community-icons/node_modules/material-ui",
+    "postinstall_lerna": "rimraf ../../node_modules/material-ui-community-icons/node_modules/material-ui",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js"
   },
   "dependencies": {
