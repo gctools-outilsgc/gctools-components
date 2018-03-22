@@ -50,9 +50,6 @@
     "sinon": "~4.0.1",
     "yargs": "~9.0.1"
   },
-  "peerDependencies": {
-    "virtualenv": "git+https://github.com/lucbelliveau/node-virtualenv.git"
-  },
   "keywords": [
     "spa",
     "localization",
