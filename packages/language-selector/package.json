@@ -1,6 +1,6 @@
 {
   "name": "@gctools-components/language-selector",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "React component designed to work with @gctools-components/i18n-translation-webpack-plugin",
   "main": "dist/index.js",
   "repository": {
@@ -59,7 +59,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@gctools-components/react-i18n-translation-webpack": "^1.1.1",
+    "@gctools-components/react-i18n-translation-webpack": "^1.1.2",
     "country-language": "^0.1.7",
     "material-ui": "^0.19.4",
     "prop-types": "^15.6.0",
