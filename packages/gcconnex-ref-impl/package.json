@@ -3,6 +3,7 @@
   "description": "Reference Implementation of GCconnex integration",
   "main": "dist/index.js",
   "version": "0.0.1",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/gctools-outilsgc/gctools-components.git"
