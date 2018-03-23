@@ -13,25 +13,10 @@ import './css/style.css';
 class I18nEditField extends Component {
   constructor() {
     super();
-    this._handleChangeFirst = this._handleChangeFirst.bind(this);
-    this._handleChangeSecond = this._handleChangeSecond.bind(this);
-    this.state = {
-      firstValue: '',
-      secondValue: '',
-    };
+    this._handleChange = this._handleChange.bind(this);
   }
 
-  _handleChangeFirst(e, data) {
-    this.setState({ firstValue: e.target.value });
-    const sendData = {
-      lang: data.lang,
-      value: data.value,
-    };
-    this.props.handleChange(sendData);
-  }
-
-  _handleChangeSecond(e, data) {
-    this.setState({ secondValue: e.target.value });
+  _handleChange(e, data) {
     const sendData = {
       lang: data.lang,
       value: data.value,
@@ -53,50 +38,39 @@ class I18nEditField extends Component {
       }
     }
 
-    if (this.props.edit && showLabel) {
-      retVal = (
-        <div>
-          <Input
-            className="edit-field-textbox"
-            labelPosition="left"
-            onChange={this._handleChangeFirst}
-            lang={values[0].lang}
-            value={this.state.firstValue}
-            placeholder={values[0].placeholder}
-          >
+    retVal = [];
+    values.map((item) => {
+      let label;
+      if (this.props.edit) {
+        if (showLabel) {
+          label = (
             <Label className="edit-field-label">
-              {values[0].lang.split('-', 1)}
+              {item.lang.split('-', 1)}
             </Label>
-            <input />
-            <Icon />
-          </Input><br />
-          <Input
-            className="edit-field-textbox"
-            labelPosition="left"
-            onChange={this._handleChangeSecond}
-            lang={values[1].lang}
-            value={this.state.secondValue}
-            placeholder={values[0].placeholder}
-          >
-            <Label className="edit-field-label">
-              {values[1].lang.split('-', 1)}
-            </Label>
-            <input />
-            <Icon />
-          </Input>
-        </div>
-      );
-    } else if (this.props.edit && showLabel === false) {
-      retVal = (
-        <Input
-          value={this.state.firstValue}
-          onChange={this._handleChangeFirst}
-          placeholder={values[0].placeholder}
-          lang={values[0].lang}
-        />
-      );
-    } else {
-      retVal = <span>{values[0].text}</span>;
+          );
+        }
+        const textbox = (
+          <div>
+            <Input
+              className="edit-field-textbox"
+              labelPosition="left"
+              onChange={this._handleChange}
+              lang={item.lang}
+              value={item.value}
+              placeholder={item.placeholder}
+            >
+              {label}
+              <input />
+            </Input>
+            <br />
+          </div>
+        );
+        retVal.push(textbox);
+      }
+      return retVal;
+    });
+    if (this.props.edit === false) {
+      retVal = <span>{values[0].value}</span>;
     }
     return retVal;
   }
@@ -110,6 +84,7 @@ I18nEditField.defaultProps = {
     { lang: 'en-CA', value: '', placeholder: '' },
   ],
   showLabel: true,
+  handleChange: () => true,
 };
 
 I18nEditField.propTypes = {
@@ -122,7 +97,7 @@ I18nEditField.propTypes = {
     placeholder: PropTypes.string.isRequired,
   })),
   showLabel: PropTypes.bool,
-  handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func,
 };
 
 export default I18nEditField;

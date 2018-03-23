@@ -6,6 +6,19 @@ import { withInfo } from '@storybook/addon-info';
 
 import I18nEditField from '../index';
 
+const values = [
+  {
+    lang: 'fr-CA',
+    value: 'C\'est une valeur française',
+    placeholder: 'placeholder',
+  },
+  {
+    lang: 'en-CA',
+    value: 'This is an English value',
+    placeholder: 'placeholder',
+  },
+];
+
 storiesOf('I18nEditField', module)
   .add(
     'Default options',
@@ -15,17 +28,7 @@ storiesOf('I18nEditField', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <I18nEditField
-          lang="en-CA"
-          values={[
-            { lang: 'fr-CA', value: '', placeholder: '' },
-            { lang: 'en-CA', value: '', placeholder: '' }]}
-          edit={false}
-          showLabel
-          handleChange={(data) => {
-            console.log(data); // eslint-disable-line
-          }}
-        />
+        <I18nEditField />
       </div>
     )),
   )
@@ -39,10 +42,7 @@ storiesOf('I18nEditField', module)
       <div style={{ margin: '20px' }}>
         <I18nEditField
           lang="en-CA"
-          values={[
-            { lang: 'fr-CA', value: 'Francais', placeholder: 'placeholder' },
-            { lang: 'en-CA', value: 'English', placeholder: 'placeholder' },
-          ]}
+          values={values}
           edit={false}
           showLabel
           handleChange={(data) => {
@@ -62,18 +62,7 @@ storiesOf('I18nEditField', module)
       <div style={{ margin: '20px' }}>
         <I18nEditField
           lang="en-CA"
-          values={[
-            {
-              lang: 'fr-CA',
-              value: 'C\'est une valeur française',
-              placeholder: 'placeholder',
-            },
-            {
-              lang: 'en-CA',
-              value: 'This is an English value',
-              placeholder: 'placeholder',
-            },
-          ]}
+          values={values}
           edit
           showLabel
           handleChange={(data) => {
@@ -93,14 +82,17 @@ storiesOf('I18nEditField', module)
       <div style={{ margin: '20px' }}>
         <I18nEditField
           lang="en-CA"
-          values={[
-            { lang: 'fr-CA', value: 'Francais', placeholder: 'placeholder' },
-            { lang: 'en-CA', value: 'English', placeholder: 'placeholder' },
-          ]}
+          values={values}
           edit
           showLabel={false}
           handleChange={(data) => {
             console.log(data); // eslint-disable-line
+            // eslint-disable-next-line
+            for (const i in values) {
+              if (values[i].lang === data.lang) {
+                Object.assign(values[i], data);
+              }
+            }
           }}
         />
       </div>
