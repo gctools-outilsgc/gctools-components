@@ -26,6 +26,6 @@
     }
   },
   "dependencies": {
-    "@storybook/cli": "^3.3.8"
+    "@storybook/cli": "^3.3.15"
   }
 }
