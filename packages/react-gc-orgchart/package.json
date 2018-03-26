@@ -8,7 +8,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "babel index.js -d dist --copy-files",
+    "build": "copyfiles orgchart.css dist && babel index.js -d dist --copy-files",
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
@@ -38,6 +38,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-plugin-react-docgen": "~1.8.1",
     "@gctools-components/eslint-config": "^1.0.0",
+    "copyfiles": "~1.2.0",
     "eslint": "^4.12.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
