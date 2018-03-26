@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots I18nEditField Controlled example 1`] = `
+exports[`Storyshots ReactI18nEdit Controlled example 1`] = `
 <div>
   <div
     style={undefined}
@@ -42,7 +42,7 @@ exports[`Storyshots I18nEditField Controlled example 1`] = `
             }
           }
         >
-          I18nEditField
+          ReactI18nEdit
         </h1>
         <h2
           style={
@@ -137,7 +137,7 @@ exports[`Storyshots I18nEditField Controlled example 1`] = `
 </div>
 `;
 
-exports[`Storyshots I18nEditField Default options 1`] = `
+exports[`Storyshots ReactI18nEdit Default options 1`] = `
 <div>
   <div
     style={undefined}
@@ -179,7 +179,7 @@ exports[`Storyshots I18nEditField Default options 1`] = `
             }
           }
         >
-          I18nEditField
+          ReactI18nEdit
         </h1>
         <h2
           style={
@@ -256,7 +256,7 @@ exports[`Storyshots I18nEditField Default options 1`] = `
             }
           >
             "
-            I18nEditField
+            ReactI18nEdit
             " Component
           </h2>
           <table
@@ -605,7 +605,7 @@ exports[`Storyshots I18nEditField Default options 1`] = `
 </div>
 `;
 
-exports[`Storyshots I18nEditField With values 1`] = `
+exports[`Storyshots ReactI18nEdit With values 1`] = `
 <div>
   <div
     style={undefined}
@@ -647,7 +647,7 @@ exports[`Storyshots I18nEditField With values 1`] = `
             }
           }
         >
-          I18nEditField
+          ReactI18nEdit
         </h1>
         <h2
           style={
@@ -724,7 +724,7 @@ exports[`Storyshots I18nEditField With values 1`] = `
             }
           >
             "
-            I18nEditField
+            ReactI18nEdit
             " Component
           </h2>
           <table
@@ -1073,7 +1073,7 @@ exports[`Storyshots I18nEditField With values 1`] = `
 </div>
 `;
 
-exports[`Storyshots I18nEditField With values, edit=true 1`] = `
+exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
 <div>
   <div
     style={undefined}
@@ -1115,7 +1115,475 @@ exports[`Storyshots I18nEditField With values, edit=true 1`] = `
             }
           }
         >
-          I18nEditField
+          ReactI18nEdit
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          With values and lang=fr_CA
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <span>
+        C'est une valeur française
+      </span>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            ReactI18nEdit
+            " Component
+          </h2>
+          <table
+            className="css-1ytzlk7"
+          >
+            <thead>
+              <tr>
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  edit
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Determines if editable components should be displayed.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  showLabel
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    true
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Wether or not to show a label next to the editable component
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  lang
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    'en_CA'
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  The current active language.  (for sorting of the value list)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  values
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            lang
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            value
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            placeholder
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    [
+  { lang: 'fr_CA', value: '', placeholder: '' },…
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  List of values to be set for each editable field and active lang label
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onChange
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    undefined
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Event called when any of the editable components are changed
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          ReactI18nEdit
         </h1>
         <h2
           style={
@@ -1235,7 +1703,7 @@ exports[`Storyshots I18nEditField With values, edit=true 1`] = `
             }
           >
             "
-            I18nEditField
+            ReactI18nEdit
             " Component
           </h2>
           <table
@@ -1584,7 +2052,7 @@ exports[`Storyshots I18nEditField With values, edit=true 1`] = `
 </div>
 `;
 
-exports[`Storyshots I18nEditField With values, edit=true, showLabel=false 1`] = `
+exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = `
 <div>
   <div
     style={undefined}
@@ -1626,7 +2094,7 @@ exports[`Storyshots I18nEditField With values, edit=true, showLabel=false 1`] = 
             }
           }
         >
-          I18nEditField
+          ReactI18nEdit
         </h1>
         <h2
           style={
@@ -1734,7 +2202,7 @@ exports[`Storyshots I18nEditField With values, edit=true, showLabel=false 1`] = 
             }
           >
             "
-            I18nEditField
+            ReactI18nEdit
             " Component
           </h2>
           <table
@@ -2083,7 +2551,7 @@ exports[`Storyshots I18nEditField With values, edit=true, showLabel=false 1`] = 
 </div>
 `;
 
-exports[`Storyshots I18nEditField edit=true 1`] = `
+exports[`Storyshots ReactI18nEdit edit=true 1`] = `
 <div>
   <div
     style={undefined}
@@ -2125,7 +2593,7 @@ exports[`Storyshots I18nEditField edit=true 1`] = `
             }
           }
         >
-          I18nEditField
+          ReactI18nEdit
         </h1>
         <h2
           style={
@@ -2245,7 +2713,7 @@ exports[`Storyshots I18nEditField edit=true 1`] = `
             }
           >
             "
-            I18nEditField
+            ReactI18nEdit
             " Component
           </h2>
           <table

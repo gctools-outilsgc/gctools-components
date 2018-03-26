@@ -4,7 +4,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
-import I18nEditField from '../index';
+import ReactI18nEdit from '../index';
 
 const values = [
   {
@@ -28,7 +28,7 @@ class ControlledExample extends React.Component {
   }
   render() {
     return (
-      <I18nEditField
+      <ReactI18nEdit
         lang="en_CA"
         values={this.state.values}
         edit
@@ -48,7 +48,7 @@ class ControlledExample extends React.Component {
   }
 }
 
-storiesOf('I18nEditField', module)
+storiesOf('ReactI18nEdit', module)
   .add(
     'Default options',
     withInfo({
@@ -57,7 +57,7 @@ storiesOf('I18nEditField', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <I18nEditField />
+        <ReactI18nEdit />
       </div>
     )),
   )
@@ -69,7 +69,7 @@ storiesOf('I18nEditField', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <I18nEditField edit />
+        <ReactI18nEdit edit />
       </div>
     )),
   )
@@ -81,8 +81,22 @@ storiesOf('I18nEditField', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <I18nEditField
-          lang="en_CA"
+        <ReactI18nEdit
+          values={values}
+        />
+      </div>
+    )),
+  )
+  .add(
+    'With values and lang=fr_CA',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <ReactI18nEdit
+          lang="fr_CA"
           values={values}
         />
       </div>
@@ -96,8 +110,7 @@ storiesOf('I18nEditField', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <I18nEditField
-          lang="en_CA"
+        <ReactI18nEdit
           values={values}
           edit
         />
@@ -112,8 +125,7 @@ storiesOf('I18nEditField', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <I18nEditField
-          lang="en_CA"
+        <ReactI18nEdit
           values={values}
           edit
           showLabel={false}

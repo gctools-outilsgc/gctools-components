@@ -1,6 +1,6 @@
 {
-  "name": "@gctools-components/i18n-edit-field",
-  "description": "Editable label that turns into 2 text boxes upon entering edit mode. One text box for English and one for French. The label (when not in edit mode) displays the value from the currently selected language.",
+  "name": "@gctools-components/react-i18n-edit",
+  "description": "Editable label that turns into multiple text boxes upon entering edit mode.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",

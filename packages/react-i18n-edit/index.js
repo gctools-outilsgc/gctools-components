@@ -10,7 +10,7 @@ import './css/style.css';
  * One for each language specified.  The label (when not in edit mode)
  * displays the associated language.
  */
-class I18nEditField extends Component {
+class ReactI18nEdit extends Component {
   constructor(props) {
     super(props);
     this._onChange = this._onChange.bind(this);
@@ -28,7 +28,8 @@ class I18nEditField extends Component {
 
   render() {
     const { values, showLabel, lang } = this.props;
-    if (values.length === 0) return null;
+    if (!values.length || !Array.isArray(values)) return null;
+
 
     // Sort so the selected language is first, leave other items as-is.
     const displayList = values.slice();
@@ -71,7 +72,7 @@ class I18nEditField extends Component {
   }
 }
 
-I18nEditField.defaultProps = {
+ReactI18nEdit.defaultProps = {
   edit: false,
   lang: 'en_CA',
   values: [
@@ -82,7 +83,7 @@ I18nEditField.defaultProps = {
   onChange: undefined,
 };
 
-I18nEditField.propTypes = {
+ReactI18nEdit.propTypes = {
   /** Determines if editable components should be displayed. */
   edit: PropTypes.bool,
   /** Wether or not to show a label next to the editable component */
@@ -99,5 +100,5 @@ I18nEditField.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default I18nEditField;
+export default ReactI18nEdit;
 
