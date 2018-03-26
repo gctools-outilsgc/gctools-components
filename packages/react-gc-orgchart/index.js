@@ -21,21 +21,23 @@ class ReactGcOrgchart extends Component {
   }
 
   componentDidMount() {
-    const h = this.element.clientWidth;
-    if (this.state.height !== h) {
-      // eslint-disable-next-line react/no-did-mount-set-state
-      this.setState({ height: h });
-    }
-    const func = (counter) => {
-      if (!this.element) return;
-      if (this.element.clientWidth !== h) {
-        this.updateHeight();
-      } else if (counter < 100) {
-        const f = func.bind(this, counter + 1);
-        setTimeout(f, 10);
+    if (this.element) {
+      const h = this.element.clientWidth;
+      if (this.state.height !== h) {
+        // eslint-disable-next-line react/no-did-mount-set-state
+        this.setState({ height: h });
       }
-    };
-    func(1);
+      const func = (counter) => {
+        if (!this.element) return;
+        if (this.element.clientWidth !== h) {
+          this.updateHeight();
+        } else if (counter < 100) {
+          const f = func.bind(this, counter + 1);
+          setTimeout(f, 10);
+        }
+      };
+      func(1);
+    }
   }
 
   updateHeight() {
