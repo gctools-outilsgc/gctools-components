@@ -12,8 +12,41 @@ import './orgchart.css';
  * React component capable of displaying org charts
  */
 class ReactGcOrgchart extends Component {
+  constructor() {
+    super();
+    this.element = false;
+    this.state = {
+      height: false,
+    };
+  }
+
+  componentDidMount() {
+    const h = this.element.clientWidth;
+    if (this.state.height !== h) {
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({ height: h });
+    }
+    const func = (counter) => {
+      if (!this.element) return;
+      if (this.element.clientWidth !== h) {
+        this.updateHeight();
+      } else if (counter < 100) {
+        const f = func.bind(this, counter + 1);
+        setTimeout(f, 10);
+      }
+    };
+    func(1);
+  }
+
+  updateHeight() {
+    // We use width instead of height because the element is rotated.
+    if (this.state.height !== this.element.clientWidth) {
+      // eslint-disable-next-line react/no-did-mount-set-state
+      this.setState({ height: this.element.clientWidth });
+    }
+  }
+
   render() {
-    const rowHeight = 55;
     const { orgStructure, subject } = this.props;
 
     if (!orgStructure) return null;
@@ -24,10 +57,6 @@ class ReactGcOrgchart extends Component {
       }
       return r + 1;
     };
-
-    const totalCols = (orgStructure.subordinates) ?
-      orgStructure.subordinates.reduce(colCount, 0) : 1;
-    const estimatedHeight = totalCols * rowHeight;
 
     const getLineClass = (pos, total) => {
       const part1 = (pos % 2) ? 'leftLine' : 'rightLine';
@@ -85,9 +114,11 @@ class ReactGcOrgchart extends Component {
       );
     };
 
+    const height = (this.state.height) ? this.state.height : 0;
+
     return (
-      <div style={{ height: `${estimatedHeight}px` }}>
-        <div className="orgchart l2r">
+      <div style={{ height: `${height}px` }}>
+        <div className="orgchart l2r" ref={(r) => { this.element = r; }}>
           {createChart(this.props.orgStructure)}
         </div>
       </div>
@@ -129,7 +160,7 @@ ReactGcOrgchart.propTypes = {
       /** Organizational tier of the named person */
       orgTier: PropTypes.string,
       /** Subordinates of the named person */
-      subordinates: NodePropType,
+      subordinates: PropTypes.arrayOf(NodePropType),
     })),
   }).isRequired,
   /** Identifies by `uuid` which node is in focus */
