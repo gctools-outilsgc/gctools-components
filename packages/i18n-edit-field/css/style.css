@@ -1,9 +1,9 @@
-.edit-field-textbox {
+.multiline-edit-field-textbox {
     margin-bottom: 10px;
     display: block;
     width: auto;
 }
 
-.edit-field-label {
+.multiline-edit-field-label {
     width: 40px;
 }

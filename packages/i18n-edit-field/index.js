@@ -1,103 +1,102 @@
 import React, { Component } from 'react';
-import { Label, Input, Icon } from 'semantic-ui-react';
+import { Label, Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import 'semantic-ui-css/semantic.min.css';
 import './css/style.css';
 
 /**
- * Editable label that turns into 2 text boxes upon entering edit mode. One
- * text box for English and one for French. The label (when not in edit mode)
- * displays the value from the currently selected language.
+ * Editable label that turns into multiple text boxes upon entering edit mode.
+ * One for each language specified.  The label (when not in edit mode)
+ * displays the associated language.
  */
 class I18nEditField extends Component {
-  constructor() {
-    super();
-    this._handleChange = this._handleChange.bind(this);
+  constructor(props) {
+    super(props);
+    this._onChange = this._onChange.bind(this);
   }
 
-  _handleChange(e, data) {
-    const sendData = {
-      lang: data.lang,
-      value: data.value,
-    };
-    this.props.handleChange(sendData);
+  _onChange(e, data) {
+    if (this.props.onChange) {
+      const sendData = {
+        lang: data.lang,
+        value: data.value,
+      };
+      this.props.onChange(sendData);
+    }
   }
 
   render() {
-    let retVal;
-    let selectedLang;
-    const { values, showLabel } = this.props;
+    const { values, showLabel, lang } = this.props;
+    if (values.length === 0) return null;
 
-    // eslint-disable-next-line
-    for (const i in values) {
-      if (values[i].lang === this.props.lang) {
-        selectedLang = values.splice(i, 1);
-        values.unshift(selectedLang[0]);
-        break;
-      }
+    // Sort so the selected language is first, leave other items as-is.
+    const displayList = values.slice();
+    displayList.sort((a, b) => {
+      const ai = (a.lang === lang) ? 1 : 0;
+      const bi = (b.lang === lang) ? 1 : 0;
+      return bi - ai;
+    });
+
+    // If we are not in edit mode, simply display the first value from the list
+    if (this.props.edit === false) {
+      return <span>{displayList[0].value}</span>;
     }
 
-    retVal = [];
-    values.map((item) => {
-      let label;
-      if (this.props.edit) {
-        if (showLabel) {
-          label = (
-            <Label className="edit-field-label">
-              {item.lang.split('-', 1)}
-            </Label>
-          );
-        }
-        const textbox = (
-          <div>
+    // Display the editable fields for each language
+    return (
+      <div>
+        {displayList.map(item => (
+          <div key={`item_${item.lang}`}>
             <Input
-              className="edit-field-textbox"
+              className="multiline-edit-field-textbox"
               labelPosition="left"
-              onChange={this._handleChange}
+              onChange={this._onChange}
               lang={item.lang}
               value={item.value}
               placeholder={item.placeholder}
             >
-              {label}
+              {(showLabel) ? (
+                <Label className="multiline-edit-field-label">
+                  {item.lang.split('_', 1)}
+                </Label>
+              ) : null}
               <input />
             </Input>
             <br />
           </div>
-        );
-        retVal.push(textbox);
-      }
-      return retVal;
-    });
-    if (this.props.edit === false) {
-      retVal = <span>{values[0].value}</span>;
-    }
-    return retVal;
+        ))}
+      </div>
+    );
   }
 }
 
 I18nEditField.defaultProps = {
   edit: false,
-  lang: 'en-CA',
+  lang: 'en_CA',
   values: [
-    { lang: 'fr-CA', value: '', placeholder: '' },
-    { lang: 'en-CA', value: '', placeholder: '' },
+    { lang: 'fr_CA', value: '', placeholder: '' },
+    { lang: 'en_CA', value: '', placeholder: '' },
   ],
   showLabel: true,
-  handleChange: () => true,
+  onChange: undefined,
 };
 
 I18nEditField.propTypes = {
-  /** This is an example prop called "test". */
+  /** Determines if editable components should be displayed. */
   edit: PropTypes.bool,
+  /** Wether or not to show a label next to the editable component */
+  showLabel: PropTypes.bool,
+  /** The current active language.  (for sorting of the value list) */
   lang: PropTypes.string,
+  /** List of values to be set for each editable field and active lang label */
   values: PropTypes.arrayOf(PropTypes.shape({
     lang: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
   })),
-  showLabel: PropTypes.bool,
-  handleChange: PropTypes.func,
+  /** Event called when any of the editable components are changed */
+  onChange: PropTypes.func,
 };
 
 export default I18nEditField;

@@ -8,16 +8,45 @@ import I18nEditField from '../index';
 
 const values = [
   {
-    lang: 'fr-CA',
+    lang: 'fr_CA',
     value: 'C\'est une valeur française',
     placeholder: 'placeholder',
   },
   {
-    lang: 'en-CA',
+    lang: 'en_CA',
     value: 'This is an English value',
     placeholder: 'placeholder',
   },
 ];
+
+class ControlledExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      values,
+    };
+  }
+  render() {
+    return (
+      <I18nEditField
+        lang="en_CA"
+        values={this.state.values}
+        edit
+        showLabel
+        onChange={(data) => {
+          const v = this.state.values;
+          for (let i = 0; i < v.length; i += 1) {
+            if (v[i].lang === data.lang) {
+              v[i] = Object.assign(v[i], data);
+              break;
+            }
+          }
+          this.setState({ values: v });
+        }}
+      />
+    );
+  }
+}
 
 storiesOf('I18nEditField', module)
   .add(
@@ -33,7 +62,19 @@ storiesOf('I18nEditField', module)
     )),
   )
   .add(
-    'With values (displays currently selected language value)',
+    'edit=true',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <I18nEditField edit />
+      </div>
+    )),
+  )
+  .add(
+    'With values',
     withInfo({
       header: true,
       inline: true,
@@ -41,19 +82,14 @@ storiesOf('I18nEditField', module)
     })(() => (
       <div style={{ margin: '20px' }}>
         <I18nEditField
-          lang="en-CA"
+          lang="en_CA"
           values={values}
-          edit={false}
-          showLabel
-          handleChange={(data) => {
-            console.log(data); // eslint-disable-line
-          }}
         />
       </div>
     )),
   )
   .add(
-    'With values in edit mode',
+    'With values, edit=true',
     withInfo({
       header: true,
       inline: true,
@@ -61,19 +97,15 @@ storiesOf('I18nEditField', module)
     })(() => (
       <div style={{ margin: '20px' }}>
         <I18nEditField
-          lang="en-CA"
+          lang="en_CA"
           values={values}
           edit
-          showLabel
-          handleChange={(data) => {
-            console.log(data); // eslint-disable-line
-          }}
         />
       </div>
     )),
   )
   .add(
-    'With showLabel false in edit mode',
+    'With values, edit=true, showLabel=false',
     withInfo({
       header: true,
       inline: true,
@@ -81,21 +113,20 @@ storiesOf('I18nEditField', module)
     })(() => (
       <div style={{ margin: '20px' }}>
         <I18nEditField
-          lang="en-CA"
+          lang="en_CA"
           values={values}
           edit
           showLabel={false}
-          handleChange={(data) => {
-            console.log(data); // eslint-disable-line
-            // eslint-disable-next-line
-            for (const i in values) {
-              if (values[i].lang === data.lang) {
-                Object.assign(values[i], data);
-              }
-            }
-          }}
         />
       </div>
     )),
+  )
+  .add(
+    'Controlled example',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+      propTables: false,
+    })(() => <ControlledExample />),
   );
-
