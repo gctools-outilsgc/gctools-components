@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: recommendation-storage
+  namespace: gctoolsv2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: recommendation-storage
+    spec:
+      containers:
+      - name: recommendation-storage
+        image: localhost:5000/gctools-outilsgc/recommendation-store:0.0.20
+        ports:
+        - containerPort: 8080

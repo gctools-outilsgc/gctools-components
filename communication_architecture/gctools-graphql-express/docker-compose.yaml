@@ -1,0 +1,13 @@
+version: "2"
+services:
+  api:
+    extra_hosts:
+    - localhost:127.0.0.1
+    build: .
+    volumes:
+    - .:/app
+    ports:
+    - 3001:3001
+    environment:
+    - HTTP_PROXY=localhost:8080
+    - HTTPS_PROXY=localhost:8080

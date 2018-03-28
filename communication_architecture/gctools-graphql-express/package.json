@@ -1,0 +1,52 @@
+{
+  "name": "gctools-graphql-express",
+  "version": "1.0.0",
+  "description": "GraphQL server implementation",
+  "main": "index.js",
+  "author": "Luc Belliveau",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-watch index.js",
+    "build-lib": "webpack --target node ./index.js lib/bundle.js",
+    "build-docker-dev": "npm run docker-build-dev && npm run docker-push-dev",
+    "docker-build-dev": "docker build . -t localhost:5000/graphql-server:dev",
+    "docker-push-dev": "docker push localhost:5000/graphql-server:dev",
+    "docker-build": "docker build . -t gctools-outilsgc/graphql-server:latest"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.2.0",
+    "cached-request": "^1.1.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "global": "^4.3.2",
+    "graphql": "^0.11.7",
+    "graphql-cli": "^2.0.2",
+    "graphql-playground-middleware-express": "^1.2.0",
+    "graphql-subscriptions": "^0.5.5",
+    "graphql-voyager": "^1.0.0-rc.10",
+    "kafka-node": "^2.3.0",
+    "request": "^2.83.0",
+    "subscriptions-transport-ws": "^0.9.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-watch": "^2.0.7",
+    "webpack": "^3.8.1"
+  },
+  "eslintConfig": {
+    "extends": "@gctools-components",
+    "root": true
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  }
+}

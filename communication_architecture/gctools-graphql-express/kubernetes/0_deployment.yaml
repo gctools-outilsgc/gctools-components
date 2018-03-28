@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: graphql-server
+  namespace: gctoolsv2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: graphql-server
+    spec:
+      hostAliases:
+      - ip: "167.37.33.20"
+        hostnames:
+        - "recommendation.rest"
+      containers:
+      - name: graphql-server
+        image: localhost:5000/gctools-outilsgc/graphql-server:0.0.71
+        ports:
+        - containerPort: 3001
+        - containerPort: 3002
+        env:
+        - name: "http_proxy"
+          value: "http://proxy.paz.nrc.gc.ca:8080"
+        - name: "https_proxy"
+          value: "http://proxy.paz.nrc.gc.ca:8080"
