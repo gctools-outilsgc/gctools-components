@@ -49,14 +49,14 @@ const AutoCompletePerson = AutoCompleteGraphQL(gql`
       }
     }
   }`, ({ ownProps, data: { people } }) => ({
-    ...ownProps,
-    items: (people)
-      ? people.map(p => ({
-        text: p.name.value,
-        value: p.id,
-        username: p.gcconnex_username,
-      })) : [],
-  }));
+  ...ownProps,
+  items: (people)
+    ? people.map(p => ({
+      text: p.name.value,
+      value: p.id,
+      username: p.gcconnex_username,
+    })) : [],
+}));
 
 const AutoCompleteArticle = AutoCompleteGraphQL(gql`
   query TypeAndFindQuery($nameContains: String!) {
@@ -68,10 +68,10 @@ const AutoCompleteArticle = AutoCompleteGraphQL(gql`
     }
   }
 `, ({ ownProps, data: { articles } }) => ({
-    ...ownProps,
-    items: (articles)
-      ? articles.map(p => ({ text: p.name.value, value: p.id })) : [],
-  }));
+  ...ownProps,
+  items: (articles)
+    ? articles.map(p => ({ text: p.name.value, value: p.id })) : [],
+}));
 
 const AutoCompleteDiscussion = AutoCompleteGraphQL(gql`
   query TypeAndFindQuery($nameContains: String!) {
@@ -83,10 +83,10 @@ const AutoCompleteDiscussion = AutoCompleteGraphQL(gql`
     }
   }
 `, ({ ownProps, data: { discussions } }) => ({
-    ...ownProps,
-    items: (discussions)
-      ? discussions.map(p => ({ text: p.name.value, value: p.id })) : [],
-  }));
+  ...ownProps,
+  items: (discussions)
+    ? discussions.map(p => ({ text: p.name.value, value: p.id })) : [],
+}));
 
 const CLOUD_SIZE = {
   article: 10,
@@ -239,9 +239,7 @@ class ArticleRecommendations extends React.Component {
     this.props.mutate({
       variables: { context: 'login' },
       context: {
-        headers: {
-          Authorization: token,
-        },
+        headers: { Authorization: token },
       },
     });
     this.setState({

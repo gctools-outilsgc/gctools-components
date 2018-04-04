@@ -14,7 +14,8 @@ import {
   TableHeader,
   TableHeaderColumn,
   TableRow,
-  TableRowColumn } from 'material-ui/Table';
+  TableRowColumn
+} from 'material-ui/Table';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/styles';

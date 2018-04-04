@@ -75,9 +75,7 @@ class PeopleFinder extends React.Component {
       },
     };
     mutate(Object.assign(options, {
-      variables: {
-        context: 'login',
-      },
+      variables: { context: 'login' },
     }));
     const useContext = `article_${context.toLowerCase()}`;
     mutate(Object.assign(options, {

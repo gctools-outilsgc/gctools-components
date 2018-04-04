@@ -14,7 +14,8 @@ import {
   TableHeader,
   TableHeaderColumn,
   TableRow,
-  TableRowColumn } from 'material-ui/Table';
+  TableRowColumn
+} from 'material-ui/Table';
 
 const Methods = (props) => {
   const funcs =

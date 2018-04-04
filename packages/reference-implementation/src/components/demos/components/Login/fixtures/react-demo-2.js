@@ -10,7 +10,8 @@ import React from 'react';
 import {
   Step,
   Stepper,
-  StepLabel } from 'material-ui/Stepper';
+  StepLabel
+} from 'material-ui/Stepper';
 
 import Login from '@gctools-components/gc-login';
 import identityServer from './authority';
