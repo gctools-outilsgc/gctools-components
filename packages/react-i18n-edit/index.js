@@ -92,7 +92,7 @@ ReactI18nEdit.propTypes = {
   lang: PropTypes.string,
   /** List of values to be set for each editable field and active lang label */
   values: PropTypes.arrayOf(PropTypes.shape({
-    lang: PropTypes.string.isRequired,
+    lang: PropTypes.string,
     value: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
   })),

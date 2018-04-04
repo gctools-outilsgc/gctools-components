@@ -134,6 +134,25 @@ storiesOf('ReactI18nEdit', module)
     )),
   )
   .add(
+    'With lang undefined, values, edit=true, showLabel=false',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <ReactI18nEdit
+          values={[{
+            value: 'Elon Musk',
+            placeholder: 'placeholder',
+          }]}
+          edit
+          showLabel={false}
+        />
+      </div>
+    )),
+  )
+  .add(
     'Controlled example',
     withInfo({
       header: true,
