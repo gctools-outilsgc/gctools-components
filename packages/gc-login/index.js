@@ -28,7 +28,7 @@ const gctoolsLogo = require('./img/gctools.png');
  */
 class Login extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       profile: props.profile,
       str_login: props.profile ? props.profile.name : 'Login',
@@ -331,7 +331,7 @@ Login.propTypes = {
   /** Set of configuration parameters to pass to the internal oidc-client
     instance.  Refer to
     https://github.com/IdentityModel/oidc-client-js/blob/dev/src/OidcClientSettings.js for more information. */ // eslint-disable-line
-  oidcConfig: PropTypes.shape(),
+  oidcConfig: PropTypes.shape({}),
   /** Override the action when the login button is clicked.  (If you
     specify this property, the default `login` action will NOT fire, you
     must do so manually.) */

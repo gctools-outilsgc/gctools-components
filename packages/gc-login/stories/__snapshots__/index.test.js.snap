@@ -618,7 +618,7 @@ exports[`Storyshots Login Default options 1`] = `
                   className="css-1ygfcef"
                 >
                   <span>
-                    'always' | 'not-logged-in' | 'never'
+                    oneOf 'always' | 'not-logged-in' | 'never'
                   </span>
                 </td>
                 <td

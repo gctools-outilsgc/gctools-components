@@ -499,7 +499,7 @@ exports[`Storyshots GcconnexRefImpl Default options 1`] = `
                   className="css-1ygfcef"
                 >
                   <span>
-                    'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
+                    oneOf 'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
                   </span>
                 </td>
                 <td
@@ -982,7 +982,7 @@ exports[`Storyshots GcconnexRefImpl context=login 1`] = `
                   className="css-1ygfcef"
                 >
                   <span>
-                    'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
+                    oneOf 'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
                   </span>
                 </td>
                 <td
@@ -1509,7 +1509,7 @@ exports[`Storyshots GcconnexRefImpl loading=true 1`] = `
                   className="css-1ygfcef"
                 >
                   <span>
-                    'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
+                    oneOf 'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
                   </span>
                 </td>
                 <td
@@ -2036,7 +2036,7 @@ exports[`Storyshots GcconnexRefImpl with no available recommendations (recommend
                   className="css-1ygfcef"
                 >
                   <span>
-                    'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
+                    oneOf 'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
                   </span>
                 </td>
                 <td
@@ -2563,7 +2563,7 @@ exports[`Storyshots GcconnexRefImpl with recommendations 1`] = `
                   className="css-1ygfcef"
                 >
                   <span>
-                    'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
+                    oneOf 'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
                   </span>
                 </td>
                 <td
@@ -3090,7 +3090,7 @@ exports[`Storyshots GcconnexRefImpl with recommendations not ready (recommendati
                   className="css-1ygfcef"
                 >
                   <span>
-                    'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
+                    oneOf 'login' | 'article_c1' | 'article_c2' | 'article_c3' | 'article_c4' | 'article_c5'
                   </span>
                 </td>
                 <td

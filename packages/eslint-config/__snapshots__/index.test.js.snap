@@ -15,6 +15,16 @@ Object {
   },
   "parser": "babel-eslint",
   "rules": Object {
+    "comma-dangle": Array [
+      "error",
+      Object {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline",
+        "imports": "never",
+        "objects": "always-multiline",
+      },
+    ],
     "max-len": Array [
       2,
       79,
