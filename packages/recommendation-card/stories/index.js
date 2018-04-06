@@ -186,6 +186,7 @@ storiesOf('CardContainer', module)
             type="tweet"
             title="this is a short title"
             rank={1}
+            touched={1523044273}
             phrases={[
             { text: 'word', size: 0.3 },
             { text: 'phrase cloud', size: 1 },
@@ -230,6 +231,7 @@ storiesOf('CardContainer', module)
             key="card1"
             type="tweet"
             title="this is a short title"
+            touched={1523044273}
             rank={1}
             phrases={[
           { text: 'word', size: 0.3 },
@@ -239,6 +241,7 @@ storiesOf('CardContainer', module)
           <RecommendationCard
             key="card2"
             type="gcpedia-article"
+            touched={1523044273}
             title="this is a short title"
             rank={1}
             phrases={[
@@ -249,6 +252,7 @@ storiesOf('CardContainer', module)
           <RecommendationCard
             key="card3"
             type="gcprofile-user"
+            touched={1523044273}
             title="this is a short title"
             rank={1}
             phrases={[
@@ -261,6 +265,7 @@ storiesOf('CardContainer', module)
             type="gcpedia-article"
             title="this is a short title"
             rank={1}
+            touched={761522136}
             phrases={[
           { text: 'word', size: 0.3 },
           { text: 'phrase cloud', size: 1 },
@@ -270,6 +275,7 @@ storiesOf('CardContainer', module)
             key="card5"
             type="tweet"
             title="this is a short title"
+            touched={761522136}
             rank={1}
             phrases={[
           { text: 'word', size: 0.3 },
@@ -279,6 +285,7 @@ storiesOf('CardContainer', module)
           <RecommendationCard
             key="card6"
             type="gcpedia-article"
+            touched={761522136}
             title="this is a short title"
             rank={1}
             phrases={[
@@ -288,6 +295,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card7"
+            touched={761522136}
             type="tweet"
             title="this is a short title"
             rank={1}
@@ -300,6 +308,7 @@ storiesOf('CardContainer', module)
             key="card8"
             type="gcpedia-article"
             title="this is a short title"
+            touched={761522136}
             rank={1}
             phrases={[
           { text: 'word', size: 0.3 },
@@ -308,6 +317,7 @@ storiesOf('CardContainer', module)
           />,
           <RecommendationCard
             key="card9"
+            touched={761522136}
             type="gcprofile-user"
             title="this is a short title"
             rank={1}
@@ -320,6 +330,7 @@ storiesOf('CardContainer', module)
             key="card10"
             type="gcpedia-article"
             title="this is a short title"
+            touched={761522136}
             rank={1}
             phrases={[
           { text: 'word', size: 0.3 },

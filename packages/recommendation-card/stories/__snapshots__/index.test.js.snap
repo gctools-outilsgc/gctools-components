@@ -79,7 +79,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
         className="recommendations-container"
       >
         <h4>
-          1969
+          2018
         </h4>
         <div
           className="grid-item card"
@@ -1013,7 +1013,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
         className="recommendations-container"
       >
         <h4>
-          1969
+          2018
         </h4>
         <div
           className="grid-item card"
