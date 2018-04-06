@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "copyfiles img/* dist && babel index.js -d dist --copy-files",
+    "build": "babel index.js -d dist --copy-files",
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
@@ -34,8 +34,8 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "@gctools-components/eslint-config": "^1.1.1",
@@ -58,15 +58,16 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "jest": "^21.2.1",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "material-ui": "^0.19.4",
     "oidc-client": "^1.4.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "babel": {
     "presets": [
