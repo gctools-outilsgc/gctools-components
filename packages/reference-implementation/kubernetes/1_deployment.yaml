@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: reference-implementation
+  namespace: gctoolsv2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: reference-implementation
+    spec:
+      containers:
+      - name: reference-implementation
+        image: localhost:5000/gctools-outilsgc/reference-implementation:0.0.9
+        ports:
+        - containerPort: 5000

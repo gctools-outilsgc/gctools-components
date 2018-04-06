@@ -28,93 +28,93 @@ const demo = () => (
     </p>
 
     <h3>Quickstart</h3>
-  Add it like any other webpack plugin.
-  <ExampleCode language="jsx">
-    {`
-const I18nTranslationWebpackPlugin =
-  require('@gctools-components/i18n-translation-webpack-plugin');
+    Add it like any other webpack plugin.
+    <ExampleCode language="jsx">
+      {`
+  const I18nTranslationWebpackPlugin =
+    require('@gctools-components/i18n-translation-webpack-plugin');
 
-module.exports = {
-  plugins: [
-    new I18nTranslationWebpackPlugin()
-  ]
-};
-    `}
-  </ExampleCode>
-  Encapsulate your strings with the translation function (double underscore by
-  default).
-  <ExampleCode language="jsx">
-    {`
-// Regular javascript
-const mystring = __('This is a translation test.');
+  module.exports = {
+    plugins: [
+      new I18nTranslationWebpackPlugin()
+    ]
+  };
+      `}
+    </ExampleCode>
+    Encapsulate your strings with the translation function (double
+    underscore by default).
+    <ExampleCode language="jsx">
+      {`
+  // Regular javascript
+  const mystring = __('This is a translation test.');
 
-// Inside JSX
-<span>{__('Translate inside JSX')}</span>
-    `}
-  </ExampleCode>
-  Control the language using the globally available `localizer`.
-  <ExampleCode language="jsx">
-    {`
-    localizer.setLanguage('fr_CA');
-    `}
-  </ExampleCode>
-  The generated .po files will contain all the message ids found in your
-  project with empty strings.  The translation function will return the
-  message id until a string has been defined in the .po file.
-  <ExampleCode language="gettext">
-    {`
-// i18n/fr_CA/LC_MESSAGES/mypath/myfile.js.po
-msgid "This is a translation test."
-msgstr "Ceci est un test de traduction."
+  // Inside JSX
+  <span>{__('Translate inside JSX')}</span>
+      `}
+    </ExampleCode>
+    Control the language using the globally available `localizer`.
+    <ExampleCode language="jsx">
+      {`
+      localizer.setLanguage('fr_CA');
+      `}
+    </ExampleCode>
+    The generated .po files will contain all the message ids found in your
+    project with empty strings.  The translation function will return the
+    message id until a string has been defined in the .po file.
+    <ExampleCode language="gettext">
+      {`
+  // i18n/fr_CA/LC_MESSAGES/mypath/myfile.js.po
+  msgid "This is a translation test."
+  msgstr "Ceci est un test de traduction."
 
-msgid "Translate inside JSX"
-msgstr "Traduire à l'intérieur de JSX"
-    `}
-  </ExampleCode>
+  msgid "Translate inside JSX"
+  msgstr "Traduire à l'intérieur de JSX"
+      `}
+    </ExampleCode>
 
     <h3>Plugin options</h3>
-  When you instantiate the plugin, you can pass several options to customize
-  it&apos;s behaviour.  When an option is omitted, it takes on the default
-  value shown below.
-  <ExampleCode language="jsx">
-    {`
-const I18nTranslationWebpackPlugin =
-  require('@gctools-components/i18n-translation-webpack-plugin');
+    When you instantiate the plugin, you can pass several options to customize
+    it&apos;s behaviour.  When an option is omitted, it takes on the default
+    value shown below.
+    <ExampleCode language="jsx">
+      {`
+  const I18nTranslationWebpackPlugin =
+    require('@gctools-components/i18n-translation-webpack-plugin');
 
-module.exports = {
-  plugins: [
-    new I18nTranslationWebpackPlugin({
-      // Array of locale IDs to support.
-      languages: ['en_CA', 'fr_CA'],
+  module.exports = {
+    plugins: [
+      new I18nTranslationWebpackPlugin({
+        // Array of locale IDs to support.
+        languages: ['en_CA', 'fr_CA'],
 
-      // Relative path from project root to store localization files.
-      i18n_dir: 'i18n',
+        // Relative path from project root to store localization files.
+        i18n_dir: 'i18n',
 
-      // RegEx pattern used to process javascript files for translations
-      extract_text_test: /\\.(js|jsx)$/,
+        // RegEx pattern used to process javascript files for translations
+        extract_text_test: /\\.(js|jsx)$/,
 
-      // RegEx pattern to ignore for translation
-      extract_text_exclude: /node_modules/,
+        // RegEx pattern to ignore for translation
+        extract_text_exclude: /node_modules/,
 
-      // Type of code splitting (lazy loading) to use.
-      codeSplitting: 'language',
+        // Type of code splitting (lazy loading) to use.
+        codeSplitting: 'language',
 
-      // The global function used for translation.
-      translate_global: '__',
+        // The global function used for translation.
+        translate_global: '__',
 
-      // The global function used for the localizer.
-      localizer_global: 'localizer',
+        // The global function used for the localizer.
+        localizer_global: 'localizer',
 
-      // Function name to add to 'window' for the localizer, or false.
-      localizer_window: false,
+        // Function name to add to 'window' for the localizer, or false.
+        localizer_window: false,
 
-      // The global function used for positional interpolation.
-      interpolate_global: '___',
-    })
-  ]
-};
-    `}
-  </ExampleCode>
+        // The global function used for positional interpolation.
+        interpolate_global: '___',
+      })
+    ]
+  };
+      `}
+    </ExampleCode>
     <p>
     The codeSplitting option can be set to one of the following values.
     </p>

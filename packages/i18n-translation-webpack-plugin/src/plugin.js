@@ -19,7 +19,8 @@ import {
   buildPoFiles,
   buildPotHash,
   ensureDirExists,
-  createGettextConfig } from './po-builder';
+  createGettextConfig
+} from './po-builder';
 
 const path = require('path');
 

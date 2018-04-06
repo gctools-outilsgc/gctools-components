@@ -1,0 +1,13 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bufferutil": "^3.0.3",
+    "express": "^4.16.2",
+    "node-zookeeper-client": "^0.2.2",
+    "optional": "^0.1.4",
+    "utf-8-validate": "^3.0.4"
+  }
+}

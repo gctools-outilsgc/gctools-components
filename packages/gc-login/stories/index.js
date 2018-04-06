@@ -10,6 +10,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import { Button } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
 import Login from '../index';
 
@@ -36,7 +38,16 @@ storiesOf('Login', module)
       source: false,
     })(() => (
       <div style={{ margin: '20px' }}>
-        <Login />
+        <Login>
+          {({ onClick }) => (
+            <Button
+              onClick={onClick}
+              label="Login"
+              primary
+              compact
+            />
+          )}
+        </Login>
       </div>
     )),
   );

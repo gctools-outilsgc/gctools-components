@@ -1,4 +1,5 @@
 *
+.node-virtualenv
 !dist/**
 !requirements.txt
 !python/**

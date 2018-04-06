@@ -25,6 +25,13 @@ module.exports = {
     'react/no-typos': 0,
     'max-len': [2, 79, 2],
     'no-underscore-dangle': 0,
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'never',
+      exports: 'always-multiline',
+      functions: 'always-multiline',
+    }],
   },
 };
 

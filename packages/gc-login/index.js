@@ -7,31 +7,25 @@
  * the Minister of National Research Council, 2017
  */
 import 'babel-polyfill';
-import React, { Component } from 'react';
+import { Component } from 'react';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 import Oidc from 'oidc-client';
 
-const gctoolsLogo = require('./img/gctools.png');
-
 /**
- * The single sign-on component is a drop-in solution to provide SSO for
- * any GCTools, or GoC site.  This component provides a complete "client-side
+ * The single sign-on component is a drop-in solution to provide SSO for any
+ * OpenID compatible  site.  This component provides a complete "client-side
  * only" authentication solution using `oidc-client`, and can also be
  * customized to defer authentication to a backend server, or to orchestrate
- * remote authentication using the `RAP` protocol using a hybrid client+server
+ * remote authentication using the `RAP` protocol using a hybrid client/server
  * design.
  *
  */
 class Login extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       profile: props.profile,
-      str_login: props.profile ? props.profile.name : 'Login',
     };
     if (!props.dumb) {
       const config = Object.assign({
@@ -54,7 +48,6 @@ class Login extends Component {
       this.oidc.events.addUserUnloaded(() => {
         this.setState({
           profile: undefined,
-          str_login: 'Login',
         });
 
         if (this.props.onUserUnloaded) {
@@ -75,12 +68,14 @@ class Login extends Component {
       });
 
       this.oidc.events.addAccessTokenExpiring(() => {
+        this.silentRenew();
         if (this.props.onAccessTokenExpiring) {
           this.props.onAccessTokenExpiring();
         }
       });
 
       this.oidc.events.addAccessTokenExpired(() => {
+        this.silentRenew();
         if (this.props.onAccessTokenExpired) {
           this.props.onAccessTokenExpired();
         }
@@ -89,6 +84,9 @@ class Login extends Component {
       this.oidc.events.addSilentRenewError(() => {
         if (this.props.onSilentRenewError) {
           this.props.onSilentRenewError();
+        } else {
+          console.error('There was an error renewing your access token');
+          console.info('You should refresh the page to continue.');
         }
       });
 
@@ -120,6 +118,7 @@ class Login extends Component {
             case '#!logout': {
               setTimeout(() => {
                 this.oidc.signoutPopupCallback();
+                window.close();
               }, 0);
               break;
             }
@@ -127,7 +126,7 @@ class Login extends Component {
               throw new Error('Unsupported callback');
             }
           }
-          document.open();
+          // document.open();
         }
       }
     }
@@ -154,7 +153,6 @@ class Login extends Component {
           if (user) {
             this.setState({
               profile: user.profile,
-              str_login: user.profile.name,
             });
             if (this.props.onUserFetched) {
               this.props.onUserFetched(user);
@@ -172,7 +170,6 @@ class Login extends Component {
     if ((next.profile) || (this.props.profile)) {
       this.setState({
         profile: next.profile,
-        str_login: (next.profile) ? next.profile.name : 'Login',
       });
     }
   }
@@ -189,7 +186,6 @@ class Login extends Component {
     if (user) {
       this.setState({
         profile: user.profile,
-        str_login: user.profile.name,
       });
     }
   }
@@ -202,10 +198,6 @@ class Login extends Component {
       throw new Error('You cannot call `logout` on a dumb component');
     }
     await this.oidc.signoutPopup();
-    this.setState({
-      profile: undefined,
-      str_login: 'Login',
-    });
   }
 
   /**
@@ -218,7 +210,6 @@ class Login extends Component {
     await this.oidc.removeUser();
     this.setState({
       profile: undefined,
-      str_login: 'Login',
     });
   }
 
@@ -275,18 +266,9 @@ class Login extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <RaisedButton
-            onClick={this._click}
-            label={this.state.str_login}
-            icon={<img src={gctoolsLogo} alt="GCTools" width="20" />}
-            primary
-          />
-        </MuiThemeProvider>
-      </div>
-    );
+    return this.props.children({
+      onClick: this._click,
+    });
   }
 }
 
@@ -317,6 +299,8 @@ Login.defaultProps = {
 };
 
 Login.propTypes = {
+  /** A function that renders the login button.  (render-prop pattern) */
+  children: PropTypes.func.isRequired,
   /** Completely disables built-in OIDC functionality, requiring you to
     provide your handlers for `onLoginClick` and `onLogoutClick` */
   dumb: PropTypes.bool,
@@ -325,7 +309,7 @@ Login.propTypes = {
   /** Set of configuration parameters to pass to the internal oidc-client
     instance.  Refer to
     https://github.com/IdentityModel/oidc-client-js/blob/dev/src/OidcClientSettings.js for more information. */ // eslint-disable-line
-  oidcConfig: PropTypes.shape(),
+  oidcConfig: PropTypes.shape({}),
   /** Override the action when the login button is clicked.  (If you
     specify this property, the default `login` action will NOT fire, you
     must do so manually.) */

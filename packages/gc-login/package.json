@@ -1,6 +1,6 @@
 {
   "name": "@gctools-components/gc-login",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Seamless SSO for any GC site.",
   "main": "dist/index.js",
   "repository": {
@@ -9,10 +9,11 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "copyfiles img/* dist && babel index.js -d dist --copy-files",
+    "build": "babel index.js -d dist --copy-files",
     "prepare": "npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
+    "test-update": "npm run test -u",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -33,17 +34,17 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.0",
-    "@gctools-components/jest-config": "^1.1.0",
-    "@storybook/addon-actions": "^3.2.13",
-    "@storybook/addon-info": "^3.2.13",
-    "@storybook/addon-links": "^3.2.13",
-    "@storybook/addon-storyshots": "^3.2.13",
-    "@storybook/react": "^3.3.0-alpha.2",
+    "@gctools-components/eslint-config": "^1.1.2",
+    "@gctools-components/jest-config": "^1.1.2",
+    "@storybook/addon-actions": "^3.3.10",
+    "@storybook/addon-info": "^3.3.10",
+    "@storybook/addon-links": "^3.3.10",
+    "@storybook/addon-storyshots": "^3.3.10",
+    "@storybook/react": "^3.3.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-react-docgen": "~1.8.1",
@@ -52,20 +53,21 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "copyfiles": "~1.2.0",
-    "eslint": "^4.9.0",
+    "eslint": "^4.12.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "jest": "^21.2.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "material-ui": "^0.19.4",
     "oidc-client": "^1.4.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "babel": {
     "presets": [

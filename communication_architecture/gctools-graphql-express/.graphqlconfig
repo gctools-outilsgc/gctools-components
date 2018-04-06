@@ -1,0 +1,13 @@
+{
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "dev": {
+        "url": "http://localhost:3001/",
+        "headers": {
+          "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Imx1Yy5iZWxsaXZlYXVAbnJjLWNucmMuZ2MuY2EiLCJnY2Nvbm5leF9ndWlkIjoiMjQyOTQ3MzcifQ.POfrONXXi7JF1yALrQLKVGqwMn1hLnlgbpWGNQrh8hk"
+        }
+      }
+    }
+  }
+}

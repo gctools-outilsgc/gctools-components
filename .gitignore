@@ -2,6 +2,10 @@
 
 # Created by https://www.gitignore.io/api/node,pycharm,jetbrains,visualstudiocode
 
+.node-virtualenv
+communication_architecture/services/recommendation-storage/lib
+
+
 ### Node ###
 # Logs
 logs

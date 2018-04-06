@@ -190,7 +190,7 @@ class PhraseCloudSquare extends Component {
 
         for (let i = drawQueue.length - 1; i >= 0; i -= 1) {
           const {
-            pathInfo, pathId, red, text, x1, y1, item_color, score,
+            pathInfo, pathId, red, text, x1, y1, itemColor, score,
           }
             = drawQueue[i];
 
@@ -209,7 +209,7 @@ class PhraseCloudSquare extends Component {
               .append('textPath')
               .attr('startOffset', '50%')
               .attr('xlink:href', `#${pathId}`)
-              .attr('fill', item_color)
+              .attr('fill', itemColor)
               .text(text),
           });
           this.pathObjects[this.pathObjects.length - 1].text

@@ -8,24 +8,28 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Paper from 'material-ui/Paper';
+import { Card } from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import TwitterCircle from 'material-ui-community-icons/icons/twitter-circle';
 import HelpCircle from 'material-ui-community-icons/icons/help-circle';
 import AccountCircle from 'material-ui-community-icons/icons/account-circle';
-import FileDocument from 'material-ui-community-icons/icons/file-document';
-import StarRatingComponent from 'react-star-rating-component';
-import Dotdotdot from 'react-dotdotdot';
-import ReactTooltip from 'react-tooltip';
+import { IconButton } from 'material-ui';
+import { ListItem } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
+import Avatar from 'material-ui/Avatar';
+import SocialShare from 'material-ui/svg-icons/social/share';
+import ToggleStar from 'material-ui/svg-icons/toggle/star';
+import ToggleStarBorder from 'material-ui/svg-icons/toggle/star-border';
+import Toggle from 'material-ui/Toggle';
 import 'font-awesome/css/font-awesome.min.css';
-
 import WordCloud from './WordCloud';
 
 import '../css/fonts.css';
 import '../css/card-style.css';
 
-const FontAwesome = require('react-fontawesome');
+const gcpedia = require('../img/gcpedia.jpg');
+const Rating = require('react-rating');
 
 /**
  * Recommendation cards provide a consistent interface for recommendations
@@ -34,66 +38,71 @@ const FontAwesome = require('react-fontawesome');
 class RecommendationCard extends Component {
   constructor() {
     super();
+    this.state = {
+      expanded: false,
+    };
     this.cloudElement = false;
     this.cloudLayout = false;
     this.restartCount = 0;
-    this.handleCardClick = this.handleCardClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleCardClick() {
-    if (this.props.type !== 'gcprofile-user') {
-      window.open(`http://www.gcpedia.gc.ca/wiki/${this.props.title}`);
-    }
+  handleClick() {
+    window.open(
+      `http://gcpedia.gctools.nrc.ca/index.php/${this.props.title}`,
+      (this.props.context === 'gcpedia') ? '_self' : '_blank',
+    );
+  }
+
+  handleToggle() {
+    this.setState({ expanded: !this.state.expanded });
   }
 
   render() {
     let header = <span />;
-    const headerStyle = {
-      display: 'flex',
-      alignItems: 'center',
-      fontFamily: 'Roboto, sans-serif',
-    };
     switch (this.props.type) {
       case 'tweet':
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <TwitterCircle
-              color="#00aced"
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              color="#fff"
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>Tweet</h3>
+            <h5>Tweet</h5>
           </div>
         );
         break;
       case 'gcpedia-article':
         header = (
-          <div style={headerStyle}>
-            <FileDocument
-              data-tip="GCPedia Article"
-              color="#1c507f"
-              style={{ height: '50px', width: '50px' }}
-            />
-          </div>
+          <ListItem
+            key="listKeyTitle"
+            leftAvatar={<Avatar src={gcpedia} />}
+            primaryText={<div className="card-title">{this.props.title}</div>}
+            secondaryText={<div className="card-subtitle">GCpedia</div>}
+            hoverColor="none"
+            onClick={this.handleClick}
+          />
         );
         break;
       case 'gcprofile-user':
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <AccountCircle
-              color="#0375b4"
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              color="#fff"
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>GCprofile User</h3>
+            <h5>GCprofile User</h5>
           </div>
         );
         break;
       default:
         header = (
-          <div style={headerStyle}>
+          <div className="header">
             <HelpCircle
-              style={{ height: '50px', width: '50px', marginRight: '15px' }}
+              style={{ height: '20px', width: '20px', marginRight: '3px' }}
             />
-            <h3>Unknown</h3>
+            <h5>Unknown</h5>
           </div>
         );
     }
@@ -101,77 +110,121 @@ class RecommendationCard extends Component {
     const showExtra = this.props.type !== 'gcprofile-user';
 
     if (typeof this.props.rank === 'number' && showExtra) {
+      const rating = (this.props.rank * 10) / 2;
       score = (
-        <div className="score-text">
-          <div className="score-star-rating">
-            <span className="star-rating">
-              <StarRatingComponent
-                name={`star-rating${Math.random * 1000}`}
-                starCount={5}
-                value={
-                  Math
-                    .floor(parseFloat(this.props.rank * 5).toFixed(2) * 2) / 2
-                }
-                starColor="#F49633"
-                renderStarIcon={
-                  (index, value) =>
-                    <FontAwesome name={index <= value ? 'star' : 'star-o'} />
-                }
-                renderStarIconHalf={() => (
-                  <FontAwesome
-                    name="star-half-full"
-                    style={{ color: '#F49633' }}
-                  />
-                )}
-                editing={false}
-              />
-            </span>
+        <div style={{ alignSelf: 'flex-end', marginBottom: '-7px' }}>
+          <div className="rating-border">
+            <Rating
+              stop={5}
+              readonly
+              emptySymbol={
+                <ToggleStarBorder
+                  color="#0375b4"
+                  style={{ width: '15px' }}
+                />
+              }
+              fullSymbol={
+                <ToggleStar
+                  color="#0375b4"
+                  style={{ width: '15px' }}
+                />
+              }
+              fractions={2}
+              initialRating={rating}
+            />
           </div>
         </div>
       );
     }
-
-    const cardStyle = {
-      fontFamily: 'Roboto, helvetica, arial, sans-serif',
-      padding: '15px',
-      cursor: (showExtra) ? 'pointer' : '',
-    };
-    return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <Paper
-          className={this.props.className}
-          style={cardStyle}
-          zDepth={1}
-          onClick={this.handleCardClick}
-        >
-          <div style={{ height: '9ex' }}>
-            <Dotdotdot clamp={3}>
-              <h3 className="article-title">{this.props.title}</h3>
-            </Dotdotdot>
+    let phraseCloud; // for non list view mode
+    if (this.state.expanded) {
+      phraseCloud = (
+        <div style={{ marginTop: '30px' }}>
+          <div className="phrases-heading-text-listview">
+            Top Matching Profile Phrases
           </div>
-          <div className="wordcloud-score-div">
+          <div
+            style={{
+              textAlign: 'center',
+              overflow: 'hidden',
+            }}
+          >
+            <WordCloud
+              phrases={this.props.phrases}
+            />
+          </div>
+        </div>
+      );
+    }
+    const cardBottom = (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          height: '35px',
+        }}
+      >
+        <div style={{ alignSelf: 'flex-end' }}>
+          <IconButton
+            disableTouchRipple
+            style={{ bottom: '-13px', left: '-12px' }}
+          >
+            <SocialShare color="#0375b4" />
+          </IconButton>
+        </div>
+        {score}
+      </div>
+    );
+    let retVal;
+    if (this.props.listView === true) {
+      retVal = (
+        <div>
+          {header}
+          <div className="card-padding-listview">
+            <div>
+              <Toggle
+                toggled={this.state.expanded}
+                onToggle={this.handleToggle}
+                labelPosition="left"
+                label="Why this article?"
+                labelStyle={{ fontSize: '13px' }}
+              />
+            </div>
+            {phraseCloud}
+            {cardBottom}
+          </div>
+          <Divider />
+        </div>
+      );
+    } else {
+      retVal = (
+        <Card className="grid-item card">
+          {header}
+          <div className="card-padding">
             {showExtra
               ?
-                <h3 className="heading">Matching Characteristics</h3>
+                <div className="phrases-heading-border-top">
+                  <div className="phrases-heading-text">
+                    Top Matching Profile Phrases
+                  </div>
+                </div>
               :
                 false
             }
-            <div
-              style={{
-                textAlign: 'center',
-                marginTop: '15px',
-                overflow: 'hidden',
-              }}
-            >
-              <WordCloud phrases={this.props.phrases} />
+            <div className="wordcloud-container">
+              <WordCloud
+                phrases={this.props.phrases}
+              />
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              {score}
-              {header}
-            </div>
+            <div className="phrases-heading-border-bottom" />
+            {cardBottom}
           </div>
-          <ReactTooltip className="tooltip" effect="solid" />
-        </Paper>
+        </Card>
+      );
+    }
+    return (
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        {retVal}
       </MuiThemeProvider>
     );
   }
@@ -179,10 +232,12 @@ class RecommendationCard extends Component {
 
 RecommendationCard.defaultProps = {
   title: 'Default Recommendation',
+  context: 'other',
   type: 'unknown',
   phrases: [],
   rank: 1,
-  className: '',
+  listView: false,
+  touched: 0,
 };
 
 RecommendationCard.propTypes = {
@@ -190,6 +245,12 @@ RecommendationCard.propTypes = {
    * Title of the recommendation card, can be simple text or a node.
    */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /**
+   * Context where this card is being displayed
+   */
+  context: PropTypes.oneOf(['gcconnex', 'gcpedia', 'other']),
+  /** Timestamp of latest modification */
+  touched: PropTypes.number, // eslint-disable-line react/no-unused-prop-types
   /**
    * A string describing what type of resource is being recommended.
    *
@@ -213,10 +274,7 @@ RecommendationCard.propTypes = {
     text: PropTypes.string,
     size: PropTypes.number,
   })),
-  /**
-   * CSS class name to give the containing Paper element.
-   */
-  className: PropTypes.string,
+  listView: PropTypes.bool,
 };
 
 export default RecommendationCard;

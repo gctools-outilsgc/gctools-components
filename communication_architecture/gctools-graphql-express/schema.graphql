@@ -1,0 +1,160 @@
+# source: http://localhost:3001/
+# timestamp: Tue Nov 28 2017 16:05:31 GMT-0400 (AST)
+
+# GCpedia article
+type Article implements NamedObject {
+  # A GUID that uniquely identifies an article
+  id: ID
+
+  # The article title
+  name: MultiString
+}
+
+# An specific application context
+type Context {
+  # Recommendations for this context
+  recommendations: RecommendationType
+}
+
+# Application context
+union ContextApplication = ContextGCpedia | ContextGCconnex
+
+# Possible application contexts
+enum ContextApplicationEnum {
+  GCconnex
+  GCpedia
+}
+
+# GCconnex application context
+type ContextGCconnex {
+  # Known user reading group discussion.
+  article_c5: Context
+
+  # Unknown user reading group discussion.
+  article_c6: Context
+}
+
+# GCpedia application context
+type ContextGCpedia {
+  # Known user on the landing page.
+  article_c1: Context
+
+  # Unknown user on the landing page..
+  article_c2: Context
+
+  # Known user reading an article.
+  article_c3: Context
+
+  # Unknown user reading an article.
+  article_c4: Context
+}
+
+# A physical or conceptual source of data
+type DataSource {
+  # A name that uniquely identitifes the data source
+  name: String
+}
+
+# A GCconnex discussion
+type Discussion implements NamedObject {
+  # A GUID that uniquely identifies the discussion
+  id: ID
+
+  # The discussion's name
+  name: MultiString
+}
+
+# A GCconnex mission
+type Mission implements NamedObject {
+  # A GUID that uniquely identifies the mission
+  id: ID
+
+  # The mission's name
+  name: MultiString
+}
+
+# A collection of strings, with a default @ value
+type MultiString implements SourcedStringInterface {
+  # The data value
+  value: String
+
+  # The source of this data
+  source: DataSource
+
+  # Additional values
+  list: [MultiString]
+}
+
+# An object that can be identified by it's name
+interface NamedObject {
+  # The name that identifies this object
+  name: MultiString
+
+  # A unique identitfier for this object.
+  id: ID
+}
+
+# Person is a human working for the GoC.
+type Person implements NamedObject {
+  # A GUID that uniquely identifies this person
+  id: ID
+
+  # The person's full name.
+  name: MultiString
+
+  # Email address belonging to this person
+  email: MultiString
+
+  # Description of person
+  description: MultiString
+
+  # Which department the person works for
+  department: MultiString
+
+  # The person's language
+  language: MultiString
+
+  # Skills this person possesses
+  skills: [Skill]
+
+  # Application context
+  context(application: ContextApplicationEnum): ContextApplication
+}
+
+type Query {
+  me: Person
+  people: [Person]
+  articles: [Article]
+  missions: [Mission]
+  discussions: [Discussion]
+}
+
+# Recommendations for a particular object
+type RecommendationType {
+  # List of recommended articles.
+  articles: [Article]
+
+  # List of recommended people.
+  people: [Person]
+
+  # List of recommended missions.
+  missions: [Mission]
+}
+
+# Skill a person can possess
+type Skill implements NamedObject {
+  # A GUID that uniquely identifies a skill
+  id: ID
+
+  # The name of the skill
+  name: MultiString
+}
+
+# A string that can be traced to a specific data source
+interface SourcedStringInterface {
+  # The data value
+  value: String
+
+  # The source of this data
+  source: DataSource
+}

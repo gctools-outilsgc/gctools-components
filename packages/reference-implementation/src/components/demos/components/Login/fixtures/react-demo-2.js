@@ -10,7 +10,8 @@ import React from 'react';
 import {
   Step,
   Stepper,
-  StepLabel } from 'material-ui/Stepper';
+  StepLabel
+} from 'material-ui/Stepper';
 
 import Login from '@gctools-components/gc-login';
 import identityServer from './authority';
@@ -56,6 +57,7 @@ class LoginExample extends React.Component {
         <Login
           oidcConfig={{
             authority: identityServer,
+            client_id: '369399',
           }}
           profile={this.state.profile}
           onLoginClick={this.loginClick}

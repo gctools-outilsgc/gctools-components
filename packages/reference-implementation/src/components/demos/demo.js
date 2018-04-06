@@ -9,10 +9,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  Example,
-  ExampleCode,
-  ExampleComponent } from './_utils/CodeExample/source';
+import { Example, ExampleCode, ExampleComponent }
+  from './_utils/CodeExample/source';
 
 import Properties from './_utils/CodeExample/properties';
 import Methods from './_utils/CodeExample/methods';

@@ -18,7 +18,8 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -340,7 +341,8 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -388,45 +390,57 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   labelStyle
                 </td>
-                <td>
-                  object
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span />
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -440,21 +454,31 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Style applied to the select box label.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   selectedLanguageStyle
                 </td>
-                <td>
-                  object
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span />
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -468,21 +492,31 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Style applied to the selected language in the list.
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   languageItemStyle
                 </td>
-                <td>
-                  object
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span />
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -496,7 +530,9 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Style applied to each language in the list.
                 </td>
               </tr>

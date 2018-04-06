@@ -18,7 +18,8 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -98,7 +99,8 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -143,45 +145,59 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -195,21 +211,33 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -223,21 +251,33 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -251,21 +291,33 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -279,38 +331,141 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -324,23 +479,46 @@ exports[`Storyshots PhraseCloudTreemap Minimum config ( phrases ) 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -354,22 +532,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -383,10 +580,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -416,7 +626,8 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -496,7 +707,8 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -541,45 +753,59 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -593,21 +819,33 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -621,21 +859,33 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -649,21 +899,33 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -677,38 +939,141 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -722,23 +1087,46 @@ exports[`Storyshots PhraseCloudTreemap fontFamily="Alfa Slab One" and waitForFon
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -752,22 +1140,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -781,10 +1188,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -814,7 +1234,8 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -894,7 +1315,8 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -939,45 +1361,59 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -991,21 +1427,33 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1019,21 +1467,33 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1047,21 +1507,33 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1075,38 +1547,141 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1120,23 +1695,46 @@ exports[`Storyshots PhraseCloudTreemap with height=50 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1150,22 +1748,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1179,10 +1796,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -1212,7 +1842,8 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1292,7 +1923,8 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1337,45 +1969,59 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1389,21 +2035,33 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1417,21 +2075,33 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1445,21 +2115,33 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1473,38 +2155,141 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1518,23 +2303,46 @@ exports[`Storyshots PhraseCloudTreemap with height=150 and width=750 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1548,22 +2356,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1577,10 +2404,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -1610,7 +2450,8 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1690,7 +2531,8 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -1735,45 +2577,59 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1787,21 +2643,33 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1815,21 +2683,33 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1843,21 +2723,33 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1871,38 +2763,141 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1916,23 +2911,46 @@ exports[`Storyshots PhraseCloudTreemap with maxFontSize=30 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1946,22 +2964,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -1975,10 +3012,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -2008,7 +3058,8 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2088,7 +3139,8 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2133,45 +3185,59 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2185,21 +3251,33 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2213,21 +3291,33 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2241,21 +3331,33 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2269,38 +3371,141 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2314,23 +3519,46 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2344,22 +3572,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2373,10 +3620,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -2406,7 +3666,8 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2486,7 +3747,8 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2531,45 +3793,59 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2583,21 +3859,33 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2611,21 +3899,33 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2639,21 +3939,33 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2667,38 +3979,141 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2712,23 +4127,46 @@ exports[`Storyshots PhraseCloudTreemap with minFontSize=15 and maxFontSize=30 1`
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2742,22 +4180,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2771,10 +4228,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -2804,7 +4274,8 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2884,7 +4355,8 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
-          "marginTop": "50px",
+          "marginBottom": "20px",
+          "marginTop": "20px",
           "padding": "20px 40px 40px",
         }
       }
@@ -2929,45 +4401,59 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
             " Component
           </h2>
           <table
-            style={
-              Object {
-                "borderCollapse": "separate",
-                "borderSpacing": "10px 5px",
-                "marginLeft": -10,
-              }
-            }
+            className="css-1ytzlk7"
           >
             <thead>
               <tr>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   property
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   propType
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   required
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   default
                 </th>
-                <th>
+                <th
+                  className="css-d52hbj"
+                >
                   description
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   width
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -2981,21 +4467,33 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Width of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   height
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3009,21 +4507,33 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Height of underlying svg element
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   maxFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3037,21 +4547,33 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the most important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   minFontSize
                 </td>
-                <td>
-                  number
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    number
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3065,38 +4587,141 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
                     "
                   </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   The font size of the least important phrase
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   phrases
                 </td>
-                <td>
-                  shape[]
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            text
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            size
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            number
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   yes
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   Array of { text, size } objects to draw
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3110,23 +4735,46 @@ exports[`Storyshots PhraseCloudTreemap with width=150 1`] = `
                     "
                   </span>
                 </td>
-                <td>
-                  Font family to use when drawing phrases.  "Alfa Slab One" works well,
-but make sure to include it in your application and set
-\`waitForFontFace\` to \`true\`.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Font family to use when drawing phrases.  "Alfa Slab One" works well,
+                  </span>
+                  <span>
+                    <br />
+                     
+                    but make sure to include it in your application and set
+                  </span>
+                  <span>
+                    <br />
+                     
+                    \`waitForFontFace\` to \`true\`.
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   fallbackFontFamily
                 </td>
-                <td>
-                  string
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3140,22 +4788,41 @@ but make sure to include it in your application and set
                     "
                   </span>
                 </td>
-                <td>
-                  If the specified font family is external and cannot be loaded, fallback
-this font instead
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    If the specified font family is external and cannot be loaded, fallback
+                  </span>
+                  <span>
+                    <br />
+                     
+                    this font instead
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td
+                  className="css-1ygfcef"
+                >
                   waitForFontFace
                 </td>
-                <td>
-                  bool
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
                 </td>
-                <td>
-                  no
+                <td
+                  className="css-d52hbj"
+                >
+                  -
                 </td>
-                <td>
+                <td
+                  className="css-d52hbj"
+                >
                   <span
                     style={
                       Object {
@@ -3169,10 +4836,23 @@ this font instead
                     "
                   </span>
                 </td>
-                <td>
-                  Use font-face-observer to wait for fonts to be available.  This is
-necessary because computations regarding character size will be affected
-by the missing font.
+                <td
+                  className="css-d52hbj"
+                >
+                  <span>
+                     
+                    Use font-face-observer to wait for fonts to be available.  This is
+                  </span>
+                  <span>
+                    <br />
+                     
+                    necessary because computations regarding character size will be affected
+                  </span>
+                  <span>
+                    <br />
+                     
+                    by the missing font.
+                  </span>
                 </td>
               </tr>
             </tbody>
