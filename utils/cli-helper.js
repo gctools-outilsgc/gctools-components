@@ -189,11 +189,11 @@ const component_package_template = {
     "react-dom": "^16.0.0",
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.10",
-    "@storybook/addon-info": "^3.3.10",
-    "@storybook/addon-links": "^3.3.10",
-    "@storybook/addon-storyshots": "^3.3.10",
-    "@storybook/react": "^3.3.10",
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-info": "^3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addon-storyshots": "^3.4.0",
+    "@storybook/react": "^3.4.0",
 
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-runtime": "~6.23.0",

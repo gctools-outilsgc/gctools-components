@@ -431,7 +431,9 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
                 <td
                   className="css-1ygfcef"
                 >
-                  <span />
+                  <span>
+                    object
+                  </span>
                 </td>
                 <td
                   className="css-d52hbj"
@@ -469,7 +471,9 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
                 <td
                   className="css-1ygfcef"
                 >
-                  <span />
+                  <span>
+                    object
+                  </span>
                 </td>
                 <td
                   className="css-d52hbj"
@@ -507,7 +511,9 @@ exports[`Storyshots LanguageSelector Default options 1`] = `
                 <td
                   className="css-1ygfcef"
                 >
-                  <span />
+                  <span>
+                    object
+                  </span>
                 </td>
                 <td
                   className="css-d52hbj"
