@@ -809,7 +809,9 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                       [
                     </span>
                     <span>
-                      <span />
+                      <span>
+                        object
+                      </span>
                     </span>
                     <span>
                       ]
@@ -2576,7 +2578,9 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                       [
                     </span>
                     <span>
-                      <span />
+                      <span>
+                        object
+                      </span>
                     </span>
                     <span>
                       ]
@@ -2980,7 +2984,9 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                       [
                     </span>
                     <span>
-                      <span />
+                      <span>
+                        object
+                      </span>
                     </span>
                     <span>
                       ]
@@ -3384,7 +3390,9 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                       [
                     </span>
                     <span>
-                      <span />
+                      <span>
+                        object
+                      </span>
                     </span>
                     <span>
                       ]
