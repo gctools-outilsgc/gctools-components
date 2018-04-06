@@ -1,6 +1,6 @@
 {
   "name": "@gctools-components/react-i18n-translation-webpack",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "React higher-order component designed to function with `i18n-translation-webpack-plugin`.",
   "main": "dist/index.js",
   "repository": {
@@ -19,8 +19,8 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.1",
-    "@gctools-components/jest-config": "^1.1.1",
+    "@gctools-components/eslint-config": "^1.1.2",
+    "@gctools-components/jest-config": "^1.1.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",

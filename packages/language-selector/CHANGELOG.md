@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/gctools-outilsgc/gctools-components/compare/@gctools-components/language-selector@1.1.3...@gctools-components/language-selector@1.1.4) (2018-04-06)
+
+
+
+
+**Note:** Version bump only for package @gctools-components/language-selector
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/gctools-outilsgc/gctools-components/compare/@gctools-components/language-selector@1.1.2...@gctools-components/language-selector@1.1.3) (2018-03-23)
 

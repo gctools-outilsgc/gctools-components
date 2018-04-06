@@ -3,7 +3,7 @@
   "description": "AutoComplete component sourced on a graphql query",
   "main": "dist/index.js",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/gctools-outilsgc/gctools-components.git"
@@ -27,8 +27,8 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.1",
-    "@gctools-components/jest-config": "^1.1.1",
+    "@gctools-components/eslint-config": "^1.1.2",
+    "@gctools-components/jest-config": "^1.1.2",
     "@storybook/addon-actions": "^3.3.10",
     "@storybook/addon-info": "^3.3.10",
     "@storybook/addon-links": "^3.3.10",

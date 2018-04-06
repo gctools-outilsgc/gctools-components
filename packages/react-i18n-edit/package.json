@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/gctools-outilsgc/gctools-components.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "clean": "rimraf dist",
     "build": "copyfiles css/style.css dist && babel index.js -d dist --copy-files",
@@ -26,8 +26,8 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.0.0",
-    "@gctools-components/jest-config": "^1.0.0",
+    "@gctools-components/eslint-config": "^1.1.2",
+    "@gctools-components/jest-config": "^1.1.2",
     "@storybook/addon-actions": "^3.3.10",
     "@storybook/addon-info": "^3.3.10",
     "@storybook/addon-links": "^3.3.10",
