@@ -9,7 +9,8 @@
   "scripts": {
     "new": "node ./utils/cli-helper.js",
     "postinstall": "node ./utils/linker.js",
-    "test": "exit 0"
+    "testall": "lerna run test",
+    "lintall": "lerna run lint"
   },
   "devDependencies": {
     "argparse": "^1.0.9",
