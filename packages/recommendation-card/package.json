@@ -1,7 +1,7 @@
 {
   "name": "@gctools-components/recommendation-card",
   "description": "NRC recommendation card component",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "main": "dist/index.js",
   "private": true,
   "repository": {
@@ -32,8 +32,8 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@gctools-components/eslint-config": "^1.1.2",
-    "@gctools-components/jest-config": "^1.1.2",
+    "@gctools-components/eslint-config": "^1.1.3",
+    "@gctools-components/jest-config": "^1.1.3",
     "@storybook/addon-actions": "^3.4.0",
     "@storybook/addon-info": "^3.4.0",
     "@storybook/addon-links": "^3.4.0",
@@ -65,7 +65,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
-    "@gctools-components/phrase-cloud": "^1.1.2",
+    "@gctools-components/phrase-cloud": "^1.1.3",
     "font-awesome": "^4.7.0",
     "material-ui-community-icons": "^0.15.0",
     "prop-types": "^15.6.0",
