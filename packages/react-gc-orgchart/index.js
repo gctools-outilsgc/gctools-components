@@ -43,7 +43,6 @@ class ReactGcOrgchart extends Component {
   updateHeight() {
     // We use width instead of height because the element is rotated.
     if (this.state.height !== this.element.clientWidth) {
-      // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({ height: this.element.clientWidth });
     }
   }
@@ -66,15 +65,26 @@ class ReactGcOrgchart extends Component {
       return `${part1} ${part2}`;
     };
 
+    let tab = 0;
+    const nodeStyle = {};
+    if (this.props.onClick !== ReactGcOrgchart.defaultProps.onClick) {
+      nodeStyle.cursor = 'pointer';
+    }
     const createChart = (obj) => {
+      tab += 1;
       const subLength = (obj.subordinates) ? obj.subordinates.length * 2 : 2;
       return (
         <table>
           <tbody>
             <tr>
               <td colSpan={subLength}>
-                <div className={
-                  `node ${(obj.uuid === subject) ? 'focused' : ''}`}
+                <div
+                  className={`node ${(obj.uuid === subject) ? 'focused' : ''}`}
+                  onClick={(e) => { this.props.onClick(e, obj); }}
+                  onKeyPress={(e) => { this.props.onKeyPress(e, obj); }}
+                  role="button"
+                  tabIndex={tab}
+                  style={nodeStyle}
                 >
                   <div className="title">
                     {obj.name}
@@ -130,6 +140,8 @@ class ReactGcOrgchart extends Component {
 
 ReactGcOrgchart.defaultProps = {
   subject: undefined,
+  onClick: () => {},
+  onKeyPress: () => {},
 };
 
 const NodePropType = PropTypes.shape({
@@ -167,6 +179,10 @@ ReactGcOrgchart.propTypes = {
   }).isRequired,
   /** Identifies by `uuid` which node is in focus */
   subject: PropTypes.string,
+  /** Handler for click events */
+  onClick: PropTypes.func,
+  /** Handler for click events */
+  onKeyPress: PropTypes.func,
 };
 
 export default ReactGcOrgchart;

@@ -474,6 +474,86 @@ exports[`Storyshots ReactGcOrgchart Default options 1`] = `
                   Identifies by \`uuid\` which node is in focus
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onClick
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Handler for click events
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onKeyPress
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Handler for click events
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -570,6 +650,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                 >
                   <div
                     className="node "
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    role="button"
+                    style={Object {}}
+                    tabIndex={1}
                   >
                     <div
                       className="title"
@@ -673,6 +758,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={2}
                           >
                             <div
                               className="title"
@@ -701,6 +791,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={3}
                           >
                             <div
                               className="title"
@@ -729,6 +824,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={4}
                           >
                             <div
                               className="title"
@@ -757,6 +857,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={5}
                           >
                             <div
                               className="title"
@@ -785,6 +890,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={6}
                           >
                             <div
                               className="title"
@@ -813,6 +923,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={7}
                           >
                             <div
                               className="title"
@@ -841,6 +956,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={8}
                           >
                             <div
                               className="title"
@@ -869,6 +989,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={9}
                           >
                             <div
                               className="title"
@@ -897,6 +1022,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={10}
                           >
                             <div
                               className="title"
@@ -925,6 +1055,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={11}
                           >
                             <div
                               className="title"
@@ -1353,6 +1488,86 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                   Identifies by \`uuid\` which node is in focus
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onClick
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Handler for click events
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onKeyPress
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Handler for click events
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1449,6 +1664,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                 >
                   <div
                     className="node "
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    role="button"
+                    style={Object {}}
+                    tabIndex={1}
                   >
                     <div
                       className="title"
@@ -1552,6 +1772,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node focused"
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={2}
                           >
                             <div
                               className="title"
@@ -1580,6 +1805,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={3}
                           >
                             <div
                               className="title"
@@ -1608,6 +1838,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={4}
                           >
                             <div
                               className="title"
@@ -1636,6 +1871,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={5}
                           >
                             <div
                               className="title"
@@ -1664,6 +1904,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={6}
                           >
                             <div
                               className="title"
@@ -1692,6 +1937,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={7}
                           >
                             <div
                               className="title"
@@ -1720,6 +1970,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={8}
                           >
                             <div
                               className="title"
@@ -1748,6 +2003,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={9}
                           >
                             <div
                               className="title"
@@ -1776,6 +2036,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={10}
                           >
                             <div
                               className="title"
@@ -1804,6 +2069,11 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                         >
                           <div
                             className="node "
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            style={Object {}}
+                            tabIndex={11}
                           >
                             <div
                               className="title"
@@ -2230,6 +2500,86 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                   className="css-d52hbj"
                 >
                   Identifies by \`uuid\` which node is in focus
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onClick
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Handler for click events
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onKeyPress
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    () =&gt; {}
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Handler for click events
                 </td>
               </tr>
             </tbody>
