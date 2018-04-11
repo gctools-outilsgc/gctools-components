@@ -130,7 +130,7 @@ class ReactGcOrgchart extends Component {
 
     return (
       <div style={{ height: `${height}px` }}>
-        <div className="orgchart l2r" ref={(r) => { this.element = r; }}>
+        <div className="orgchart t2b" ref={(r) => { this.element = r; }}>
           {createChart(this.props.orgStructure)}
         </div>
       </div>
