@@ -156,10 +156,10 @@
   display: inline-block;
   position: relative;
   margin: 0;
-  padding: 3px;
+  padding: 2px;
   border: 2px dashed transparent;
   text-align: center;
-  width: 130px;
+  width: 140px;
 }
 
 .orgchart.l2r .node, .orgchart.r2l .node {
@@ -206,7 +206,7 @@
   text-align: center;
   font-size: 12px;
   font-weight: bold;
-  height: 20px;
+  padding: 2px;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -242,7 +242,7 @@
 .orgchart .node .content {
   box-sizing: border-box;
   width: 100%;
-  height: 20px;
+  padding: 2px;
   font-size: 11px;
   line-height: 18px;
   border: 1px solid black;
