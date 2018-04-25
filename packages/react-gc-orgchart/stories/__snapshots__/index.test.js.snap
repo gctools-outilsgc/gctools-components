@@ -640,7 +640,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
         }
       >
         <div
-          className="orgchart l2r"
+          className="orgchart t2b"
         >
           <table>
             <tbody>
@@ -1654,7 +1654,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
         }
       >
         <div
-          className="orgchart l2r"
+          className="orgchart t2b"
         >
           <table>
             <tbody>

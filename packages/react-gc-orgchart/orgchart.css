@@ -52,7 +52,7 @@
 }
 .orgchart .verticalNodes>td::before {
   content: '';
-  border: 1px solid rgba(217, 83, 79, 0.8);
+  border: 1px solid black;
 }
 .orgchart .verticalNodes>td>ul>li:first-child::before {
   box-sizing: border-box;
@@ -70,7 +70,7 @@
   content: '';
   position: absolute;
   left: -6px;
-  border-color: rgba(217, 83, 79, 0.8);
+  border-color: black;
   border-style: solid;
   border-width: 0 0 2px 2px;
 }
@@ -127,23 +127,23 @@
 }
 
 .orgchart .lines .topLine {
-  border-top: 2px solid rgba(217, 83, 79, 0.8);
+  border-top: 2px solid black;
 }
 
 .orgchart .lines .rightLine {
-  border-right: 1px solid rgba(217, 83, 79, 0.8);
+  border-right: 1px solid black;
   float: none;
   border-radius: 0;
 }
 
 .orgchart .lines .leftLine {
-  border-left: 1px solid rgba(217, 83, 79, 0.8);
+  border-left: 1px solid black;
   float: none;
   border-radius: 0;
 }
 
 .orgchart .lines .downLine {
-  background-color: rgba(217, 83, 79, 0.8);
+  background-color: black;
   margin: 0 auto;
   height: 20px;
   width: 2px;
@@ -156,10 +156,10 @@
   display: inline-block;
   position: relative;
   margin: 0;
-  padding: 3px;
+  padding: 2px;
   border: 2px dashed transparent;
   text-align: center;
-  width: 130px;
+  width: 140px;
 }
 
 .orgchart.l2r .node, .orgchart.r2l .node {
@@ -206,12 +206,12 @@
   text-align: center;
   font-size: 12px;
   font-weight: bold;
-  height: 20px;
+  padding: 2px;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: rgba(217, 83, 79, 0.8);
+  background-color: black;
   color: #fff;
   border-radius: 4px 4px 0 0; 
 }
@@ -242,10 +242,10 @@
 .orgchart .node .content {
   box-sizing: border-box;
   width: 100%;
-  height: 20px;
+  padding: 2px;
   font-size: 11px;
   line-height: 18px;
-  border: 1px solid rgba(217, 83, 79, 0.8);
+  border: 1px solid black;
   border-radius: 0 0 4px 4px;
   text-align: center;
   background-color: #fff;
