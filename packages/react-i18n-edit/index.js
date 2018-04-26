@@ -56,6 +56,7 @@ class ReactI18nEdit extends Component {
               lang={item.lang}
               value={item.value}
               placeholder={item.placeholder}
+              error={this.props.error}
             >
               {(showLabel) ? (
                 <Label className="multiline-edit-field-label">
@@ -74,6 +75,7 @@ class ReactI18nEdit extends Component {
 
 ReactI18nEdit.defaultProps = {
   edit: false,
+  error: false,
   lang: 'en_CA',
   values: [
     { lang: 'fr_CA', value: '', placeholder: '' },
@@ -98,6 +100,8 @@ ReactI18nEdit.propTypes = {
   })),
   /** Event called when any of the editable components are changed */
   onChange: PropTypes.func,
+  /** An Input field can show the data contains errors. */
+  error: PropTypes.bool,
 };
 
 export default ReactI18nEdit;

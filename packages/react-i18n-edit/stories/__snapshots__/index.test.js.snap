@@ -596,6 +596,46 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                   Event called when any of the editable components are changed
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1079,6 +1119,46 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                   Event called when any of the editable components are changed
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1547,6 +1627,46 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                   Event called when any of the editable components are changed
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2013,6 +2133,46 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                   className="css-d52hbj"
                 >
                   Event called when any of the editable components are changed
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
                 </td>
               </tr>
             </tbody>
@@ -2526,6 +2686,46 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                   Event called when any of the editable components are changed
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -3023,6 +3223,46 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                   className="css-d52hbj"
                 >
                   Event called when any of the editable components are changed
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
                 </td>
               </tr>
             </tbody>
@@ -3534,6 +3774,46 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                   className="css-d52hbj"
                 >
                   Event called when any of the editable components are changed
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    "
+                    false
+                    "
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
                 </td>
               </tr>
             </tbody>
