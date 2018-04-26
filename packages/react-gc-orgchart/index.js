@@ -22,29 +22,39 @@ class ReactGcOrgchart extends Component {
 
   componentDidMount() {
     if (this.element) {
-      const h = this.element.clientWidth;
+      // Use clientWidth instead of height if rotated
+      const h = this.element.clientHeight;
       if (this.state.height !== h) {
         // eslint-disable-next-line react/no-did-mount-set-state
         this.setState({ height: h });
       }
-      const func = (counter) => {
-        if (!this.element) return;
-        if (this.element.clientWidth !== h) {
-          this.updateHeight();
-        } else if (counter < 100) {
-          const f = func.bind(this, counter + 1);
-          setTimeout(f, 10);
-        }
-      };
-      func(1);
+      this.updateHeight();
+    }
+  }
+
+  componentWillReceiveProps(next) {
+    const { orgStructure } = this.props;
+    const { orgStructure: nextStructure } = next;
+    if (JSON.stringify(nextStructure) !== JSON.stringify(orgStructure)) {
+      this.updateHeight();
     }
   }
 
   updateHeight() {
-    // We use width instead of height because the element is rotated.
-    if (this.state.height !== this.element.clientWidth) {
-      this.setState({ height: this.element.clientWidth });
-    }
+    // Use clientWidth instead of height if rotated
+    const h = this.element.clientHeight;
+    const func = (counter) => {
+      if (!this.element) return;
+      if (this.element.clientHeight !== h) {
+        if (this.state.height !== this.element.clientHeight) {
+          this.setState({ height: this.element.clientHeight });
+        }
+      } else if (counter < 100) {
+        const f = func.bind(this, counter + 1);
+        setTimeout(f, 10);
+      }
+    };
+    func(1);
   }
 
   render() {
