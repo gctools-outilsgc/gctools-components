@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.5"></a>
+## [1.2.5](https://github.com/gctools-outilsgc/gctools-components/compare/gctools-nrc-components@1.2.4...gctools-nrc-components@1.2.5) (2018-04-26)
+
+
+
+
+**Note:** Version bump only for package gctools-nrc-components
+
 <a name="1.2.4"></a>
 ## [1.2.4](https://github.com/gctools-outilsgc/gctools-components/compare/gctools-nrc-components@1.1.0...gctools-nrc-components@1.2.4) (2018-04-09)
 
