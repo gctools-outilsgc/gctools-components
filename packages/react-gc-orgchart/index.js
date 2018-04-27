@@ -17,16 +17,25 @@ class ReactGcOrgchart extends Component {
     this.element = false;
     this.state = {
       height: false,
+      width: false,
     };
   }
 
   componentDidMount() {
     if (this.element) {
-      // Use clientWidth instead of height if rotated
+      // Invert width and height if rotated
       const h = this.element.clientHeight;
+      const w = this.element.clientWidth;
+      const obj = {};
       if (this.state.height !== h) {
+        obj.height = h;
+      }
+      if (this.state.width !== w) {
+        obj.width = w;
+      }
+      if (Object.keys(obj).length > 0) {
         // eslint-disable-next-line react/no-did-mount-set-state
-        this.setState({ height: h });
+        this.setState(obj);
       }
       this.updateHeight();
     }
@@ -41,14 +50,24 @@ class ReactGcOrgchart extends Component {
   }
 
   updateHeight() {
-    // Use clientWidth instead of height if rotated
+    // Invert width and height if rotated
     const h = this.element.clientHeight;
+    const w = this.element.clientWidth;
     const func = (counter) => {
       if (!this.element) return;
+      const obj = {};
       if (this.element.clientHeight !== h) {
         if (this.state.height !== this.element.clientHeight) {
-          this.setState({ height: this.element.clientHeight });
+          obj.height = this.element.clientHeight;
         }
+      }
+      if (this.element.clientWidth !== w) {
+        if (this.state.width !== this.element.clientWidth) {
+          obj.width = this.element.clientWidth;
+        }
+      }
+      if (Object.keys(obj).length > 0) {
+        this.setState(obj);
       } else if (counter < 100) {
         const f = func.bind(this, counter + 1);
         setTimeout(f, 10);
@@ -136,10 +155,11 @@ class ReactGcOrgchart extends Component {
       );
     };
 
-    const height = (this.state.height) ? this.state.height : 0;
+    const height = this.state.height || 0;
+    const width = this.state.width || 0;
 
     return (
-      <div style={{ height: `${height}px` }}>
+      <div style={{ height: `${height}px`, width: `${width}px` }}>
         <div className="orgchart t2b" ref={(r) => { this.element = r; }}>
           {createChart(this.props.orgStructure)}
         </div>
