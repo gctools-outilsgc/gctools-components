@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/gctools-outilsgc/gctools-components.git"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "clean": "rimraf dist",
     "build": "copyfiles orgchart.css dist && babel index.js -d dist --copy-files",
