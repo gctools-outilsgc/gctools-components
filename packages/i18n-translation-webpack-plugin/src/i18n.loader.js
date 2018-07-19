@@ -13,25 +13,20 @@
  *
  */
 const loaderUtils = require('loader-utils');
-const Plugin = require('./plugin');
 
 function i18nLoader() {
-  let options = {};
-  this.options.plugins.forEach((p) => {
-    if (p instanceof Plugin) {
-      [{ options }] = [p];
-    }
-  });
+  const loaderOptions = loaderUtils.getOptions(this);
+  const options = JSON.parse(decodeURIComponent(loaderOptions.options));
 
   const { localizer_global, localizer_window } = options;
-  const loaderOptions = loaderUtils.getOptions(this);
   let addDomain = '';
-  if (loaderOptions && loaderOptions.domain) {
+  if (loaderOptions.domain) {
     addDomain
       = `${localizer_global}.registerDomain('${loaderOptions.domain}');`;
   }
   const window = (localizer_window)
-    ? `window.${localizer_window} = ${localizer_global};` : '';
+    ? `if (typeof window !== 'undefined')
+      window.${localizer_window} = ${localizer_global};` : '';
   const newStr =
     `
     (function () {

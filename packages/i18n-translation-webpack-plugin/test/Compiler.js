@@ -13,11 +13,10 @@ export const getCompilation = (calls) => {
     depT: () => {},
     plug: () => {},
   }, calls);
-  const { depF, depT, plug } = callbacks;
+  const { depF, depT } = callbacks;
   const compilation = {
     dependencyFactories: { set: depF },
     dependencyTemplates: { set: depT },
-    plugin: plug,
   };
   return compilation;
 };
@@ -36,7 +35,30 @@ export const getParams = (calls) => {
     normalModuleFactoryPlug, parserPlug,
     evaluate, addDep, domain, expr, parserStatements,
   } = callbacks;
+  const parserAddState = {
+    current: {
+      addDependency: addDep,
+    },
+  };
   const parser = {
+    evaluateExpression: evaluate,
+    hooks: {
+      call: {
+        for: name => ({
+          tap: (_, callback) => {
+            if (parserStatements.indexOf(name) >= 0) {
+              Object.assign(parser.state, parser.state, parserAddState);
+              parserPlug(name, callback(expr));
+            }
+          },
+        }),
+      },
+      expression: {
+        for: name => ({
+          tap: () => {},
+        }),
+      },
+    },
     plugin: (name, callback) => {
       if (parserStatements.indexOf(name) >= 0) {
         const parsedObject = {
@@ -59,6 +81,16 @@ export const getParams = (calls) => {
   };
   const params = {
     normalModuleFactory: {
+      hooks: {
+        parser: {
+          for: name => ({
+            tap: (_, callback) => {
+              normalModuleFactoryPlug(name);
+              callback(parser);
+            },
+          }),
+        },
+      },
       plugin: (name, callback) => {
         normalModuleFactoryPlug(name);
         callback(parser);

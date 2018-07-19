@@ -9,8 +9,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const Plugin = require('./plugin');
-
 
 /**
  * Loader responsible for injecting language data into bundle, and for code
@@ -24,12 +22,8 @@ module.exports = function I18nWebpackLoader() {
     'language', 'domain', 'language+domain', 'all', 'none',
   ];
 
-  let options = {};
-  this.options.plugins.forEach((p) => {
-    if (p instanceof Plugin) {
-      [{ options }] = [p];
-    }
-  });
+  const optSplit = this.request.split('?options=')[1];
+  const options = JSON.parse(decodeURIComponent(optSplit));
 
   const { languages } = options;
   const { context } = this._compiler;
