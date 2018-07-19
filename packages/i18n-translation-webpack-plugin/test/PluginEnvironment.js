@@ -13,9 +13,8 @@ module.exports = function PluginEnvironment(context) {
   let callback = false;
 
   this.getEnvironmentStub = function getEnvironmentStub() {
-    return {
-      context,
-      plugin: function plugin(name, handler) {
+    const tappable = {
+      tap: function plugin(name, handler) {
         events.push({
           name,
           handler: (req, cb) => {
@@ -25,10 +24,30 @@ module.exports = function PluginEnvironment(context) {
           },
         });
       },
-      resolvers: {
-        normal: {
-          plugin: function plugin(name, handler) {
-            handler(request, callback);
+    };
+    return {
+      context,
+      hooks: {
+        done: tappable,
+        compilation: tappable,
+        afterResolvers: tappable,
+      },
+      resolverFactory: {
+        hooks: {
+          resolver: {
+            for: () => ({
+              tap: (_, cb) => {
+                cb({
+                  hooks: {
+                    resolve: {
+                      tapAsync: (name, callb) => {
+                        callb(request, name, callback);
+                      },
+                    },
+                  },
+                });
+              },
+            }),
           },
         },
       },
