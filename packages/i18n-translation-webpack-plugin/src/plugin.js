@@ -67,60 +67,78 @@ class I18nTranslationWebpackPlugin {
       exclude: this.options.extract_text_exclude,
     });
 
-    compiler.plugin('done', () => {
+    compiler.hooks.done.tap('i18n_plugin', () => {
       if (this.gtc_config) {
         this.gtc_config.remove();
         delete this.gtc_config;
       }
     });
 
-    compiler.plugin('compilation', (compilation, params) => {
-      const { normalModuleFactory } = params;
-      const i18nFactory = new I18nNormalModuleFactory(normalModuleFactory);
+    compiler.hooks.compilation.tap(
+      'i18n-plugin',
+      (compilation, { normalModuleFactory }) => {
+        const i18nFactory = new I18nNormalModuleFactory(normalModuleFactory);
 
-      compilation.dependencyFactories.set(I18nDep, i18nFactory);
-      compilation.dependencyFactories.set(I18nIdep, i18nFactory);
-      compilation.dependencyFactories.set(ConstDep, new NullFactory());
+        compilation.dependencyFactories.set(I18nDep, i18nFactory);
+        compilation.dependencyFactories.set(I18nIdep, i18nFactory);
+        compilation.dependencyFactories.set(ConstDep, new NullFactory());
 
-      compilation.dependencyTemplates.set(I18nDep, new I18nDep.Template());
-      compilation.dependencyTemplates.set(I18nIdep, new I18nIdep.Template());
-      compilation.dependencyTemplates.set(ConstDep, new ConstDep.Template());
+        compilation.dependencyTemplates.set(I18nDep, new I18nDep.Template());
+        compilation.dependencyTemplates.set(I18nIdep, new I18nIdep.Template());
+        compilation.dependencyTemplates.set(ConstDep, new ConstDep.Template());
 
-      compilation.plugin('build-module', () => {
-        const {
-          translate_global: name,
-          interpolate_global: interpolate,
-        } = this.options;
-        const interpolateReplaces = [];
-        params.normalModuleFactory.plugin('parser', (parser) => {
-          parser.plugin(`call ${name}`, function I18nTranslate(expr) {
-            const ikey = (interpolateReplaces.indexOf(expr.range[0]) >= 0);
+        const handler = (parser) => {
+          const {
+            translate_global: name,
+            interpolate_global: interpolate,
+            localizer_global: loc,
+            languages: availableLanguages,
+          } = this.options;
+          const interpolateReplaces = [];
+          parser.hooks.call.for(name).tap('i18n-plugin', (expr) => {
+            const ikey = (
+              interpolateReplaces.indexOf(expr.range[0]) >= 0
+            );
             const { resource } = parser.state.module;
             let dep = false;
             if (expr.arguments.length === 1) {
               const [arg] = expr.arguments;
-              const key = this.evaluateExpression(arg).string;
+              const key = parser.evaluateExpression(arg).string;
               const domain = path.relative(context, resource);
-              dep = new I18nDep(expr, key, domain, undefined, ikey);
+              dep = new I18nDep(
+                expr,
+                key,
+                domain,
+                undefined,
+                ikey,
+                this.options,
+              );
               dep.loc = expr.loc;
             } else if (expr.arguments.length === 2) {
               const [arg1, arg2] = expr.arguments;
-              const key = this.evaluateExpression(arg1).string;
-              const value = this.evaluateExpression(arg2).number;
+              const key = parser.evaluateExpression(arg1).string;
+              const value = parser.evaluateExpression(arg2).number;
               const domain = path.relative(context, resource);
-              dep = new I18nDep(expr, key, domain, value, ikey);
+              dep = new I18nDep(expr, key, domain, value, ikey, this.options);
               dep.loc = expr.loc;
             }
-            if (dep) this.state.current.addDependency(dep);
+            if (dep) {
+              parser.state.current.addDependency(dep);
+            }
             return true;
           });
-          parser.plugin(`call ${interpolate}`, function I18nInterpolated(ex) {
+
+          parser.hooks.call.for(interpolate).tap('i18n-plugin', (expr) => {
             const { resource } = parser.state.module;
-            if (ex.arguments.length > 1) {
+            if (expr.arguments.length > 1) {
               const domain = path.relative(context, resource);
-              const dep = new I18nIdep(ex, name, domain);
-              dep.loc = ex.loc;
-              this.state.current.addDependency(dep);
+              const dep = new I18nIdep(expr, name, domain, this.options);
+              dep.loc = expr.loc;
+              parser.state.current.addDependency(dep);
+              // Interpolate takes a literal as it's first parameter, but
+              // only key's prefixed by the `translate_global` are processed.
+              // To solve this, if the first argument to the interpolate
+              // function is `translate_global`, it is marked and later removed
               const findLocalizedKey = (node) => {
                 if (node.type === 'CallExpression') {
                   if (node.callee.name === dep.tglobal) {
@@ -135,57 +153,63 @@ class I18nTranslationWebpackPlugin {
               };
               findLocalizedKey(dep.expr.arguments[0]);
             }
+            // must return false to continue parsing inside function
             return false;
           });
 
-          const {
-            localizer_global: loc,
-            languages: availableLanguages,
-          } = this.options;
+          parser.hooks.expression.for(loc).tap('i18n-plugin', (expr) => {
+            const pathToLocalizer = path.join(__dirname, 'localizer.js');
+            const config = { availableLanguages };
 
-          parser.plugin(
-            `expression ${loc}`,
-            function I18nGlobal(expr) {
-              const pathToLocalizer = path.join(__dirname, 'localizer.js');
-              const config = { availableLanguages };
-
-              const ex = `
-                require(${JSON.stringify(pathToLocalizer)}).default(
-                  ${JSON.stringify(config)}
-                )
-              `;
-              if (!ParserHelpers.addParsedVariableToModule(this, loc, ex)) {
-                return false;
-              }
-              ParserHelpers.toConstantDependency(loc).bind(this)(expr);
-              return true;
-            },
-          );
-        });
-      });
-    });
-
-    compiler.plugin('after-resolvers', () => {
-      compiler.resolvers.normal.plugin('resolve', (request, callback) => {
-        if (request.request === './<I18nWebpackPlugin>') {
-          this.pot_files = buildPoFiles(
-            path.join(context, this.options.i18n_dir),
-            this.pot_files,
-            this.options.languages,
-          );
-
-          const filename = path.join(__dirname, 'localizer.js');
-
-          callback(null, {
-            path: filename,
-            module: true,
-            file: false,
-            resolved: true,
+            const ex = `
+              require(${JSON.stringify(pathToLocalizer)}).default(
+                ${JSON.stringify(config)}
+              )
+            `;
+            if (!ParserHelpers.addParsedVariableToModule(parser, loc, ex)) {
+              return false;
+            }
+            ParserHelpers.toConstantDependency(parser, loc)
+              .bind(parser)(expr);
+            return true;
           });
-        } else {
-          callback();
-        }
-      });
+        };
+
+        normalModuleFactory.hooks.parser
+          .for('javascript/auto')
+          .tap('i18n-plugin', handler);
+
+        normalModuleFactory.hooks.parser
+          .for('javascript/dynamic')
+          .tap('i18n-plugin', handler);
+      },
+    );
+
+    compiler.hooks.afterResolvers.tap('i18n-plugin-ar', () => {
+      compiler.resolverFactory.hooks.resolver
+        .for('normal').tap('i18n', (resolver) => {
+          resolver.hooks.resolve.tapAsync('i18n', (params, _, callback) => {
+            if (params.request === './<I18nWebpackPlugin>') {
+              this.pot_files = buildPoFiles(
+                path.join(context, this.options.i18n_dir),
+                this.pot_files,
+                this.options.languages,
+              );
+              const filename = path.join(__dirname, 'localizer.js');
+              callback(null, {
+                path: filename,
+                module: true,
+                file: false,
+                resolved: true,
+                query: `?options=${
+                  encodeURIComponent(JSON.stringify(this.options))
+                }`,
+              });
+            } else {
+              callback();
+            }
+          });
+        });
     });
   }
 }

@@ -16,10 +16,10 @@ const path = require('path');
 
 const loader = path.join(__dirname, 'i18n.loader.js');
 
-function I18nInterpolatedDependency(ex, tglobal, domain) {
-  const loaderStr = encodeURI(`${loader}?domain=${domain}`);
+function I18nInterpolatedDependency(ex, tglobal, domain, options) {
+  const loaderStr = encodeURI(`${loader}?domain=${domain}&options=${
+    encodeURIComponent(JSON.stringify(options))}`);
   this.request = `${loaderStr}!./<I18nWebpackPlugin>`;
-  this.module = null;
 
   this.userRequest = this.request;
   this.Class = I18nInterpolatedDependency;
@@ -31,23 +31,26 @@ function I18nInterpolatedDependency(ex, tglobal, domain) {
 I18nInterpolatedDependency.prototype = Object.create(Dependency.prototype);
 I18nInterpolatedDependency.prototype.type = 'i18n';
 I18nInterpolatedDependency.prototype.constructor = I18nInterpolatedDependency;
-I18nInterpolatedDependency.prototype.isEqualResource =
-  function isEqualResource(other) {
-    return other instanceof I18nInterpolatedDependency ?
-      this.request === other.request : false;
+I18nInterpolatedDependency.prototype.getResourceIdentifier =
+  function getResourceIdentifier() {
+    if (this.module) {
+      return this.module.id;
+    }
+    return this.request;
   };
 
-class I18nTemplate {
+class I18nITemplate {
   // eslint-disable-next-line class-methods-use-this
   apply(dep, source) {
     if (!dep.expr) return;
     const [range1, range2] = dep.expr.callee.range;
     let content = '';
     if (dep.module) {
+      const moduleId = dep.getResourceIdentifier();
       content = `(
         /* this was injected by i18n */
         function localizedInterpolatedString() {
-          var l = __webpack_require__(${JSON.stringify(dep.module.id)});
+          var l = __webpack_require__(${JSON.stringify(moduleId)});
           return l.interpolate.bind(l);
         }
       )()(${JSON.stringify(dep.domain)},`;
@@ -55,6 +58,6 @@ class I18nTemplate {
     }
   }
 }
-I18nInterpolatedDependency.Template = I18nTemplate;
+I18nInterpolatedDependency.Template = I18nITemplate;
 
 module.exports = I18nInterpolatedDependency;

@@ -10,8 +10,9 @@
 import Jed from 'jed';
 
 const { Promise } = require('es6-promise');
-
 const objectAssign = require('object-assign');
+
+const hasWndw = () => typeof window !== 'undefined';
 
 /**
  * Javascript in-browser object reponsible for loading language files,
@@ -31,8 +32,8 @@ export class Localizer {
     const defaultConfig = {
       window_global: 'localizer',
       availableLanguages: defaultAvailableLanguages,
-      language: window.navigator.userLanguage
-        || window.navigator.language || defaultAvailableLanguages[0],
+      language: (hasWndw() ? window.navigator.userLanguage
+        || window.navigator.language : false) || defaultAvailableLanguages[0],
     };
     defaultConfig.language = defaultConfig.language.replace('-', '_');
     this.config = defaultConfig;
@@ -196,11 +197,11 @@ const localizer = (config) => {
   if (localizerInstance !== null) {
     return localizerInstance;
   }
-  if (window.localizer && window.localizer instanceof Localizer) {
+  if (hasWndw() && window.localizer && window.localizer instanceof Localizer) {
     return window.localizer;
   }
   localizerInstance = new Localizer(config);
-  if (config.window_global) {
+  if (hasWndw() && config.window_global) {
     window[config.window_global] = localizerInstance;
   }
   return localizerInstance;

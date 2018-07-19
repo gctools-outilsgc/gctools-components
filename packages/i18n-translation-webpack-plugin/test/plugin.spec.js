@@ -112,7 +112,6 @@ describe('I18nTranslationWebpackPlugin', () => {
           should(result.file).be.exactly(false);
           should(result.resolved).be.exactly(true);
         };
-
         const spy = sinon.spy(x);
 
         object.afterResolvers.handler({
@@ -192,18 +191,12 @@ describe('I18nTranslationWebpackPlugin', () => {
 
       it('should replace the translate function', () => {
         const object = buildPluginWithParams({ i18n_dir: I18N_DIR });
-        const checkBuild = (name, callback) => {
-          name.should.be.exactly('build-module');
-          callback();
-        };
-        const spy = sinon.spy(checkBuild);
-
         const plug = (name) => {
-          name.should.be.exactly('parser');
+          name.should.be.equalOneOf('javascript/auto', 'javascript/dynamic');
         };
         const plugSpy = sinon.spy(plug);
         const parserPlug = (name, callbackResult) => {
-          name.should.be.exactly('call __');
+          name.should.be.exactly('__');
           callbackResult.should.be.exactly(true);
         };
         const parserPlugSpy = sinon.spy(parserPlug);
@@ -225,7 +218,7 @@ describe('I18nTranslationWebpackPlugin', () => {
         };
         const addDependencySpy = sinon.spy(addDependency);
 
-        const compilation = getCompilation({ plug: spy });
+        const compilation = getCompilation();
         const params = getParams({
           normalModuleFactoryPlug: plugSpy,
           parserPlug: parserPlugSpy,
@@ -236,11 +229,10 @@ describe('I18nTranslationWebpackPlugin', () => {
           addDep: addDependencySpy,
           domain: 'test_domain',
           expr: typical,
-          parserStatements: ['call __'],
+          parserStatements: ['__'],
         });
 
         object.compilation.handler(compilation, params);
-        spy.called.should.be.exactly(true);
         plugSpy.called.should.be.exactly(true);
         parserPlugSpy.called.should.be.exactly(true);
         addDependencySpy.called.should.be.exactly(true);
@@ -248,18 +240,12 @@ describe('I18nTranslationWebpackPlugin', () => {
 
       it('should handle plural forms', () => {
         const object = buildPluginWithParams({ i18n_dir: I18N_DIR });
-        const checkBuild = (name, callback) => {
-          name.should.be.exactly('build-module');
-          callback();
-        };
-        const spy = sinon.spy(checkBuild);
-
         const plug = (name) => {
-          name.should.be.exactly('parser');
+          name.should.be.equalOneOf('javascript/auto', 'javascript/dynamic');
         };
         const plugSpy = sinon.spy(plug);
         const parserPlug = (name, callbackResult) => {
-          name.should.be.exactly('call __');
+          name.should.be.exactly('__');
           callbackResult.should.be.exactly(true);
         };
         const parserPlugSpy = sinon.spy(parserPlug);
@@ -281,11 +267,11 @@ describe('I18nTranslationWebpackPlugin', () => {
         };
         const addDependencySpy = sinon.spy(addDependency);
 
-        const compilation = getCompilation({ plug: spy });
+        const compilation = getCompilation();
         const params = getParams({
           normalModuleFactoryPlug: plugSpy,
           parserPlug: parserPlugSpy,
-          parserStatements: ['call __'],
+          parserStatements: ['__'],
           evaluate: () => ({
             string: 'test_string',
             number: 5,
@@ -296,7 +282,6 @@ describe('I18nTranslationWebpackPlugin', () => {
         });
 
         object.compilation.handler(compilation, params);
-        spy.called.should.be.exactly(true);
         plugSpy.called.should.be.exactly(true);
         parserPlugSpy.called.should.be.exactly(true);
         addDependencySpy.called.should.be.exactly(true);
@@ -304,18 +289,12 @@ describe('I18nTranslationWebpackPlugin', () => {
 
       it('should replace the interpolate function', () => {
         const object = buildPluginWithParams({ i18n_dir: I18N_DIR });
-        const checkBuild = (name, callback) => {
-          name.should.be.exactly('build-module');
-          callback();
-        };
-        const spy = sinon.spy(checkBuild);
-
         const plug = (name) => {
-          name.should.be.exactly('parser');
+          name.should.be.equalOneOf('javascript/auto', 'javascript/dynamic');
         };
         const plugSpy = sinon.spy(plug);
         const parserPlug = (name, callbackResult) => {
-          name.should.be.exactly('call ___');
+          name.should.be.exactly('___');
           callbackResult.should.be.exactly(false);
         };
         const parserPlugSpy = sinon.spy(parserPlug);
@@ -333,11 +312,11 @@ describe('I18nTranslationWebpackPlugin', () => {
         };
         const addDependencySpy = sinon.spy(addDependency);
 
-        const compilation = getCompilation({ plug: spy });
+        const compilation = getCompilation();
         const params = getParams({
           normalModuleFactoryPlug: plugSpy,
           parserPlug: parserPlugSpy,
-          parserStatements: ['call ___'],
+          parserStatements: ['___'],
           evaluate: () => ({
             string: 'test_string',
             number: 5,
@@ -348,7 +327,6 @@ describe('I18nTranslationWebpackPlugin', () => {
         });
 
         object.compilation.handler(compilation, params);
-        spy.called.should.be.exactly(true);
         plugSpy.called.should.be.exactly(true);
         parserPlugSpy.called.should.be.exactly(true);
         addDependencySpy.called.should.be.exactly(true);
