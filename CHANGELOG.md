@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.7"></a>
+## [1.2.7](https://github.com/gctools-outilsgc/gctools-components/compare/gctools-nrc-components@1.2.6...gctools-nrc-components@1.2.7) (2018-07-20)
+
+
+### Bug Fixes
+
+* **recommendation-card:** fixed linting errors ([5067378](https://github.com/gctools-outilsgc/gctools-components/commit/5067378))
+
+
+
+
+
 <a name="1.2.6"></a>
 ## [1.2.6](https://github.com/gctools-outilsgc/gctools-components/compare/gctools-nrc-components@1.2.5...gctools-nrc-components@1.2.6) (2018-04-27)
 

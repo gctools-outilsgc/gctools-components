@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.5"></a>
+## [1.2.5](https://github.com/gctools-outilsgc/gctools-components/compare/@gctools-components/reference-implementation@1.2.4...@gctools-components/reference-implementation@1.2.5) (2018-07-20)
+
+**Note:** Version bump only for package @gctools-components/reference-implementation
+
+
+
+
+
 <a name="1.2.4"></a>
 ## [1.2.4](https://github.com/gctools-outilsgc/gctools-components/compare/@gctools-components/reference-implementation@1.1.0...@gctools-components/reference-implementation@1.2.4) (2018-04-09)
 

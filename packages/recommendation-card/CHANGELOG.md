@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/gctools-outilsgc/gctools-components/compare/@gctools-components/recommendation-card@1.1.3...@gctools-components/recommendation-card@1.1.4) (2018-07-20)
+
+
+### Bug Fixes
+
+* **recommendation-card:** fixed linting errors ([5067378](https://github.com/gctools-outilsgc/gctools-components/commit/5067378))
+
+
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/gctools-outilsgc/gctools-components/compare/@gctools-components/recommendation-card@1.1.0...@gctools-components/recommendation-card@1.1.3) (2018-04-09)
 
