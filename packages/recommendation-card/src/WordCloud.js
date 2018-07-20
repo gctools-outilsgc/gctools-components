@@ -38,12 +38,12 @@ class WordCloud extends React.Component {
     return false;
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-
   componentDidCatch() {
     this.setState({ hasError: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize() {

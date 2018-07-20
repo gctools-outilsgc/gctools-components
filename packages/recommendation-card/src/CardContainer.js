@@ -43,12 +43,12 @@ class ContainerLarge extends Component {
     this.handleDrawerClose = this.handleDrawerClose.bind(this);
   }
 
-  handleLoadMore() {
-    this.setState({ cardsShown: this.state.cardsShown + 3 });
-  }
-
   componentDidCatch() {
     this.setState({ hasError: true });
+  }
+
+  handleLoadMore() {
+    this.setState({ cardsShown: this.state.cardsShown + 3 });
   }
 
   handleOpenDrawer() {
