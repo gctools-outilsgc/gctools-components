@@ -650,7 +650,11 @@ class ArticleRecommendations extends React.Component {
               <div style={{ marginRight: '25px', order: -1 }}>
                 <h2 style={heading}>{__('GCProfile user')}</h2>
                 <div style={padLeft}>
-                  <a target="_blank" href={profileUrl}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={profileUrl}
+                  >
                     {this.state.selectedUser.name}
                   </a>
                 </div>
@@ -660,7 +664,11 @@ class ArticleRecommendations extends React.Component {
               <div style={{ marginRight: '25px', order: -1 }}>
                 <h2 style={heading}>{__('GCpedia article')}</h2>
                 <div style={padLeft}>
-                  <a target="_blank" href={articleUrl}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={articleUrl}
+                  >
                     {this.state.selectedArticle.name}
                   </a>
                 </div>
@@ -670,7 +678,11 @@ class ArticleRecommendations extends React.Component {
               <div style={{ marginRight: '25px', order: -1 }}>
                 <h2 style={heading}>{__('GCconnex discussion')}</h2>
                 <div style={padLeft}>
-                  <a target="_blank" href={discussionUrl}>
+                  <a
+                    target="_blank"
+                    href={discussionUrl}
+                    rel="noopener noreferrer"
+                  >
                     {this.state.selectedDiscussion.name}
                   </a>
                 </div>

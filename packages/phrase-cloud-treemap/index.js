@@ -23,16 +23,6 @@ const equal = require('deep-equal');
  * phrases.
  */
 export default class PhraseCloudTreeMap extends Component {
-  static defaultProps = {
-    width: 250,
-    height: 200,
-    maxFontSize: 18,
-    minFontSize: 4,
-    fontFamily: 'courier new',
-    waitForFontFace: false,
-    fallbackFontFamily: 'courier',
-  };
-
   static propTypes = {
     /** Width of underlying svg element */
     width: PropTypes.number,
@@ -59,6 +49,16 @@ export default class PhraseCloudTreeMap extends Component {
      * by the missing font. */
     waitForFontFace: PropTypes.bool,
   };
+  static defaultProps = {
+    width: 250,
+    height: 200,
+    maxFontSize: 18,
+    minFontSize: 4,
+    fontFamily: 'courier new',
+    waitForFontFace: false,
+    fallbackFontFamily: 'courier',
+  };
+
 
   constructor(props) {
     super();
