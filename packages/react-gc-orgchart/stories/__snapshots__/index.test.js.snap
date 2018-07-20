@@ -463,9 +463,7 @@ exports[`Storyshots ReactGcOrgchart Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -503,9 +501,7 @@ exports[`Storyshots ReactGcOrgchart Default options 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -543,9 +539,7 @@ exports[`Storyshots ReactGcOrgchart Default options 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -1478,9 +1472,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -1518,9 +1510,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -1558,9 +1548,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -2493,9 +2481,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -2533,9 +2519,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -2573,9 +2557,7 @@ exports[`Storyshots ReactGcOrgchart With HCI team structure and subject=1 1`] = 
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td

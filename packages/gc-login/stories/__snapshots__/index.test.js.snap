@@ -241,9 +241,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -289,9 +287,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -350,11 +346,9 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     {
   authority: 'http://localhost:8080',
   client_i…
-                    "
                   </span>
                 </td>
                 <td
@@ -405,9 +399,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -458,9 +450,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -519,9 +509,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -567,9 +555,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     'not-logged-in'
-                    "
                   </span>
                 </td>
                 <td
@@ -635,9 +621,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -683,9 +667,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -723,9 +705,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -763,9 +743,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -803,9 +781,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -843,9 +819,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -883,9 +857,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -923,9 +895,7 @@ exports[`Storyshots Login Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td

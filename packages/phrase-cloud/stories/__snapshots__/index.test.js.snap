@@ -206,9 +206,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     250
-                    "
                   </span>
                 </td>
                 <td
@@ -246,9 +244,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     200
-                    "
                   </span>
                 </td>
                 <td
@@ -286,9 +282,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     18
-                    "
                   </span>
                 </td>
                 <td
@@ -326,9 +320,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     4
-                    "
                   </span>
                 </td>
                 <td
@@ -366,9 +358,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     'supernova'
-                    "
                   </span>
                 </td>
                 <td
@@ -514,9 +504,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     'courier new'
-                    "
                   </span>
                 </td>
                 <td
@@ -567,9 +555,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     'courier'
-                    "
                   </span>
                 </td>
                 <td
@@ -615,9 +601,7 @@ exports[`Storyshots PhraseCloud Minimum config ( phrases ) 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -854,9 +838,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     250
-                    "
                   </span>
                 </td>
                 <td
@@ -894,9 +876,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     200
-                    "
                   </span>
                 </td>
                 <td
@@ -934,9 +914,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     18
-                    "
                   </span>
                 </td>
                 <td
@@ -974,9 +952,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     4
-                    "
                   </span>
                 </td>
                 <td
@@ -1014,9 +990,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     'supernova'
-                    "
                   </span>
                 </td>
                 <td
@@ -1162,9 +1136,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     'courier new'
-                    "
                   </span>
                 </td>
                 <td
@@ -1215,9 +1187,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     'courier'
-                    "
                   </span>
                 </td>
                 <td
@@ -1263,9 +1233,7 @@ exports[`Storyshots PhraseCloud fontFamily="Alfa Slab One" and waitForFontFace=t
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td

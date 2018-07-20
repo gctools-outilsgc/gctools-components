@@ -321,9 +321,7 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -361,9 +359,7 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -401,9 +397,7 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -544,10 +538,8 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -585,9 +577,7 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -625,9 +615,7 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -844,9 +832,7 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -884,9 +870,7 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -924,9 +908,7 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -1067,10 +1049,8 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -1108,9 +1088,7 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -1148,9 +1126,7 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1352,9 +1328,7 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1392,9 +1366,7 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -1432,9 +1404,7 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -1575,10 +1545,8 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -1616,9 +1584,7 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -1656,9 +1622,7 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1860,9 +1824,7 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1900,9 +1862,7 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -1940,9 +1900,7 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -2083,10 +2041,8 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -2124,9 +2080,7 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -2164,9 +2118,7 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2411,9 +2363,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2451,9 +2401,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -2491,9 +2439,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -2634,10 +2580,8 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -2675,9 +2619,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -2715,9 +2657,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2950,9 +2890,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2990,9 +2928,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -3030,9 +2966,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -3173,10 +3107,8 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -3214,9 +3146,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -3254,9 +3184,7 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3501,9 +3429,7 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3541,9 +3467,7 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -3581,9 +3505,7 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     'en_CA'
-                    "
                   </span>
                 </td>
                 <td
@@ -3724,10 +3646,8 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     [
   { lang: 'fr_CA', value: '', placeholder: '' },…
-                    "
                   </span>
                 </td>
                 <td
@@ -3765,9 +3685,7 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -3805,9 +3723,7 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td

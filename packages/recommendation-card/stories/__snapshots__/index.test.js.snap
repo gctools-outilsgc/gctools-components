@@ -246,14 +246,16 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                     className="rating-border"
                   >
                     <span
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
+                      aria-label={undefined}
+                      className={undefined}
+                      id={undefined}
                       style={
                         Object {
                           "direction": "ltr",
                           "display": "inline-block",
                         }
                       }
+                      tabIndex={undefined}
                     >
                       <span
                         onClick={[Function]}
@@ -262,7 +264,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -331,7 +333,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -400,7 +402,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -469,7 +471,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -538,7 +540,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -744,9 +746,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -784,9 +784,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -834,9 +832,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -874,9 +870,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                       }
                     }
                   >
-                    "
                     '#fff'
-                    "
                   </span>
                 </td>
                 <td
@@ -914,9 +908,7 @@ exports[`Storyshots CardContainer Container with 1 card 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1180,14 +1172,16 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                     className="rating-border"
                   >
                     <span
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
+                      aria-label={undefined}
+                      className={undefined}
+                      id={undefined}
                       style={
                         Object {
                           "direction": "ltr",
                           "display": "inline-block",
                         }
                       }
+                      tabIndex={undefined}
                     >
                       <span
                         onClick={[Function]}
@@ -1196,7 +1190,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1265,7 +1259,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1334,7 +1328,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1403,7 +1397,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1472,7 +1466,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1795,14 +1789,16 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                     className="rating-border"
                   >
                     <span
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
+                      aria-label={undefined}
+                      className={undefined}
+                      id={undefined}
                       style={
                         Object {
                           "direction": "ltr",
                           "display": "inline-block",
                         }
                       }
+                      tabIndex={undefined}
                     >
                       <span
                         onClick={[Function]}
@@ -1811,7 +1807,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1880,7 +1876,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -1949,7 +1945,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -2018,7 +2014,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -2087,7 +2083,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                         onTouchMove={[Function]}
                         style={
                           Object {
-                            "cursor": "auto",
+                            "cursor": "inherit",
                             "display": "inline-block",
                             "position": "relative",
                           }
@@ -2513,9 +2509,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -2553,9 +2547,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2603,9 +2595,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -2643,9 +2633,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                       }
                     }
                   >
-                    "
                     '#fff'
-                    "
                   </span>
                 </td>
                 <td
@@ -2683,9 +2671,7 @@ exports[`Storyshots CardContainer Container with 10 cards 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2919,9 +2905,7 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -2959,9 +2943,7 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3009,9 +2991,7 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -3049,9 +3029,7 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                       }
                     }
                   >
-                    "
                     '#fff'
-                    "
                   </span>
                 </td>
                 <td
@@ -3089,9 +3067,7 @@ exports[`Storyshots CardContainer Container with loaded=false 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3325,9 +3301,7 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                       }
                     }
                   >
-                    "
                     true
-                    "
                   </span>
                 </td>
                 <td
@@ -3365,9 +3339,7 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3415,9 +3387,7 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -3455,9 +3425,7 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                       }
                     }
                   >
-                    "
                     '#fff'
-                    "
                   </span>
                 </td>
                 <td
@@ -3495,9 +3463,7 @@ exports[`Storyshots CardContainer Container with no cards 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3835,14 +3801,16 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                 className="rating-border"
               >
                 <span
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
+                  aria-label={undefined}
+                  className={undefined}
+                  id={undefined}
                   style={
                     Object {
                       "direction": "ltr",
                       "display": "inline-block",
                     }
                   }
+                  tabIndex={undefined}
                 >
                   <span
                     onClick={[Function]}
@@ -3851,7 +3819,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -3920,7 +3888,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -3989,7 +3957,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -4058,7 +4026,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -4127,7 +4095,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -4315,9 +4283,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -4355,9 +4321,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -4395,9 +4359,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -4435,9 +4397,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -4488,9 +4448,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -4607,9 +4565,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -4655,9 +4611,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with react node as descri
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -4991,14 +4945,16 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                 className="rating-border"
               >
                 <span
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
+                  aria-label={undefined}
+                  className={undefined}
+                  id={undefined}
                   style={
                     Object {
                       "direction": "ltr",
                       "display": "inline-block",
                     }
                   }
+                  tabIndex={undefined}
                 >
                   <span
                     onClick={[Function]}
@@ -5007,7 +4963,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -5076,7 +5032,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -5145,7 +5101,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -5214,7 +5170,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -5283,7 +5239,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -5471,9 +5427,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -5511,9 +5465,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -5551,9 +5503,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -5591,9 +5541,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -5644,9 +5592,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -5763,9 +5709,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -5811,9 +5755,7 @@ exports[`Storyshots RecommendationCard gcpedia-article with string description 1
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -6160,9 +6102,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -6200,9 +6140,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -6240,9 +6178,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -6280,9 +6216,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -6333,9 +6267,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -6452,9 +6384,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -6500,9 +6430,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with react node descriptio
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -6849,9 +6777,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -6889,9 +6815,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -6929,9 +6853,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -6969,9 +6891,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -7022,9 +6942,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -7141,9 +7059,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -7189,9 +7105,7 @@ exports[`Storyshots RecommendationCard gcprofile-user with string description 1`
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -7436,14 +7350,16 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                 className="rating-border"
               >
                 <span
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
+                  aria-label={undefined}
+                  className={undefined}
+                  id={undefined}
                   style={
                     Object {
                       "direction": "ltr",
                       "display": "inline-block",
                     }
                   }
+                  tabIndex={undefined}
                 >
                   <span
                     onClick={[Function]}
@@ -7452,7 +7368,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -7521,7 +7437,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -7590,7 +7506,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -7659,7 +7575,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -7728,7 +7644,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -7916,9 +7832,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -7956,9 +7870,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -7996,9 +7908,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -8036,9 +7946,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -8089,9 +7997,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -8208,9 +8114,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -8256,9 +8160,7 @@ exports[`Storyshots RecommendationCard tweet with react node as description 1`] 
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -8503,14 +8405,16 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                 className="rating-border"
               >
                 <span
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
+                  aria-label={undefined}
+                  className={undefined}
+                  id={undefined}
                   style={
                     Object {
                       "direction": "ltr",
                       "display": "inline-block",
                     }
                   }
+                  tabIndex={undefined}
                 >
                   <span
                     onClick={[Function]}
@@ -8519,7 +8423,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -8588,7 +8492,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -8657,7 +8561,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -8726,7 +8630,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -8795,7 +8699,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -8983,9 +8887,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -9023,9 +8925,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -9063,9 +8963,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -9103,9 +9001,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -9156,9 +9052,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -9275,9 +9169,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -9323,9 +9215,7 @@ exports[`Storyshots RecommendationCard tweet with string description 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -9570,14 +9460,16 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                 className="rating-border"
               >
                 <span
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
+                  aria-label={undefined}
+                  className={undefined}
+                  id={undefined}
                   style={
                     Object {
                       "direction": "ltr",
                       "display": "inline-block",
                     }
                   }
+                  tabIndex={undefined}
                 >
                   <span
                     onClick={[Function]}
@@ -9586,7 +9478,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -9655,7 +9547,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -9724,7 +9616,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -9793,7 +9685,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -9862,7 +9754,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -10050,9 +9942,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -10090,9 +9980,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -10130,9 +10018,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -10170,9 +10056,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -10223,9 +10107,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -10342,9 +10224,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -10390,9 +10270,7 @@ exports[`Storyshots RecommendationCard unknown with react node description 1`] =
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -10637,14 +10515,16 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                 className="rating-border"
               >
                 <span
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
+                  aria-label={undefined}
+                  className={undefined}
+                  id={undefined}
                   style={
                     Object {
                       "direction": "ltr",
                       "display": "inline-block",
                     }
                   }
+                  tabIndex={undefined}
                 >
                   <span
                     onClick={[Function]}
@@ -10653,7 +10533,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -10722,7 +10602,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -10791,7 +10671,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -10860,7 +10740,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -10929,7 +10809,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                     onTouchMove={[Function]}
                     style={
                       Object {
-                        "cursor": "auto",
+                        "cursor": "inherit",
                         "display": "inline-block",
                         "position": "relative",
                       }
@@ -11117,9 +10997,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     'Default Recommendation'
-                    "
                   </span>
                 </td>
                 <td
@@ -11157,9 +11035,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     'other'
-                    "
                   </span>
                 </td>
                 <td
@@ -11197,9 +11073,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     0
-                    "
                   </span>
                 </td>
                 <td
@@ -11237,9 +11111,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     'unknown'
-                    "
                   </span>
                 </td>
                 <td
@@ -11290,9 +11162,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     1
-                    "
                   </span>
                 </td>
                 <td
@@ -11409,9 +11279,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -11457,9 +11325,7 @@ exports[`Storyshots RecommendationCard unknown with string description 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td

@@ -304,9 +304,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -344,9 +342,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -384,9 +380,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
                       }
                     }
                   >
-                    "
                     ''
-                    "
                   </span>
                 </td>
                 <td
@@ -424,9 +418,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -507,9 +499,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -679,9 +669,7 @@ exports[`Storyshots AutocompletePerson with Full Width option 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -1003,9 +991,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -1043,9 +1029,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1083,9 +1067,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
                       }
                     }
                   >
-                    "
                     ''
-                    "
                   </span>
                 </td>
                 <td
@@ -1123,9 +1105,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -1206,9 +1186,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -1378,9 +1356,7 @@ exports[`Storyshots AutocompletePerson with default options 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -1702,9 +1678,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -1742,9 +1716,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1782,9 +1754,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
                       }
                     }
                   >
-                    "
                     ''
-                    "
                   </span>
                 </td>
                 <td
@@ -1822,9 +1792,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -1905,9 +1873,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -2077,9 +2043,7 @@ exports[`Storyshots AutocompletePerson with searchText & items 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -2401,9 +2365,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
                       }
                     }
                   >
-                    "
                     undefined
-                    "
                   </span>
                 </td>
                 <td
@@ -2441,9 +2403,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2481,9 +2441,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
                       }
                     }
                   >
-                    "
                     ''
-                    "
                   </span>
                 </td>
                 <td
@@ -2521,9 +2479,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -2604,9 +2560,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
                       }
                     }
                   >
-                    "
                     () =&gt; {}
-                    "
                   </span>
                 </td>
                 <td
@@ -2776,9 +2730,7 @@ exports[`Storyshots AutocompletePerson with searchText 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td

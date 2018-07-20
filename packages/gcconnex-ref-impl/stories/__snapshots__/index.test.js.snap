@@ -438,9 +438,7 @@ exports[`Storyshots GcconnexRefImpl Default options 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -478,9 +476,7 @@ exports[`Storyshots GcconnexRefImpl Default options 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -921,9 +917,7 @@ exports[`Storyshots GcconnexRefImpl context=login 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -961,9 +955,7 @@ exports[`Storyshots GcconnexRefImpl context=login 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1448,9 +1440,7 @@ exports[`Storyshots GcconnexRefImpl loading=true 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -1488,9 +1478,7 @@ exports[`Storyshots GcconnexRefImpl loading=true 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -1975,9 +1963,7 @@ exports[`Storyshots GcconnexRefImpl with no available recommendations (recommend
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -2015,9 +2001,7 @@ exports[`Storyshots GcconnexRefImpl with no available recommendations (recommend
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -2502,9 +2486,7 @@ exports[`Storyshots GcconnexRefImpl with recommendations 1`] = `
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -2542,9 +2524,7 @@ exports[`Storyshots GcconnexRefImpl with recommendations 1`] = `
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
@@ -3029,9 +3009,7 @@ exports[`Storyshots GcconnexRefImpl with recommendations not ready (recommendati
                       }
                     }
                   >
-                    "
                     []
-                    "
                   </span>
                 </td>
                 <td
@@ -3069,9 +3047,7 @@ exports[`Storyshots GcconnexRefImpl with recommendations not ready (recommendati
                       }
                     }
                   >
-                    "
                     false
-                    "
                   </span>
                 </td>
                 <td
