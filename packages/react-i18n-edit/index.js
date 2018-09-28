@@ -49,12 +49,13 @@ class ReactI18nEdit extends Component {
       <div>
         {displayList.map(item => (
           <div key={`item_${item.lang}`} className="input-group">
-            <label>
+            <label htmlFor={this.props.forId}>
               {item.placeholder}
               {(showLabel) ? (
                 <span> - {item.lang.split('_', 1)}</span>
               ) : null}
               <Input
+                id={this.props.forId}
                 onChange={this._onChange}
                 lang={item.lang}
                 value={item.value}
@@ -102,6 +103,8 @@ ReactI18nEdit.propTypes = {
   error: PropTypes.bool,
   /** Pass the input type to the input */
   type: PropTypes.string,
+  /** Pass for ID for label a11y */
+  forId: PropTypes.string.isRequired,
 };
 
 export default ReactI18nEdit;

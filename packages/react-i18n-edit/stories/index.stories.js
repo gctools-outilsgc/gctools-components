@@ -167,7 +167,8 @@ storiesOf('ReactI18nEdit', module)
           }]}
           edit
           showLabel={false}
-          type='email'
+          type="email"
+          forId="emailID"
         />
       </div>
     )),
