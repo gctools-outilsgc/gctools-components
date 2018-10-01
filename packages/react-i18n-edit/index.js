@@ -27,7 +27,12 @@ class ReactI18nEdit extends Component {
   }
 
   render() {
-    const { values, showLabel, lang } = this.props;
+    const {
+      values,
+      showLabel,
+      lang,
+      forId,
+    } = this.props;
     if (!values.length || !Array.isArray(values)) return null;
 
 
@@ -49,13 +54,13 @@ class ReactI18nEdit extends Component {
       <div>
         {displayList.map(item => (
           <div key={`item_${item.lang}`} className="input-group">
-            <label htmlFor={this.props.forId}>
+            <label htmlFor={forId}>
               {item.placeholder}
               {(showLabel) ? (
                 <span> - {item.lang.split('_', 1)}</span>
               ) : null}
               <Input
-                id={this.props.forId}
+                id={forId}
                 onChange={this._onChange}
                 lang={item.lang}
                 value={item.value}
