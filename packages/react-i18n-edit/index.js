@@ -103,7 +103,7 @@ ReactI18nEdit.propTypes = {
   error: PropTypes.bool,
   /** Pass the input type to the input */
   type: PropTypes.string,
-  /** Pass for ID for label a11y */
+  /** Pass htmlFor ID for label a11y */
   forId: PropTypes.string.isRequired,
 };
 
