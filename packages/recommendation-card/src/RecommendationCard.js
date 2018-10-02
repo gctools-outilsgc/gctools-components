@@ -22,6 +22,7 @@ import SocialShare from 'material-ui/svg-icons/social/share';
 import ToggleStar from 'material-ui/svg-icons/toggle/star';
 import ToggleStarBorder from 'material-ui/svg-icons/toggle/star-border';
 import Toggle from 'material-ui/Toggle';
+import Rating from 'react-rating';
 import 'font-awesome/css/font-awesome.min.css';
 import WordCloud from './WordCloud';
 
@@ -29,7 +30,6 @@ import '../css/fonts.css';
 import '../css/card-style.css';
 
 const gcpedia = require('../img/gcpedia.jpg');
-const Rating = require('react-rating');
 
 /**
  * Recommendation cards provide a consistent interface for recommendations

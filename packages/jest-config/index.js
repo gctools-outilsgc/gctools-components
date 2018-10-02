@@ -27,6 +27,7 @@ module.exports = {
     'json-summary',
     'lcov',
   ],
+  testURL: 'http://localhost',
   testResultsProcessor: 'jest-bamboo-formatter',
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$': '<rootDir>/node_modules/@gctools-components/jest-config/mocks/fileMock.js', // eslint-disable-line
