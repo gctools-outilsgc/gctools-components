@@ -25,5 +25,6 @@ Object {
     "<rootDir>/node_modules/@gctools-components/jest-config/mocks/raf.js",
   ],
   "testResultsProcessor": "jest-bamboo-formatter",
+  "testURL": "http://localhost",
 }
 `;
