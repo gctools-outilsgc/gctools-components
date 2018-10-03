@@ -65,6 +65,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.5.2",
     "reactstrap": "^6.4.0",
     "semantic-ui-css": "^2.3.1",
     "semantic-ui-react": "^0.79.0"

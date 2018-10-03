@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Input } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 
 /**
