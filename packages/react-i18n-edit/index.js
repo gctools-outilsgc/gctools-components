@@ -66,6 +66,7 @@ class ReactI18nEdit extends Component {
                 placeholder={item.placeholder}
                 error={this.props.error}
                 type={this.props.type}
+                className="form-control"
               />
             </label>
           </div>

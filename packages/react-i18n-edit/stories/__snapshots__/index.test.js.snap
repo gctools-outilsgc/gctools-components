@@ -74,16 +74,20 @@ exports[`Storyshots ReactI18nEdit Controlled example 1`] = `
              - 
             en
           </span>
-          <input
-            className="form-control"
-            error={false}
-            id={undefined}
+          <div
+            className="ui input form-control"
             lang="en_CA"
-            onChange={[Function]}
-            placeholder="placeholder"
-            type="text"
-            value="This is an English value"
-          />
+          >
+            <input
+              disabled={undefined}
+              id={undefined}
+              onChange={[Function]}
+              placeholder="placeholder"
+              tabIndex={undefined}
+              type="text"
+              value="This is an English value"
+            />
+          </div>
         </label>
       </div>
       <div
@@ -97,16 +101,20 @@ exports[`Storyshots ReactI18nEdit Controlled example 1`] = `
              - 
             fr
           </span>
-          <input
-            className="form-control"
-            error={false}
-            id={undefined}
+          <div
+            className="ui input form-control"
             lang="fr_CA"
-            onChange={[Function]}
-            placeholder="placeholder"
-            type="text"
-            value="C'est une valeur française"
-          />
+          >
+            <input
+              disabled={undefined}
+              id={undefined}
+              onChange={[Function]}
+              placeholder="placeholder"
+              tabIndex={undefined}
+              type="text"
+              value="C'est une valeur française"
+            />
+          </div>
         </label>
       </div>
     </div>
@@ -779,16 +787,20 @@ exports[`Storyshots ReactI18nEdit With Input type 1`] = `
             htmlFor="emailID"
           >
             Email
-            <input
-              className="form-control"
-              error={false}
-              id="emailID"
+            <div
+              className="ui input form-control"
               lang={undefined}
-              onChange={[Function]}
-              placeholder="Email"
-              type="email"
-              value=""
-            />
+            >
+              <input
+                disabled={undefined}
+                id="emailID"
+                onChange={[Function]}
+                placeholder="Email"
+                tabIndex={undefined}
+                type="email"
+                value=""
+              />
+            </div>
           </label>
         </div>
       </div>
@@ -1360,16 +1372,20 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
             htmlFor={undefined}
           >
             placeholder
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang={undefined}
-              onChange={[Function]}
-              placeholder="placeholder"
-              type="text"
-              value="Elon Musk"
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="Elon Musk"
+              />
+            </div>
           </label>
         </div>
       </div>
@@ -3071,16 +3087,20 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                - 
               en
             </span>
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang="en_CA"
-              onChange={[Function]}
-              placeholder="placeholder"
-              type="text"
-              value="This is an English value"
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="This is an English value"
+              />
+            </div>
           </label>
         </div>
         <div
@@ -3094,16 +3114,20 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                - 
               fr
             </span>
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang="fr_CA"
-              onChange={[Function]}
-              placeholder="placeholder"
-              type="text"
-              value="C'est une valeur française"
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="C'est une valeur française"
+              />
+            </div>
           </label>
         </div>
       </div>
@@ -3675,16 +3699,20 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
             htmlFor={undefined}
           >
             placeholder
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang="en_CA"
-              onChange={[Function]}
-              placeholder="placeholder"
-              type="text"
-              value="This is an English value"
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="This is an English value"
+              />
+            </div>
           </label>
         </div>
         <div
@@ -3694,16 +3722,20 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
             htmlFor={undefined}
           >
             placeholder
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang="fr_CA"
-              onChange={[Function]}
-              placeholder="placeholder"
-              type="text"
-              value="C'est une valeur française"
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="C'est une valeur française"
+              />
+            </div>
           </label>
         </div>
       </div>
@@ -4279,16 +4311,20 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                - 
               en
             </span>
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang="en_CA"
-              onChange={[Function]}
-              placeholder=""
-              type="text"
-              value=""
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder=""
+                tabIndex={undefined}
+                type="text"
+                value=""
+              />
+            </div>
           </label>
         </div>
         <div
@@ -4302,16 +4338,20 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                - 
               fr
             </span>
-            <input
-              className="form-control"
-              error={false}
-              id={undefined}
+            <div
+              className="ui input form-control"
               lang="fr_CA"
-              onChange={[Function]}
-              placeholder=""
-              type="text"
-              value=""
-            />
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder=""
+                tabIndex={undefined}
+                type="text"
+                value=""
+              />
+            </div>
           </label>
         </div>
       </div>
