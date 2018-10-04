@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input } from 'reactstrap';
+import { Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 import './css/style.css';
