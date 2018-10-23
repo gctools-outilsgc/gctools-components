@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Label, Input } from 'semantic-ui-react';
+import { Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-import 'semantic-ui-css/semantic.min.css';
 import './css/style.css';
 
 /**
@@ -27,7 +26,12 @@ class ReactI18nEdit extends Component {
   }
 
   render() {
-    const { values, showLabel, lang } = this.props;
+    const {
+      values,
+      showLabel,
+      lang,
+      forId,
+    } = this.props;
     if (!values.length || !Array.isArray(values)) return null;
 
 
@@ -48,24 +52,23 @@ class ReactI18nEdit extends Component {
     return (
       <div>
         {displayList.map(item => (
-          <div key={`item_${item.lang}`}>
-            <Input
-              className="multiline-edit-field-textbox"
-              labelPosition="left"
-              onChange={this._onChange}
-              lang={item.lang}
-              value={item.value}
-              placeholder={item.placeholder}
-              error={this.props.error}
-            >
+          <div key={`item_${item.lang}`} className="input-group">
+            <label htmlFor={forId}>
+              {item.placeholder}
               {(showLabel) ? (
-                <Label className="multiline-edit-field-label">
-                  {item.lang.split('_', 1)}
-                </Label>
+                <span> - {item.lang.split('_', 1)}</span>
               ) : null}
-              <input />
-            </Input>
-            <br />
+              <Input
+                id={forId}
+                onChange={this._onChange}
+                lang={item.lang}
+                value={item.value}
+                placeholder={item.placeholder}
+                error={this.props.error}
+                type={this.props.type}
+                className="form-control"
+              />
+            </label>
           </div>
         ))}
       </div>
@@ -83,6 +86,7 @@ ReactI18nEdit.defaultProps = {
   ],
   showLabel: true,
   onChange: undefined,
+  type: 'text',
 };
 
 ReactI18nEdit.propTypes = {
@@ -102,6 +106,10 @@ ReactI18nEdit.propTypes = {
   onChange: PropTypes.func,
   /** An Input field can show the data contains errors. */
   error: PropTypes.bool,
+  /** Pass the input type to the input */
+  type: PropTypes.string,
+  /** Pass htmlFor ID for label a11y */
+  forId: PropTypes.string.isRequired,
 };
 
 export default ReactI18nEdit;

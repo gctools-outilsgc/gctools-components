@@ -153,6 +153,27 @@ storiesOf('ReactI18nEdit', module)
     )),
   )
   .add(
+    'With Input type',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }}>
+        <ReactI18nEdit
+          values={[{
+            value: '',
+            placeholder: 'Email',
+          }]}
+          edit
+          showLabel={false}
+          type="email"
+          forId="emailID"
+        />
+      </div>
+    )),
+  )
+  .add(
     'Controlled example',
     withInfo({
       header: true,

@@ -63,49 +63,59 @@ exports[`Storyshots ReactI18nEdit Controlled example 1`] = `
     style={Object {}}
   >
     <div>
-      <div>
-        <div
-          className="ui left labeled input multiline-edit-field-textbox"
-          lang="en_CA"
+      <div
+        className="input-group"
+      >
+        <label
+          htmlFor={undefined}
         >
-          <div
-            className="ui label multiline-edit-field-label"
-            onClick={[Function]}
-          >
+          placeholder
+          <span>
+             - 
             en
-          </div>
-          <input
-            disabled={undefined}
-            onChange={[Function]}
-            placeholder="placeholder"
-            tabIndex={undefined}
-            type="text"
-            value="This is an English value"
-          />
-        </div>
-        <br />
-      </div>
-      <div>
-        <div
-          className="ui left labeled input multiline-edit-field-textbox"
-          lang="fr_CA"
-        >
+          </span>
           <div
-            className="ui label multiline-edit-field-label"
-            onClick={[Function]}
+            className="ui input form-control"
+            lang="en_CA"
           >
-            fr
+            <input
+              disabled={undefined}
+              id={undefined}
+              onChange={[Function]}
+              placeholder="placeholder"
+              tabIndex={undefined}
+              type="text"
+              value="This is an English value"
+            />
           </div>
-          <input
-            disabled={undefined}
-            onChange={[Function]}
-            placeholder="placeholder"
-            tabIndex={undefined}
-            type="text"
-            value="C'est une valeur française"
-          />
-        </div>
-        <br />
+        </label>
+      </div>
+      <div
+        className="input-group"
+      >
+        <label
+          htmlFor={undefined}
+        >
+          placeholder
+          <span>
+             - 
+            fr
+          </span>
+          <div
+            className="ui input form-control"
+            lang="fr_CA"
+          >
+            <input
+              disabled={undefined}
+              id={undefined}
+              onChange={[Function]}
+              placeholder="placeholder"
+              tabIndex={undefined}
+              type="text"
+              value="C'est une valeur française"
+            />
+          </div>
+        </label>
       </div>
     </div>
   </div>
@@ -624,6 +634,73 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
                   An Input field can show the data contains errors.
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -633,7 +710,7 @@ exports[`Storyshots ReactI18nEdit Default options 1`] = `
 </div>
 `;
 
-exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLabel=false 1`] = `
+exports[`Storyshots ReactI18nEdit With Input type 1`] = `
 <div>
   <div
     style={undefined}
@@ -687,7 +764,7 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
             }
           }
         >
-          With lang undefined, values, edit=true, showLabel=false
+          With Input type
         </h2>
       </div>
     </div>
@@ -703,21 +780,28 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
       }
     >
       <div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang={undefined}
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor="emailID"
           >
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder="placeholder"
-              tabIndex={undefined}
-              type="text"
-              value="Elon Musk"
-            />
-          </div>
-          <br />
+            Email
+            <div
+              className="ui input form-control"
+              lang={undefined}
+            >
+              <input
+                disabled={undefined}
+                id="emailID"
+                onChange={[Function]}
+                placeholder="Email"
+                tabIndex={undefined}
+                type="email"
+                value=""
+              />
+            </div>
+          </label>
         </div>
       </div>
     </div>
@@ -1133,6 +1217,658 @@ exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLa
                   className="css-d52hbj"
                 >
                   An Input field can show the data contains errors.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ReactI18nEdit With lang undefined, values, edit=true, showLabel=false 1`] = `
+<div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          ReactI18nEdit
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          With lang undefined, values, edit=true, showLabel=false
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "margin": "20px",
+        }
+      }
+    >
+      <div>
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
+          >
+            placeholder
+            <div
+              className="ui input form-control"
+              lang={undefined}
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="Elon Musk"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={undefined}
+  >
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            ReactI18nEdit
+            " Component
+          </h2>
+          <table
+            className="css-1ytzlk7"
+          >
+            <thead>
+              <tr>
+                <th
+                  className="css-d52hbj"
+                >
+                  property
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  propType
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  required
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  default
+                </th>
+                <th
+                  className="css-d52hbj"
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  edit
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    false
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Determines if editable components should be displayed.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  showLabel
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    true
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Wether or not to show a label next to the editable component
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  lang
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'en_CA'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  The current active language.  (for sorting of the value list)
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  values
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    <span>
+                      [
+                    </span>
+                    <span>
+                      <span>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          {
+                        </button>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                        >
+                          ...
+                        </button>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            lang
+                            ?
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            value
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginLeft": 15,
+                            }
+                          }
+                        >
+                          <span
+                            style={
+                              Object {
+                                "whiteSpace": "nowrap",
+                              }
+                            }
+                          >
+                            placeholder
+                            
+                            :
+                             
+                          </span>
+                          <span>
+                            string
+                          </span>
+                          ,
+                        </div>
+                        <button
+                          className="css-5gtpmt"
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          }
+                        </button>
+                      </span>
+                    </span>
+                    <span>
+                      ]
+                    </span>
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    [
+  { lang: 'fr_CA', value: '', placeholder: '' },…
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  List of values to be set for each editable field and active lang label
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  onChange
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    func
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    undefined
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Event called when any of the editable components are changed
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  error
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    false
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  An Input field can show the data contains errors.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
                 </td>
               </tr>
             </tbody>
@@ -1631,6 +2367,73 @@ exports[`Storyshots ReactI18nEdit With values 1`] = `
                   An Input field can show the data contains errors.
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2127,6 +2930,73 @@ exports[`Storyshots ReactI18nEdit With values and lang=fr_CA 1`] = `
                   An Input field can show the data contains errors.
                 </td>
               </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2206,49 +3076,59 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
       }
     >
       <div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang="en_CA"
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
           >
-            <div
-              className="ui label multiline-edit-field-label"
-              onClick={[Function]}
-            >
+            placeholder
+            <span>
+               - 
               en
-            </div>
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder="placeholder"
-              tabIndex={undefined}
-              type="text"
-              value="This is an English value"
-            />
-          </div>
-          <br />
-        </div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang="fr_CA"
-          >
+            </span>
             <div
-              className="ui label multiline-edit-field-label"
-              onClick={[Function]}
+              className="ui input form-control"
+              lang="en_CA"
             >
-              fr
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="This is an English value"
+              />
             </div>
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder="placeholder"
-              tabIndex={undefined}
-              type="text"
-              value="C'est une valeur française"
-            />
-          </div>
-          <br />
+          </label>
+        </div>
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
+          >
+            placeholder
+            <span>
+               - 
+              fr
+            </span>
+            <div
+              className="ui input form-control"
+              lang="fr_CA"
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="C'est une valeur française"
+              />
+            </div>
+          </label>
         </div>
       </div>
     </div>
@@ -2664,6 +3544,73 @@ exports[`Storyshots ReactI18nEdit With values, edit=true 1`] = `
                   className="css-d52hbj"
                 >
                   An Input field can show the data contains errors.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
                 </td>
               </tr>
             </tbody>
@@ -2745,37 +3692,51 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
       }
     >
       <div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang="en_CA"
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
           >
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder="placeholder"
-              tabIndex={undefined}
-              type="text"
-              value="This is an English value"
-            />
-          </div>
-          <br />
+            placeholder
+            <div
+              className="ui input form-control"
+              lang="en_CA"
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="This is an English value"
+              />
+            </div>
+          </label>
         </div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang="fr_CA"
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
           >
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder="placeholder"
-              tabIndex={undefined}
-              type="text"
-              value="C'est une valeur française"
-            />
-          </div>
-          <br />
+            placeholder
+            <div
+              className="ui input form-control"
+              lang="fr_CA"
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder="placeholder"
+                tabIndex={undefined}
+                type="text"
+                value="C'est une valeur française"
+              />
+            </div>
+          </label>
         </div>
       </div>
     </div>
@@ -3191,6 +4152,73 @@ exports[`Storyshots ReactI18nEdit With values, edit=true, showLabel=false 1`] = 
                   className="css-d52hbj"
                 >
                   An Input field can show the data contains errors.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
                 </td>
               </tr>
             </tbody>
@@ -3272,49 +4300,59 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
       }
     >
       <div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang="en_CA"
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
           >
-            <div
-              className="ui label multiline-edit-field-label"
-              onClick={[Function]}
-            >
+            
+            <span>
+               - 
               en
-            </div>
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder=""
-              tabIndex={undefined}
-              type="text"
-              value=""
-            />
-          </div>
-          <br />
-        </div>
-        <div>
-          <div
-            className="ui left labeled input multiline-edit-field-textbox"
-            lang="fr_CA"
-          >
+            </span>
             <div
-              className="ui label multiline-edit-field-label"
-              onClick={[Function]}
+              className="ui input form-control"
+              lang="en_CA"
             >
-              fr
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder=""
+                tabIndex={undefined}
+                type="text"
+                value=""
+              />
             </div>
-            <input
-              disabled={undefined}
-              onChange={[Function]}
-              placeholder=""
-              tabIndex={undefined}
-              type="text"
-              value=""
-            />
-          </div>
-          <br />
+          </label>
+        </div>
+        <div
+          className="input-group"
+        >
+          <label
+            htmlFor={undefined}
+          >
+            
+            <span>
+               - 
+              fr
+            </span>
+            <div
+              className="ui input form-control"
+              lang="fr_CA"
+            >
+              <input
+                disabled={undefined}
+                id={undefined}
+                onChange={[Function]}
+                placeholder=""
+                tabIndex={undefined}
+                type="text"
+                value=""
+              />
+            </div>
+          </label>
         </div>
       </div>
     </div>
@@ -3730,6 +4768,73 @@ exports[`Storyshots ReactI18nEdit edit=true 1`] = `
                   className="css-d52hbj"
                 >
                   An Input field can show the data contains errors.
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  type
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    'text'
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass the input type to the input
+                </td>
+              </tr>
+              <tr>
+                <td
+                  className="css-1ygfcef"
+                >
+                  forId
+                </td>
+                <td
+                  className="css-1ygfcef"
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  yes
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  -
+                </td>
+                <td
+                  className="css-d52hbj"
+                >
+                  Pass htmlFor ID for label a11y
                 </td>
               </tr>
             </tbody>
