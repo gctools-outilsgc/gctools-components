@@ -18,5 +18,5 @@
   },
   "version": "independent",
   "npmClient": "yarn",
-  "hoist": true
+  "useWorkspaces": true
 }
