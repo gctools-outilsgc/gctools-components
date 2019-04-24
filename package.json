@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/gctools-outilsgc/gctools-components.git"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "new": "node ./utils/cli-helper.js",
     "postinstall": "node ./utils/linker.js",
@@ -28,5 +31,8 @@
   },
   "dependencies": {
     "@storybook/cli": "^3.3.15"
+  },
+  "resolutions": {
+    "**/event-stream": "^4.0.1"
   }
 }
