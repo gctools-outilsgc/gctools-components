@@ -1,0 +1,79 @@
+{
+  "name": "@gctools-components/global-nav",
+  "description": "Global navigation react component for OADW apps.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gctools-outilsgc/gctools-components.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "babel index.js -d dist --copy-files",
+    "prepare": "npm run clean && npm run build",
+    "lint": "eslint .",
+    "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [
+    "gctools",
+    "gctoolscomponent"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-info": "^3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addon-storyshots": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-plugin-react-docgen": "~1.8.1",
+    "@gctools-components/eslint-config": "^1.0.0",
+    "eslint": "^4.12.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "@gctools-components/jest-config": "^1.0.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "material-ui": "^0.19.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/react",
+      "@babel/es2015"
+    ],
+    "plugins": [
+      "babel-plugin-transform-runtime",
+      "transform-object-rest-spread",
+      "@babel/proposal-class-properties",
+      [
+        "react-docgen",
+        {
+          "includeMethods": true
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@gctools-components",
+    "root": true
+  }
+}
