@@ -1,0 +1,14 @@
+/*
+  Styles
+*/
+/* using "gn-" prefix for now */
+.gn-holder {
+  height: 100vh;
+  width: 275px;
+  background: #fafafa;
+  /* Change to absolute? */
+  position: sticky;
+  top: 0;
+  /* To do the slide toggle we can adjust the right and the body can have no overflow */
+  right: 0;
+}

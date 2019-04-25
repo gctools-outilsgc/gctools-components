@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LoginSection from './components/LoginSection';
+import './css/style.css';
+
 /**
  * Global navigation react component for OADW apps.
  */
@@ -11,9 +14,9 @@ const GlobalNav = (props) => {
   } = props;
 
   return (
-    <div>
-      Test Component
+    <div className="gn-holder">
       {test}
+      <LoginSection />
     </div>
   );
 };
