@@ -10,7 +10,8 @@ import {
 
 const ToggleLangDropdown = (props) => {
   const {
-    currentLang
+    currentLang,
+    onResultClick,
   } = props;
   return (
     <UncontrolledDropdown direction="left">
@@ -18,9 +19,13 @@ const ToggleLangDropdown = (props) => {
         {currentLang}
       </DropdownToggle>
       <DropdownMenu>
-        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem onClick={() => onResultClick('en_CA')}>
+          English
+        </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem onClick={() => onResultClick('fr_CA')}>
+          French
+        </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
   );
@@ -28,10 +33,12 @@ const ToggleLangDropdown = (props) => {
 
 ToggleLangDropdown.defaultProps = {
   currentLang: 'en_CA',
+  onResultClick: () => {},
 };
 
 ToggleLangDropdown.propTypes = {
   currentLang: PropTypes.string,
+  onResultClick: PropTypes.func,
 };
 
 export default ToggleLangDropdown;

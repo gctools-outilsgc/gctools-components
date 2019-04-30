@@ -13,25 +13,40 @@ import ToggleLangDropdown from './components/ToggleLangDropdown';
 
 const GlobalNav = (props) => {
   const {
-    test
+    test,
+    currentLang,
+    onLanguageResultClick,
   } = props;
 
   return (
     <div className="gn-holder">
       {test}
       <LoginSection />
-      <ToggleLangDropdown />
+      <ToggleLangDropdown
+        currentLang={currentLang}
+        onResultClick={(e) => {
+          //TODO Send e to parent
+          onLanguageResultClick(e);
+          console.log(e);
+        }}
+      />
     </div>
   );
 };
 
 GlobalNav.defaultProps = {
   test: 'prop test',
+  currentLang: 'en_CA',
+  onLanguageResultClick: () => {},
 };
 
 GlobalNav.propTypes = {
   /** This is an example prop called "test". */
   test: PropTypes.string,
+  /** This is the current language of the app */
+  currentLang: PropTypes.string,
+  /** Function will pass the selected language to parent */
+  onLanguageResultClick: PropTypes.func,
 };
 
 export default GlobalNav;
