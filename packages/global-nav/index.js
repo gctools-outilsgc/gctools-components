@@ -5,6 +5,8 @@ import LoginSection from './components/LoginSection';
 import '@gctools-components/aurora-css/css/aurora.min.css';
 import './css/style.css';
 
+import ToggleLangDropdown from './components/ToggleLangDropdown';
+
 /**
  * Global navigation react component for OADW apps.
  */
@@ -18,6 +20,7 @@ const GlobalNav = (props) => {
     <div className="gn-holder">
       {test}
       <LoginSection />
+      <ToggleLangDropdown />
     </div>
   );
 };
