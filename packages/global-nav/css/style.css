@@ -6,6 +6,7 @@
 /* Fake "Browser" to hold globalnav*/
 .gn-story-holder {
   border:2px solid black;
+  background-color: white;
   width: 80%;
   height: 100vh;
   position: relative;

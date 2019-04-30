@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import LoginSection from './components/LoginSection';
+import '@gctools-components/aurora-css/css/aurora.min.css';
 import './css/style.css';
 
 /**
