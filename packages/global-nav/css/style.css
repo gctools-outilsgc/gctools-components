@@ -2,12 +2,22 @@
   Styles
 */
 /* using "gn-" prefix for now */
+
+/* Fake "Browser" to hold globalnav*/
+.gn-story-holder {
+  border:2px solid black;
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
 .gn-holder {
   height: 100vh;
   width: 275px;
   background: #fafafa;
   /* Change to absolute? */
-  position: sticky;
+  position: absolute;
   top: 0;
   /* To do the slide toggle we can adjust the right and the body can have no overflow */
   right: 0;

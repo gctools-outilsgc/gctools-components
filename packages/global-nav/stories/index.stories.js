@@ -14,7 +14,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }}>
+      <div style={{ margin: '20px' }} className="gn-story-holder">
         <GlobalNav />
       </div>
     )),
