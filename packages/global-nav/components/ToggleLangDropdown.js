@@ -16,15 +16,15 @@ const ToggleLangDropdown = (props) => {
   return (
     <UncontrolledDropdown direction="left">
       <DropdownToggle caret>
-        {currentLang}
+        {(currentLang == 'en_CA') ? 'EN' : 'FR'}
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem onClick={() => onResultClick('en_CA')}>
-          English
+          <span>{(currentLang == 'en_CA') ? '$Sel ' : ''}</span>English
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem onClick={() => onResultClick('fr_CA')}>
-          French
+          <span>{(currentLang == 'fr_CA') ? '$Sel ' : ''}</span>French
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
@@ -37,7 +37,9 @@ ToggleLangDropdown.defaultProps = {
 };
 
 ToggleLangDropdown.propTypes = {
+  /** Gets the current language of the application */
   currentLang: PropTypes.string,
+  /** Gets the value of the option clicked */
   onResultClick: PropTypes.func,
 };
 

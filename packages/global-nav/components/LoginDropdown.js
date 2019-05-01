@@ -33,7 +33,7 @@ const LoginDropdown = (props) => {
           </DropdownMenu>
         </UncontrolledDropdown>
       ) : (
-        <div>Login</div>
+        <div>Login Button</div>
       )}
     </div>
   );

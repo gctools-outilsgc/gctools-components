@@ -8,6 +8,7 @@ import LoginDropdown from './components/LoginDropdown';
 import AppListDropdown from './components/AppListDropdown';
 import ToggleLangDropdown from './components/ToggleLangDropdown';
 import HelpDropdown from './components/HelpDropdown';
+import NotificationDropdown from './components/NotificationDropdown';
 
 /**
  * Global navigation react component for OADW apps.
@@ -15,19 +16,25 @@ import HelpDropdown from './components/HelpDropdown';
 
 const GlobalNav = (props) => {
   const {
-    test,
     currentLang,
+    currentApp,
     onLanguageResultClick,
     currentUser,
+    accessToken,
   } = props;
 
   return (
     <div className="gn-holder">
-      {test}
       <LoginDropdown
         userObject={currentUser}
       />
-      <AppListDropdown />
+      <NotificationDropdown
+        userObject={currentUser}
+        accessToken={accessToken}
+      />
+      <AppListDropdown
+        currentApp={currentApp}
+      />
       <ToggleLangDropdown
         currentLang={currentLang}
         onResultClick={(e) => {
@@ -45,15 +52,14 @@ const GlobalNav = (props) => {
 };
 
 GlobalNav.defaultProps = {
-  test: 'prop test',
   currentLang: 'en_CA',
   onLanguageResultClick: () => {},
   currentUser: null,
+  currentApp: {},
+  accessToken: '',
 };
 
 GlobalNav.propTypes = {
-  /** This is an example prop called "test". */
-  test: PropTypes.string,
   /** This is the current language of the app */
   currentLang: PropTypes.string,
   /** Function will pass the selected language to parent */
@@ -67,7 +73,19 @@ GlobalNav.propTypes = {
     /** Logged in user's avatar */
     avatar: PropTypes.string,
   }),
+  /** Logged in user's access token */
+  accessToken: PropTypes.string,
+  /** Information about the parent App */
+  currentApp: PropTypes.shape({
+    /** A unique client ID for the App */
+    id: PropTypes.string,
+    /** The name of the App */
+    name: PropTypes.string,
+    /** The home page URL of the App */
+    homeLink: PropTypes.string,
+    /** Logo / Icon / Image url for the App */
+    logo: PropTypes.string,
+  }),
 };
 
 export default GlobalNav;
-
