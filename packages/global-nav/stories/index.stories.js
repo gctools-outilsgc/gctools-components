@@ -18,5 +18,25 @@ storiesOf('GlobalNav', module)
         <GlobalNav />
       </div>
     )),
+  )
+  .add(
+    'With Logged in User',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div style={{ margin: '20px' }} className="gn-story-holder">
+        <GlobalNav
+          currentUser={
+            {
+              gcID: '1',
+              name: 'Jonald',
+              avatar: 'url.com',
+            }
+          }
+        />
+      </div>
+    ))
   );
 
