@@ -9,6 +9,7 @@ import AppListDropdown from './components/AppListDropdown';
 import ToggleLangDropdown from './components/ToggleLangDropdown';
 import HelpDropdown from './components/HelpDropdown';
 import NotificationDropdown from './components/NotificationDropdown';
+import TopNavBar from './components/TopNavBar';
 
 /**
  * Global navigation react component for OADW apps.
@@ -26,32 +27,39 @@ const GlobalNav = (props) => {
   } = props;
 
   return (
-    <div className="gn-holder">
-      <LoginDropdown
-        userObject={currentUser}
-        oidcConfig={oidcConfig}
-        doLogin={doLogin}
-      />
-      <NotificationDropdown
-        userObject={currentUser}
-        accessToken={accessToken}
-      />
-      <AppListDropdown
-        currentApp={currentApp}
-      />
-      <ToggleLangDropdown
-        currentLang={currentLang}
-        onResultClick={(e) => {
-          //TODO Send e to parent
-          onLanguageResultClick(e);
-          console.log(e);
-        }}
-      />
-      <HelpDropdown
-        currentApp={currentApp}
-        //TODO this could just exist in this component
-        windowLocation={window.location.href}
-      />
+    <div>
+      <div>
+        <TopNavBar 
+          currentApp={currentApp}
+        />
+      </div>
+      <div className="gn-holder">
+        <LoginDropdown
+          userObject={currentUser}
+          oidcConfig={oidcConfig}
+          doLogin={doLogin}
+        />
+        <NotificationDropdown
+          userObject={currentUser}
+          accessToken={accessToken}
+        />
+        <AppListDropdown
+          currentApp={currentApp}
+        />
+        <ToggleLangDropdown
+          currentLang={currentLang}
+          onResultClick={(e) => {
+            //TODO Send e to parent
+            onLanguageResultClick(e);
+            console.log(e);
+          }}
+        />
+        <HelpDropdown
+          currentApp={currentApp}
+          //TODO this could just exist in this component
+          windowLocation={window.location.href}
+        />
+      </div>
     </div>
   );
 };
