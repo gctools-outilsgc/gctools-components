@@ -20,8 +20,18 @@
   /* Change to absolute? */
   position: absolute;
   top: 0;
-  /* To do the slide toggle we can adjust the right and the body can have no overflow */
   right: 0;
+  -webkit-transition: transform 0.45s ease-out;
+  -moz-transition: transform 0.45s ease-out;
+  -o-transition: transform 0.45s ease-out;
+  transition: transform 0.45s ease-out;
+}
+
+.gn-minimize {
+  -ms-transform: translateX(180px);
+  -moz-transform: translateX(180px);
+  -webkit-transform: translateX(180px);
+  transform: translateX(180px);
 }
 
 .top_bar{

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import '@gctools-components/aurora-css/css/aurora.min.css';
 import './css/style.css';
 
+import SidebarToggle from './components/SidebarToggle';
 import LoginDropdown from './components/LoginDropdown';
 import AppListDropdown from './components/AppListDropdown';
 import ToggleLangDropdown from './components/ToggleLangDropdown';
@@ -24,16 +25,25 @@ const GlobalNav = (props) => {
     oidcConfig,
     doLogin,
     accessToken,
+    minimized,
+    onToggleResultClick,
   } = props;
 
   return (
     <div>
       <div>
-        <TopNavBar 
+        <TopNavBar
           currentApp={currentApp}
         />
       </div>
-      <div className="gn-holder">
+      <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
+        <SidebarToggle
+          minimized={minimized}
+          onResultClick={(e) => {
+            onToggleResultClick(e);
+            console.log(e);
+          }}
+        />
         <LoginDropdown
           userObject={currentUser}
           oidcConfig={oidcConfig}
@@ -80,6 +90,8 @@ GlobalNav.defaultProps = {
     silent_redirect_uri: 'http://localhost:8081/#!silent',
   },
   doLogin: () => {},
+  minimized: false,
+  onToggleResultClick: () => {},
 };
 
 GlobalNav.propTypes = {
@@ -113,6 +125,10 @@ GlobalNav.propTypes = {
   oidcConfig: PropTypes.shape({}),
   /** Login function from the parent App */
   doLogin: PropTypes.func,
+  /** Display status for sidebar*/
+  minimized: PropTypes.bool,
+  /** Function will pass the sidebar status to parent */
+  onToggleResultClick: PropTypes.func,
 };
 
 export default GlobalNav;

@@ -1,5 +1,6 @@
 {
   "name": "@gctools-components/global-nav",
+  "version":"0.3.0",
   "description": "Global navigation react component for OADW apps.",
   "main": "dist/index.js",
   "repository": {
