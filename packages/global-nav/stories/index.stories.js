@@ -71,6 +71,7 @@ storiesOf('GlobalNav', module)
           }
           currentApp={
             {
+              name: 'Another App',
               id: '2',
             }
           }

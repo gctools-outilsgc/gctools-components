@@ -28,19 +28,19 @@ const NotificationDropdown = (props) => {
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem>
-                A notifcation?
+                You've got Mail!
               </DropdownItem>
               <DropdownItem>
-                A notifcation?
+                You've got Mail!
               </DropdownItem>
               <DropdownItem>
-                A notifcation?
+                You've got Mail!
               </DropdownItem>
               <DropdownItem>
-                A notifcation?
+                You've got Mail!
               </DropdownItem>
               <DropdownItem>
-                A notifcation?
+                You've got Mail!
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>

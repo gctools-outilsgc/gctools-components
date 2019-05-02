@@ -20,6 +20,8 @@ const GlobalNav = (props) => {
     currentApp,
     onLanguageResultClick,
     currentUser,
+    oidcConfig,
+    doLogin,
     accessToken,
   } = props;
 
@@ -27,6 +29,8 @@ const GlobalNav = (props) => {
     <div className="gn-holder">
       <LoginDropdown
         userObject={currentUser}
+        oidcConfig={oidcConfig}
+        doLogin={doLogin}
       />
       <NotificationDropdown
         userObject={currentUser}
@@ -44,6 +48,7 @@ const GlobalNav = (props) => {
         }}
       />
       <HelpDropdown
+        currentApp={currentApp}
         //TODO this could just exist in this component
         windowLocation={window.location.href}
       />
@@ -57,6 +62,16 @@ GlobalNav.defaultProps = {
   currentUser: null,
   currentApp: {},
   accessToken: '',
+  oidcConfig: {
+    authority: 'http://localhost:8080',
+    client_id: 'js',
+    redirect_uri: 'http://localhost:8081/#!callback',
+    response_type: 'id_token token',
+    scope: 'openid profile api1',
+    post_logout_redirect_uri: 'http://localhost:8081/#!logout',
+    silent_redirect_uri: 'http://localhost:8081/#!silent',
+  },
+  doLogin: () => {},
 };
 
 GlobalNav.propTypes = {
@@ -86,6 +101,10 @@ GlobalNav.propTypes = {
     /** Logo / Icon / Image url for the App */
     logo: PropTypes.string,
   }),
+  /** The Open ID config for the parent App */
+  oidcConfig: PropTypes.shape({}),
+  /** Login function from the parent App */
+  doLogin: PropTypes.func,
 };
 
 export default GlobalNav;
