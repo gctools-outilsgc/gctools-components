@@ -1,17 +1,20 @@
 import React from 'react'; import PropTypes from 'prop-types'; 
 import { Row, Col } from "reactstrap";
-import FlagEN from "./sig-en-w.png"
+import FlagEN from "./sig-en-w.png";
+
 const TopNavBar = (props) => {
   const {
     currentApp,
   } = props;
+
   return (
     <div className= 'top_bar'>
       <div className = "containerGoC"><img className = "flag" src={FlagEN} alt="Government of Canada" /></div>
-      <div className = "appName">App name</div>
+      <div className = "appName">{currentApp.name}</div>
 </div>
   );
 };
+
 TopNavBar.defaultProps = {
   currentApp: {
     name: 'AppName',
@@ -20,6 +23,7 @@ TopNavBar.defaultProps = {
     logo: ''
   },
 };
+
 TopNavBar.propTypes = {
   /** Current app object name, ID, home link and logo */
   currentApp: PropTypes.shape({
@@ -29,4 +33,5 @@ TopNavBar.propTypes = {
     logo: PropTypes.string,
   }),
 };
+
 export default TopNavBar;
