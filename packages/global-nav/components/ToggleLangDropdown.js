@@ -16,7 +16,7 @@ const ToggleLangDropdown = (props) => {
   return (
     <UncontrolledDropdown direction="left">
       <DropdownToggle caret>
-        {(currentLang == 'en_CA') ? 'EN' : 'FR'}
+        {(currentLang == 'en_CA') ? 'English' : 'Français'}
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem onClick={() => onResultClick('en_CA')}>
@@ -24,7 +24,7 @@ const ToggleLangDropdown = (props) => {
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem onClick={() => onResultClick('fr_CA')}>
-          <span>{(currentLang == 'fr_CA') ? '$Sel ' : ''}</span>French
+          <span>{(currentLang == 'fr_CA') ? '$Sel ' : ''}</span>Français
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
