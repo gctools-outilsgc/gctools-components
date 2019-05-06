@@ -15,7 +15,7 @@ const ToggleLangDropdown = (props) => {
   } = props;
   return (
     <UncontrolledDropdown direction="left">
-      <DropdownToggle caret>
+      <DropdownToggle className="gn-dd-btn">
         {(currentLang == 'en_CA') ? 'English' : 'Français'}
       </DropdownToggle>
       <DropdownMenu>

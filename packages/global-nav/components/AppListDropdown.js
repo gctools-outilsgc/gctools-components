@@ -45,7 +45,7 @@ const AppListDropdown = (props) => {
 
   return (
     <UncontrolledDropdown direction="left">
-      <DropdownToggle caret>
+      <DropdownToggle className="gn-dd-btn">
         Apps {currentApp.id}
       </DropdownToggle>
       <DropdownMenu>

@@ -15,7 +15,7 @@ const HelpDropdown = (props) => {
   } = props;
   return (
     <UncontrolledDropdown direction="left">
-      <DropdownToggle caret>
+      <DropdownToggle className="gn-dd-btn">
         Help
       </DropdownToggle>
       <DropdownMenu>

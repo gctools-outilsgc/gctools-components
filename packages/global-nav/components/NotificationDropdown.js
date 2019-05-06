@@ -23,7 +23,7 @@ const NotificationDropdown = (props) => {
       {userObject ? (
         <div className="query-maybe-it-might-get-mad">
           <UncontrolledDropdown direction="left">
-            <DropdownToggle caret>
+            <DropdownToggle className="gn-dd-btn">
               {userObject.gcID} / {accessToken} / Add count
             </DropdownToggle>
             <DropdownMenu>

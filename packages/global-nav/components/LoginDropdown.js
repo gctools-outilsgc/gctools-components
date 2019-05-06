@@ -22,7 +22,7 @@ const LoginDropdown = (props) => {
     <div>
       {userObject ? (
         <UncontrolledDropdown direction="left">
-          <DropdownToggle caret>
+          <DropdownToggle className="gn-dd-btn">
             {userObject.avatar} / {userObject.name}
           </DropdownToggle>
           <DropdownMenu>
@@ -46,6 +46,7 @@ const LoginDropdown = (props) => {
           >
             {({ onClick }) => (
               <Button
+                className="gn-dd-btn"
                 onClick={(e) => {
                   e.stopPropagation();
                   onClick(e);
