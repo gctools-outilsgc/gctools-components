@@ -8,6 +8,14 @@ import {
   DropdownItem
 } from 'reactstrap';
 
+const checkMark = (
+  <span className="checkmark">
+    <div className="checkmark_stem"></div>
+    <div className="checkmark_kick"></div>
+    <span className="sr-only">Current Lang</span>
+  </span>
+);
+
 const ToggleLangDropdown = (props) => {
   const {
     currentLang,
@@ -20,11 +28,11 @@ const ToggleLangDropdown = (props) => {
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem onClick={() => onResultClick('en_CA')}>
-          <span>{(currentLang == 'en_CA') ? '$Sel ' : ''}</span>English
+          <span>{(currentLang == 'en_CA') ? checkMark : ''}</span>English
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem onClick={() => onResultClick('fr_CA')}>
-          <span>{(currentLang == 'fr_CA') ? '$Sel ' : ''}</span>Français
+          <span>{(currentLang == 'fr_CA') ? checkMark : ''}</span>Français
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
