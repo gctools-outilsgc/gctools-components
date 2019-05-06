@@ -8,10 +8,21 @@ const TopNavBar = (props) => {
   } = props;
 
   return (
-    <div className= 'top_bar'>
-      <div className = "containerGoC"><img className = "flag" src={FlagEN} alt="Government of Canada" /></div>
-      <div className = "appName">{currentApp.name}</div>
-</div>
+    <nav className="top_bar shadow-sm">
+      <div className="containerGoC">
+        <img className="flag" src={FlagEN} alt="Government of Canada" />
+      </div>
+      <a className="gn-app-brand d-flex" href={currentApp.home}>
+        <img
+          src={currentApp.logo}
+          alt=""
+          className="gn-app-logo align-self-center"
+        />
+        <div className="align-self-center">
+          {currentApp.name}
+        </div>
+      </a>
+    </nav>
   );
 };
 

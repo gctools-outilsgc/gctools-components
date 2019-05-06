@@ -37,14 +37,42 @@
 .top_bar{
   background-image: linear-gradient(to right, #137991, #15A3A6);
   display: flex;
+  padding: 12px 18px;
+  position: relative;
+}
+
+.top_bar .gn-app-brand {
+  font-weight: bold;
+  color: white !important;
+  font-size: 1.2rem;
+  margin-left: 30px;
+}
+
+.top_bar .gn-app-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.gn-btn-sidebar-toggle {
+  padding: 17px 17px 18px 17px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.15) !important;
+  border-radius: 0px !important;
+  background-color: #15A3A6;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.gn-btn-sidebar-toggle:hover {
+  background-color: #137991;
 }
 
 .containerGoC {
-position: relative;
 display: inline-block;
-padding: 0.5em;
 color: #fff;
-width: 30% !important;
+width: 255px !important;
 z-index: 50;
 }
 
@@ -59,10 +87,10 @@ background: #000;
 -webkit-transform-origin: 100% 0;
 -ms-transform-origin: 100% 0;
 transform-origin: 100% 0;
--webkit-transform: skew(-45deg);
--ms-transform: skew(-45deg);
-transform: skew(-45deg);
-width: 390px !important;
+-webkit-transform: skew(-35deg);
+-ms-transform: skew(-35deg);
+transform: skew(-35deg);
+width: 305px !important;
 z-index: 50;
 }
 
@@ -75,7 +103,6 @@ z-index: 50;
   position: relative;
   z-index: 100;
   vertical-align: middle;
-  height: 28px;
 }
 
 .flag.resize {

@@ -73,6 +73,8 @@ storiesOf('GlobalNav', module)
             {
               name: 'Another App',
               id: '2',
+              home: '!#',
+              logo: 'https://github.com/gctools-outilsgc/gcconnex/blob/master/mod/wet4/graphics/gc_connex_icon.gif?raw=true',
             }
           }
         />
