@@ -69,6 +69,13 @@ const GlobalNav = (props) => {
           //TODO this could just exist in this component
           windowLocation={window.location.href}
         />
+        {currentUser ? '' :(
+          <div className="gn-not-logged-cta">
+            <div>Welcome!</div>
+            <div>You are not logged in. Why not? It's free.</div>
+            <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
+          </div>
+        )}
       </div>
     </div>
   );

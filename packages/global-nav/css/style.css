@@ -25,6 +25,9 @@
   -moz-transition: transform 0.45s ease-out;
   -o-transition: transform 0.45s ease-out;
   transition: transform 0.45s ease-out;
+  background-image:url('../assets/sidebar-bg-flare.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .gn-minimize {
@@ -34,8 +37,18 @@
   transform: translateX(180px);
 }
 
+.gn-not-logged-cta {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.gn-not-logged-cta div {
+  margin-bottom: 15px;
+}
+
 .top_bar{
-  background-image: linear-gradient(to right, #137991, #15A3A6);
+  background-image: linear-gradient(to right, #0D7586, #0D84B9);
   display: flex;
   padding: 12px 18px;
   position: relative;
@@ -60,12 +73,12 @@
   border: none;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.15) !important;
   border-radius: 0px !important;
-  background-color: #15A3A6;
+  background-color: #0D84B9;
   color: white;
 }
 
 .gn-btn-sidebar-toggle:hover {
-  background-color: #137991;
+  background-color: #0D7586;
 }
 
 .gn-dd-btn {
@@ -74,12 +87,12 @@
   border: none;
   border-radius: 0;
   text-align: left;
-  color: #137991;
+  color: #0D7586;
 }
 
 .gn-dd-btn:hover {
   background-color: lightgray;
-  color: #137991; 
+  color: #0D7586; 
 }
 
 .containerGoC {
@@ -138,7 +151,7 @@ z-index: 50;
   position: absolute;
   width:3px;
   height:9px;
-  background-color:#137991;
+  background-color:#0D7586;
   left:11px;
   top:6px;
 }
@@ -147,7 +160,7 @@ z-index: 50;
   position: absolute;
   width:3px;
   height:3px;
-  background-color:#137991;
+  background-color:#0D7586;
   left:8px;
   top:12px;
 }
