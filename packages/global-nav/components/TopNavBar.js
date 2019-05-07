@@ -1,6 +1,7 @@
 import React from 'react'; import PropTypes from 'prop-types'; 
 import { Row, Col } from "reactstrap";
 import FlagEN from "./sig-en-w.png";
+import Search from "./Search";
 
 const TopNavBar = (props) => {
   const {
@@ -22,6 +23,9 @@ const TopNavBar = (props) => {
           {currentApp.name}
         </div>
       </a>
+      <div className="search-box">
+        <Search />
+      </div>
     </nav>
   );
 };
