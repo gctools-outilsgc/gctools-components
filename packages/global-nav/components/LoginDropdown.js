@@ -37,14 +37,14 @@ const LoginDropdown = (props) => {
             </div>
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem>
-              Profile {userObject.gcID}
+            <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.gcID}`}>
+              My Profile
             </DropdownItem>
-            <DropdownItem>
-              More Links
+            <DropdownItem href="https://account.gccollab.ca/profile/">
+              Reset Password
             </DropdownItem>
-            <DropdownItem>
-              More Links
+            <DropdownItem href="https://account.gccollab.ca/securitypages/">
+              Account Settings
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
