@@ -24,8 +24,17 @@ const LoginDropdown = (props) => {
     <div>
       {userObject ? (
         <UncontrolledDropdown direction="left">
-          <DropdownToggle className="gn-dd-btn">
-            {userObject.avatar} / {userObject.name}
+          <DropdownToggle className="gn-dd-btn d-flex">
+            <div className="align-self-center">
+              <img
+                className="gn-avatar"
+                src={userObject.avatar}
+                alt=""
+              />
+            </div>
+            <div className="align-self-center pl-2">
+              {userObject.name}
+            </div>
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem>

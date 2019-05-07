@@ -46,7 +46,7 @@ storiesOf('GlobalNav', module)
             {
               gcID: '1',
               name: 'Jonald',
-              avatar: 'url.com',
+              avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
         />
@@ -66,7 +66,7 @@ storiesOf('GlobalNav', module)
             {
               gcID: '1',
               name: 'Jonald',
-              avatar: 'url.com',
+              avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
           currentApp={
@@ -109,7 +109,7 @@ storiesOf('GlobalNav', module)
             {
               gcID: '1',
               name: 'Jonald',
-              avatar: 'url.com',
+              avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
           currentApp={

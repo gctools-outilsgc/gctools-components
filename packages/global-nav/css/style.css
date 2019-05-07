@@ -31,6 +31,12 @@
   background-size: cover;
 }
 
+.gn-avatar {
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+}
+
 .gn-minimize {
   -ms-transform: translateX(180px);
   -moz-transform: translateX(180px);
