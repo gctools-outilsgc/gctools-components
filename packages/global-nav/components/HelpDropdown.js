@@ -8,6 +8,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
+import helpIcon from '../assets/help-icon.gif';
+
 const HelpDropdown = (props) => {
   const {
     currentApp,
@@ -15,8 +17,13 @@ const HelpDropdown = (props) => {
   } = props;
   return (
     <UncontrolledDropdown direction="left">
-      <DropdownToggle className="gn-dd-btn">
-        Help
+      <DropdownToggle className="gn-dd-btn d-flex">
+        <div className="align-self-center">
+          <img src={helpIcon} alt="" />
+        </div>
+        <div className="align-self-center pl-2">
+          Help
+        </div>
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem>

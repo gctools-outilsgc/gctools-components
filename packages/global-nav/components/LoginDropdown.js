@@ -11,6 +11,8 @@ import {
   Button
 } from 'reactstrap';
 
+import signInIcon from '../assets/sign-in-icon.png';
+
 const LoginDropdown = (props) => {
   const {
     userObject,
@@ -46,13 +48,18 @@ const LoginDropdown = (props) => {
           >
             {({ onClick }) => (
               <Button
-                className="gn-dd-btn"
+                className="gn-dd-btn d-flex"
                 onClick={(e) => {
                   e.stopPropagation();
                   onClick(e);
                 }}
               >
-                Login
+                <div className="align-self-center">
+                  <img src={signInIcon} alt="" />
+                </div>
+                <div className="align-self-center pl-2">
+                  Login
+                </div>
               </Button>
             )}
           </Login>

@@ -15,7 +15,14 @@ const SidebarToggle = (props) => {
 
   return (
     <div>
-      <Button onClick={() => onResultClick(status)} className="gn-btn-sidebar-toggle">
+      <Button
+        onClick={() => onResultClick(status)}
+        className={
+          (minimized) ? 
+            'gn-btn-sidebar-toggle gn-minimize' :
+            'gn-btn-sidebar-toggle show'
+        }
+      >
         Toggle
       </Button>
     </div>

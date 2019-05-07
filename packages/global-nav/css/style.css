@@ -15,11 +15,12 @@
 
 .gn-holder {
   height: 100vh;
-  width: 275px;
+  width: 240px;
   background: #fafafa;
+  border-left: 1px solid #D3D3D3;
   /* Change to absolute? */
   position: absolute;
-  top: 0;
+  top: 62px;
   right: 0;
   -webkit-transition: transform 0.45s ease-out;
   -moz-transition: transform 0.45s ease-out;
@@ -47,6 +48,10 @@
   margin-bottom: 15px;
 }
 
+.gn-toggle-holder {
+  
+}
+
 .top_bar{
   background-image: linear-gradient(to right, #0D7586, #0D84B9);
   display: flex;
@@ -69,12 +74,20 @@
 
 .gn-btn-sidebar-toggle {
   padding: 17px 17px 18px 17px;
-  width: 100%;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 239px;
   border: none;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.15) !important;
   border-radius: 0px !important;
-  background-color: #0D84B9;
+  background-color: transparent;
   color: white;
+  z-index: 99999;
+  -webkit-transition: transform 0.45s ease-out;
+  -moz-transition: transform 0.45s ease-out;
+  -o-transition: transform 0.45s ease-out;
+  transition: transform 0.45s ease-out;
 }
 
 .gn-btn-sidebar-toggle:hover {
@@ -83,7 +96,7 @@
 
 .gn-dd-btn {
   width: 100%;
-  padding: 15px 15px;
+  padding: 5px !important;
   border: none;
   border-radius: 0;
   text-align: left;

@@ -8,7 +8,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-
+import appWaffle from '../assets/app-waffle.gif';
 
 const AppListDropdown = (props) => {
   const {
@@ -45,8 +45,13 @@ const AppListDropdown = (props) => {
 
   return (
     <UncontrolledDropdown direction="left">
-      <DropdownToggle className="gn-dd-btn">
-        Apps {currentApp.id}
+      <DropdownToggle className="gn-dd-btn d-flex">
+        <div className="align-self-center">
+          <img src={appWaffle} alt="" />
+        </div>
+        <div className="align-self-center pl-2">
+          Apps {currentApp.id}
+        </div>
       </DropdownToggle>
       <DropdownMenu>
         {listComponent}

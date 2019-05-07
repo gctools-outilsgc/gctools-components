@@ -35,8 +35,6 @@ const GlobalNav = (props) => {
         <TopNavBar
           currentApp={currentApp}
         />
-      </div>
-      <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
         <SidebarToggle
           minimized={minimized}
           onResultClick={(e) => {
@@ -44,6 +42,8 @@ const GlobalNav = (props) => {
             console.log(e);
           }}
         />
+      </div>
+      <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
         <LoginDropdown
           userObject={currentUser}
           oidcConfig={oidcConfig}

@@ -8,6 +8,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
+import notificationBell from '../assets/notification-bell.gif';
+
 const NotificationDropdown = (props) => {
   const {
     userObject,
@@ -23,15 +25,20 @@ const NotificationDropdown = (props) => {
       {userObject ? (
         <div className="query-maybe-it-might-get-mad">
           <UncontrolledDropdown direction="left">
-            <DropdownToggle className="gn-dd-btn">
-              {userObject.gcID} / {accessToken} / Add count
+            <DropdownToggle className="gn-dd-btn d-flex">
+              <div className="align-self-center">
+                <img src={notificationBell} alt="" />
+              </div>
+              <div className="align-self-center pl-2">
+                Notifications
+              </div>
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem>
-                You've got Mail!
+                {userObject.gcID}
               </DropdownItem>
               <DropdownItem>
-                You've got Mail!
+                {accessToken}
               </DropdownItem>
               <DropdownItem>
                 You've got Mail!
