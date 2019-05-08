@@ -9,7 +9,7 @@ import {
 } from 'reactstrap';
 
 import helpIcon from '../assets/help-icon.gif';
-
+//This currently contains fake hrefs as examples
 const HelpDropdown = (props) => {
   const {
     currentApp,
@@ -26,19 +26,20 @@ const HelpDropdown = (props) => {
         </div>
       </DropdownToggle>
       <DropdownMenu>
-        <DropdownItem>
-          A bug for {currentApp.name}
+        <DropdownItem href={`somewhere.gccollab.ca/report?app=${currentApp.name}&url=${windowLocation}`}>
+          Report a Bug
+        </DropdownItem>
+        <DropdownItem href={`somewhere.gccollab.ca/feedback?app=${currentApp.name}`}>
+          Submit Feedback
         </DropdownItem>
         <DropdownItem>
-          Help Link
+          Account Issues
         </DropdownItem>
-        <DropdownItem>
-          <span>
-            {windowLocation}
-          </span>
+        <DropdownItem href={`somewhere.gccollab.ca/report?app=${currentApp.name}&url=${windowLocation}`}>
+          Report Content
         </DropdownItem>
-        <DropdownItem>
-          Hardcoded link example
+        <DropdownItem className="text-center bg-light" href="#">
+          Take me to Help Portal
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
