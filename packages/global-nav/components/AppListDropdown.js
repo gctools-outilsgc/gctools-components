@@ -17,29 +17,50 @@ const AppListDropdown = (props) => {
   // Hardcoded array of apps
   const appList = [
     {
-      'name':'Testing App',
+      'name':'GCCool',
       'color': 'red',
       'id': '1',
+      'logo': 'CO',
+      'desc': 'This app will allow you to order pizza',
     },
     {
-      'name': 'Another App',
+      'name': 'GCDiscuss',
       'color': 'blue',
       'id': '2',
+      'logo': 'DI',
+      'desc': 'This is the portal you always wanted',
     },
     {
-      'name': 'A Third App',
+      'name': 'GCAsk',
       'color': 'green',
       'id': '3',
+      'logo': 'AS',
+      'desc': 'Im not jaded ur jaded',
+    },
+    {
+      'name': 'GCTasks',
+      'color': 'pink',
+      'id': '4',
+      'logo': 'TA',
+      'desc': 'Look at me!',
     },
   ];
 
   //Map apps and Identify the app the user is currently on by App ID
   const listComponent = appList.map(a => (
-    <DropdownItem key={a.id}>
-      {(a.id == currentApp.id) ? 'Current App': ''}
-      <h5 style={{'color': a.color}}>
-        {a.name}
-      </h5>
+    <DropdownItem key={a.id} className="d-flex">
+      {/*(a.id == currentApp.id) ? 'Current App': ''*/}
+      <div className="gn-applist-logo align-self-center" style={{ 'backgroundColor': a.color }}>
+        <span>{a.logo}</span>
+      </div>
+      <div className="align-self-center ml-2">
+        <div className="h6 mb-0">
+          {a.name}
+        </div>
+        <small className="text-muted">
+          {a.desc}
+        </small>
+      </div>
     </DropdownItem>
   ));
 
@@ -55,6 +76,9 @@ const AppListDropdown = (props) => {
       </DropdownToggle>
       <DropdownMenu>
         {listComponent}
+        <DropdownItem className="text-center bg-light" href="#">
+          See All Apps
+        </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>
   );

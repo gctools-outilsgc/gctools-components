@@ -37,12 +37,26 @@
   padding: 8px;
 }
 
+/*
 .gn-holder .dropleft .dropdown-menu {
   top: 0;
   right: 100%;
   left: auto;
   margin-top: 0;
   margin-right: .5rem;
+}
+*/
+
+.gn-applist-logo {
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.gn-applist-logo span {
+  display: inline-block;
+  margin: 9px;
 }
 
 .gn-holder .dropleft .dropdown-menu:before {
