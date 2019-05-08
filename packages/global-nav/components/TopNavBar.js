@@ -5,8 +5,12 @@ import Search from "./Search";
 
 const TopNavBar = (props) => {
   const {
+    minimized,
     currentApp,
+    search,
   } = props;
+
+  const status = (minimized ? false : true);
 
   return (
     <nav className="top_bar shadow-sm">
@@ -23,8 +27,14 @@ const TopNavBar = (props) => {
           {currentApp.name}
         </div>
       </a>
-      <div className="search-box">
-        <Search />
+      <div className={
+          (minimized) ? 
+            'searchbox-close search-box' :
+            'search-box'
+        }>
+        <Search 
+         search={search}
+        />
       </div>
     </nav>
   );
