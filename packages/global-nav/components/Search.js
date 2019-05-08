@@ -1,21 +1,28 @@
 import React from 'react'; 
 import PropTypes from 'prop-types'; 
-import { Input } from "reactstrap"; 
+import { Input, Button } from "reactstrap"; 
+import langEn from '../assets/search.png';
 
 const Search = (props) => {
   const {
     currentApp,
+    search
   } = props;
   return (
-    <Input type="search" name="search" id="search" placeholder="search" />
+      <div className="searchContainer">
+
+        <Input className="searchBox" type="search" name="search" placeholder="Search" />
+        <Button className="btn-search" type="button"><img  className="searchIcon" src={langEn} alt="" /></Button>
+      </div>
   );
 };
 Search.defaultProps = {
   currentApp: {
     name: 'AppName',
     id: '1',
-    home: '#',
-    logo: ''
+  },
+  search: {
+    keyword:""
   },
 };
 Search.propTypes = {
@@ -23,8 +30,10 @@ Search.propTypes = {
   currentApp: PropTypes.shape({
     name: PropTypes.string,
     id: PropTypes.string,
-    home: PropTypes.string,
-    logo: PropTypes.string,
+  }),
+
+  search: PropTypes.shape({
+    keyword: PropTypes.string,
   }),
 };
 export default Search;

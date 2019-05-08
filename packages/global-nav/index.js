@@ -27,6 +27,7 @@ const GlobalNav = (props) => {
     accessToken,
     minimized,
     onToggleResultClick,
+    search,
   } = props;
 
   return (
@@ -34,6 +35,8 @@ const GlobalNav = (props) => {
       <div>
         <TopNavBar
           currentApp={currentApp}
+          minimized={minimized}
+          search={search}
         />
         <SidebarToggle
           minimized={minimized}
@@ -100,6 +103,7 @@ GlobalNav.defaultProps = {
   doLogin: () => {},
   minimized: false,
   onToggleResultClick: () => {},
+  search:""
 };
 
 GlobalNav.propTypes = {
@@ -137,6 +141,8 @@ GlobalNav.propTypes = {
   minimized: PropTypes.bool,
   /** Function will pass the sidebar status to parent */
   onToggleResultClick: PropTypes.func,
+  /**Send search keyword */
+  search: PropTypes.string,
 };
 
 export default GlobalNav;

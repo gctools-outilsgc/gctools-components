@@ -234,5 +234,55 @@ z-index: 50;
   top:12px;
 }
  .search-box{
-   margin-right:22%;
+  margin-right: 18%;
+  margin-left: auto;
  }
+
+ .searchbox-close{
+  margin-right: 4% !important;
+ }
+
+ .search{
+   border-radius:1rem;
+ }
+
+ .searchContainer {
+  display: inline-flex;
+  flex: 1 1 300px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.searchBox {
+  border: 0;
+  flex: 1;
+  height:auto;
+  box-shadow: none;
+}
+
+.searchIcon{
+  width:30px;
+  height:30px;
+}
+
+.btn-search{
+  border:none;
+  padding:0;
+}
+
+.btn-search:hover{
+  background-color: white;
+}
+
+.btn-search:active{
+  background-color: white !important;
+  box-shadow:none !important;
+}
+
+.btn-search:focus{
+ box-shadow:none;
+}
