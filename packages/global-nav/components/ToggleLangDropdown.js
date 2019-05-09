@@ -8,7 +8,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import langEn from '../assets/lang-bubble-en.png';
+import langEn from '../assets/enIcon.svg';
+import langFr from '../assets/frIcon.svg';
 
 const checkMark = (
   <span className="checkmark">
@@ -23,11 +24,14 @@ const ToggleLangDropdown = (props) => {
     currentLang,
     onResultClick,
   } = props;
+
+  const langIcon = (currentLang === 'en_CA' ? langEn : langFr );
+
   return (
     <UncontrolledDropdown direction="left">
       <DropdownToggle className="gn-dd-btn d-flex">
         <div className="align-self-center">
-          <img src={langEn} alt="" />
+          <img src={langIcon} alt="" className="lang-icon" />
         </div>
         <div className="align-self-center pl-2">
           {(currentLang == 'en_CA') ? 'English' : 'Français'}

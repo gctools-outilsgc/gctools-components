@@ -8,7 +8,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import notificationBell from '../assets/notification-bell.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 const NotificationDropdown = (props) => {
   const {
@@ -19,7 +20,7 @@ const NotificationDropdown = (props) => {
   //TODO query the notification LIST on dropdown click
   //TODO map the DropdownItems based on that query
   //TODO mutate the notifications on dropdown click
-  //TODO display something when all messages are read / deleted / it fetches nothing 
+  //TODO display something when all messages are read / deleted / it fetches nothing
   return (
     <div>
       {userObject ? (
@@ -27,7 +28,7 @@ const NotificationDropdown = (props) => {
           <UncontrolledDropdown direction="left">
             <DropdownToggle className="gn-dd-btn d-flex">
               <div className="align-self-center">
-                <img src={notificationBell} alt="" />
+                <FontAwesomeIcon icon={faBell} />
               </div>
               <div className="align-self-center pl-2">
                 Notifications

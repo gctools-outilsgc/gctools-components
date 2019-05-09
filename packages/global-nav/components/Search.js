@@ -1,18 +1,27 @@
-import React from 'react'; 
-import PropTypes from 'prop-types'; 
-import { Input, Button } from "reactstrap"; 
-import langEn from '../assets/search.png';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Input, Button } from "reactstrap";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Search = (props) => {
   const {
     currentApp,
+    currentLang,
     search
   } = props;
+
+  const searchAlt = (currentLang === 'en_CA' ? 'Search' : 'Chercher');
+
   return (
       <div className="searchContainer">
 
-        <Input className="searchBox" type="search" name="search" placeholder="Search" />
-        <Button className="btn-search" type="button"><img  className="searchIcon" src={langEn} alt="" /></Button>
+        <Input className="searchBox" type="search" name="search" placeholder={searchAlt} />
+        <Button className="btn-search" type="button">
+          <FontAwesomeIcon icon={faSearch} />
+          <span className="sr-only">{searchAlt}</span>
+        </Button>
       </div>
   );
 };

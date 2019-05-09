@@ -11,7 +11,8 @@ import {
   Button
 } from 'reactstrap';
 
-import signInIcon from '../assets/sign-in-icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 const LoginDropdown = (props) => {
   const {
@@ -64,7 +65,7 @@ const LoginDropdown = (props) => {
                 }}
               >
                 <div className="align-self-center">
-                  <img src={signInIcon} alt="" />
+                  <FontAwesomeIcon icon={faSignInAlt} />
                 </div>
                 <div className="align-self-center pl-2">
                   Login

@@ -8,7 +8,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import appWaffle from '../assets/app-waffle.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTh } from '@fortawesome/free-solid-svg-icons';
 
 const AppListDropdown = (props) => {
   const {
@@ -68,7 +69,7 @@ const AppListDropdown = (props) => {
     <UncontrolledDropdown direction="left">
       <DropdownToggle className="gn-dd-btn d-flex">
         <div className="align-self-center">
-          <img src={appWaffle} alt="" />
+          <FontAwesomeIcon icon={faTh} />
         </div>
         <div className="align-self-center pl-2">
           Apps {currentApp.id}

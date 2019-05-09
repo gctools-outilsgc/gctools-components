@@ -1,21 +1,27 @@
-import React from 'react'; import PropTypes from 'prop-types'; 
+import React from 'react'; import PropTypes from 'prop-types';
 import { Row, Col } from "reactstrap";
 import FlagEN from "./sig-en-w.png";
 import Search from "./Search";
 
+import SigEn from '../assets/sig-en.svg';
+import SigFr from '../assets/sig-fr.svg';
+
 const TopNavBar = (props) => {
   const {
     minimized,
+    currentLang,
     currentApp,
     search,
   } = props;
 
   const status = (minimized ? false : true);
+  const flag = (currentLang === 'en_CA' ? SigEn : SigFr );
+  const flagAlt = (currentLang === 'en_CA' ? 'Government of Canada' : 'Gouvernment du Canada' );
 
   return (
     <nav className="top_bar shadow-sm">
-      <div className="containerGoC">
-        <img className="flag" src={FlagEN} alt="Government of Canada" />
+      <div className="containerGoC align-self-center">
+        <img className="flag" src={flag} alt={flagAlt} />
       </div>
       <a className="gn-app-brand d-flex" href={currentApp.home}>
         <img
@@ -28,11 +34,12 @@ const TopNavBar = (props) => {
         </div>
       </a>
       <div className={
-          (minimized) ? 
+          (minimized) ?
             'searchbox-close search-box' :
             'search-box'
         }>
-        <Search 
+        <Search
+         currentLang={currentLang}
          search={search}
         />
       </div>

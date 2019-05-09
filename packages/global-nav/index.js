@@ -12,6 +12,8 @@ import HelpDropdown from './components/HelpDropdown';
 import NotificationDropdown from './components/NotificationDropdown';
 import TopNavBar from './components/TopNavBar';
 
+import Canada from './assets/wmms-spl.svg';
+
 /**
  * Global navigation react component for OADW apps.
  */
@@ -37,6 +39,7 @@ const GlobalNav = (props) => {
           currentApp={currentApp}
           minimized={minimized}
           search={search}
+          currentLang={currentLang}
         />
         <SidebarToggle
           minimized={minimized}
@@ -80,6 +83,9 @@ const GlobalNav = (props) => {
             <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
           </div>
         )}
+        <div className="gn-holder-foot">
+          <img src={Canada} alt="Canada" className="float-right" />
+        </div>
       </div>
     </div>
   );

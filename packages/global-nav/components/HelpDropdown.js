@@ -8,7 +8,9 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import helpIcon from '../assets/help-icon.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+
 //This currently contains fake hrefs as examples
 const HelpDropdown = (props) => {
   const {
@@ -19,7 +21,7 @@ const HelpDropdown = (props) => {
     <UncontrolledDropdown direction="left">
       <DropdownToggle className="gn-dd-btn d-flex">
         <div className="align-self-center">
-          <img src={helpIcon} alt="" />
+          <FontAwesomeIcon icon={faQuestionCircle} />
         </div>
         <div className="align-self-center pl-2">
           Help
