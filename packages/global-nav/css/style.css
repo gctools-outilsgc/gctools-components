@@ -13,9 +13,37 @@
   overflow: hidden;
 }
 
+.gn-story-holder>.gn-nav {
+  position:relative;
+}
+
+.gn-nav {
+  position: fixed;
+  width:100%;
+  top:0;
+  z-index:9999;
+}
+
+.gn-main-container {
+  -webkit-transition: 0.45s ease-out;
+  -moz-transition: 0.45s ease-out;
+  -o-transition: 0.45s ease-out;
+  transition: 0.45s ease-out;
+  width: 100%;
+  margin: 70px auto 0;
+  max-width: 1380px;
+  padding-right: 240px;
+}
+
+.gn-main-minimize {
+  max-width: 1200px;
+  padding-right: 60px;
+}
+
 .gn-holder {
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 240px;
+  padding-bottom: 60px;
   background: #fafafa;
   border-left: 1px solid #D3D3D3;
   /* Change to absolute? */

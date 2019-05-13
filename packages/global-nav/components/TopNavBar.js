@@ -1,6 +1,6 @@
 import React from 'react'; import PropTypes from 'prop-types';
 import { Row, Col } from "reactstrap";
-import FlagEN from "./sig-en-w.png";
+
 import Search from "./Search";
 
 import SigEn from '../assets/sig-en.svg';

@@ -33,7 +33,7 @@ const GlobalNav = (props) => {
   } = props;
 
   return (
-    <div>
+    <div className="gn-nav">
       <div>
         <TopNavBar
           currentApp={currentApp}

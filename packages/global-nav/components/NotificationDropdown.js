@@ -9,7 +9,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import notificationBell from '../assets/notification-bell.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -37,7 +38,7 @@ const NotificationDropdown = (props) => {
     return (
       <div>
          {userObject ? (
-          
+
           <Query
             query={GET_NOTIFICATIONS}
             variables={{ gcID }}
@@ -50,7 +51,7 @@ const NotificationDropdown = (props) => {
                 <UncontrolledDropdown direction="left">
                   <DropdownToggle className="gn-dd-btn d-flex">
                     <div className="align-self-center">
-                      <img src={notificationBell} alt="" />
+                      <FontAwesomeIcon icon={faBell} />
                     </div>
                     <div className="align-self-center pl-2">
                       Notifications

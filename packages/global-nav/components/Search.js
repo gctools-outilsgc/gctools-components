@@ -16,8 +16,16 @@ const Search = (props) => {
 
   return (
       <div className="searchContainer">
-
-        <Input className="searchBox" type="search" name="search" placeholder={searchAlt} />
+        <label htmlFor="search" className="sr-only">
+          {searchAlt}
+        </label>
+        <Input
+          className="searchBox"
+          type="search"
+          name="search"
+          id="search"
+          placeholder={searchAlt}
+        />
         <Button className="btn-search" type="button">
           <FontAwesomeIcon icon={faSearch} />
           <span className="sr-only">{searchAlt}</span>
