@@ -1,13 +1,52 @@
-
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-
+import apolloStorybookDecorator from 'apollo-storybook-react';
 import GlobalNav from '../index';
 
+const baseUserMock = () => {
+  return {
+    id: 122,
+    actionLevel: 'Featured',
+    gcID: '79',
+    email: {
+      subject: 'New notification',
+    },
+  };
+};
+
+const mocks = {
+
+  Notifications: () => {
+     return baseUserMock();
+  },
+}
+
+const typeDefs = `
+
+  type EmailInfo {
+    subject: String
+  }
+  type Notifications {
+    email: EmailInfo
+    id: Int
+  }
+  type Query {
+    notifications(gcID: String, actionLevel: String): [Notifications]
+  }
+  schema {
+    query: Query
+  }
+`;
+
 storiesOf('GlobalNav', module)
-  .add(
+.addDecorator(
+  apolloStorybookDecorator({
+    typeDefs,
+    mocks,
+  }),
+)
+.add(
     'Default options',
     withInfo({
       header: true,

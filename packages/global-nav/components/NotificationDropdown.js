@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,67 +9,70 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
+import notificationBell from '../assets/notification-bell.gif';
 
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+
+  const GET_NOTIFICATIONS = gql`
+  query notifications($gcID: String!){
+    notifications(gcID:$gcID, actionLevel:"Featured"){
+      id,
+      email{
+        subject,
+      }
+    }
+  }
+`;
 const NotificationDropdown = (props) => {
   const {
     userObject,
     accessToken,
   } = props;
-  //TODO query the notification COUNT on component render
-  //TODO query the notification LIST on dropdown click
-  //TODO map the DropdownItems based on that query
-  //TODO mutate the notifications on dropdown click
-  //TODO display something when all messages are read / deleted / it fetches nothing
-  return (
-    <div>
-      {userObject ? (
-        <div className="query-maybe-it-might-get-mad">
-          <UncontrolledDropdown direction="left">
-            <DropdownToggle className="gn-dd-btn d-flex">
-              <div className="align-self-center">
-                <FontAwesomeIcon icon={faBell} />
-              </div>
-              <div className="align-self-center pl-2">
-                Notifications
-              </div>
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem>
-                {userObject.gcID}
-              </DropdownItem>
-              <DropdownItem>
-                {accessToken}
-              </DropdownItem>
-              <DropdownItem>
-                You've got Mail!
-              </DropdownItem>
-              <DropdownItem>
-                You've got Mail!
-              </DropdownItem>
-              <DropdownItem>
-                You've got Mail!
-              </DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-        </div>
-      ) : ''}
-    </div>
-  );
-};
+  const gcID = '';
+  if(userObject){
+    const gcID = userObject.sub;
+  }
 
-NotificationDropdown.defaultProps = {
-  userObject: null,
-  accessToken: '',
-};
+    return (
+      <div>
+         {userObject ? (
+          
+          <Query
+            query={GET_NOTIFICATIONS}
+            variables={{ gcID }}
+          >
+            {({ loading, error, data }) => {
+              if (loading) return 'loading...';
+              if (error) return `Error!: ${error}`;
+              return (
+               <div className="query-maybe-it-might-get-mad">
+                <UncontrolledDropdown direction="left">
+                  <DropdownToggle className="gn-dd-btn d-flex">
+                    <div className="align-self-center">
+                      <img src={notificationBell} alt="" />
+                    </div>
+                    <div className="align-self-center pl-2">
+                      Notifications
+                    </div>
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    {data.notifications.map(notif => (
+                      <DropdownItem key={notif.id}>
+                        {notif.email.subject}
+                      </DropdownItem>
+                    ))}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </div>
+              );
+          }}
+          </Query>
+        ) : ''}
+      </div>
+    );
+  };
 
-NotificationDropdown.propTypes = {
-  userObject: PropTypes.shape({
-    gcID: PropTypes.string,
-    name: PropTypes.string,
-  }),
-  accessToken: PropTypes.string,
-};
+
 
 export default NotificationDropdown;
