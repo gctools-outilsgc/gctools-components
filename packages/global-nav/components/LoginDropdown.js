@@ -29,7 +29,7 @@ const LoginDropdown = (props) => {
             <div className="align-self-center">
               <img
                 className="gn-avatar"
-                src={userObject.avatar}
+                src={userObject.picture}
                 alt=""
               />
             </div>
@@ -99,7 +99,7 @@ LoginDropdown.propTypes = {
     /** GCID for user that comes back from openID provider */
     sub: PropTypes.string,
     name: PropTypes.string,
-    avatar: PropTypes.string,
+    picture: PropTypes.string,
   }),
   /** The parent App's openID config */
   oidcConfig: PropTypes.shape({}),
