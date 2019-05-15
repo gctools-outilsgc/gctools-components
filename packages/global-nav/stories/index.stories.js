@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import apolloStorybookDecorator from 'apollo-storybook-react';
-import GlobalNav from '../index';
+import GlobalNav from '../components/GlobalNav';
 
 const baseUserMock = () => {
   return {
