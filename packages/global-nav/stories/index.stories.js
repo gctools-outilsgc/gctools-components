@@ -83,7 +83,7 @@ storiesOf('GlobalNav', module)
         <GlobalNav
           currentUser={
             {
-              gcID: '22',
+              sub: '22',
               name: 'Jonald',
               avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
@@ -103,7 +103,7 @@ storiesOf('GlobalNav', module)
         <GlobalNav
           currentUser={
             {
-              gcID: '22',
+              sub: '22',
               name: 'Jonald',
               avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
@@ -146,7 +146,7 @@ storiesOf('GlobalNav', module)
           minimized
 	        currentUser={
             {
-              gcID: '22',
+              sub: '22',
               name: 'Jonald',
               avatar: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }

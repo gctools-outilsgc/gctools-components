@@ -38,7 +38,7 @@ const LoginDropdown = (props) => {
             </div>
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.gcID}`}>
+            <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.sub}`}>
               My Profile
             </DropdownItem>
             <DropdownItem href="https://account.gccollab.ca/profile/">
@@ -96,7 +96,8 @@ LoginDropdown.defaultProps = {
 LoginDropdown.propTypes = {
   /** Information about the logged in user */
   userObject: PropTypes.shape({
-    gcID: PropTypes.string,
+    /** GCID for user that comes back from openID provider */
+    sub: PropTypes.string,
     name: PropTypes.string,
     avatar: PropTypes.string,
   }),
