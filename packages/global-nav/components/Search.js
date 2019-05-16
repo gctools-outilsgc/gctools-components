@@ -9,10 +9,13 @@ const Search = (props) => {
   const {
     currentApp,
     currentLang,
-    search
   } = props;
 
   const searchAlt = (currentLang === 'en_CA' ? 'Search' : 'Chercher');
+
+  function SearchKey(){
+    console.log('search')
+  }
 
   return (
       <div className="searchContainer">
@@ -26,7 +29,7 @@ const Search = (props) => {
           id="search"
           placeholder={searchAlt}
         />
-        <Button className="btn-search" type="button">
+        <Button className="btn-search" type="button" onClick={() => SearchKey(this.handleClick)}>
           <FontAwesomeIcon icon={faSearch} />
           <span className="sr-only">{searchAlt}</span>
         </Button>
@@ -38,19 +41,24 @@ Search.defaultProps = {
     name: 'AppName',
     id: '1',
   },
-  search: {
-    keyword:""
-  },
+  SearchKey: () => {},
+  currentLang: 'en_CA',
+  onResultClick: () => {},
 };
+
+
 Search.propTypes = {
   /** Current app object name, ID, home link and logo */
   currentApp: PropTypes.shape({
     name: PropTypes.string,
     id: PropTypes.string,
   }),
+  /** Gets the current language of the application */
+  currentLang: PropTypes.string,
+  /** Gets the value of the option clicked */
+  onResultClick: PropTypes.func,
 
-  search: PropTypes.shape({
-    keyword: PropTypes.string,
-  }),
+  SearchKey: PropTypes.func
 };
+
 export default Search;
