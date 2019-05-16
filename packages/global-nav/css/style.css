@@ -323,6 +323,8 @@ z-index: 50;
   flex: 1;
   height:auto;
   box-shadow: none;
+  display:inline-flex;
+  width:auto;
 }
 
 .searchIcon{
