@@ -3,24 +3,24 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import apolloStorybookDecorator from 'apollo-storybook-react';
 import GlobalNav from '../index';
-
-const baseUserMock = () => {
-  return {
-    id: 122,
-    actionLevel: 'Featured',
-    gcID: '79',
-    email: {
-      subject: 'New notification',
-    },
-  };
-};
+import faker from "faker";
+import { MockList } from 'graphql-tools';
 
 const mocks = {
+  Notifications: () =>({
+    id: faker.random.number(100),
+      actionLevel: 'Featured',
+      gcID: '79',
+      email: {
+        subject: faker.name.findName()+' has posted a new discussion',
+      },
 
-  Notifications: () => {
-     return baseUserMock();
-  },
-}
+  }),
+
+  Query: () => ({
+    notifications: () => new MockList(4),
+  }),
+};
 
 const typeDefs = `
 
