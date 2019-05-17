@@ -11,24 +11,23 @@ const mocks = {
     id: faker.random.number(100),
       actionLevel: 'Featured',
       gcID: '79',
-      email: {
-        subject: faker.name.findName()+' has posted a new discussion',
+      online: {
+        titleEn: faker.name.findName()+' has posted a new discussion',
       },
 
   }),
-
   Query: () => ({
-    notifications: () => new MockList(4),
+    notifications: () => new MockList([0,4]),
   }),
 };
 
 const typeDefs = `
-
-  type EmailInfo {
-    subject: String
+  type OnlineInfo {
+    titleEn: String,
+    titleFr: String
   }
   type Notifications {
-    email: EmailInfo
+    online: OnlineInfo
     id: Int
   }
   type Query {
