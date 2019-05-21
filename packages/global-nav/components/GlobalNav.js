@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import '@gctools-components/aurora-css/css/aurora.min.css';
-import './css/style.css';
+import '../css/style.css';
 
-import SidebarToggle from './components/SidebarToggle';
-import LoginDropdown from './components/LoginDropdown';
-import AppListDropdown from './components/AppListDropdown';
-import ToggleLangDropdown from './components/ToggleLangDropdown';
-import HelpDropdown from './components/HelpDropdown';
-import NotificationDropdown from './components/NotificationDropdown';
-import TopNavBar from './components/TopNavBar';
+import SidebarToggle from './SidebarToggle';
+import LoginDropdown from './LoginDropdown';
+import AppListDropdown from './AppListDropdown';
+import ToggleLangDropdown from './ToggleLangDropdown';
+import HelpDropdown from './HelpDropdown';
+import NotificationDropdown from './NotificationDropdown';
+import TopNavBar from './TopNavBar';
 
-import Canada from './assets/wmms-spl.svg';
+import Canada from '../assets/wmms-spl.svg';
 
 /**
  * Global navigation react component for OADW apps.

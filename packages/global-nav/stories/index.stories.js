@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import apolloStorybookDecorator from 'apollo-storybook-react';
-import GlobalNav from '../index';
 import faker from "faker";
 import { MockList } from 'graphql-tools';
+import GlobalNav from '../components/GlobalNav';
 
 const mocks = {
   Notifications: () =>({
