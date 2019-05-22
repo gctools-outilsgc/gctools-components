@@ -73,6 +73,32 @@
   width: 113px;
 }
 
+.gn-mobile-menu {
+  max-width: 100%;
+  margin: 0;
+  background: #fafafa;
+}
+
+.gn-mobile-menu .modal-content {
+  height:100vh;
+}
+
+.gn-mobile-menu .modal-header {
+  padding: 0.8rem 1rem;
+}
+
+.gn-mobile-menu .modal-body {
+  background: #fafafa;
+}
+
+.gn-mobile-menu .modal-footer {
+  border-top: 2px solid #137991;
+}
+
+.gn-mobile-menu .modal-footer>img {
+  width: 90px;
+}
+
 .gn-avatar {
   width: 48px;
   height: 48px;
@@ -217,7 +243,7 @@
   border-radius: 0px !important;
   background-color: transparent;
   color: white;
-  z-index: 99999;
+  z-index: 99998;
   -webkit-transition: transform 0.45s ease-out;
   -moz-transition: transform 0.45s ease-out;
   -o-transition: transform 0.45s ease-out;

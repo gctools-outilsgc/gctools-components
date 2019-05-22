@@ -13,6 +13,7 @@ import ToggleLangDropdown from './ToggleLangDropdown';
 import HelpDropdown from './HelpDropdown';
 import NotificationDropdown from './NotificationDropdown';
 import TopNavBar from './TopNavBar';
+import MobileMenu from './MobileMenu';
 
 import Canada from '../assets/wmms-spl.svg';
 
