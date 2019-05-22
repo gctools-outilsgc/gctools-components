@@ -40,7 +40,7 @@ class MobileMenu extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.toggle}>Open me</Button>
+        <Button onClick={this.toggle} className="mobile-menu-btn">O</Button>
         <Modal zIndex="99999" isOpen={this.state.modal} toggle={this.toggle} className="gn-mobile-menu">
           <ModalHeader toggle={this.toggle}>GCTools</ModalHeader>
           <ModalBody>

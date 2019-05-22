@@ -7,6 +7,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import SigEn from '../assets/sig-en.svg';
 import SigFr from '../assets/sig-fr.svg';
 
+import MobileMenu from './MobileMenu';
+
 const TopNavBar = (props) => {
   const {
     minimized,
@@ -55,7 +57,7 @@ const TopNavBar = (props) => {
         </div>
         <nav className="top-bar-mobile shadow-sm" id="mobileNavBar">
           <button
-            className="btn mobile-menu-btn"
+            className="btn mobile-menu-btn mr-1"
             onClick={() => onMobileMenuClick()}
           >
             <FontAwesomeIcon icon={faBars} />
@@ -71,6 +73,9 @@ const TopNavBar = (props) => {
               {currentApp.name}
             </div>
           </a>
+          <div className="ml-auto">
+            <MobileMenu />  
+          </div>
         </nav>
       </MediaQuery>
     </div>
