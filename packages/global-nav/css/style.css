@@ -199,6 +199,13 @@
   margin-right: 10px;
 }
 
+.top-bar-mobile .mobile-menu-btn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  margin-right: 5px;
+}
+
 .gn-btn-sidebar-toggle {
   padding: 17px 17px 18px 17px;
   position: absolute;

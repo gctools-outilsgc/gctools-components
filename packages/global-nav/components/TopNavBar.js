@@ -1,7 +1,8 @@
 import React from 'react'; import PropTypes from 'prop-types';
-import { Row, Col } from "reactstrap";
 import MediaQuery from 'react-responsive';
 import Search from "./Search";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import SigEn from '../assets/sig-en.svg';
 import SigFr from '../assets/sig-fr.svg';
@@ -12,6 +13,7 @@ const TopNavBar = (props) => {
     currentLang,
     currentApp,
     search,
+    onMobileMenuClick,
   } = props;
 
   const status = (minimized ? false : true);
@@ -52,6 +54,13 @@ const TopNavBar = (props) => {
           <img className="flag" src={flag} alt={flagAlt} />
         </div>
         <nav className="top-bar-mobile shadow-sm" id="mobileNavBar">
+          <button
+            className="btn mobile-menu-btn"
+            onClick={() => onMobileMenuClick()}
+          >
+            <FontAwesomeIcon icon={faBars} />
+            <span className="sr-only">Menu</span>
+          </button>
           <a className="gn-app-brand d-flex" href={currentApp.home}>
             <img
               src={currentApp.logo}
@@ -75,6 +84,7 @@ TopNavBar.defaultProps = {
     home: '#',
     logo: ''
   },
+  onMobileMenuClick: () => {},
 };
 
 TopNavBar.propTypes = {
@@ -85,6 +95,8 @@ TopNavBar.propTypes = {
     home: PropTypes.string,
     logo: PropTypes.string,
   }),
+  /** Function for parent app to open mobile menu */
+  onMobileMenuClick: PropTypes.func,
 };
 
 export default TopNavBar;
