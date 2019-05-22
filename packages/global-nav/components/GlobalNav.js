@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import '@gctools-components/aurora-css/css/aurora.min.css';
 import '../css/style.css';
-import './utils.js';
+import '../assets/utils.js';
 import MediaQuery from 'react-responsive';
 
 import SidebarToggle from './SidebarToggle';
