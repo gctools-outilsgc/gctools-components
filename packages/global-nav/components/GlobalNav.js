@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import '@gctools-components/aurora-css/css/aurora.min.css';
 import '../css/style.css';
+import './utils.js';
+import MediaQuery from 'react-responsive';
 
 import SidebarToggle from './SidebarToggle';
 import LoginDropdown from './LoginDropdown';
@@ -33,60 +35,74 @@ const GlobalNav = (props) => {
   } = props;
 
   return (
-    <div className="gn-nav">
-      <div>
-        <TopNavBar
-          currentApp={currentApp}
-          minimized={minimized}
-          search={search}
-          currentLang={currentLang}
-        />
-        <SidebarToggle
-          minimized={minimized}
-          onResultClick={(e) => {
-            onToggleResultClick(e);
-            console.log(e);
-          }}
-        />
-      </div>
-      <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
-        <LoginDropdown
-          userObject={currentUser}
-          oidcConfig={oidcConfig}
-          doLogin={doLogin}
-        />
-        <NotificationDropdown
-          userObject={currentUser}
-          accessToken={accessToken}
-        />
-        <AppListDropdown
-          currentApp={currentApp}
-        />
-        <ToggleLangDropdown
-          currentLang={currentLang}
-          onResultClick={(e) => {
-            //TODO Send e to parent
-            onLanguageResultClick(e);
-            console.log(e);
-          }}
-        />
-        <HelpDropdown
-          currentApp={currentApp}
-          //TODO this could just exist in this component
-          windowLocation={window.location.href}
-        />
-        {currentUser ? '' :
-          minimized ? '' : (
-          <div className="gn-not-logged-cta">
-            <div>Welcome!</div>
-            <div>You are not logged in. Why not? It's free.</div>
-            <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
+    <div>
+      <MediaQuery query="(min-device-width: 1224px)">
+        <div className="gn-nav">
+          <div>
+            <TopNavBar
+              currentApp={currentApp}
+              minimized={minimized}
+              search={search}
+              currentLang={currentLang}
+            />
+            <SidebarToggle
+              minimized={minimized}
+              onResultClick={(e) => {
+                onToggleResultClick(e);
+                console.log(e);
+              }}
+            />
           </div>
-        )}
-        <div className="gn-holder-foot">
-          <img src={Canada} alt="Canada" className="float-right" />
+          <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
+            <LoginDropdown
+              userObject={currentUser}
+              oidcConfig={oidcConfig}
+              doLogin={doLogin}
+            />
+            <NotificationDropdown
+              userObject={currentUser}
+              accessToken={accessToken}
+            />
+            <AppListDropdown
+              currentApp={currentApp}
+            />
+            <ToggleLangDropdown
+              currentLang={currentLang}
+              onResultClick={(e) => {
+                //TODO Send e to parent
+                onLanguageResultClick(e);
+                console.log(e);
+              }}
+            />
+            <HelpDropdown
+              currentApp={currentApp}
+              //TODO this could just exist in this component
+              windowLocation={window.location.href}
+            />
+            {currentUser ? '' :
+              minimized ? '' : (
+              <div className="gn-not-logged-cta">
+                <div>Welcome!</div>
+                <div>You are not logged in. Why not? It's free.</div>
+                <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
+              </div>
+            )}
+            <div className="gn-holder-foot">
+              <img src={Canada} alt="Canada" className="float-right" />
+            </div>
+          </div>
         </div>
-      </div>
+      </MediaQuery>
+      <MediaQuery query="(max-device-width: 1224px)">
+        <div className="gn-nav">
+          <TopNavBar
+            currentApp={currentApp}
+            minimized={minimized}
+            search={search}
+            currentLang={currentLang}
+          />
+        </div>
+      </MediaQuery>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react'; import PropTypes from 'prop-types';
 import { Row, Col } from "reactstrap";
-
+import MediaQuery from 'react-responsive';
 import Search from "./Search";
 
 import SigEn from '../assets/sig-en.svg';
@@ -19,31 +19,52 @@ const TopNavBar = (props) => {
   const flagAlt = (currentLang === 'en_CA' ? 'Government of Canada' : 'Gouvernment du Canada' );
 
   return (
-    <nav className="top_bar shadow-sm">
-      <div className="containerGoC align-self-center">
-        <img className="flag" src={flag} alt={flagAlt} />
-      </div>
-      <a className="gn-app-brand d-flex" href={currentApp.home}>
-        <img
-          src={currentApp.logo}
-          alt=""
-          className="gn-app-logo align-self-center"
-        />
-        <div className="align-self-center">
-          {currentApp.name}
+    <div>
+      <MediaQuery query="(min-device-width: 1224px)">
+        <nav className="top_bar shadow-sm">
+          <div className="containerGoC align-self-center">
+            <img className="flag" src={flag} alt={flagAlt} />
+          </div>
+          <a className="gn-app-brand d-flex" href={currentApp.home}>
+            <img
+              src={currentApp.logo}
+              alt=""
+              className="gn-app-logo align-self-center"
+            />
+            <div className="align-self-center">
+              {currentApp.name}
+            </div>
+          </a>
+          <div className={
+              (minimized) ?
+                'searchbox-close search-box' :
+                'search-box'
+            }>
+            <Search
+            currentLang={currentLang}
+            search={search}
+            />
+          </div>
+        </nav>
+      </MediaQuery>
+      <MediaQuery query="(max-device-width: 1224px)">
+        <div className="bg-dark top-bar-mobile-fip" id="mobileFip" onScroll={() => {console.log('scrollin?')}}>
+          <img className="flag" src={flag} alt={flagAlt} />
         </div>
-      </a>
-      <div className={
-          (minimized) ?
-            'searchbox-close search-box' :
-            'search-box'
-        }>
-        <Search
-         currentLang={currentLang}
-         search={search}
-        />
-      </div>
-    </nav>
+        <nav className="top-bar-mobile shadow-sm" id="mobileNavBar">
+          <a className="gn-app-brand d-flex" href={currentApp.home}>
+            <img
+              src={currentApp.logo}
+              alt=""
+              className="gn-app-logo align-self-center"
+            />
+            <div className="align-self-center">
+              {currentApp.name}
+            </div>
+          </a>
+        </nav>
+      </MediaQuery>
+    </div>
   );
 };
 

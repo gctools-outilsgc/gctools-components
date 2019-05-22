@@ -170,6 +170,35 @@
   margin-right: 10px;
 }
 
+.top-bar-mobile {
+  background-image: linear-gradient(to right, #0D7586, #0D84B9);
+  display: flex;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  top: 48px;
+  transition: top 0.4s;
+}
+
+.top-bar-mobile .gn-app-brand {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.top-bar-mobile-fip {
+  position: absolute;
+  width: 100%;
+  padding: 12px 12px;
+  transition: top 0.4s;
+}
+
+.top-bar-mobile .gn-app-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
 .gn-btn-sidebar-toggle {
   padding: 17px 17px 18px 17px;
   position: absolute;
