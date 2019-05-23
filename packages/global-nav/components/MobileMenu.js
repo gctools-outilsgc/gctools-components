@@ -11,6 +11,7 @@ import {
 
 import Canada from '../assets/wmms-spl.svg';
 import MobileMenuSubModal from './MobileMenuSubModal';
+import MobileLang from './MobileLang';
 
 class MobileMenu extends React.Component {
   constructor() {
@@ -53,6 +54,7 @@ class MobileMenu extends React.Component {
             </ul>
             
             <MobileMenuSubModal closeAll={this.toggle} />
+            <MobileLang closeAll={this.toggle} />
 
           </ModalBody>
           <ModalFooter>

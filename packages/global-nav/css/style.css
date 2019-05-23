@@ -285,6 +285,25 @@
   filter: brightness(0) invert(1);
 }
 
+.gn-mobile-back-btn{
+  background: #fafafa !important;
+  border-bottom: 2px solid #ccc;
+}
+
+.gn-grid-btn {
+  width: 95px;
+  height: 95px;
+  border: none;
+  color: #0D7586;
+  text-align: center;
+}
+
+.gn-grid-btn .lang-icon {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
 .containerGoC {
 display: inline-block;
 color: #fff;
