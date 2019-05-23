@@ -18,9 +18,11 @@ class MobileMenuSubModal extends React.Component {
         super();
         this.state = {
           modal: false,
+          hideHeader: false,
         };
     
         this.toggle = this.toggle.bind(this);
+        this.closeEverything = this.closeEverything.bind(this);
     };
 
     toggle() {
@@ -29,7 +31,18 @@ class MobileMenuSubModal extends React.Component {
         }));
       }
 
+    closeEverything() {
+        this.toggle();
+        this.props.closeAll();
+        this.setState(prevState => ({
+            hideHeader: !prevState.hideHeader
+          }));
+    }
+
     render() {
+
+        const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
+
         return (
             <div>
                 <Button color="success" onClick={this.toggle}>Show Nested Modal</Button>
@@ -37,13 +50,15 @@ class MobileMenuSubModal extends React.Component {
                     className="gn-mobile-menu" 
                     zIndex="99999" 
                     isOpen={this.state.modal} 
-                    toggle={this.toggle} 
+                    toggle={this.toggle}
+                    wrapClassName="gn-sub-modal"
+                    backdrop={false}
                 >
-                    <ModalHeader toggle={this.props.closeAll}>Nested Modal title</ModalHeader>
+                    <ModalHeader className={hideHeaderClass} toggle={this.closeEverything}>GCTools</ModalHeader>
                     <ModalBody>Stuff and things</ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Done</Button>{' '}
-                        <Button color="secondary" onClick={this.props.closeAll}>All Done</Button>
+                        <Button size="sm" color="primary" onClick={this.toggle}>Done</Button>{' '}
+                        <Button size="sm" color="secondary" onClick={this.closeEverything} >All Done</Button>
                     </ModalFooter>
                 </Modal>
             </div>
