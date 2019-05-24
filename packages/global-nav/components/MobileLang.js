@@ -53,7 +53,9 @@ class MobileLang extends React.Component {
                     className="gn-mobile-menu" 
                     zIndex="99999" 
                     isOpen={this.state.modal} 
-                    toggle={this.toggle} 
+                    toggle={this.toggle}
+                    wrapClassName="gn-sub-modal"
+                    backdrop={false}
                 >
                     <ModalHeader toggle={this.props.closeAll}>Nested Modal title</ModalHeader>
                     <div>

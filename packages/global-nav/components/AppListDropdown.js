@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import MediaQuery from 'react-responsive';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTh } from '@fortawesome/free-solid-svg-icons';
@@ -65,23 +66,49 @@ const AppListDropdown = (props) => {
     </DropdownItem>
   ));
 
+  const mobileList = appList.map(a => (
+    <a href="#" className="d-flex" key={`m-${a.id}`}>
+      {/*(a.id == currentApp.id) ? 'Current App': ''*/}
+      <div className="gn-applist-logo align-self-center" style={{ 'backgroundColor': a.color }}>
+        <span>{a.logo}</span>
+      </div>
+      <div className="align-self-center ml-2">
+        <div className="h6 mb-0">
+          {a.name}
+        </div>
+        <small className="text-muted">
+          {a.desc}
+        </small>
+      </div>
+    </a>
+  ));
+
   return (
-    <UncontrolledDropdown direction="left">
-      <DropdownToggle className="gn-dd-btn d-flex">
-        <div className="align-self-center">
-          <FontAwesomeIcon icon={faTh} />
+    <div>
+      <MediaQuery query="(min-device-width: 1224px)">
+        <UncontrolledDropdown direction="left">
+          <DropdownToggle className="gn-dd-btn d-flex">
+            <div className="align-self-center">
+              <FontAwesomeIcon icon={faTh} />
+            </div>
+            <div className="align-self-center pl-2">
+              Apps {currentApp.id}
+            </div>
+          </DropdownToggle>
+          <DropdownMenu>
+            {listComponent}
+            <DropdownItem className="text-center bg-light" href="#">
+              See All Apps
+            </DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+      </MediaQuery>
+      <MediaQuery query="(max-device-width: 1224px)">
+        <div>
+          {mobileList}
         </div>
-        <div className="align-self-center pl-2">
-          Apps {currentApp.id}
-        </div>
-      </DropdownToggle>
-      <DropdownMenu>
-        {listComponent}
-        <DropdownItem className="text-center bg-light" href="#">
-          See All Apps
-        </DropdownItem>
-      </DropdownMenu>
-    </UncontrolledDropdown>
+      </MediaQuery>
+    </div>
   );
 };
 
