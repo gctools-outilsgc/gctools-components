@@ -14,6 +14,7 @@ import MobileMenuSubModal from './MobileMenuSubModal';
 import MobileLang from './MobileLang';
 import MobileAppList from './MobileAppList';
 import NotificationDropdown from './NotificationDropdown';
+import MobileHelp from './MobileHelp';
 
 class MobileMenu extends React.Component {
   constructor() {
@@ -69,7 +70,9 @@ class MobileMenu extends React.Component {
                 this.props.onLanguageResultClick(e);
               }}
             />
-
+            <MobileHelp
+              closeAll={this.toggle}
+            />
           </ModalBody>
           <ModalFooter>
             <img src={Canada} alt="Canada" className="float-right" />

@@ -568,3 +568,12 @@ z-index: 50;
   height: 13px;
   transform: rotate(-225deg) translateY(-1px);
 }
+
+.help-section{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.help-button{
+  white-space: unset;
+}
