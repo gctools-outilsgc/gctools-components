@@ -18,6 +18,7 @@ const TopNavBar = (props) => {
     onMobileMenuClick,
     userObject,
     accessToken,
+    onLanguageResultClick,
   } = props;
 
   const status = (minimized ? false : true);
@@ -80,7 +81,10 @@ const TopNavBar = (props) => {
               currentLang={currentLang}
               userObject={userObject}
               accessToken={accessToken}
-            />  
+              onLanguageResultClick={(e) => {
+                onLanguageResultClick(e);
+              }}
+            />
           </div>
         </nav>
       </MediaQuery>
@@ -96,6 +100,7 @@ TopNavBar.defaultProps = {
     logo: ''
   },
   onMobileMenuClick: () => {},
+  onLanguageResultClick: () => {},
 };
 
 TopNavBar.propTypes = {
@@ -108,6 +113,7 @@ TopNavBar.propTypes = {
   }),
   /** Function for parent app to open mobile menu */
   onMobileMenuClick: PropTypes.func,
+  onLanguageResultClick: PropTypes.func,
 };
 
 export default TopNavBar;

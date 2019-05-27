@@ -63,7 +63,12 @@ class MobileMenu extends React.Component {
               accessToken={this.props.accessToken}
             />
             <MobileAppList />
-            <MobileLang closeAll={this.toggle} />
+            <MobileLang
+              closeAll={this.toggle}
+              onResultClick={(e) => {
+                this.props.onLanguageResultClick(e);
+              }}
+            />
 
           </ModalBody>
           <ModalFooter>

@@ -9,6 +9,8 @@ import {
     Button
   } from 'reactstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTh } from '@fortawesome/free-solid-svg-icons';
 
 import AppListDropdown from './AppListDropdown';  
 /**
@@ -39,6 +41,7 @@ class MobileAppList extends React.Component {
         return (
             <div>
                 <Button className="d-flex gn-dd-btn" onClick={this.toggle}>
+                  <FontAwesomeIcon icon={faTh} />
                   Apps
                 </Button>
                 <Modal 

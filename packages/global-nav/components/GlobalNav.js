@@ -102,6 +102,10 @@ const GlobalNav = (props) => {
             currentLang={currentLang}
             userObject={currentUser}
             accessToken={accessToken}
+            onLanguageResultClick={(e) => {
+              onLanguageResultClick(e);
+              console.log(e);
+            }}
           />
         </div>
       </MediaQuery>

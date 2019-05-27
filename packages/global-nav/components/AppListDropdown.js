@@ -24,6 +24,7 @@ const AppListDropdown = (props) => {
       'id': '1',
       'logo': 'CO',
       'desc': 'This app will allow you to order pizza',
+      'link': '!#',
     },
     {
       'name': 'GCDiscuss',
@@ -31,6 +32,7 @@ const AppListDropdown = (props) => {
       'id': '2',
       'logo': 'DI',
       'desc': 'This is the portal you always wanted',
+      'link': '!#',
     },
     {
       'name': 'GCAsk',
@@ -38,6 +40,7 @@ const AppListDropdown = (props) => {
       'id': '3',
       'logo': 'AS',
       'desc': 'Im not jaded ur jaded',
+      'link': '!#',
     },
     {
       'name': 'GCTasks',
@@ -45,12 +48,13 @@ const AppListDropdown = (props) => {
       'id': '4',
       'logo': 'TA',
       'desc': 'Look at me!',
+      'link': '!#',
     },
   ];
 
   //Map apps and Identify the app the user is currently on by App ID
   const listComponent = appList.map(a => (
-    <DropdownItem key={a.id} className="d-flex">
+    <DropdownItem key={a.id} className="d-flex" href={a.link}>
       {/*(a.id == currentApp.id) ? 'Current App': ''*/}
       <div className="gn-applist-logo align-self-center" style={{ 'backgroundColor': a.color }}>
         <span>{a.logo}</span>
@@ -67,7 +71,7 @@ const AppListDropdown = (props) => {
   ));
 
   const mobileList = appList.map(a => (
-    <a href="#" className="d-flex" key={`m-${a.id}`}>
+    <a href={a.link} className="d-flex" key={`m-${a.id}`}>
       {/*(a.id == currentApp.id) ? 'Current App': ''*/}
       <div className="gn-applist-logo align-self-center" style={{ 'backgroundColor': a.color }}>
         <span>{a.logo}</span>
