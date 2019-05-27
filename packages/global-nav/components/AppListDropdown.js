@@ -71,7 +71,7 @@ const AppListDropdown = (props) => {
   ));
 
   const mobileList = appList.map(a => (
-    <a href={a.link} className="d-flex" key={`m-${a.id}`}>
+    <a href={a.link} className="d-flex mb-2" key={`m-${a.id}`}>
       {/*(a.id == currentApp.id) ? 'Current App': ''*/}
       <div className="gn-applist-logo align-self-center" style={{ 'backgroundColor': a.color }}>
         <span>{a.logo}</span>

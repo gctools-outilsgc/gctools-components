@@ -53,10 +53,21 @@ class MobileAppList extends React.Component {
                     backdrop={false}
                 >
                     <ModalHeader toggle={this.props.closeAll}>Nested Modal title</ModalHeader>
-                    <div>
-                      <Button className="d-flex gn-dd-btn gn-mobile-back-btn" onClick={this.toggle}>
+                    <div className="d-flex gn-dd-btn gn-mobile-back-btn">
+                      <div className="align-self-center" >
+                        <Button
+                            onClick={this.toggle}
+                            aria-label="Return"
+                        >
+                          <span className="gn-chevron-arrow-left"></span>
+                        </Button>
+                      </div>
+                      <div className="align-self-center">
+                        <FontAwesomeIcon icon={faTh} />
+                      </div>
+                      <div className="align-self-center pl-2">
                         Apps
-                      </Button>
+                      </div>
                     </div>
                     <ModalBody>
                       <AppListDropdown currentApp={currentApp} />

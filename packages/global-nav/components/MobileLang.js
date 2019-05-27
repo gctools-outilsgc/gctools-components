@@ -58,15 +58,21 @@ class MobileLang extends React.Component {
                     backdrop={false}
                 >
                     <ModalHeader toggle={this.props.closeAll}>Nested Modal title</ModalHeader>
-                    <div>
-                      <Button className="d-flex gn-dd-btn gn-mobile-back-btn" onClick={this.toggle}>
-                        <div className="align-self-center">
-                          <img src={langIcon} alt="" className="lang-icon" />
-                        </div>
-                        <div className="align-self-center pl-2">
-                          {(currentLang == 'en_CA') ? 'English' : 'Français'}
-                        </div>
-                      </Button>
+                    <div className="d-flex gn-dd-btn gn-mobile-back-btn">
+                      <div className="align-self-center" >
+                        <Button
+                            onClick={this.toggle}
+                            aria-label="Return"
+                        >
+                          <span className="gn-chevron-arrow-left"></span>
+                        </Button>
+                      </div>
+                      <div className="align-self-center">
+                        <img src={langIcon} alt="" className="lang-icon" />
+                      </div>
+                      <div className="align-self-center pl-2">
+                        {(currentLang == 'en_CA') ? 'English' : 'Français'}
+                      </div>
                     </div>
                     <ModalBody>
                       <div className="d-flex">
