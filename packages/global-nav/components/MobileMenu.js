@@ -13,6 +13,7 @@ import Canada from '../assets/wmms-spl.svg';
 import MobileMenuSubModal from './MobileMenuSubModal';
 import MobileLang from './MobileLang';
 import MobileAppList from './MobileAppList';
+import NotificationDropdown from './NotificationDropdown';
 
 class MobileMenu extends React.Component {
   constructor() {
@@ -55,8 +56,14 @@ class MobileMenu extends React.Component {
             </ul>
             
             <MobileMenuSubModal closeAll={this.toggle} />
-            <MobileLang closeAll={this.toggle} />
+            <NotificationDropdown
+              currentLang={this.props.currentLang}
+              closeAll={this.toggle}
+              userObject={this.props.userObject}
+              accessToken={this.props.accessToken}
+            />
             <MobileAppList />
+            <MobileLang closeAll={this.toggle} />
 
           </ModalBody>
           <ModalFooter>

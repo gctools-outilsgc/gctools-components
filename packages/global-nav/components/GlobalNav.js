@@ -13,7 +13,6 @@ import ToggleLangDropdown from './ToggleLangDropdown';
 import HelpDropdown from './HelpDropdown';
 import NotificationDropdown from './NotificationDropdown';
 import TopNavBar from './TopNavBar';
-import MobileMenu from './MobileMenu';
 
 import Canada from '../assets/wmms-spl.svg';
 
@@ -101,6 +100,8 @@ const GlobalNav = (props) => {
             minimized={minimized}
             search={search}
             currentLang={currentLang}
+            userObject={currentUser}
+            accessToken={accessToken}
           />
         </div>
       </MediaQuery>

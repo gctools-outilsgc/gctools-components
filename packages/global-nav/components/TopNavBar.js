@@ -16,6 +16,8 @@ const TopNavBar = (props) => {
     currentApp,
     search,
     onMobileMenuClick,
+    userObject,
+    accessToken,
   } = props;
 
   const status = (minimized ? false : true);
@@ -74,7 +76,11 @@ const TopNavBar = (props) => {
             </div>
           </a>
           <div className="ml-auto">
-            <MobileMenu />  
+            <MobileMenu
+              currentLang={currentLang}
+              userObject={userObject}
+              accessToken={accessToken}
+            />  
           </div>
         </nav>
       </MediaQuery>
