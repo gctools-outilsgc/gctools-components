@@ -57,7 +57,7 @@ class MobileLang extends React.Component {
                     wrapClassName="gn-sub-modal"
                     backdrop={false}
                 >
-                    <ModalHeader toggle={this.props.closeAll}>Nested Modal title</ModalHeader>
+                    <ModalHeader toggle={this.props.closeAll}>Change language</ModalHeader>
                     <div className="d-flex gn-dd-btn gn-mobile-back-btn">
                       <div className="align-self-center" >
                         <Button

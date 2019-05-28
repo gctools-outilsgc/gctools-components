@@ -78,6 +78,7 @@ const TopNavBar = (props) => {
           </a>
           <div className="ml-auto">
             <MobileMenu
+              currentApp={currentApp}
               currentLang={currentLang}
               userObject={userObject}
               accessToken={accessToken}

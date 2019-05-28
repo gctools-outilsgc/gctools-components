@@ -13,18 +13,20 @@ const mocks = {
       gcID: '79',
       online: {
         titleEn: faker.name.findName()+' has posted a new discussion',
+        viewed: faker.random.boolean()
       },
 
   }),
   Query: () => ({
-    notifications: () => new MockList([0,4]),
+    notifications: () => new MockList([0,12]),
   }),
 };
 
 const typeDefs = `
   type OnlineInfo {
     titleEn: String,
-    titleFr: String
+    titleFr: String,
+    viewed: Boolean
   }
   type Notifications {
     online: OnlineInfo

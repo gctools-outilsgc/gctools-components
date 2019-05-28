@@ -73,23 +73,6 @@
   width: 113px;
 }
 
-.gn-modal .modal.fade .modal-dialog {
-  -webkit-transition: -webkit-transform 0.45s ease-out;
-  transition: -webkit-transform 0.45s ease-out;
-  -o-transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out, -webkit-transform 0.45s ease-out;
-  -webkit-transform: translateX(105%);
-  -ms-transform: translateX(105%);
-  transform: translateX(105%);
-}
-
-.gn-modal .modal.show .modal-dialog {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
 .gn-modal .fade {
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
@@ -108,13 +91,15 @@
 }
 
 .gn-mobile-menu .modal-header {
-  padding: 0.8rem 1rem;
   height: 66px;
   background:white;
 }
 
 .gn-mobile-menu .modal-header>button{
   font-size:2rem;
+}
+.gn-mobile-menu .modal-header>h5{
+  align-self: center;
 }
 
 .gn-mobile-menu .modal-body {
@@ -143,28 +128,10 @@
   transform: translateX(0);
 }
 
-.gn-sub-modal .modal.fade .modal-dialog .modal-body {
-  -webkit-transition: -webkit-transform 0.45s ease-out;
-  transition: -webkit-transform 0.45s ease-out;
-  -o-transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out, -webkit-transform 0.45s ease-out;
-  -webkit-transform: translateX(105%);
-  -ms-transform: translateX(105%);
-  transform: translateX(105%);
-}
-
-.gn-sub-modal .modal.fade .modal-dialog .gn-mobile-back-btn {
-  -webkit-transition: -webkit-transform 0.45s ease-out;
-  transition: -webkit-transform 0.45s ease-out;
-  -o-transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out, -webkit-transform 0.45s ease-out;
-  -webkit-transform: translateX(105%);
-  -ms-transform: translateX(105%);
-  transform: translateX(105%);
-}
-
+.gn-header-move,
+.gn-modal .modal.fade .modal-dialog,
+.gn-sub-modal .modal.fade .modal-dialog .modal-body,
+.gn-sub-modal .modal.fade .modal-dialog .gn-mobile-back-btn,
 .gn-sub-modal .modal.fade .modal-dialog .modal-footer {
   -webkit-transition: -webkit-transform 0.45s ease-out;
   transition: -webkit-transform 0.45s ease-out;
@@ -176,23 +143,10 @@
   transform: translateX(105%);
 }
 
-.gn-sub-modal .modal.show .modal-dialog .modal-body {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-.gn-sub-modal .modal.show .modal-dialog .gn-mobile-back-btn {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.gn-sub-modal .modal.show .modal-dialog .modal-footer {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
+.gn-modal .modal.show .modal-dialog,
+.gn-sub-modal .modal.show .modal-dialog .modal-body,
+.gn-sub-modal .modal.show .modal-dialog .gn-mobile-back-btn,
+.gn-sub-modal .modal.show .modal-dialog .modal-footer,
 .gn-sub-modal .modal.show .modal-dialog {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -209,17 +163,6 @@
   -webkit-transition: opacity 2s linear;
   -o-transition: opacity 2s linear;
   transition: opacity 2s linear;
-}
-
-.gn-header-move {
-  -webkit-transition: -webkit-transform 0.45s ease-out;
-  transition: -webkit-transform 0.45s ease-out;
-  -o-transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out;
-  transition: transform 0.45s ease-out, -webkit-transform 0.45s ease-out;
-  -webkit-transform: translateX(105%);
-  -ms-transform: translateX(105%);
-  transform: translateX(105%);
 }
 
 .gn-sub-modal .gn-mobile-menu .modal-content {
@@ -424,6 +367,16 @@
   border-bottom: 2px solid #ccc;
 }
 
+.gn-mobile-back-btn button {
+  padding: 12px 20px;
+  border: none;
+}
+
+button:active>.gn-chevron-arrow-left,
+button:hover>.gn-chevron-arrow-left {
+  border-color:white;
+}
+
 .gn-grid-btn {
   width: 95px;
   height: 95px;
@@ -569,11 +522,47 @@ z-index: 50;
   transform: rotate(-225deg) translateY(-1px);
 }
 
-.help-section{
+.help-section {
   display: flex;
   flex-flow: row wrap;
 }
 
-.help-button{
+.help-button {
   white-space: unset;
+}
+
+.gn-notification-modal .modal-body {
+  padding: 1rem 0;
+}
+
+.gn-notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.gn-notifications-list li {
+  width:100%;
+}
+
+.gn-notifications-list a {
+  display: block;
+  width: 100%;
+  padding: 5px !important;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  color: #0D7586;
+}
+
+.gn-notifications-list a:hover {
+  background-color: #f3f3f3;
+  color: #0D7586;
+}
+
+.gn-unread {
+  border-radius: 1rem;
+  background:salmon;
+  width:8px;
+  height:8px;
+  margin: 0 .5rem;
 }

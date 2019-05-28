@@ -63,7 +63,9 @@ class MobileMenu extends React.Component {
               userObject={this.props.userObject}
               accessToken={this.props.accessToken}
             />
-            <MobileAppList />
+            <MobileAppList
+              currentApp={this.props.currentApp}
+            />
             <MobileLang
               closeAll={this.toggle}
               onResultClick={(e) => {
@@ -71,6 +73,7 @@ class MobileMenu extends React.Component {
               }}
             />
             <MobileHelp
+              currentApp={this.props.currentApp}
               closeAll={this.toggle}
             />
           </ModalBody>

@@ -41,8 +41,12 @@ class MobileAppList extends React.Component {
         return (
             <div>
                 <Button className="d-flex gn-dd-btn" onClick={this.toggle}>
-                  <FontAwesomeIcon icon={faTh} />
-                  Apps
+                  <div className="align-self-center">
+                    <FontAwesomeIcon icon={faTh} />
+                  </div>
+                  <div className="align-self-center pl-2">
+                    Apps
+                  </div>
                 </Button>
                 <Modal 
                     className="gn-mobile-menu" 
@@ -52,7 +56,7 @@ class MobileAppList extends React.Component {
                     wrapClassName="gn-sub-modal"
                     backdrop={false}
                 >
-                    <ModalHeader toggle={this.props.closeAll}>Nested Modal title</ModalHeader>
+                    <ModalHeader toggle={this.props.closeAll}>Apps</ModalHeader>
                     <div className="d-flex gn-dd-btn gn-mobile-back-btn">
                       <div className="align-self-center" >
                         <Button

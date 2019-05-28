@@ -24,7 +24,8 @@ query notifications($gcID: String!){
     id,
     online{
       titleEn,
-      titleFr
+      titleFr,
+      viewed
     }
   }
 }
@@ -101,6 +102,22 @@ const NotificationDropdown = (props) => {
     );
   };
 
+  NotificationDropdown.defaultProps = {
+    currentLang: 'en_CA',
+    userObject: null,
+    accessToken: '',
+    closeAll: () => {}
+  };
 
+  NotificationDropdown.propTypes = {
+    currentLang: PropTypes.string,
+    userObject: PropTypes.shape({
+      sub: PropTypes.string,
+      name: PropTypes.string,
+      avatar: PropTypes.string,
+    }),
+    accessToken: PropTypes.string,
+    closeAll: PropTypes.func,
+  };
 
 export default NotificationDropdown;
