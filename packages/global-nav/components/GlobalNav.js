@@ -36,7 +36,7 @@ const GlobalNav = (props) => {
 
   return (
     <div>
-      <MediaQuery query="(min-device-width: 1224px)">
+      <MediaQuery query="(min-width: 768px)">
         <div className="gn-nav">
           <div>
             <TopNavBar
@@ -45,13 +45,15 @@ const GlobalNav = (props) => {
               search={search}
               currentLang={currentLang}
             />
-            <SidebarToggle
-              minimized={minimized}
-              onResultClick={(e) => {
-                onToggleResultClick(e);
-                console.log(e);
-              }}
-            />
+            <MediaQuery query="(min-width: 1024px)">
+              <SidebarToggle
+                minimized={minimized}
+                onResultClick={(e) => {
+                  onToggleResultClick(e);
+                  console.log(e);
+                }}
+              />
+            </MediaQuery>
           </div>
           <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
             <LoginDropdown
@@ -93,7 +95,7 @@ const GlobalNav = (props) => {
           </div>
         </div>
       </MediaQuery>
-      <MediaQuery query="(max-device-width: 1224px)">
+      <MediaQuery query="(max-width: 768px)">
         <div className="gn-nav">
           <TopNavBar
             currentApp={currentApp}

@@ -55,7 +55,7 @@ const NotificationDropdown = (props) => {
               if (error) return `Error!: ${error}`;
                 return (
                   <div className="query-maybe-it-might-get-mad">
-                    <MediaQuery query="(min-device-width: 1224px)">
+                    <MediaQuery query="(min-width: 768px)">
                       <UncontrolledDropdown direction="left">
                         <DropdownToggle className="gn-dd-btn d-flex">
                           <div className="align-self-center">
@@ -86,7 +86,7 @@ const NotificationDropdown = (props) => {
                         </DropdownMenu>
                       </UncontrolledDropdown>
                     </MediaQuery>
-                    <MediaQuery query="(max-device-width: 1224px)">
+                    <MediaQuery query="(max-width: 768px)">
                       <MobileNotifications
                         currentLang={currentLang}
                         closeAll={closeAll}

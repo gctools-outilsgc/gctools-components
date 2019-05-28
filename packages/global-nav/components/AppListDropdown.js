@@ -89,7 +89,7 @@ const AppListDropdown = (props) => {
 
   return (
     <div>
-      <MediaQuery query="(min-device-width: 1224px)">
+      <MediaQuery query="(min-width: 768px)">
         <UncontrolledDropdown direction="left">
           <DropdownToggle className="gn-dd-btn d-flex">
             <div className="align-self-center">
@@ -107,7 +107,7 @@ const AppListDropdown = (props) => {
           </DropdownMenu>
         </UncontrolledDropdown>
       </MediaQuery>
-      <MediaQuery query="(max-device-width: 1224px)">
+      <MediaQuery query="(max-width: 768px)">
         <div>
           {mobileList}
         </div>

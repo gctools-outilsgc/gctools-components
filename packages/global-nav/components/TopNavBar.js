@@ -27,7 +27,7 @@ const TopNavBar = (props) => {
 
   return (
     <div>
-      <MediaQuery query="(min-device-width: 1224px)">
+      <MediaQuery query="(min-width: 768px)">
         <nav className="top_bar shadow-sm">
           <div className="containerGoC align-self-center">
             <img className="flag" src={flag} alt={flagAlt} />
@@ -54,7 +54,7 @@ const TopNavBar = (props) => {
           </div>
         </nav>
       </MediaQuery>
-      <MediaQuery query="(max-device-width: 1224px)">
+      <MediaQuery query="(max-width: 768px)">
         <div className="bg-dark top-bar-mobile-fip" id="mobileFip" onScroll={() => {console.log('scrollin?')}}>
           <img className="flag" src={flag} alt={flagAlt} />
         </div>
