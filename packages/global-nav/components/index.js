@@ -9,4 +9,8 @@ export const ToggleLangDropdown = require('./ToggleLangDropdown').default;
 export const TopNavBar = require('./TopNavBar').default;
 export const MobileMenu = require('./MobileMenu').default;
 export const MobileMenuSubModal = require('./MobileMenuSubModal').default;
+export const MobileAppList = require('./MobileAppList').default;
+export const MobileHelp = require('./MobileHelp').default;
+export const MobileLang = require('./MobileLang').default;
+export const MobileNotifications = require('./MobileNotifications').default;
 export default require('./GlobalNav').default;
