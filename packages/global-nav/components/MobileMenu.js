@@ -74,6 +74,7 @@ class MobileMenu extends React.Component {
               currentApp={this.props.currentApp}
             />
             <MobileLang
+              currentLang={this.props.currentLang}
               closeAll={this.toggle}
               onResultClick={(e) => {
                 this.props.onLanguageResultClick(e);
