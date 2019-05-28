@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import MediaQuery from 'react-responsive';
 import Login from '@gctools-components/gc-login';
 
 import {
@@ -13,16 +13,19 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import MobileLogin from './MobileLogin';
 
 const LoginDropdown = (props) => {
   const {
     userObject,
     oidcConfig,
     doLogin,
+    closeAll,
   } = props;
 
   return (
     <div>
+      <MediaQuery query="(min-device-width: 1224px)">
       {userObject ? (
         <UncontrolledDropdown direction="left">
           <DropdownToggle className="gn-dd-btn d-flex">
@@ -75,6 +78,16 @@ const LoginDropdown = (props) => {
           </Login>
         </div>
       )}
+    </MediaQuery>
+    <MediaQuery query="(max-device-width: 1224px)">
+      <MobileLogin
+        closeAll={closeAll}
+        oidcConfig={oidcConfig}
+        onUserLoaded={doLogin}
+        onUserFetched={doLogin}
+        userObject={userObject}
+      />
+   </MediaQuery>
     </div>
   );
 };

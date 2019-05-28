@@ -14,6 +14,7 @@ import MobileMenuSubModal from './MobileMenuSubModal';
 import MobileLang from './MobileLang';
 import MobileAppList from './MobileAppList';
 import NotificationDropdown from './NotificationDropdown';
+import LoginDropdown from './LoginDropdown';
 import MobileHelp from './MobileHelp';
 
 class MobileMenu extends React.Component {
@@ -57,6 +58,12 @@ class MobileMenu extends React.Component {
             </ul>
             
             <MobileMenuSubModal closeAll={this.toggle} />
+            <LoginDropdown
+              closeAll={this.toggle}
+              userObject={this.props.userObject}
+              oidcConfig={this.props.oidcConfig}
+              doLogin={this.props.doLogin}
+            />
             <NotificationDropdown
               currentLang={this.props.currentLang}
               closeAll={this.toggle}
