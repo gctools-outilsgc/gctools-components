@@ -49,15 +49,6 @@ class MobileMenu extends React.Component {
         <Modal wrapClassName="gn-modal" zIndex="99999" isOpen={this.state.modal} toggle={this.toggle} className="gn-mobile-menu">
           <ModalHeader toggle={this.toggle}>GCTools</ModalHeader>
           <ModalBody>
-            <ul>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="#">Apps</a></li>
-              <li><a href="#">Language</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-            
-            <MobileMenuSubModal closeAll={this.toggle} />
             <LoginDropdown
               closeAll={this.toggle}
               userObject={this.props.userObject}
@@ -72,6 +63,7 @@ class MobileMenu extends React.Component {
             />
             <MobileAppList
               currentApp={this.props.currentApp}
+              closeAll={this.toggle}
             />
             <MobileLang
               currentLang={this.props.currentLang}

@@ -35,6 +35,9 @@ class MobileLogin extends React.Component {
           }));
     }
     render() {
+
+      const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
+      
           return (
             <div>
                 <Button className="gn-dd-btn d-flex" onClick={this.toggle}>
@@ -72,7 +75,8 @@ class MobileLogin extends React.Component {
                     backdrop={false}
                 >
                     <ModalHeader
-                        toggle={this.closeEverything}
+                      className={hideHeaderClass} 
+                      toggle={this.closeEverything}
                     >
                         GCTools
                     </ModalHeader>

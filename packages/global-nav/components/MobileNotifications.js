@@ -129,7 +129,6 @@ class MobileNotifications extends React.Component {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button size="sm" color="primary" >Clear all</Button>{' '}
                         <Button size="sm" color="secondary" onClick={this.toggle} >Close</Button>
                     </ModalFooter>
                 </Modal>

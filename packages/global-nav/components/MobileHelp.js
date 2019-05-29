@@ -16,20 +16,31 @@ import React from 'react'; import PropTypes from
         super();
         this.state = {
           modal: false,
+          hideHeader: false,
         };
     
         this.toggle = this.toggle.bind(this);
+        this.closeEverything = this.closeEverything.bind(this);
     };
     toggle() {
         this.setState(prevState => ({
           modal: !prevState.modal
         }));
       }
+    closeEverything() {
+      this.toggle();
+      this.props.closeAll();
+      this.setState(prevState => ({
+        hideHeader: !prevState.hideHeader
+      }));
+    }
     render() {
       const {
         currentApp,
         onResultClick,
       } = this.props;
+
+      const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
     
         return (
             <div>
@@ -49,7 +60,12 @@ import React from 'react'; import PropTypes from
                     wrapClassName="gn-sub-modal"
                     backdrop={false}
                 >
-                    <ModalHeader toggle={this.props.closeAll}>Help</ModalHeader>
+                    <ModalHeader
+                        className={hideHeaderClass} 
+                        toggle={this.closeEverything}
+                    >
+                      Help
+                    </ModalHeader>
                     <div className="d-flex gn-dd-btn gn-mobile-back-btn">
                     <div className="align-self-center" >
                       <Button
@@ -115,8 +131,7 @@ import React from 'react'; import PropTypes from
                       </div>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Done</Button>{' '}
-                        <Button color="secondary" onClick={this.props.closeAll}>All Done</Button>
+                      <Button size="sm" color="secondary" onClick={this.toggle} >Close</Button>
                     </ModalFooter>
                 </Modal>
             </div>

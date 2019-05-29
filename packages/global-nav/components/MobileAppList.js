@@ -22,9 +22,11 @@ class MobileAppList extends React.Component {
         super();
         this.state = {
           modal: false,
+          hideHeader: false,
         };
     
         this.toggle = this.toggle.bind(this);
+        this.closeEverything = this.closeEverything.bind(this);
     };
 
     toggle() {
@@ -32,11 +34,19 @@ class MobileAppList extends React.Component {
           modal: !prevState.modal
         }));
       }
-
+    closeEverything() {
+      this.toggle();
+      this.props.closeAll();
+      this.setState(prevState => ({
+        hideHeader: !prevState.hideHeader
+      }));
+    }
     render() {
       const {
         currentApp,
       } = this.props;
+
+      const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
         return (
             <div>
@@ -56,7 +66,12 @@ class MobileAppList extends React.Component {
                     wrapClassName="gn-sub-modal"
                     backdrop={false}
                 >
-                    <ModalHeader toggle={this.props.closeAll}>Apps</ModalHeader>
+                    <ModalHeader
+                        className={hideHeaderClass} 
+                        toggle={this.closeEverything}
+                    >
+                      Apps
+                    </ModalHeader>
                     <div className="d-flex gn-dd-btn gn-mobile-back-btn">
                       <div className="align-self-center" >
                         <Button
@@ -77,8 +92,7 @@ class MobileAppList extends React.Component {
                       <AppListDropdown currentApp={currentApp} />
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Done</Button>{' '}
-                        <Button color="secondary" onClick={this.props.closeAll}>All Done</Button>
+                      <Button size="sm" color="secondary" onClick={this.toggle} >Close</Button>
                     </ModalFooter>
                 </Modal>
             </div>
