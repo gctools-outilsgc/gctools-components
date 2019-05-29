@@ -25,7 +25,7 @@ const LoginDropdown = (props) => {
 
   return (
     <div>
-      <MediaQuery query="(min-device-width: 1224px)">
+      <MediaQuery query="(min-width: 768px)">
       {userObject ? (
         <UncontrolledDropdown direction="left">
           <DropdownToggle className="gn-dd-btn d-flex">
@@ -79,7 +79,7 @@ const LoginDropdown = (props) => {
         </div>
       )}
     </MediaQuery>
-    <MediaQuery query="(max-device-width: 1224px)">
+    <MediaQuery query="(max-width: 768px)">
       <MobileLogin
         closeAll={closeAll}
         oidcConfig={oidcConfig}

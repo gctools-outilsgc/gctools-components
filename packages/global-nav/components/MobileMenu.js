@@ -10,7 +10,6 @@ import {
   } from 'reactstrap';
 
 import Canada from '../assets/wmms-spl.svg';
-import MobileMenuSubModal from './MobileMenuSubModal';
 import MobileLang from './MobileLang';
 import MobileAppList from './MobileAppList';
 import NotificationDropdown from './NotificationDropdown';
