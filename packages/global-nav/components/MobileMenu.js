@@ -13,7 +13,8 @@ import Canada from '../assets/wmms-spl.svg';
 import MobileLang from './MobileLang';
 import MobileAppList from './MobileAppList';
 import NotificationDropdown from './NotificationDropdown';
-import LoginDropdown from './LoginDropdown';
+// import LoginDropdown from './LoginDropdown';
+import MobileLogin from './MobileLogin';
 import MobileHelp from './MobileHelp';
 
 class MobileMenu extends React.Component {
@@ -48,7 +49,7 @@ class MobileMenu extends React.Component {
         <Modal wrapClassName="gn-modal" zIndex="99999" isOpen={this.state.modal} toggle={this.toggle} className="gn-mobile-menu">
           <ModalHeader toggle={this.toggle}>GCTools</ModalHeader>
           <ModalBody>
-            <LoginDropdown
+            <MobileLogin
               closeAll={this.toggle}
               userObject={this.props.userObject}
               oidcConfig={this.props.oidcConfig}

@@ -79,15 +79,6 @@ const LoginDropdown = (props) => {
         </div>
       )}
     </MediaQuery>
-    <MediaQuery query="(max-width: 768px)">
-      <MobileLogin
-        closeAll={closeAll}
-        oidcConfig={oidcConfig}
-        onUserLoaded={doLogin}
-        onUserFetched={doLogin}
-        userObject={userObject}
-      />
-   </MediaQuery>
     </div>
   );
 };

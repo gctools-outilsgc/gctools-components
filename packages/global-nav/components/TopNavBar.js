@@ -17,6 +17,8 @@ const TopNavBar = (props) => {
     search,
     onMobileMenuClick,
     userObject,
+    oidcConfig,
+    doLogin,
     accessToken,
     onLanguageResultClick,
   } = props;
@@ -81,6 +83,8 @@ const TopNavBar = (props) => {
               currentApp={currentApp}
               currentLang={currentLang}
               userObject={userObject}
+              oidcConfig={oidcConfig}
+              doLogin={doLogin}
               accessToken={accessToken}
               onLanguageResultClick={(e) => {
                 onLanguageResultClick(e);

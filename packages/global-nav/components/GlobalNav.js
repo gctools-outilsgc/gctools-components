@@ -44,6 +44,9 @@ const GlobalNav = (props) => {
               minimized={minimized}
               search={search}
               currentLang={currentLang}
+              userObject={currentUser}
+              oidcConfig={oidcConfig}
+              doLogin={doLogin}
             />
             <MediaQuery query="(min-width: 1024px)">
               <SidebarToggle
