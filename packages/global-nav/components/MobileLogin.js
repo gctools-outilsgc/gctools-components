@@ -9,7 +9,7 @@ import {
   } from 'reactstrap';
 import Login from '@gctools-components/gc-login';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faUserCircle, faSignInAlt } from '@fortawesome/free-solid-svg-icons'; 
+import { faUserCircle, faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'; 
 
 class MobileLogin extends React.Component {
     constructor() {
@@ -130,7 +130,7 @@ class MobileLogin extends React.Component {
                         <div>
                           
                         </div>
-                        <FontAwesomeIcon icon={faUserCircle} />
+                        <FontAwesomeIcon icon={faSignOutAlt} />
                         <div>Sign out</div>
                       </div>
                     </Button>

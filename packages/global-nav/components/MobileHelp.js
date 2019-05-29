@@ -9,7 +9,8 @@ import React from 'react'; import PropTypes from
   } from 'reactstrap';
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faQuestionCircle, faPen, faCommentAlt, faFlag } from '@fortawesome/free-solid-svg-icons';
-  
+  import accountissue from '../assets/account-issue.svg';
+
  class MobileHelp extends React.Component {
     constructor() {
         super();
@@ -96,6 +97,7 @@ import React from 'react'; import PropTypes from
                             <div>
                               
                             </div>
+                            <img src={accountissue} alt="" className="lang-icon" />
                             <div>Account Issues</div>
                           </div>
                         </Button>
