@@ -38,12 +38,30 @@ class MobileLogin extends React.Component {
           return (
             <div>
                 <Button className="gn-dd-btn d-flex" onClick={this.toggle}>
-                    <div className="align-self-center">
-                        <FontAwesomeIcon icon={faUserCircle} />
-                    </div>
-                    <div className="align-self-center pl-2">
-                        Profile
-                    </div>
+                {this.props.userObject ? ( 
+                  <div>
+                  <div className="align-self-center">
+                  <img
+                      className="gn-avatar"
+                      src={this.props.userObject.picture}
+                      alt=""
+                  />  
+                                         
+                  </div>
+                  <div className="align-self-center pl-2">
+                  {this.props.userObject.name}
+                  </div>
+                  </div>
+                 ) : ( 
+                   <div>
+                  <div className="align-self-center">  
+                    <FontAwesomeIcon icon={faSignInAlt} />  
+                  </div>
+                  <div className="align-self-center pl-2">
+                      Sign in
+                  </div> 
+                  </div>
+                  )} 
                 </Button>
                 <Modal
                     className="gn-mobile-menu"
@@ -67,28 +85,41 @@ class MobileLogin extends React.Component {
                                 <span className="gn-chevron-arrow-left"></span>
                             </Button>
                         </div>
-                        <div className="align-self-center">
-                            <FontAwesomeIcon icon={faUserCircle} />
-                        </div>
-                        <div className="align-self-center pl-2">
-                            Profile
-                        </div>
-                    </div>
-                    <ModalBody>
-                    {this.props.userObject ? (
-                    <div className="d-flex help-section">
-                    <Button className="gn-grid-btn help-button" onClick={() => {
-                      onResultClick();
-                    }}>
-                      <div>
+                       
+                        {this.props.userObject ? ( 
                         <div>
-                         
-                        </div>
+                        <div className="align-self-center">
                         <img
                             className="gn-avatar"
                             src={this.props.userObject.picture}
                             alt=""
-                        />
+                        />  
+                                               
+                        </div>
+                        <div className="align-self-center pl-2">
+                        {this.props.userObject.name}
+                        </div>
+                        </div>
+                       ) : ( 
+                         <div>
+                        <div className="align-self-center">  
+                          <FontAwesomeIcon icon={faUserCircle} />  
+                        </div>
+                        <div className="align-self-center pl-2">
+                            Profile
+                        </div> 
+                        </div>
+                        )} 
+                    </div>
+                    <ModalBody>
+                    {this.props.userObject ? (
+                    <div className="d-flex help-section">
+                    <Button className="gn-grid-btn help-button" href={`https://profile.gccollab.ca/p/${this.props.userObject.sub}`}>
+                      <div>
+                        <div>
+                        
+                        </div>
+                        <FontAwesomeIcon icon={faUserCircle} />
                         <div>My profile</div>
                       </div>
                     </Button>
