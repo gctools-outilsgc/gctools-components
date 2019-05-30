@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
-import Login from '@gctools-components/gc-login';
+// import Login from '@gctools-components/gc-login';
 
 import {
   UncontrolledDropdown,
@@ -13,7 +13,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import MobileLogin from './MobileLogin';
+// import MobileLogin from './MobileLogin';
 
 const LoginDropdown = (props) => {
   const {
@@ -54,28 +54,23 @@ const LoginDropdown = (props) => {
         </UncontrolledDropdown>
       ) : (
         <div>
-          <Login
-            oidcConfig={oidcConfig}
-            onUserLoaded={doLogin}
-            onUserFetched={doLogin}
+          <Button
+            className="gn-dd-btn d-flex"
+            onClick={(e) => {
+              e.stopPropagation();
+              if(document.getElementById('login-btn')){
+                document.getElementById('login-btn').click();
+              }
+              console.log('LOGIN!');
+            }}
           >
-            {({ onClick }) => (
-              <Button
-                className="gn-dd-btn d-flex"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onClick(e);
-                }}
-              >
-                <div className="align-self-center">
-                  <FontAwesomeIcon icon={faSignInAlt} />
-                </div>
-                <div className="align-self-center pl-2">
-                  Login
-                </div>
-              </Button>
-            )}
-          </Login>
+            <div className="align-self-center">
+              <FontAwesomeIcon icon={faSignInAlt} />
+            </div>
+            <div className="align-self-center pl-2">
+              Login
+            </div>
+          </Button>
         </div>
       )}
     </MediaQuery>
