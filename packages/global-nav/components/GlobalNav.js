@@ -106,6 +106,8 @@ const GlobalNav = (props) => {
             search={search}
             currentLang={currentLang}
             userObject={currentUser}
+            oidcConfig={oidcConfig}
+            doLogin={doLogin}
             accessToken={accessToken}
             onLanguageResultClick={(e) => {
               onLanguageResultClick(e);
