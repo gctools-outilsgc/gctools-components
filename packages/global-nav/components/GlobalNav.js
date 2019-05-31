@@ -38,6 +38,14 @@ const GlobalNav = (props) => {
     <div>
       <MediaQuery query="(min-width: 768px)">
         <div className="gn-nav">
+          <div className="gn-skip-to">
+            <a 
+              className="sr-only sr-only-focusable"
+              href="#gn-main"
+            >
+              Skip to main content
+            </a>
+          </div>
           <div>
             <TopNavBar
               currentApp={currentApp}
@@ -100,6 +108,14 @@ const GlobalNav = (props) => {
       </MediaQuery>
       <MediaQuery query="(max-width: 768px)">
         <div className="gn-nav">
+          <div className="gn-skip-to">
+            <a 
+              className="sr-only sr-only-focusable"
+              href="#gn-main"
+            >
+              Skip to main content
+            </a>
+          </div>
           <TopNavBar
             currentApp={currentApp}
             minimized={minimized}

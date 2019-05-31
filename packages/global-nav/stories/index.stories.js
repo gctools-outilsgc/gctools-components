@@ -54,7 +54,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }} className="gn-story-holder">
+      <div className="gn-story-holder">
         <GlobalNav />
       </div>
     )),
@@ -66,7 +66,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }} className="gn-story-holder">
+      <div className="gn-story-holder">
         <GlobalNav
           currentLang='fr_CA'
         />
@@ -80,7 +80,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }} className="gn-story-holder">
+      <div className="gn-story-holder">
         <GlobalNav
           currentUser={
             {
@@ -100,7 +100,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }} className="gn-story-holder">
+      <div className="gn-story-holder">
         <GlobalNav
           currentUser={
             {
@@ -128,7 +128,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }} className="gn-story-holder">
+      <div className="gn-story-holder">
         <GlobalNav
           minimized
         />
@@ -142,7 +142,7 @@ storiesOf('GlobalNav', module)
       inline: true,
       source: false,
     })(() => (
-      <div style={{ margin: '20px' }} className="gn-story-holder">
+      <div className="gn-story-holder">
         <GlobalNav
           minimized
 	        currentUser={

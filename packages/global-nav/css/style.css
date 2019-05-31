@@ -24,6 +24,22 @@
   z-index:9999;
 }
 
+.gn-skip-to {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 99999;
+  top:0;
+}
+
+.gn-skip-to a:focus {
+  color: white;
+  background: black;
+  padding: 5px 8px;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
 .gn-main-container {
   -webkit-transition: 0.45s ease-out;
   -moz-transition: 0.45s ease-out;
