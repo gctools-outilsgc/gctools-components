@@ -160,4 +160,18 @@ storiesOf('GlobalNav', module)
         />
       </div>
     ))
-);
+)
+.add(
+  'Default options without hamburger menu',
+  withInfo({
+    header: true,
+    inline: true,
+    source: false,
+  })(() => (
+    <div className="gn-story-holder">
+      <GlobalNav 
+        hamburgerMenu={false}
+      />
+    </div>
+  )),
+)

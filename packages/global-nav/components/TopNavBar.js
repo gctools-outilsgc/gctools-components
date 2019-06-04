@@ -21,6 +21,7 @@ const TopNavBar = (props) => {
     doLogin,
     accessToken,
     onLanguageResultClick,
+    hamburgerMenu,
   } = props;
 
   const status = (minimized ? false : true);
@@ -61,6 +62,7 @@ const TopNavBar = (props) => {
           <img className="flag" src={flag} alt={flagAlt} />
         </div>
         <nav className="top-bar-mobile shadow-sm" id="mobileNavBar">
+        {(hamburgerMenu) ? 
           <button
             className="btn mobile-menu-btn mr-1"
             onClick={() => onMobileMenuClick()}
@@ -68,6 +70,7 @@ const TopNavBar = (props) => {
             <FontAwesomeIcon icon={faBars} />
             <span className="sr-only">Menu</span>
           </button>
+         : '' }
           <a className="gn-app-brand d-flex" href={currentApp.home}>
             <img
               src={currentApp.logo}

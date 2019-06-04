@@ -32,6 +32,7 @@ const GlobalNav = (props) => {
     minimized,
     onToggleResultClick,
     search,
+    hamburgerMenu
   } = props;
 
   return (
@@ -125,6 +126,7 @@ const GlobalNav = (props) => {
             oidcConfig={oidcConfig}
             doLogin={doLogin}
             accessToken={accessToken}
+            hamburgerMenu={hamburgerMenu}
             onLanguageResultClick={(e) => {
               onLanguageResultClick(e);
               console.log(e);
@@ -154,7 +156,8 @@ GlobalNav.defaultProps = {
   doLogin: () => {},
   minimized: false,
   onToggleResultClick: () => {},
-  search:""
+  search:"",
+  hamburgerMenu:true
 };
 
 GlobalNav.propTypes = {
@@ -194,6 +197,8 @@ GlobalNav.propTypes = {
   onToggleResultClick: PropTypes.func,
   /**Send search keyword */
   search: PropTypes.string,
+  /** Status of the hamburger menu */
+  hamburgerMenu: PropTypes.bool
 };
 
 export default GlobalNav;
