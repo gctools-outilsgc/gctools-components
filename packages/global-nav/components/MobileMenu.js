@@ -6,7 +6,8 @@ import {
     ModalHeader,
     ModalBody,
     ModalFooter,
-    Button
+    Button,
+    Badge
   } from 'reactstrap';
 
 import Canada from '../assets/wmms-spl.svg';
@@ -43,9 +44,16 @@ class MobileMenu extends React.Component {
   }
 
   render() {
+
+    const notifBadge = this.props.count < 1 ? ( "" ) :
+        (<Badge color="danger" className="align-self-center">
+            {this.props.count}
+            <span className="sr-only">unread notifications</span>
+        </Badge>);
+
     return (
       <div>
-        <Button onClick={this.toggle} className="mobile-menu-btn">O</Button>
+        <Button onClick={this.toggle} className="mobile-menu-btn">O {notifBadge}</Button>
         <Modal wrapClassName="gn-modal" zIndex="99999" isOpen={this.state.modal} toggle={this.toggle} className="gn-mobile-menu">
           <ModalHeader toggle={this.toggle}>GCTools</ModalHeader>
           <ModalBody>
@@ -60,6 +68,8 @@ class MobileMenu extends React.Component {
               closeAll={this.toggle}
               userObject={this.props.userObject}
               accessToken={this.props.accessToken}
+              count={this.props.count}
+              updateCount={this.props.updateCount}
             />
             <MobileAppList
               currentApp={this.props.currentApp}

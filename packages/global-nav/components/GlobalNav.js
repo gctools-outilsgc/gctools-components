@@ -20,122 +20,128 @@ import Canada from '../assets/wmms-spl.svg';
  * Global navigation react component for OADW apps.
  */
 
-const GlobalNav = (props) => {
-  const {
-    currentLang,
-    currentApp,
-    onLanguageResultClick,
-    currentUser,
-    oidcConfig,
-    doLogin,
-    accessToken,
-    minimized,
-    onToggleResultClick,
-    search,
-    hamburgerMenu
-  } = props;
+class GlobalNav extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0
+    };
+    this.updateCount = this.updateCount.bind(this);
+  };
 
-  return (
-    <div>
-      <MediaQuery query="(min-width: 768px)">
-        <div className="gn-nav">
-          <div className="gn-skip-to">
-            <a 
-              className="sr-only sr-only-focusable"
-              href="#gn-main"
-            >
-              Skip to main content
-            </a>
-          </div>
-          <div>
-            <TopNavBar
-              currentApp={currentApp}
-              minimized={minimized}
-              search={search}
-              currentLang={currentLang}
-              userObject={currentUser}
-              oidcConfig={oidcConfig}
-              doLogin={doLogin}
-            />
-            <MediaQuery query="(min-width: 1024px)">
-              <SidebarToggle
-                minimized={minimized}
+  updateCount(number) {
+    this.setState({
+      count: number
+    })
+  }
+
+  render(){
+    return (
+      <div>
+        <MediaQuery query="(min-width: 768px)">
+          <div className="gn-nav">
+            <div className="gn-skip-to">
+              <a 
+                className="sr-only sr-only-focusable"
+                href="#gn-main"
+              >
+                Skip to main content
+              </a>
+            </div>
+            <div>
+              <TopNavBar
+                currentApp={this.props.currentApp}
+                minimized={this.props.minimized}
+                search={this.props.search}
+                currentLang={this.props.currentLang}
+                userObject={this.props.currentUser}
+                oidcConfig={this.props.oidcConfig}
+                doLogin={this.props.doLogin}
+              />
+              <MediaQuery query="(min-width: 1024px)">
+                <SidebarToggle
+                  minimized={this.props.minimized}
+                  onResultClick={(e) => {
+                    this.props.onToggleResultClick(e);
+                    console.log(e);
+                  }}
+                />
+              </MediaQuery>
+            </div>
+            <div className={"gn-holder " + (this.props.minimized ? 'gn-minimize' : 'show')}>
+              <LoginDropdown
+                userObject={this.props.currentUser}
+                oidcConfig={this.props.oidcConfig}
+                doLogin={this.props.doLogin}
+              />
+              <NotificationDropdown
+                userObject={this.props.currentUser}
+                accessToken={this.props.accessToken}
+                count={this.state.count}
+                updateCount={this.updateCount}
+              />
+              <AppListDropdown
+                currentApp={this.props.currentApp}
+              />
+              <ToggleLangDropdown
+                currentLang={this.props.currentLang}
                 onResultClick={(e) => {
-                  onToggleResultClick(e);
+                  //TODO Send e to parent
+                  this.props.onLanguageResultClick(e);
                   console.log(e);
                 }}
               />
-            </MediaQuery>
-          </div>
-          <div className={"gn-holder " + (minimized ? 'gn-minimize' : 'show')}>
-            <LoginDropdown
-              userObject={currentUser}
-              oidcConfig={oidcConfig}
-              doLogin={doLogin}
-            />
-            <NotificationDropdown
-              userObject={currentUser}
-              accessToken={accessToken}
-            />
-            <AppListDropdown
-              currentApp={currentApp}
-            />
-            <ToggleLangDropdown
-              currentLang={currentLang}
-              onResultClick={(e) => {
-                //TODO Send e to parent
-                onLanguageResultClick(e);
-                console.log(e);
-              }}
-            />
-            <HelpDropdown
-              currentApp={currentApp}
-              //TODO this could just exist in this component
-              windowLocation={window.location.href}
-            />
-            {currentUser ? '' :
-              minimized ? '' : (
-              <div className="gn-not-logged-cta">
-                <div>Welcome!</div>
-                <div>You are not logged in. Why not? It's free.</div>
-                <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
+              <HelpDropdown
+                currentApp={this.props.currentApp}
+                //TODO this could just exist in this component
+                windowLocation={window.location.href}
+              />
+              {this.props.currentUser ? '' :
+                this.props.minimized ? '' : (
+                <div className="gn-not-logged-cta">
+                  <div>Welcome!</div>
+                  <div>You are not logged in. Why not? It's free.</div>
+                  <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
+                </div>
+              )}
+              <div className="gn-holder-foot">
+                <img src={Canada} alt="Canada" className="float-right" />
               </div>
-            )}
-            <div className="gn-holder-foot">
-              <img src={Canada} alt="Canada" className="float-right" />
             </div>
           </div>
-        </div>
-      </MediaQuery>
-      <MediaQuery query="(max-width: 768px)">
-        <div className="gn-nav">
-          <div className="gn-skip-to">
-            <a 
-              className="sr-only sr-only-focusable"
-              href="#gn-main"
-            >
-              Skip to main content
-            </a>
+        </MediaQuery>
+        <MediaQuery query="(max-width: 768px)">
+          <div className="gn-nav">
+            <div className="gn-skip-to">
+              <a 
+                className="sr-only sr-only-focusable"
+                href="#gn-main"
+              >
+                Skip to main content
+              </a>
+            </div>
+            <TopNavBar
+              currentApp={this.props.currentApp}
+              minimized={this.props.minimized}
+              search={this.props.search}
+              currentLang={this.props.currentLang}
+              userObject={this.props.currentUser}
+              oidcConfig={this.props.oidcConfig}
+              doLogin={this.props.doLogin}
+              accessToken={this.props.accessToken}
+              hamburgerMenu={this.props.hamburgerMenu}
+              onLanguageResultClick={(e) => {
+                this.props.onLanguageResultClick(e);
+                console.log(e);
+              }}
+              count={this.state.count}
+              updateCount={this.updateCount}
+            />
           </div>
-          <TopNavBar
-            currentApp={currentApp}
-            minimized={minimized}
-            search={search}
-            currentLang={currentLang}
-            userObject={currentUser}
-            oidcConfig={oidcConfig}
-            doLogin={doLogin}
-            accessToken={accessToken}
-            hamburgerMenu={hamburgerMenu}
-            onLanguageResultClick={(e) => {
-              onLanguageResultClick(e);
-              console.log(e);
-            }}
-          />
-        </div>
-      </MediaQuery>
-    </div>
-  );
+        </MediaQuery>
+      </div>
+    );
+  };
 };
 
 GlobalNav.defaultProps = {

@@ -9,9 +9,12 @@ import {
     Button,
     Badge
   } from 'reactstrap';
+import { Mutation } from 'react-apollo';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
+
+import NotificationItem from './NotificationItem';
 
 class MobileNotifications extends React.Component {
     constructor() {
@@ -43,9 +46,9 @@ class MobileNotifications extends React.Component {
 
         const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
-        const notifBadge = Object.entries(this.props.data.notifications).length === 0 ? ( "" ) :
+        const notifBadge = this.props.count < 1 ? ( "" ) :
         (<Badge color="danger" className="align-self-center">
-            {Object.entries(this.props.data.notifications).length}
+            {this.props.count}
             <span className="sr-only">unread</span>
         </Badge>);
 
@@ -95,36 +98,31 @@ class MobileNotifications extends React.Component {
                     </div>
                     <ModalBody>
                         <div>
-                            <ul className="gn-notifications-list">
+                            <div className="gn-notifications-list">
                                 {Object.entries(this.props.data.notifications).length === 0 ? (
-                                    <li className="align-self-center ml-3 mr-3">
+                                    <div className="align-self-center ml-3 mr-3">
                                         No new notifications available.
-                                    </li>
+                                    </div>
                                 ): (
                                     this.props.data.notifications.map(notif =>(
-                                    <li className="d-inline" key={notif.id}>
-                                        <a href="!#" className="d-flex">
-                                            {notif.online.viewed ? 
-                                            <div className="gn-unread align-self-center">
-                                                <span className="sr-only">Unread</span>
-                                            </div>
-                                            : 
-                                            <div style={{"width": "24px"}}/>}
-                                            <div
-                                                className="gn-applist-logo align-self-center"
-                                                style={{ 'backgroundColor': 'green' }}
-                                            >
-                                                <span>{notif.id}</span>
-                                            </div>
-                                            <small className="align-self-center ml-2">
-                                                {notif.online.titleEn}
-                                                <p className="mb-0">timestamp</p>
-                                            </small>
-                                        </a>
-                                    </li>
+                                        <Mutation
+                                            key={notif.id}
+                                            client={this.props.client}
+                                            mutation={this.props.READ_NOTIFICATION}
+                                        >
+                                            {(updateNotification) => (
+                                            <NotificationItem
+                                                notification={notif}
+                                                currentLang={this.props.currentLang}
+                                                readNotification={() => {
+                                                updateNotification({ variables: { id: notif.id, online: { viewed: true } } });
+                                                }}
+                                            />
+                                            )}
+                                        </Mutation>
                                     ))
                                 )}
-                            </ul>
+                            </div>
                         </div>
                     </ModalBody>
 

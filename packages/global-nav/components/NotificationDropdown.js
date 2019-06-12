@@ -15,13 +15,32 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
+import {
+  ApolloClient,
+  InMemoryCache,
+  HttpLink 
+} from 'apollo-boost';
+
+import NotificationItem from './NotificationItem';
 import MobileNotifications from './MobileNotifications';
+import NotificationLoad from './NotificationLoad';
+import NotificationError from './NotificationError';
+
+const notificationClient = new ApolloClient({
+  link: new HttpLink({
+    uri: 'https://naas.beta.gccollab.ca/graphql'
+  }),
+  cache: new InMemoryCache()
+});
 
 const GET_NOTIFICATIONS = gql`
 query notifications($gcID: String!){
-  notifications(gcID:$gcID, actionLevel:"Featured"){
+  notifications(gcID:$gcID){
     id,
+    actionLink,
+    generatedOn,
+    appID,
     online{
       titleEn,
       titleFr,
@@ -30,16 +49,31 @@ query notifications($gcID: String!){
   }
 }
 `;
+
+const READ_NOTIFICATION= gql`
+  mutation UpdateNotification($id: ID!, $online: UpdateOnlineInput) {
+    updateNotification(id: $id, online: $online) {
+      id
+      online {
+        viewed
+      }
+    }
+  }
+`;
+
 const NotificationDropdown = (props) => {
   const {
     userObject,
     accessToken,
     closeAll,
-    currentLang
+    currentLang,
+    count,
+    updateCount
   } = props;
-  const gcID = '';
+
+  let gcID = '';
   if(userObject){
-    const gcID = userObject.sub;
+    gcID = userObject.sub;
   }
 
     return (
@@ -47,12 +81,31 @@ const NotificationDropdown = (props) => {
          {userObject ? (
 
          <Query
+            client={notificationClient}
             query={GET_NOTIFICATIONS}
             variables={{ gcID }}
+            onCompleted={(data) => {
+              let unreadCount = 0
+              data.notifications.map(notif =>(
+                (notif.online.viewed ? "" : unreadCount += 1)
+              ))
+              updateCount(unreadCount)
+            }}
           >
             {({ loading, error, data }) => {
-              if (loading) return 'loading...';
-              if (error) return `Error!: ${error}`;
+              if (loading)
+                return (
+                  <NotificationLoad
+                    currentLang={currentLang}
+                  />
+                );
+              if (error) 
+                return (
+                  <NotificationError
+                    currentLang={currentLang}
+                    closeAll={closeAll}
+                  />
+                );
                 return (
                   <div className="query-maybe-it-might-get-mad">
                     <MediaQuery query="(min-width: 768px)">
@@ -61,28 +114,42 @@ const NotificationDropdown = (props) => {
                           <div className="align-self-center">
                             <FontAwesomeIcon icon={faBell} />
                           </div>
-                          {Object.entries(data.notifications).length === 0 ? ( "" ) :
-                            (<Badge color="danger" className="align-self-center gn-notification-badge">
-                                {Object.entries(data.notifications).length} 
+                          {count < 1 ? ("") :
+                            <Badge color="danger" className="align-self-center gn-notification-badge">
+                                {count}
                                 <span className="sr-only">unread</span>
-                            </Badge>)
+                            </Badge>
                           }
                           <div className="align-self-center pl-2">
                             Notifications
                           </div>
                         </DropdownToggle>
-                        <DropdownMenu>
-                          {Object.entries(data.notifications).length === 0 ? (
-                            <DropdownItem >
-                              notification
-                            </DropdownItem>
-                          ): (
-                            data.notifications.map(notif =>(
-                            <DropdownItem key={notif.id}>
-                              {notif.online.titleEn}
-                            </DropdownItem>
-                            ))
-                          )}
+                        <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}} className="gn-notif-menu">
+                          <div className="gn-notif-container">
+                            {Object.entries(data.notifications).length === 0 ? (
+                              <DropdownItem >
+                                No notifications available
+                              </DropdownItem>
+                            ): (
+                              data.notifications.map(notif =>(
+                                <Mutation
+                                  key={notif.id}
+                                  client={notificationClient}
+                                  mutation={READ_NOTIFICATION}
+                                >
+                                  {(updateNotification) => (
+                                    <NotificationItem
+                                      notification={notif}
+                                      currentLang={currentLang}
+                                      readNotification={() => {
+                                        updateNotification({ variables: { id: notif.id, online: { viewed: true } } });
+                                      }}
+                                    />
+                                  )}
+                                </Mutation>
+                              ))
+                            )}
+                          </div>
                         </DropdownMenu>
                       </UncontrolledDropdown>
                     </MediaQuery>
@@ -91,6 +158,9 @@ const NotificationDropdown = (props) => {
                         currentLang={currentLang}
                         closeAll={closeAll}
                         data={data}
+                        READ_NOTIFICATION={READ_NOTIFICATION}
+                        client={notificationClient}
+                        count={count}
                       />
                     </MediaQuery>
                   </div>

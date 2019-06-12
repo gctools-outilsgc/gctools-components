@@ -22,6 +22,8 @@ const TopNavBar = (props) => {
     accessToken,
     onLanguageResultClick,
     hamburgerMenu,
+    count,
+    updateCount
   } = props;
 
   const status = (minimized ? false : true);
@@ -92,6 +94,8 @@ const TopNavBar = (props) => {
               onLanguageResultClick={(e) => {
                 onLanguageResultClick(e);
               }}
+              count={count}
+              updateCount={updateCount}
             />
           </div>
         </nav>

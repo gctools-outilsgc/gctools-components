@@ -242,6 +242,23 @@
   right: -9px;
 }
 
+.gn-notif-container {
+  overflow: auto;
+  max-height: 300px;
+  width:100%;
+  padding: 10px 0;
+}
+
+.gn-notif-container>.dropdown-item {
+  padding: 7px 5px 7px 0;
+  max-width: 350px;
+  white-space: normal;
+}
+
+.gn-notif-container>.dropdown-item small {
+  white-space: normal;
+}
+
 .gn-minimize {
   -ms-transform: translateX(180px);
   -moz-transform: translateX(180px);
@@ -579,9 +596,15 @@ z-index: 50;
   color: #0D7586;
 }
 
+.gn-read {
+  width:8px;
+  height:8px;
+  margin: 0 .5rem;
+}
+
 .gn-unread {
   border-radius: 1rem;
-  background:salmon;
+  background:red;
   width:8px;
   height:8px;
   margin: 0 .5rem;
