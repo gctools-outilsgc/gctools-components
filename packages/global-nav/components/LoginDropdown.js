@@ -40,7 +40,7 @@ const LoginDropdown = (props) => {
               {userObject.name}
             </div>
           </DropdownToggle>
-          <DropdownMenu>
+          <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
             <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.sub}`}>
               My Profile
             </DropdownItem>

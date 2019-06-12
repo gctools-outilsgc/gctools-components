@@ -107,7 +107,7 @@ const AppListDropdown = (props) => {
               Apps {currentApp.id}
             </div>
           </DropdownToggle>
-          <DropdownMenu>
+          <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
             {listComponent}
             <DropdownItem className="text-center bg-light" href="#">
               See All Apps

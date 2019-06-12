@@ -37,7 +37,7 @@ const ToggleLangDropdown = (props) => {
           {(currentLang == 'en_CA') ? 'English' : 'Français'}
         </div>
       </DropdownToggle>
-      <DropdownMenu>
+      <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
         <DropdownItem onClick={() => onResultClick('en_CA')}>
           <span>{(currentLang == 'en_CA') ? checkMark : ''}</span>English
         </DropdownItem>

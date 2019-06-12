@@ -27,7 +27,7 @@ const HelpDropdown = (props) => {
           Help
         </div>
       </DropdownToggle>
-      <DropdownMenu>
+      <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
         <DropdownItem href={`somewhere.gccollab.ca/report?app=${currentApp.name}&url=${windowLocation}`}>
           Report a Bug
         </DropdownItem>
