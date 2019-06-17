@@ -46,6 +46,21 @@ class NotificationError extends React.Component {
 
         const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
+        let copy = {}
+        if(this.props.currentLang == "en_CA"){
+            copy = {
+            "return": "Return to main menu",
+            "close": "Close GCTools navigation",
+            "error": "Unable to show notifications. Please try again later."
+            }
+        } else {
+            copy = {
+            "return": "Retour au menu principal",
+            "close": "Fermer la navigation dans OutilsGC",
+            "error": "Incapable de montrer des notifications. S'il vous plaît essayer plus tard. "
+            }
+        }
+
         return(
             <div>
                 <MediaQuery query="(min-width: 768px)">
@@ -60,7 +75,7 @@ class NotificationError extends React.Component {
                         </DropdownToggle>
                         <DropdownMenu className="gn-notif-menu">
                             <p className="m-2">
-                              Unable to fetch notifications. Please try again later.
+                              {copy.error}
                             </p>
                         </DropdownMenu>
                       </UncontrolledDropdown>
@@ -99,6 +114,7 @@ class NotificationError extends React.Component {
                                         aria-label="Return"
                                     >
                                         <span className="gn-chevron-arrow-left"></span>
+                                        <span className="sr-only">{copy.return}</span> 
                                     </Button>
                                 </div>
                                 <div className="align-self-center">
@@ -112,14 +128,14 @@ class NotificationError extends React.Component {
                                 <div>
                                     <div className="gn-notifications-list">
                                         <div className="align-self-center ml-3 mr-3">
-                                            Unable to fetch notifications. Please try again later.
+                                            {copy.error}
                                         </div>
                                     </div>
                                 </div>
                             </ModalBody>
 
                             <ModalFooter>
-                                <Button size="sm" color="secondary" onClick={this.toggle} >Close</Button>
+                                <Button size="sm" color="secondary" onClick={this.toggle} >{copy.return}</Button>
                             </ModalFooter>
                         </Modal>
                     </div>

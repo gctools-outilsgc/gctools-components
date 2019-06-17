@@ -5,10 +5,13 @@ import {
   Button
 } from 'reactstrap';
 
+import GctoolsIcon from '../assets/gctools-icon.svg';
+
 const SidebarToggle = (props) => {
   const {
     minimized,
     onResultClick,
+    currentLang,
   } = props;
 
   const status = (minimized ? false : true);
@@ -19,11 +22,20 @@ const SidebarToggle = (props) => {
         onClick={() => onResultClick(status)}
         className={
           (minimized) ? 
-            'gn-btn-sidebar-toggle gn-minimize' :
-            'gn-btn-sidebar-toggle show'
+            'gn-btn-sidebar-toggle gn-minimize d-flex' :
+            'gn-btn-sidebar-toggle show d-flex'
         }
       >
-        Toggle
+        <img className="align-self-center" src={GctoolsIcon} alt="" style={{width: "30px", height: "30px"}}/>
+        {currentLang === "en_CA" ? 
+          <span className="align-self-center pl-3">
+            <span className="sr-only">Toggle</span><span>GC</span>Tools<span className="sr-only">navigation open or closed</span>
+          </span>
+        :
+          <span className="align-self-center pl-3">
+            <span className="sr-only">Faire basculer la navigation dans </span>Outils<span>GC</span><span className="sr-only"> entre ouvert ou fermé</span>
+          </span>
+        }
       </Button>
     </div>
   );
@@ -32,6 +44,7 @@ const SidebarToggle = (props) => {
 SidebarToggle.defaultProps = {
   minimized: false,
   onResultClick: () => {},
+  currentLang: "en_CA"
 };
 
 SidebarToggle.propTypes = {
@@ -39,6 +52,7 @@ SidebarToggle.propTypes = {
   minimized: PropTypes.bool,
   /** Gets the value of the option clicked */
   onResultClick: PropTypes.func,
+  currentLang: PropTypes.string,
 };
 
 export default SidebarToggle;

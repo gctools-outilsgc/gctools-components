@@ -15,11 +15,24 @@ const NotificationItem = (props) => {
 
     const time = parseInt(notification.generatedOn, 10)/1000;
 
+    let copy = {}
+    if(currentLang != "fr_CA"){
+      copy = {
+        "unread": "unread",
+        "title": notification.online.titleEn
+      }
+    } else {
+      copy = {
+        "unread": "unread",
+        "title": notification.online.titleFr
+      }
+    }
+
     return (
         <DropdownItem
             className="d-inline d-flex"
             href={
-                (notification.actionLink ? notification.actionLink : "#!")
+                (notification.actionLink ? notification.actionLink : "#")
             }
             onClick={() => 
                 ( notification.online.viewed ? "" : readNotification() )
@@ -29,7 +42,7 @@ const NotificationItem = (props) => {
             <div className="gn-read align-self-center" />
         : 
             <div className="gn-unread align-self-center">
-                <span className="sr-only">Unread</span>
+                <span className="sr-only">{copy.unread}</span>
             </div>
             }
             <div
@@ -37,11 +50,7 @@ const NotificationItem = (props) => {
                 style={{ 'backgroundColor': 'green' }}
             />
             <div style={{"maxWidth": "250px"}} className="align-self-center ml-2">
-                {currentLang == "en_CA" ?
-                    notification.online.titleEn
-                :
-                    notification.online.titleFr
-                }
+                {copy.title}
                 <p className="mb-0">
                     <small>
                         <Moment format="YYYY-MM-DD HH:mm" unix>

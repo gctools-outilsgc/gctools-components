@@ -38,11 +38,11 @@ const ToggleLangDropdown = (props) => {
         </div>
       </DropdownToggle>
       <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
-        <DropdownItem onClick={() => onResultClick('en_CA')}>
+        <DropdownItem onClick={() => onResultClick('en_CA')} lang="en">
           <span>{(currentLang == 'en_CA') ? checkMark : ''}</span>English
         </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem onClick={() => onResultClick('fr_CA')}>
+        <DropdownItem onClick={() => onResultClick('fr_CA')} lang="fr">
           <span>{(currentLang == 'fr_CA') ? checkMark : ''}</span>Français
         </DropdownItem>
       </DropdownMenu>

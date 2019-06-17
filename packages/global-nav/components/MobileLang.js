@@ -50,6 +50,24 @@ class MobileLang extends React.Component {
       
       const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
       const langIcon = (currentLang === 'en_CA' ? langEn : langFr );
+
+        let copy = {}
+        if(this.props.currentLang == "en_CA"){
+            copy = {
+              "change":"Change language",
+              "return": "Return to main menu",
+              "closenav": "Close GCTools navigation",
+            }
+        } else {
+            copy = {
+              "change":"Changer la langue",
+              "return": "Retour au menu principal",
+              "closenav": "Fermer la navigation dans OutilsGC",
+            }
+        }
+
+        const closeBtn = <button className="close" onClick={this.closeEverything}>&times;<span className="sr-only">{copy.closenav}</span></button>;
+
         return (
             <div>
                 <Button className="d-flex gn-dd-btn" onClick={this.toggle}>
@@ -62,17 +80,18 @@ class MobileLang extends React.Component {
                 </Button>
                 <Modal 
                     className="gn-mobile-menu" 
-                    zIndex="99999" 
+                    zIndex="999" 
                     isOpen={this.state.modal} 
                     toggle={this.toggle}
                     wrapClassName="gn-sub-modal"
                     backdrop={false}
                 >
                     <ModalHeader
-                        className={hideHeaderClass} 
+                        className={hideHeaderClass}
+                        close={closeBtn}
                         toggle={this.closeEverything}
                     >
-                      Change language
+                      {copy.change}
                     </ModalHeader>
                     <div className="d-flex gn-dd-btn gn-mobile-back-btn">
                       <div className="align-self-center" >
@@ -81,6 +100,7 @@ class MobileLang extends React.Component {
                             aria-label="Return"
                         >
                           <span className="gn-chevron-arrow-left"></span>
+                          <span className="sr-only">{copy.return}</span>
                         </Button>
                       </div>
                       <div className="align-self-center">
@@ -100,7 +120,7 @@ class MobileLang extends React.Component {
                             <div>
                               <img src={langEn} alt="" className="lang-icon" />
                             </div>
-                            <div>English</div>
+                            <div lang="en">English</div>
                           </div>
                         </Button>
                         <Button className="gn-grid-btn" onClick={() => {
@@ -111,13 +131,13 @@ class MobileLang extends React.Component {
                             <div>
                               <img src={langFr} alt="" className="lang-icon" />
                             </div>
-                            <div>Français</div>
+                            <div lang="fr">Français</div>
                           </div>
                         </Button>
                       </div>
                     </ModalBody>
                     <ModalFooter>
-                      <Button size="sm" color="secondary" onClick={this.toggle} >Close</Button>
+                      <Button size="sm" color="secondary" onClick={this.toggle} >{copy.return}</Button>
                     </ModalFooter>
                 </Modal>
             </div>

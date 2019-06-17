@@ -29,7 +29,7 @@ import NotificationError from './NotificationError';
 
 const notificationClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://naas.beta.gccollab.ca/graphql'
+    uri: 'http://192.168.42.171:4000/graphql'
   }),
   cache: new InMemoryCache()
 });
@@ -76,6 +76,19 @@ const NotificationDropdown = (props) => {
     gcID = userObject.sub;
   }
 
+  let copy = {}
+  if(currentLang == "en_CA"){
+      copy = {
+          "unread": "unread",
+          "new": "No new notifications"
+      }
+  } else {
+      copy = {
+          "unread": " non lu",
+          "new": "Aucunes notifications nouveaux"
+      }
+  }
+
     return (
       <div>
          {userObject ? (
@@ -117,7 +130,7 @@ const NotificationDropdown = (props) => {
                           {count < 1 ? ("") :
                             <Badge color="danger" className="align-self-center gn-notification-badge">
                                 {count}
-                                <span className="sr-only">unread</span>
+                                <span className="sr-only">{copy.unread}</span>
                             </Badge>
                           }
                           <div className="align-self-center pl-2">
@@ -128,7 +141,7 @@ const NotificationDropdown = (props) => {
                           <div className="gn-notif-container">
                             {Object.entries(data.notifications).length === 0 ? (
                               <DropdownItem >
-                                No notifications available
+                                {copy.new}
                               </DropdownItem>
                             ): (
                               data.notifications.map(notif =>(

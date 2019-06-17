@@ -21,14 +21,14 @@
   position: fixed;
   width:100%;
   top:0;
-  z-index:9999;
+  z-index:998;
 }
 
 .gn-skip-to {
   position: absolute;
   text-align: center;
   width: 100%;
-  z-index: 99999;
+  z-index: 1000;
   top:0;
 }
 
@@ -89,6 +89,11 @@
   width: 113px;
 }
 
+.gn-holder-foot>a {
+  position: absolute;
+  top: -30px;
+}
+
 .gn-modal .fade {
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
@@ -131,6 +136,11 @@
 
 .gn-mobile-menu .modal-footer>img {
   width: 90px;
+}
+
+.gn-mobile-menu .modal-footer>.terms {
+  position: absolute;
+  left: 8px;
 }
 
 .gn-sub-modal .modal.fade .modal-dialog {
@@ -206,12 +216,12 @@
   color: white;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 40px;
 }
 
 .gn-applist-logo span {
   display: inline-block;
-  margin: 9px;
+  margin: auto;
 }
 
 .gn-holder .dropleft .dropdown-menu:before {
@@ -342,7 +352,8 @@
 }
 
 .gn-btn-sidebar-toggle {
-  padding: 17px 17px 18px 17px;
+  height: 61px;
+  padding: 17px 17px 18px 13px;
   position: absolute;
   top:0;
   right: 0;
@@ -352,14 +363,16 @@
   border-radius: 0px !important;
   background-color: transparent;
   color: white;
-  z-index: 99998;
+  z-index: 998;
   -webkit-transition: transform 0.45s ease-out;
   -moz-transition: transform 0.45s ease-out;
   -o-transition: transform 0.45s ease-out;
   transition: transform 0.45s ease-out;
+  font-size: 120%;
 }
 
-.gn-btn-sidebar-toggle:hover {
+.gn-btn-sidebar-toggle:hover,
+.gn-btn-sidebar-toggle:focus {
   background-color: #0D7586;
 }
 
@@ -632,4 +645,5 @@ z-index: 50;
     max-width: 1200px;
     padding-right: 60px;
   }
+
 }

@@ -94,6 +94,27 @@ storiesOf('GlobalNav', module)
     ))
   )
   .add(
+    'With Logged in User / French',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div className="gn-story-holder">
+        <GlobalNav
+          currentLang='fr_CA'
+          currentUser={
+            {
+              sub: '22',
+              name: 'Jonald',
+              picture: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
+            }
+          }
+        />
+      </div>
+    ))
+  )
+  .add(
     'On A Different App / Logged In',
     withInfo({
       header: true,

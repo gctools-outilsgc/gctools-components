@@ -44,13 +44,34 @@ class MobileNotifications extends React.Component {
 
     render() {
 
+        let copy = {}
+        if(this.props.currentLang == "en_CA"){
+            copy = {
+                "notifications": "Notifications",
+                "return": "Return to main menu",
+                "closenav": "Close GCTools navigation",
+                "new": "No new notifications",
+                "unread": " unread"
+            }
+        } else {
+            copy = {
+                "notifications": "Notifications",
+                "return": "Retour au menu principal",
+                "closenav": "Fermer la navigation dans OutilsGC",
+                "new": "Aucunes notifications nouveaux",
+                "unread": " non lu",
+            }
+        }
+
         const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
         const notifBadge = this.props.count < 1 ? ( "" ) :
         (<Badge color="danger" className="align-self-center">
             {this.props.count}
-            <span className="sr-only">unread</span>
+            <span className="sr-only">{copy.unread}</span>
         </Badge>);
+
+        const closeBtn = <button className="close" onClick={this.closeEverything}>&times;<span className="sr-only">{copy.closenav}</span></button>;
 
         return (
             <div>
@@ -73,7 +94,8 @@ class MobileNotifications extends React.Component {
                     backdrop={false}
                 >
                     <ModalHeader
-                        className={hideHeaderClass} 
+                        className={hideHeaderClass}
+                        close={closeBtn}
                         toggle={this.closeEverything}
                     >
                         Notifications
@@ -86,6 +108,7 @@ class MobileNotifications extends React.Component {
                                 aria-label="Return"
                             >
                                 <span className="gn-chevron-arrow-left"></span>
+                                <span className="sr-only">{copy.return}</span> 
                             </Button>
                         </div>
                         <div className="align-self-center">
@@ -101,7 +124,7 @@ class MobileNotifications extends React.Component {
                             <div className="gn-notifications-list">
                                 {Object.entries(this.props.data.notifications).length === 0 ? (
                                     <div className="align-self-center ml-3 mr-3">
-                                        No new notifications available.
+                                        {copy.new}
                                     </div>
                                 ): (
                                     this.props.data.notifications.map(notif =>(
@@ -127,7 +150,7 @@ class MobileNotifications extends React.Component {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button size="sm" color="secondary" onClick={this.toggle} >Close</Button>
+                        <Button size="sm" color="secondary" onClick={this.toggle}>{copy.return}</Button>
                     </ModalFooter>
                 </Modal>
             </div>

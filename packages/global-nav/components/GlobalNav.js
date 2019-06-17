@@ -6,11 +6,13 @@ import '../css/style.css';
 import '../assets/utils.js';
 import MediaQuery from 'react-responsive';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+
 import SidebarToggle from './SidebarToggle';
 import LoginDropdown from './LoginDropdown';
 import AppListDropdown from './AppListDropdown';
 import ToggleLangDropdown from './ToggleLangDropdown';
-import HelpDropdown from './HelpDropdown';
 import NotificationDropdown from './NotificationDropdown';
 import TopNavBar from './TopNavBar';
 
@@ -36,6 +38,32 @@ class GlobalNav extends React.Component {
   }
 
   render(){
+
+    let copy = {}
+    if(this.props.currentLang == "en_CA"){
+      copy = {
+        "skip": "Skip to main content",
+        "help": "Help",
+        "welcome": "Welcome to the GCTools!",
+        "opensource": "A free and open suite of digital collaboration tools.",
+        "try": "Haven’t tried it out yet? ",
+        "register":"Register for a free account.",
+        "terms": "Terms and Conditions",
+        "termslink": "https://gccollab.ca/terms"
+      }
+    } else {
+      copy = {
+        "skip": "Passer au contenu principal",
+        "help": "Aide",
+        "welcome": "Bienvenue dans OutilsGC!",
+        "opensource": "Un ensemble libre et ouvert d’outils de collaboration numérique.",
+        "try": "Vous n’en avez pas encore fait l’essai? ",
+        "register": "Inscrivez-vous pour ouvrir un compte gratuitement.",
+        "terms": "Conditions d’utilisation",
+        "termslink": "https://gccollab.ca/termes"
+      }
+    }
+
     return (
       <div>
         <MediaQuery query="(min-width: 768px)">
@@ -45,7 +73,7 @@ class GlobalNav extends React.Component {
                 className="sr-only sr-only-focusable"
                 href="#gn-main"
               >
-                Skip to main content
+                {copy.skip}
               </a>
             </div>
             <div>
@@ -61,6 +89,7 @@ class GlobalNav extends React.Component {
               <MediaQuery query="(min-width: 1024px)">
                 <SidebarToggle
                   minimized={this.props.minimized}
+                  currentLang={this.props.currentLang}
                   onResultClick={(e) => {
                     this.props.onToggleResultClick(e);
                     console.log(e);
@@ -73,15 +102,18 @@ class GlobalNav extends React.Component {
                 userObject={this.props.currentUser}
                 oidcConfig={this.props.oidcConfig}
                 doLogin={this.props.doLogin}
+                currentLang={this.props.currentLang}
               />
               <NotificationDropdown
                 userObject={this.props.currentUser}
                 accessToken={this.props.accessToken}
                 count={this.state.count}
                 updateCount={this.updateCount}
+                currentLang={this.props.currentLang}
               />
               <AppListDropdown
                 currentApp={this.props.currentApp}
+                currentLang={this.props.currentLang}
               />
               <ToggleLangDropdown
                 currentLang={this.props.currentLang}
@@ -91,20 +123,33 @@ class GlobalNav extends React.Component {
                   console.log(e);
                 }}
               />
-              <HelpDropdown
-                currentApp={this.props.currentApp}
-                //TODO this could just exist in this component
-                windowLocation={window.location.href}
-              />
+
+              <a href="https://gccollab.gctools-outilsgc.ca/en/support/home" className="gn-dd-btn btn btn-secondary d-flex">
+                <div className="align-self-center">
+                  <FontAwesomeIcon icon={faQuestionCircle} />
+                </div>
+                <div className="align-self-center pl-2">
+                  {copy.help}
+                </div>
+              </a>
+
               {this.props.currentUser ? '' :
                 this.props.minimized ? '' : (
-                <div className="gn-not-logged-cta">
-                  <div>Welcome!</div>
-                  <div>You are not logged in. Why not? It's free.</div>
-                  <div>Calls to action here? That would be great. I'm not sure the copy is final.</div>
-                </div>
+                  <MediaQuery query="(min-width: 1024px)">
+                    <div className="gn-not-logged-cta">
+                      <div>{copy.welcome}</div>
+                      <div>{copy.opensource}</div>
+                      <div>{copy.try}<a href="https://account.gccollab.ca/register">{copy.register}</a></div>
+                    </div>
+                  </MediaQuery>
               )}
+
               <div className="gn-holder-foot">
+                <MediaQuery query="(min-width: 1024px)">
+                {this.props.minimized ? '' : (
+                  <a href={copy.termslink}>{copy.terms}</a>
+                )}
+                </MediaQuery>
                 <img src={Canada} alt="Canada" className="float-right" />
               </div>
             </div>
@@ -117,7 +162,7 @@ class GlobalNav extends React.Component {
                 className="sr-only sr-only-focusable"
                 href="#gn-main"
               >
-                Skip to main content
+                {copy.skip}
               </a>
             </div>
             <TopNavBar

@@ -21,7 +21,25 @@ const LoginDropdown = (props) => {
     oidcConfig,
     doLogin,
     closeAll,
+    currentLang
   } = props;
+
+  let copy = {}
+  if(currentLang == "en_CA"){
+    copy = {
+      "profile": "My profile",
+      "account": "Account settings",
+      "logout": "Log-out",
+      "login": "Log-in"
+    }
+  } else {
+    copy = {
+      "profile": "Mon profil",
+      "account": "Paramètres du compte",
+      "logout": "Quitter la séance",
+      "login": "Se connecter"
+    }
+  }
 
   return (
     <div>
@@ -42,13 +60,19 @@ const LoginDropdown = (props) => {
           </DropdownToggle>
           <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
             <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.sub}`}>
-              My Profile
-            </DropdownItem>
-            <DropdownItem href="https://account.gccollab.ca/profile/">
-              Reset Password
+              {copy.profile}
             </DropdownItem>
             <DropdownItem href="https://account.gccollab.ca/securitypages/">
-              Account Settings
+              {copy.account}
+            </DropdownItem>
+            <DropdownItem onClick={(e) => {
+              e.stopPropagation();
+              if(document.getElementById('login-btn')){
+                document.getElementById('login-btn').click();
+              }
+              console.log('LOGIN!');
+            }}>
+              {copy.logout}
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
@@ -68,7 +92,7 @@ const LoginDropdown = (props) => {
               <FontAwesomeIcon icon={faSignInAlt} />
             </div>
             <div className="align-self-center pl-2">
-              Login
+              {copy.login}
             </div>
           </Button>
         </div>
@@ -79,6 +103,7 @@ const LoginDropdown = (props) => {
 };
 
 LoginDropdown.defaultProps = {
+  currentLang: "en_CA",
   userObject: {},
   oidcConfig: {
     authority: 'http://localhost:8080',
@@ -93,6 +118,7 @@ LoginDropdown.defaultProps = {
 };
 
 LoginDropdown.propTypes = {
+  currentLang: PropTypes.string,
   /** Information about the logged in user */
   userObject: PropTypes.shape({
     /** GCID for user that comes back from openID provider */
