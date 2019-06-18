@@ -66,7 +66,7 @@ class MobileNotifications extends React.Component {
         const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
         const notifBadge = this.props.count < 1 ? ( "" ) :
-        (<Badge color="danger" className="align-self-center">
+        (<Badge color="danger">
             {this.props.count}
             <span className="sr-only">{copy.unread}</span>
         </Badge>);
@@ -75,13 +75,13 @@ class MobileNotifications extends React.Component {
 
         return (
             <div>
-                <Button className="gn-dd-btn d-flex" onClick={this.toggle}>
-                    <div className="align-self-center">
+                <Button className="gn-grid-btn" onClick={this.toggle}>
+                    <div className="btn-align">
                         <FontAwesomeIcon icon={faBell} />
-                    </div>
-                    {notifBadge}
-                    <div className="align-self-center pl-2">
-                        Notifications
+                        <span className="gn-notification-badge">{notifBadge}</span>
+                        <div>
+                            Notifications
+                        </div>
                     </div>
                 </Button>
 
@@ -114,7 +114,9 @@ class MobileNotifications extends React.Component {
                         <div className="align-self-center">
                             <FontAwesomeIcon icon={faBell} />
                         </div>
-                        {notifBadge}
+                        <div className="align-self-center">
+                            {notifBadge}
+                        </div>
                         <div className="align-self-center pl-2">
                             Notifications
                         </div>

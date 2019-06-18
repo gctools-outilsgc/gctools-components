@@ -59,15 +59,15 @@ class NotificationLoad extends React.Component {
                 </MediaQuery>
 
                 <MediaQuery query="(max-width: 768px)">
-                        <div className="gn-dd-btn d-flex">
-                            <div className="align-self-center">
+                        <button className="gn-grid-btn btn btn-secondary">
+                            <div className="btn-align">
                                 <FontAwesomeIcon icon={faSpinner} spin />
                                 <span className="sr-only">{copy.loading}</span>
+                                <div>
+                                    Notifications
+                                </div>
                             </div>
-                            <div className="align-self-center pl-2">
-                                Notifications
-                            </div>
-                        </div>
+                        </button>
                 </MediaQuery>
             </div>
         );

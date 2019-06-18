@@ -69,13 +69,13 @@ class MobileLang extends React.Component {
         const closeBtn = <button className="close" onClick={this.closeEverything}>&times;<span className="sr-only">{copy.closenav}</span></button>;
 
         return (
-            <div>
-                <Button className="d-flex gn-dd-btn" onClick={this.toggle}>
-                  <div className="align-self-center">
+            <div className="d-inline-block">
+                <Button className="gn-grid-btn" onClick={this.toggle}>
+                  <div className="btn-align">
                     <img src={langIcon} alt="" className="lang-icon" />
-                  </div>
-                  <div className="align-self-center pl-2">
-                    {(currentLang == 'en_CA') ? 'English' : 'Français'}
+                    <div>
+                      {(currentLang == 'en_CA') ? 'English' : 'Français'}
+                    </div>
                   </div>
                 </Button>
                 <Modal 
@@ -116,7 +116,7 @@ class MobileLang extends React.Component {
                           onResultClick('en_CA');
                           this.toggle();
                         }}>
-                          <div>
+                          <div className="btn-align">
                             <div>
                               <img src={langEn} alt="" className="lang-icon" />
                             </div>
@@ -127,7 +127,7 @@ class MobileLang extends React.Component {
                           onResultClick('fr_CA');
                           this.toggle();
                         }}>
-                          <div>
+                          <div className="btn-align">
                             <div>
                               <img src={langFr} alt="" className="lang-icon" />
                             </div>

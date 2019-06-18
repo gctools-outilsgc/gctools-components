@@ -61,34 +61,30 @@ class MobileLogin extends React.Component {
     const closeBtn = <button className="close" onClick={this.closeEverything}>&times;<span className="sr-only">{copy.closenav}</span></button>;
 
     return (
-      <div>
+      <div className="d-inline-block">
         {this.props.userObject ? (
-          <Button className="gn-dd-btn" onClick={this.toggle}>
-          <div className="d-flex">
-            <div className="align-self-center">
+          <Button className="gn-grid-btn" onClick={this.toggle}>
+            <div className="btn-align">
               <img
                 className="gn-avatar"
                 src={this.props.userObject.picture}
                 alt=""
               />
-            </div>
-            <div className="align-self-center pl-2">
+            <div className="">
               {this.props.userObject.name}
             </div>
           </div>
           </Button>
         ) : (
-          <Button className="gn-dd-btn" onClick={(e) => {
+          <Button className="gn-grid-btn" onClick={(e) => {
             e.stopPropagation();
             if(document.getElementById('login-btn')){
               document.getElementById('login-btn').click();
             }
           }}>
-            <div className="d-flex">
-              <div className="align-self-center">
-                <FontAwesomeIcon icon={faSignInAlt} />
-              </div>
-              <div className="align-self-center pl-2">
+            <div className="btn-align">
+              <FontAwesomeIcon icon={faSignInAlt} />
+              <div>
                 {copy.login}
               </div>
             </div>
@@ -141,37 +137,28 @@ class MobileLogin extends React.Component {
           <ModalBody>
             {this.props.userObject ? (
               <div className="d-flex help-section">
-                <Button className="gn-grid-btn help-button" href={`https://profile.gccollab.ca/p/${this.props.userObject.sub}`}>
+                <Button className="gn-grid-btn" href={`https://profile.gccollab.ca/p/${this.props.userObject.sub}`}>
                   <div>
-                    <div>
-
-                    </div>
                     <FontAwesomeIcon icon={faUserCircle} />
                     <div>{copy.profile}</div>
                   </div>
                 </Button>
-                <Button className="gn-grid-btn help-button" href={`https://account.gccollab.ca/securitypages/`}>
+                <Button className="gn-grid-btn" href={`https://account.gccollab.ca/securitypages/`}>
                   <div>
-                    <div>
-
-                    </div>
                     <FontAwesomeIcon icon={faCog} />
                     <div>{copy.account}</div>
                   </div>
                 </Button>
-                <Button className="gn-grid-btn help-button" onClick={(e) => {
+                <Button className="gn-grid-btn" onClick={(e) => {
                   e.stopPropagation();
                   if(document.getElementById('login-btn')){
                     document.getElementById('login-btn').click();
                   }
                 }}>
-                  <div>
-                    <div>
-
+                    <div className="btn-align">
+                      <FontAwesomeIcon icon={faSignOutAlt} />
+                      <div>{copy.logout}</div>
                     </div>
-                    <FontAwesomeIcon icon={faSignOutAlt} />
-                    <div>{copy.logout}</div>
-                  </div>
                 </Button>
               </div>
             ) : (

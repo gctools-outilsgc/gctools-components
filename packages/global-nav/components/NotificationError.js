@@ -83,12 +83,12 @@ class NotificationError extends React.Component {
 
                 <MediaQuery query="(max-width: 768px)">
                     <div>
-                        <Button className="gn-dd-btn d-flex" onClick={this.toggle}>
-                            <div className="align-self-center">
+                        <Button className="gn-grid-btn" onClick={this.toggle}>
+                            <div className="btn-align">
                                 <FontAwesomeIcon icon={faBellSlash} />
-                            </div>
-                            <div className="align-self-center pl-2">
-                                Notifications
+                                <div>
+                                    Notifications
+                                </div>
                             </div>
                         </Button>
 

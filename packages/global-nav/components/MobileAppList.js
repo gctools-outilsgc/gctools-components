@@ -66,13 +66,13 @@ class MobileAppList extends React.Component {
       const closeBtn = <button className="close" onClick={this.closeEverything}>&times;<span className="sr-only">{copy.closenav}</span></button>;
 
         return (
-            <div>
-                <Button className="d-flex gn-dd-btn" onClick={this.toggle}>
-                  <div className="align-self-center">
-                    <FontAwesomeIcon icon={faTh} />
-                  </div>
-                  <div className="align-self-center pl-2">
-                    {copy.apps}
+            <div className="d-inline-block">
+                <Button className="gn-grid-btn" onClick={this.toggle}>
+                  <div className="btn-align">
+                    <FontAwesomeIcon icon={faTh} />            
+                    <div>
+                      {copy.apps}
+                    </div>
                   </div>
                 </Button>
                 <Modal 

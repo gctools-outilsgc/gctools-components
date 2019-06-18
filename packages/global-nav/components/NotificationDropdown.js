@@ -90,7 +90,7 @@ const NotificationDropdown = (props) => {
   }
 
     return (
-      <div>
+      <div className="gn-inline">
          {userObject ? (
 
          <Query

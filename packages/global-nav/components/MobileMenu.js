@@ -127,11 +127,9 @@ class MobileMenu extends React.Component {
               }}
             />
 
-            <a href="https://gccollab.gctools-outilsgc.ca/en/support/home" className="gn-dd-btn btn btn-secondary d-flex">
-              <div className="align-self-center">
-                <FontAwesomeIcon icon={faQuestionCircle} />
-              </div>
-              <div className="align-self-center pl-2">
+            <a href="https://gccollab.gctools-outilsgc.ca/en/support/home" className="gn-grid-btn btn btn-secondary d-inline-block">
+              <FontAwesomeIcon icon={faQuestionCircle} />
+              <div>
                 {copy.help}
               </div>
             </a>
