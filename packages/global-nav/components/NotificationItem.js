@@ -45,10 +45,13 @@ const NotificationItem = (props) => {
                 <span className="sr-only">{copy.unread}</span>
             </div>
             }
-            <div
-                className="gn-applist-logo align-self-center"
-                style={{ 'backgroundColor': 'green' }}
-            />
+            <div className="gn-applist-logo align-self-center d-flex" style={{ 'backgroundColor': '#754f8b' }} >
+              {currentLang == "en_CA" ?
+                <span aria-hidden="true" className="align-self-center">D</span>
+              :
+                <span aria-hidden="true" className="align-self-center">R</span>
+              }
+            </div>
             <div style={{"maxWidth": "250px"}} className="align-self-center ml-2">
                 {copy.title}
                 <p className="mb-0">

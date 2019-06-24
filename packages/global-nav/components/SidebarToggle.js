@@ -30,10 +30,12 @@ const SidebarToggle = (props) => {
         {currentLang === "en_CA" ? 
           <span className="align-self-center pl-3">
             <span className="sr-only">Toggle</span><span>GC</span>Tools<span className="sr-only">navigation open or closed</span>
+            <span className="gn-chevron-arrow-right"></span>
           </span>
         :
           <span className="align-self-center pl-3">
             <span className="sr-only">Faire basculer la navigation dans </span>Outils<span>GC</span><span className="sr-only"> entre ouvert ou fermé</span>
+            <span className="gn-chevron-arrow-right"></span>
           </span>
         }
       </Button>
