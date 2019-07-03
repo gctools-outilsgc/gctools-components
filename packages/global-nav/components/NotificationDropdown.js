@@ -29,7 +29,7 @@ import NotificationError from './NotificationError';
 
 const notificationClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'http://192.168.42.171:4000/graphql'
+    uri: 'https://naas.beta.gccollab.ca'
   }),
   cache: new InMemoryCache()
 });
