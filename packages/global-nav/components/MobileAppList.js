@@ -44,6 +44,7 @@ class MobileAppList extends React.Component {
     render() {
       const {
         currentApp,
+        currentLang,
       } = this.props;
 
       const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
@@ -108,7 +109,10 @@ class MobileAppList extends React.Component {
                       </div>
                     </div>
                     <ModalBody>
-                      <AppListDropdown currentApp={currentApp} />
+                      <AppListDropdown 
+                        currentLang={currentLang}
+                        currentApp={currentApp}
+                      />
                     </ModalBody>
                     <ModalFooter>
                       <Button size="sm" color="secondary" onClick={this.toggle} >{copy.return}</Button>
