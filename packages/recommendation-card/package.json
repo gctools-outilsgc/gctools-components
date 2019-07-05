@@ -16,7 +16,9 @@
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
     "test-update": "npm run test -- -u",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "nrc"
@@ -76,7 +78,8 @@
     "react-fontawesome": "^1.6.1",
     "react-masonry-component": "^6.0.1",
     "react-rating": "^1.0.4",
-    "react-tooltip": "^3.4.0"
+    "react-tooltip": "^3.4.0",
+    "snyk": "^1.192.0"
   },
   "babel": {
     "presets": [
@@ -97,5 +100,6 @@
   "eslintConfig": {
     "extends": "@gctools-components",
     "root": true
-  }
+  },
+  "snyk": true
 }
