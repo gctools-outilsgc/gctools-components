@@ -104,6 +104,13 @@ const NotificationDropdown = (props) => {
               ))
               updateCount(unreadCount)
             }}
+            context={{	
+              headers: {	
+                  Authorization:	
+                    `Bearer ${accessToken}`,	
+                },
+            }
+          }
           >
             {({ loading, error, data }) => {
               if (loading)
@@ -139,28 +146,37 @@ const NotificationDropdown = (props) => {
                         </DropdownToggle>
                         <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}} className="gn-notif-menu">
                           <div className="gn-notif-container">
-                            {Object.entries(data.notifications).length === 0 ? (
-                              <DropdownItem >
-                                {copy.new}
-                              </DropdownItem>
-                            ): (
-                              data.notifications.map(notif =>(
-                                <Mutation
-                                  key={notif.id}
-                                  client={notificationClient}
-                                  mutation={READ_NOTIFICATION}
-                                >
-                                  {(updateNotification) => (
-                                    <NotificationItem
-                                      notification={notif}
-                                      currentLang={currentLang}
-                                      readNotification={() => {
-                                        updateNotification({ variables: { id: notif.id, online: { viewed: true } } });
-                                      }}
-                                    />
-                                  )}
-                                </Mutation>
-                              ))
+                            {(data.notifications) ? (
+                              <span>
+                                {Object.entries(data.notifications).length === 0 ? (
+                                  <DropdownItem >
+                                    {copy.new}
+                                  </DropdownItem>
+                                ): (
+                                  data.notifications.map(notif =>(
+                                    <Mutation
+                                      key={notif.id}
+                                      client={notificationClient}
+                                      mutation={READ_NOTIFICATION}
+                                    >
+                                      {(updateNotification) => (
+                                        <NotificationItem
+                                          notification={notif}
+                                          currentLang={currentLang}
+                                          readNotification={() => {
+                                            updateNotification({ variables: { id: notif.id, online: { viewed: true } } });
+                                          }}
+                                        />
+                                      )}
+                                    </Mutation>
+                                  ))
+                                )}
+                              </span>
+                            ) : (
+                              <NotificationError
+                                currentLang={currentLang}
+                                closeAll={closeAll}
+                              />
                             )}
                           </div>
                         </DropdownMenu>
