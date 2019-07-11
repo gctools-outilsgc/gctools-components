@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 
@@ -147,7 +147,7 @@ const NotificationDropdown = (props) => {
                         <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}} className="gn-notif-menu">
                           <div className="gn-notif-container">
                             {(data.notifications) ? (
-                              <span>
+                              <React.Fragment>
                                 {Object.entries(data.notifications).length === 0 ? (
                                   <DropdownItem >
                                     {copy.new}
@@ -171,12 +171,9 @@ const NotificationDropdown = (props) => {
                                     </Mutation>
                                   ))
                                 )}
-                              </span>
+                              </React.Fragment>
                             ) : (
-                              <NotificationError
-                                currentLang={currentLang}
-                                closeAll={closeAll}
-                              />
+                              <div>No notifications</div>
                             )}
                           </div>
                         </DropdownMenu>

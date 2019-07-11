@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -124,29 +124,36 @@ class MobileNotifications extends React.Component {
                     <ModalBody>
                         <div>
                             <div className="gn-notifications-list">
-                                {Object.entries(this.props.data.notifications).length === 0 ? (
-                                    <div className="align-self-center ml-3 mr-3">
-                                        {copy.new}
-                                    </div>
-                                ): (
-                                    this.props.data.notifications.map(notif =>(
-                                        <Mutation
-                                            key={notif.id}
-                                            client={this.props.client}
-                                            mutation={this.props.READ_NOTIFICATION}
-                                        >
-                                            {(updateNotification) => (
-                                            <NotificationItem
-                                                notification={notif}
-                                                currentLang={this.props.currentLang}
-                                                readNotification={() => {
-                                                updateNotification({ variables: { id: notif.id, online: { viewed: true } } });
-                                                }}
-                                            />
-                                            )}
-                                        </Mutation>
-                                    ))
+                                {(this.props.data.notifications) ? (
+                                    <React.Fragment>
+                                        {Object.entries(this.props.data.notifications).length === 0 ? (
+                                        <div className="align-self-center ml-3 mr-3">
+                                            {copy.new}
+                                        </div>
+                                    ): (
+                                        this.props.data.notifications.map(notif =>(
+                                            <Mutation
+                                                key={notif.id}
+                                                client={this.props.client}
+                                                mutation={this.props.READ_NOTIFICATION}
+                                            >
+                                                {(updateNotification) => (
+                                                <NotificationItem
+                                                    notification={notif}
+                                                    currentLang={this.props.currentLang}
+                                                    readNotification={() => {
+                                                    updateNotification({ variables: { id: notif.id, online: { viewed: true } } });
+                                                    }}
+                                                />
+                                                )}
+                                            </Mutation>
+                                        ))
+                                    )}
+                                    </React.Fragment>
+                                ) : (
+                                    <div>No Notifications</div>
                                 )}
+                                
                             </div>
                         </div>
                     </ModalBody>

@@ -92,7 +92,6 @@ class GlobalNav extends React.Component {
                   currentLang={this.props.currentLang}
                   onResultClick={(e) => {
                     this.props.onToggleResultClick(e);
-                    console.log(e);
                   }}
                 />
               </MediaQuery>
@@ -120,7 +119,6 @@ class GlobalNav extends React.Component {
                 onResultClick={(e) => {
                   //TODO Send e to parent
                   this.props.onLanguageResultClick(e);
-                  console.log(e);
                 }}
               />
 
@@ -177,7 +175,6 @@ class GlobalNav extends React.Component {
               hamburgerMenu={this.props.hamburgerMenu}
               onLanguageResultClick={(e) => {
                 this.props.onLanguageResultClick(e);
-                console.log(e);
               }}
               count={this.state.count}
               updateCount={this.updateCount}
