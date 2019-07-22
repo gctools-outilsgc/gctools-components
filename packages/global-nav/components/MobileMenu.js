@@ -7,7 +7,7 @@ import {
     ModalBody,
     ModalFooter,
     Button,
-    Badge
+    Badge,
   } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
@@ -25,7 +25,8 @@ class MobileMenu extends React.Component {
     super();
     this.state = {
       modal: false,
-      closeAll: false
+      closeAll: false,
+      collapse: false
     };
 
     this.toggle = this.toggle.bind(this);

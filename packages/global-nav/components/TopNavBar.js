@@ -1,6 +1,6 @@
-import React from 'react'; import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
-import Search from "./Search";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,13 +8,13 @@ import SigEn from '../assets/sig-en.svg';
 import SigFr from '../assets/sig-fr.svg';
 
 import MobileMenu from './MobileMenu';
+import MobileSearch from './MobileSearch';
 
 const TopNavBar = (props) => {
   const {
     minimized,
     currentLang,
     currentApp,
-    search,
     onMobileMenuClick,
     userObject,
     oidcConfig,
@@ -23,7 +23,8 @@ const TopNavBar = (props) => {
     onLanguageResultClick,
     hamburgerMenu,
     count,
-    updateCount
+    updateCount,
+    searchComponent
   } = props;
 
   const status = (minimized ? false : true);
@@ -52,10 +53,9 @@ const TopNavBar = (props) => {
                 'searchbox-close search-box' :
                 'search-box'
             }>
-            <Search
-            currentLang={currentLang}
-            search={search}
-            />
+            <div className="searchContainer">
+              {searchComponent}
+            </div>
           </div>
         </nav>
       </MediaQuery>
@@ -83,7 +83,12 @@ const TopNavBar = (props) => {
               {currentApp.name}
             </div>
           </a>
-          <div className="ml-auto">
+          <div className="d-flex ml-auto">
+            {searchComponent && (
+              <MobileSearch
+                searchComponent={searchComponent}
+              />
+            )}
             <MobileMenu
               currentApp={currentApp}
               currentLang={currentLang}
@@ -96,6 +101,7 @@ const TopNavBar = (props) => {
               }}
               count={count}
               updateCount={updateCount}
+              searchComponent={searchComponent}
             />
           </div>
         </nav>
@@ -113,6 +119,7 @@ TopNavBar.defaultProps = {
   },
   onMobileMenuClick: () => {},
   onLanguageResultClick: () => {},
+  searchComponent: null,
 };
 
 TopNavBar.propTypes = {
@@ -126,6 +133,7 @@ TopNavBar.propTypes = {
   /** Function for parent app to open mobile menu */
   onMobileMenuClick: PropTypes.func,
   onLanguageResultClick: PropTypes.func,
+  searchComponent: PropTypes.element,
 };
 
 export default TopNavBar;

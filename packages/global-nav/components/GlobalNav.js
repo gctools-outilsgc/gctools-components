@@ -81,6 +81,7 @@ class GlobalNav extends React.Component {
                 currentApp={this.props.currentApp}
                 minimized={this.props.minimized}
                 search={this.props.search}
+                searchComponent={this.props.searchComponent}
                 currentLang={this.props.currentLang}
                 userObject={this.props.currentUser}
                 oidcConfig={this.props.oidcConfig}
@@ -178,6 +179,7 @@ class GlobalNav extends React.Component {
               }}
               count={this.state.count}
               updateCount={this.updateCount}
+              searchComponent={this.props.searchComponent}
             />
           </div>
         </MediaQuery>
@@ -205,7 +207,8 @@ GlobalNav.defaultProps = {
   minimized: false,
   onToggleResultClick: () => {},
   search:"",
-  hamburgerMenu:true
+  hamburgerMenu:true,
+  searchComponent: null,
 };
 
 GlobalNav.propTypes = {
@@ -246,7 +249,9 @@ GlobalNav.propTypes = {
   /**Send search keyword */
   search: PropTypes.string,
   /** Status of the hamburger menu */
-  hamburgerMenu: PropTypes.bool
+  hamburgerMenu: PropTypes.bool,
+  /** A React component that handles searching */
+  searchComponent: PropTypes.element,
 };
 
 export default GlobalNav;

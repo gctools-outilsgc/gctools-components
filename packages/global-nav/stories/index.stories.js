@@ -22,6 +22,8 @@ const mocks = {
   }),
 };
 
+const FakeSearch = () => <div><input type="text" /></div>;
+
 const typeDefs = `
   type OnlineInfo {
     titleEn: String,
@@ -89,6 +91,7 @@ storiesOf('GlobalNav', module)
               picture: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
+          searchComponent={<FakeSearch />}
         />
       </div>
     ))
@@ -110,6 +113,7 @@ storiesOf('GlobalNav', module)
               picture: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
+          searchComponent={<FakeSearch />}
         />
       </div>
     ))
@@ -178,6 +182,7 @@ storiesOf('GlobalNav', module)
               id: '2',
             }
           }
+          searchComponent={<FakeSearch />}
         />
       </div>
     ))
