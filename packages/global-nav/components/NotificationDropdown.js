@@ -35,8 +35,8 @@ const notificationClient = new ApolloClient({
 });
 
 const GET_NOTIFICATIONS = gql`
-query notifications($gcID: String!){
-  notifications(gcID:$gcID){
+query notifications{
+  notifications{
     id,
     actionLink,
     generatedOn,
