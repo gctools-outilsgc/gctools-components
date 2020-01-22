@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "@storybook/cli": "^3.3.15"
+    "@storybook/cli": "^5.0.0"
   },
   "resolutions": {
     "**/event-stream": "^4.0.1"
