@@ -44,6 +44,7 @@ class GlobalNav extends React.Component {
       copy = {
         "skip": "Skip to main content",
         "help": "Help",
+        "helpLink": "https://support.gccollab.ca/en/support/home",
         "welcome": "Welcome to the GCTools!",
         "opensource": "A free and open suite of digital collaboration tools.",
         "try": "Haven’t tried it out yet? ",
@@ -55,6 +56,7 @@ class GlobalNav extends React.Component {
       copy = {
         "skip": "Passer au contenu principal",
         "help": "Aide",
+        "helpLink": "https://support.gccollab.ca/fr/support/home",
         "welcome": "Bienvenue dans OutilsGC!",
         "opensource": "Un ensemble libre et ouvert d’outils de collaboration numérique.",
         "try": "Vous n’en avez pas encore fait l’essai? ",
@@ -123,7 +125,7 @@ class GlobalNav extends React.Component {
                 }}
               />
 
-              <a href="https://gccollab.gctools-outilsgc.ca/en/support/home" className="gn-dd-btn btn btn-secondary d-flex">
+              <a href={copy.helpLink} className="gn-dd-btn btn btn-secondary d-flex">
                 <div className="align-self-center">
                   <FontAwesomeIcon icon={faQuestionCircle} />
                 </div>

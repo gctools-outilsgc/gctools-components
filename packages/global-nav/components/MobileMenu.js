@@ -56,6 +56,7 @@ class MobileMenu extends React.Component {
         "closenav": "Close GCTools navigation",
         "unread": " unread notifications",
         "help": "Help",
+        "helpLink": "https://support.gccollab.ca/en/support/home",
         "gctools": "GCTools",
         "welcome": "Welcome to the GCTools!",
         "opensource": "A free and open suite of digital collaboration tools.",
@@ -73,6 +74,7 @@ class MobileMenu extends React.Component {
         "unread": " notifications non lu",
         "gctools": "OutilsGC",
         "help": "Aide",
+        "helpLink": "https://support.gccollab.ca/fr/support/home",
         "welcome": "Bienvenue dans OutilsGC!",
         "opensource": "Un ensemble libre et ouvert d’outils de collaboration numérique.",
         "login": "Ouvrez une séance pour avoir un accès complet aux applications dont vous avez besoin. ",
@@ -128,7 +130,7 @@ class MobileMenu extends React.Component {
               }}
             />
 
-            <a href="https://gccollab.gctools-outilsgc.ca/en/support/home" className="gn-grid-btn btn btn-secondary d-inline-block">
+            <a href={copy.helpLink} className="gn-grid-btn btn btn-secondary d-inline-block">
               <FontAwesomeIcon icon={faQuestionCircle} />
               <div>
                 {copy.help}
