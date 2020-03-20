@@ -22,14 +22,16 @@ const NotificationItem = props => {
       unread: "unread",
       title: notification.online.titleEn,
       body: notification.online.descriptionEn,
-      return: "Return to notifications"
+      return: "Return to notifications",
+      seemore: "See more"
     };
   } else {
     copy = {
       unread: "unread",
       title: notification.online.titleFr,
       body: notification.online.descriptionFr,
-      return: "Return to notifications"
+      return: "Return to notifications",
+      seemore: "Voir plus"
     };
   }
 
@@ -102,6 +104,15 @@ const NotificationItem = props => {
             </small>
           </p>
           {copy.body}
+          {notification.actionLink ? (
+            <div className="text-center mt-3">
+              <a href={notification.actionLink} className="btn btn-primary">
+                {copy.seemore}
+              </a>
+            </div>
+          ) : (
+            ""
+          )}
         </ModalBody>
         <ModalFooter>
           <Button size="sm" color="secondary" onClick={toggleModal}>

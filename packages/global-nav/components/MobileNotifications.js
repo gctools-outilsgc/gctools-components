@@ -63,7 +63,11 @@ class MobileNotifications extends React.Component {
         return: "Return to main menu",
         closenav: "Close GCTools navigation",
         new: "No new notifications",
-        unread: " unread"
+        unread: " unread",
+        unreadtab: "Unread",
+        readTab: "Read",
+        noUnread: "No unread notifications",
+        noRead: "No read notifications"
       };
     } else {
       copy = {
@@ -71,7 +75,11 @@ class MobileNotifications extends React.Component {
         return: "Retour au menu principal",
         closenav: "Fermer la navigation dans OutilsGC",
         new: "Aucunes notifications nouveaux",
-        unread: " non lu"
+        unread: " non lus",
+        unreadtab: "Non lus",
+        readTab: "Lus",
+        noUnread: "Aucunes notifications non lus",
+        noRead: "Aucunes notifications lus"
       };
     }
 
@@ -142,7 +150,7 @@ class MobileNotifications extends React.Component {
                 href="#"
                 data-toggle="tab"
               >
-                Unread
+                {copy.unreadtab}
               </NavLink>
             </NavItem>
             <NavItem>
@@ -154,7 +162,7 @@ class MobileNotifications extends React.Component {
                   this.toggleTabs("2");
                 }}
               >
-                Read
+                {copy.readTab}
               </NavLink>
             </NavItem>
           </Nav>
@@ -175,6 +183,11 @@ class MobileNotifications extends React.Component {
                           id: notif.id,
                           online: { viewed: true }
                         }}
+                        context={{
+                          headers: {
+                            Authorization: `Bearer ${this.props.accessToken}`
+                          }
+                        }}
                       >
                         {updateNotification => (
                           <NotificationItem
@@ -188,7 +201,7 @@ class MobileNotifications extends React.Component {
                       </Mutation>
                     ))
                   ) : (
-                    <li className="pl-2">No notifications</li>
+                    <li className="pl-2">{copy.noUnread}</li>
                   )}
                 </ul>
               </TabPane>
@@ -205,7 +218,7 @@ class MobileNotifications extends React.Component {
                       />
                     ))
                   ) : (
-                    <li className="pl-2">No notifications</li>
+                    <li className="pl-2">{copy.noRead}</li>
                   )}
                 </ul>
               </TabPane>
@@ -226,7 +239,9 @@ class MobileNotifications extends React.Component {
 MobileNotifications.defaultProps = {
   currentLang: "en_CA",
   data: null,
-  closeAll: () => {}
+  closeAll: () => {},
+  unreadNotification: [],
+  readNotification: []
 };
 
 MobileNotifications.propTypes = {

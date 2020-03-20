@@ -35,7 +35,7 @@ import NotificationError from "./NotificationError";
 
 const notificationClient = new ApolloClient({
   link: new HttpLink({
-    uri: "http://10.0.0.226:4000"
+    uri: "https://naas.beta.gccollab.ca"
   }),
   cache: new InMemoryCache()
 });
@@ -76,7 +76,10 @@ const NotificationDropdown = props => {
     closeAll,
     currentLang,
     count,
-    updateCount
+    unreadNotification,
+    readNotification,
+    updateCount,
+    updateNotifications
   } = props;
 
   let gcID = "";
@@ -88,12 +91,22 @@ const NotificationDropdown = props => {
   if (currentLang == "en_CA") {
     copy = {
       unread: "unread",
-      new: "No new notifications"
+      unreadTab: "Unread",
+      readTab: "Read",
+      new: "No new notifications",
+      close: "Close",
+      noUnread: "No unread notifications",
+      noRead: "No read notifications"
     };
   } else {
     copy = {
-      unread: " non lu",
-      new: "Aucunes notifications nouveaux"
+      unread: " non lus",
+      unreadtab: "Non lus",
+      readTab: "Lus",
+      new: "Aucunes notifications nouveaux",
+      close: "Proche",
+      noUnread: "Aucunes notifications non lus",
+      noRead: "Aucunes notifications lus"
     };
   }
 
@@ -101,8 +114,6 @@ const NotificationDropdown = props => {
 
   const [activeTab, setActiveTab] = useState("1");
   const [modal, setModal] = useState(false);
-  const [unreadNotification, setUnreadNotifications] = useState([]);
-  const [readNotification, setReadNotifications] = useState([]);
 
   const toggleTabs = tab => {
     if (activeTab !== tab) setActiveTab(tab);
@@ -110,12 +121,9 @@ const NotificationDropdown = props => {
 
   const toggleModal = () => setModal(!modal);
 
-  const addUnread = notif => setUnreadNotifications(notif);
-  const addRead = notif => setReadNotifications(notif);
-
   const closeBtn = (
     <button className="close" onClick={toggleModal}>
-      &times;<span className="sr-only">{copy.closenav}</span>
+      &times;<span className="sr-only">{copy.close}</span>
     </button>
   );
 
@@ -127,15 +135,12 @@ const NotificationDropdown = props => {
           query={GET_NOTIFICATIONS}
           variables={{ orderBy }}
           onCompleted={data => {
-            console.log("complete");
-            console.log(data);
             let U = [];
             let R = [];
             data.notifications.map(notif =>
               notif.online.viewed === false ? U.push(notif) : R.push(notif)
             );
-            addUnread(U);
-            addRead(R);
+            updateNotifications(U, R);
             updateCount(U.length);
           }}
           context={{
@@ -193,7 +198,7 @@ const NotificationDropdown = props => {
                           href="#"
                           data-toggle="tab"
                         >
-                          Unread
+                          {copy.unreadTab}
                         </NavLink>
                       </NavItem>
                       <NavItem>
@@ -205,7 +210,7 @@ const NotificationDropdown = props => {
                             toggleTabs("2");
                           }}
                         >
-                          Read
+                          {copy.readTab}
                         </NavLink>
                       </NavItem>
                     </Nav>
@@ -227,6 +232,11 @@ const NotificationDropdown = props => {
                                       id: notif.id,
                                       online: { viewed: true }
                                     }}
+                                    context={{
+                                      headers: {
+                                        Authorization: `Bearer ${accessToken}`
+                                      }
+                                    }}
                                   >
                                     {updateNotification => (
                                       <NotificationItem
@@ -238,7 +248,7 @@ const NotificationDropdown = props => {
                                   </Mutation>
                                 ))
                               ) : (
-                                <li>No notifications</li>
+                                <li>{copy.noUnread}</li>
                               )}
                             </ul>
                           </TabPane>
@@ -253,7 +263,7 @@ const NotificationDropdown = props => {
                                   />
                                 ))
                               ) : (
-                                <li>No notifications</li>
+                                <li>{copy.noRead}</li>
                               )}
                             </ul>
                           </TabPane>
@@ -265,6 +275,7 @@ const NotificationDropdown = props => {
                 </MediaQuery>
                 <MediaQuery query="(max-width: 768px)">
                   <MobileNotifications
+                    accessToken={accessToken}
                     currentLang={currentLang}
                     closeAll={closeAll}
                     data={data}
@@ -291,7 +302,9 @@ NotificationDropdown.defaultProps = {
   currentLang: "en_CA",
   userObject: null,
   accessToken: "",
-  closeAll: () => {}
+  closeAll: () => {},
+  unreadNotification: [],
+  readNotification: []
 };
 
 NotificationDropdown.propTypes = {
