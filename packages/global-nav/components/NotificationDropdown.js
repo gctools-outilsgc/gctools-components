@@ -4,11 +4,7 @@ import PropTypes from "prop-types";
 import MediaQuery from "react-responsive";
 
 import {
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
   Button,
-  DropdownItem,
   Badge,
   Nav,
   NavItem,
