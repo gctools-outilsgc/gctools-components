@@ -1,0 +1,22 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - graphql-cli > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - graphql-voyager > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - kafka-node > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - graphql-cli > express-request-proxy > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - graphql-cli > inquirer > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - graphql-voyager > react-redux > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - graphql-voyager > redux > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
+    - kafka-node > async > lodash:
+        patched: '2020-05-01T06:37:23.303Z'
