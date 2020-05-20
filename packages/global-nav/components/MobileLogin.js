@@ -38,14 +38,14 @@ class MobileLogin extends React.Component {
     const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
     let copy = {}
-    if(this.props.currentLang == "en_CA"){
+    if (this.props.currentLang == "en_CA") {
       copy = {
         "profile": "My profile",
         "account": "Account settings",
         "logout": "Log-out",
         "login": "Log-in",
         "return": "Return to main menu",
-        "closenav": "Close GCTools navigation", 
+        "closenav": "Close GCTools navigation",
       }
     } else {
       copy = {
@@ -70,27 +70,27 @@ class MobileLogin extends React.Component {
                 src={this.props.userObject.picture}
                 alt=""
               />
-            <div className="">
-              {this.props.userObject.name}
-            </div>
-          </div>
-          </Button>
-        ) : (
-          <Button className="gn-grid-btn" onClick={(e) => {
-            e.stopPropagation();
-            if(document.getElementById('login-btn')){
-              document.getElementById('login-btn').click();
-            }
-          }}>
-            <div className="btn-align">
-              <FontAwesomeIcon icon={faSignInAlt} />
-              <div>
-                {copy.login}
+              <div className="">
+                {this.props.userObject.name}
               </div>
             </div>
           </Button>
-        )}
-        
+        ) : (
+            <Button className="gn-grid-btn" onClick={(e) => {
+              e.stopPropagation();
+              if (document.getElementById('login-btn')) {
+                document.getElementById('login-btn').click();
+              }
+            }}>
+              <div className="btn-align">
+                <FontAwesomeIcon icon={faSignInAlt} />
+                <div>
+                  {copy.login}
+                </div>
+              </div>
+            </Button>
+          )}
+
         <Modal
           className="gn-mobile-menu"
           zIndex="999"
@@ -131,8 +131,8 @@ class MobileLogin extends React.Component {
                 </div>
               </div>
             ) : (
-              ""
-            )}
+                ""
+              )}
           </div>
           <ModalBody>
             {this.props.userObject ? (
@@ -151,14 +151,15 @@ class MobileLogin extends React.Component {
                 </Button>
                 <Button className="gn-grid-btn" onClick={(e) => {
                   e.stopPropagation();
-                  if(document.getElementById('login-btn')){
+                  if (document.getElementById('login-btn')) {
                     document.getElementById('login-btn').click();
                   }
+                  this.toggle();
                 }}>
-                    <div className="btn-align">
-                      <FontAwesomeIcon icon={faSignOutAlt} />
-                      <div>{copy.logout}</div>
-                    </div>
+                  <div className="btn-align">
+                    <FontAwesomeIcon icon={faSignOutAlt} />
+                    <div>{copy.logout}</div>
+                  </div>
                 </Button>
               </div>
             ) : (
