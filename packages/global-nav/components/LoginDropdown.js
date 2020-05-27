@@ -13,7 +13,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-// import MobileLogin from './MobileLogin';
+import GenericAvatar from '../assets/user.gif';
 
 const LoginDropdown = (props) => {
   const {
@@ -25,7 +25,7 @@ const LoginDropdown = (props) => {
   } = props;
 
   let copy = {}
-  if(currentLang == "en_CA"){
+  if (currentLang == "en_CA") {
     copy = {
       "profile": "My profile",
       "account": "Account settings",
@@ -44,60 +44,60 @@ const LoginDropdown = (props) => {
   return (
     <div>
       <MediaQuery query="(min-width: 768px)">
-      {userObject ? (
-        <UncontrolledDropdown direction="left">
-          <DropdownToggle className="gn-dd-btn d-flex">
-            <div className="align-self-center">
-              <img
-                className="gn-avatar"
-                src={userObject.picture}
-                alt=""
-              />
+        {userObject ? (
+          <UncontrolledDropdown direction="left">
+            <DropdownToggle className="gn-dd-btn d-flex">
+              <div className="align-self-center">
+                <img
+                  className="gn-avatar"
+                  src={userObject.picture ? userObject.picture : GenericAvatar}
+                  alt=""
+                />
+              </div>
+              <div className="align-self-center pl-2">
+                {userObject.name}
+              </div>
+            </DropdownToggle>
+            <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false } }}>
+              <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.sub}`}>
+                {copy.profile}
+              </DropdownItem>
+              <DropdownItem href="https://account.gccollab.ca/securitypages/">
+                {copy.account}
+              </DropdownItem>
+              <DropdownItem onClick={(e) => {
+                e.stopPropagation();
+                if (document.getElementById('login-btn')) {
+                  document.getElementById('login-btn').click();
+                }
+                console.log('LOGIN!');
+              }}>
+                {copy.logout}
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        ) : (
+            <div>
+              <Button
+                className="gn-dd-btn d-flex"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (document.getElementById('login-btn')) {
+                    document.getElementById('login-btn').click();
+                  }
+                  console.log('LOGIN!');
+                }}
+              >
+                <div className="align-self-center">
+                  <FontAwesomeIcon icon={faSignInAlt} />
+                </div>
+                <div className="align-self-center pl-2">
+                  {copy.login}
+                </div>
+              </Button>
             </div>
-            <div className="align-self-center pl-2">
-              {userObject.name}
-            </div>
-          </DropdownToggle>
-          <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
-            <DropdownItem href={`https://profile.gccollab.ca/p/${userObject.sub}`}>
-              {copy.profile}
-            </DropdownItem>
-            <DropdownItem href="https://account.gccollab.ca/securitypages/">
-              {copy.account}
-            </DropdownItem>
-            <DropdownItem onClick={(e) => {
-              e.stopPropagation();
-              if(document.getElementById('login-btn')){
-                document.getElementById('login-btn').click();
-              }
-              console.log('LOGIN!');
-            }}>
-              {copy.logout}
-            </DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown>
-      ) : (
-        <div>
-          <Button
-            className="gn-dd-btn d-flex"
-            onClick={(e) => {
-              e.stopPropagation();
-              if(document.getElementById('login-btn')){
-                document.getElementById('login-btn').click();
-              }
-              console.log('LOGIN!');
-            }}
-          >
-            <div className="align-self-center">
-              <FontAwesomeIcon icon={faSignInAlt} />
-            </div>
-            <div className="align-self-center pl-2">
-              {copy.login}
-            </div>
-          </Button>
-        </div>
-      )}
-    </MediaQuery>
+          )}
+      </MediaQuery>
     </div>
   );
 };
@@ -114,7 +114,7 @@ LoginDropdown.defaultProps = {
     post_logout_redirect_uri: 'http://localhost:8081/#!logout',
     silent_redirect_uri: 'http://localhost:8081/#!silent',
   },
-  doLogin: () => {},
+  doLogin: () => { },
 };
 
 LoginDropdown.propTypes = {

@@ -97,7 +97,7 @@ const NotificationDropdown = props => {
   } else {
     copy = {
       unread: " non lus",
-      unreadtab: "Non lus",
+      unreadTab: "Non lus",
       readTab: "Lus",
       new: "Aucunes notifications nouveaux",
       close: "Proche",
@@ -164,14 +164,14 @@ const NotificationDropdown = props => {
                     {count < 1 ? (
                       ""
                     ) : (
-                      <Badge
-                        color="danger"
-                        className="align-self-center gn-notification-badge"
-                      >
-                        {count}
-                        <span className="sr-only">{copy.unread}</span>
-                      </Badge>
-                    )}
+                        <Badge
+                          color="danger"
+                          className="align-self-center gn-notification-badge"
+                        >
+                          {count}
+                          <span className="sr-only">{copy.unread}</span>
+                        </Badge>
+                      )}
                     <div className="align-self-center pl-2">Notifications</div>
                   </Button>
                   <Modal
@@ -244,8 +244,8 @@ const NotificationDropdown = props => {
                                   </Mutation>
                                 ))
                               ) : (
-                                <li>{copy.noUnread}</li>
-                              )}
+                                  <li>{copy.noUnread}</li>
+                                )}
                             </ul>
                           </TabPane>
                           <TabPane tabId="2">
@@ -259,8 +259,8 @@ const NotificationDropdown = props => {
                                   />
                                 ))
                               ) : (
-                                <li>{copy.noRead}</li>
-                              )}
+                                  <li>{copy.noRead}</li>
+                                )}
                             </ul>
                           </TabPane>
                         </TabContent>
@@ -288,8 +288,8 @@ const NotificationDropdown = props => {
           }}
         </Query>
       ) : (
-        ""
-      )}
+          ""
+        )}
     </div>
   );
 };
@@ -298,7 +298,7 @@ NotificationDropdown.defaultProps = {
   currentLang: "en_CA",
   userObject: null,
   accessToken: "",
-  closeAll: () => {},
+  closeAll: () => { },
   unreadNotification: [],
   readNotification: []
 };

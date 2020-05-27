@@ -7,18 +7,18 @@ import { MockList } from 'graphql-tools';
 import GlobalNav from '../components/GlobalNav';
 
 const mocks = {
-  Notifications: () =>({
+  Notifications: () => ({
     id: faker.random.number(100),
-      actionLevel: 'Featured',
-      gcID: '79',
-      online: {
-        titleEn: faker.name.findName()+' has posted a new discussion',
-        viewed: faker.random.boolean()
-      },
+    actionLevel: 'Featured',
+    gcID: '79',
+    online: {
+      titleEn: faker.name.findName() + ' has posted a new discussion',
+      viewed: faker.random.boolean()
+    },
 
   }),
   Query: () => ({
-    notifications: () => new MockList([0,12]),
+    notifications: () => new MockList([0, 12]),
   }),
 };
 
@@ -43,13 +43,13 @@ const typeDefs = `
 `;
 
 storiesOf('GlobalNav', module)
-.addDecorator(
-  apolloStorybookDecorator({
-    typeDefs,
-    mocks,
-  }),
-)
-.add(
+  .addDecorator(
+    apolloStorybookDecorator({
+      typeDefs,
+      mocks,
+    }),
+  )
+  .add(
     'Default options',
     withInfo({
       header: true,
@@ -170,11 +170,11 @@ storiesOf('GlobalNav', module)
       <div className="gn-story-holder">
         <GlobalNav
           minimized
-	        currentUser={
+          currentUser={
             {
               sub: '22',
               name: 'Jonald',
-              picture: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
+              picture: '',
             }
           }
           currentApp={
@@ -186,18 +186,18 @@ storiesOf('GlobalNav', module)
         />
       </div>
     ))
-)
-.add(
-  'Default options without hamburger menu',
-  withInfo({
-    header: true,
-    inline: true,
-    source: false,
-  })(() => (
-    <div className="gn-story-holder">
-      <GlobalNav 
-        hamburgerMenu={false}
-      />
-    </div>
-  )),
-)
+  )
+  .add(
+    'Default options without hamburger menu',
+    withInfo({
+      header: true,
+      inline: true,
+      source: false,
+    })(() => (
+      <div className="gn-story-holder">
+        <GlobalNav
+          hamburgerMenu={false}
+        />
+      </div>
+    )),
+  )
