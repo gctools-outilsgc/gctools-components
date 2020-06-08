@@ -14,7 +14,7 @@
     "docker-build": "docker build . -t gctools-outilsgc/graphql-server:latest"
   },
   "dependencies": {
-    "apollo-server-express": "^1.2.0",
+    "apollo-server-express": "^2.1.0",
     "cached-request": "^1.1.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
