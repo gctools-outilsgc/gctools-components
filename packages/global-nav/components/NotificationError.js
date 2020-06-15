@@ -14,71 +14,71 @@ import {
     ModalHeader,
     ModalBody,
     ModalFooter
-  } from 'reactstrap';
+} from 'reactstrap';
 
 class NotificationError extends React.Component {
     constructor() {
         super();
         this.state = {
-          modal: false,
-          hideHeader: false,
+            modal: false,
+            hideHeader: false,
         };
-    
+
         this.toggle = this.toggle.bind(this);
         this.closeEverything = this.closeEverything.bind(this);
     };
 
     toggle() {
         this.setState(prevState => ({
-          modal: !prevState.modal
+            modal: !prevState.modal
         }));
-      }
+    }
 
     closeEverything() {
         this.toggle();
         this.props.closeAll();
         this.setState(prevState => ({
             hideHeader: !prevState.hideHeader
-          }));
+        }));
     }
 
-    render(){
+    render() {
 
         const hideHeaderClass = (this.state.hideHeader ? "gn-header-move" : "");
 
         let copy = {}
-        if(this.props.currentLang == "en_CA"){
+        if (this.props.currentLang == "en_CA") {
             copy = {
-            "return": "Return to main menu",
-            "close": "Close GCTools navigation",
-            "error": "Unable to show notifications. Please try again later."
+                "return": "Return to main menu",
+                "close": "Close GCTools navigation",
+                "error": "Unable to show notifications. Please try again later."
             }
         } else {
             copy = {
-            "return": "Retour au menu principal",
-            "close": "Fermer la navigation dans OutilsGC",
-            "error": "Incapable de montrer des notifications. S'il vous plaît essayer plus tard. "
+                "return": "Retour au menu principal",
+                "close": "Fermer la navigation dans OutilsGC",
+                "error": "Incapable de montrer des notifications. S'il vous plaît essayer plus tard. "
             }
         }
 
-        return(
+        return (
             <div>
-                <MediaQuery query="(min-width: 768px)">
+                <MediaQuery query="(min-width: 769px)">
                     <UncontrolledDropdown direction="left">
                         <DropdownToggle className="gn-dd-btn d-flex">
-                          <div className="align-self-center">
-                            <FontAwesomeIcon icon={faBellSlash} />
-                          </div>
-                          <div className="align-self-center pl-2">
-                            Notifications
+                            <div className="align-self-center">
+                                <FontAwesomeIcon icon={faBellSlash} />
+                            </div>
+                            <div className="align-self-center pl-2">
+                                Notifications
                           </div>
                         </DropdownToggle>
                         <DropdownMenu className="gn-notif-menu">
                             <p className="m-2">
-                              {copy.error}
+                                {copy.error}
                             </p>
                         </DropdownMenu>
-                      </UncontrolledDropdown>
+                    </UncontrolledDropdown>
                 </MediaQuery>
 
                 <MediaQuery query="(max-width: 768px)">
@@ -93,15 +93,15 @@ class NotificationError extends React.Component {
                         </Button>
 
                         <Modal
-                            className="gn-mobile-menu gn-notification-modal" 
-                            zIndex="99999" 
-                            isOpen={this.state.modal} 
+                            className="gn-mobile-menu gn-notification-modal"
+                            zIndex="99999"
+                            isOpen={this.state.modal}
                             toggle={this.toggle}
                             wrapClassName="gn-sub-modal"
                             backdrop={false}
                         >
                             <ModalHeader
-                                className={hideHeaderClass} 
+                                className={hideHeaderClass}
                                 toggle={this.closeEverything}
                             >
                                 Notifications
@@ -114,7 +114,7 @@ class NotificationError extends React.Component {
                                         aria-label="Return"
                                     >
                                         <span className="gn-chevron-arrow-left"></span>
-                                        <span className="sr-only">{copy.return}</span> 
+                                        <span className="sr-only">{copy.return}</span>
                                     </Button>
                                 </div>
                                 <div className="align-self-center">
@@ -147,9 +147,9 @@ class NotificationError extends React.Component {
 
 NotificationError.defaultProps = {
     currentLang: 'en_CA',
-    closeAll: () => {}
+    closeAll: () => { }
 };
-  
+
 NotificationError.propTypes = {
     currentLang: PropTypes.string,
     closeAll: PropTypes.func

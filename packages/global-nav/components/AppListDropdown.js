@@ -34,8 +34,8 @@ const AppListDropdown = (props) => {
       'link': 'https://profile.gccollab.ca',
     },
     {
-      'nameEN':'GCmessage',
-      'nameFR':'GCmessage',
+      'nameEN': 'GCmessage',
+      'nameFR': 'GCmessage',
       'color': '#46246a',
       'id': '1',
       'logo': GCmessageIcon,
@@ -67,31 +67,31 @@ const AppListDropdown = (props) => {
 
   //Map apps and Identify the app the user is currently on by App ID
   const listComponent = appList.map(a => (
-    <DropdownItem key={a.id} className="d-flex" href={a.link} style={{maxWidth: "340px", whiteSpace: "normal"}}>
+    <DropdownItem key={a.id} className="d-flex" href={a.link} style={{ maxWidth: "340px", whiteSpace: "normal" }}>
       {/*(a.id == currentApp.id) ? 'Current App': ''*/}
       {a.logo != '' ?
-        <img className="align-self-center" style={{width:"40px", height:"40px"}} src={a.logo} alt="" />
-      :
+        <img className="align-self-center" style={{ width: "40px", height: "40px" }} src={a.logo} alt="" />
+        :
         <div className="gn-applist-logo align-self-center d-flex" style={{ 'backgroundColor': a.color }} >
           {currentLang == "en_CA" ?
             <span aria-hidden="true" className="align-self-center">{a.nameEN.charAt(0)}</span>
-          :
+            :
             <span aria-hidden="true" className="align-self-center">{a.nameFR.charAt(0)}</span>
           }
         </div>
       }
       <div className="align-self-center ml-2">
         <div className="h6 mb-0">
-          {currentLang == "en_CA" ? 
-            a.nameEN 
-          :
+          {currentLang == "en_CA" ?
+            a.nameEN
+            :
             a.nameFR
           }
         </div>
         <small className="text-muted">
-          {currentLang == "en_CA" ? 
-            a.descEN 
-          :
+          {currentLang == "en_CA" ?
+            a.descEN
+            :
             a.descFR
           }
         </small>
@@ -103,28 +103,28 @@ const AppListDropdown = (props) => {
     <a href={a.link} className="d-flex mb-2" key={`m-${a.id}`}>
       {/*(a.id == currentApp.id) ? 'Current App': ''*/}
       {a.logo != '' ?
-        <img className="align-self-center" style={{width:"40px", height:"40px"}} src={a.logo} alt="" />
-      :
+        <img className="align-self-center" style={{ width: "40px", height: "40px" }} src={a.logo} alt="" />
+        :
         <div className="gn-applist-logo align-self-center d-flex" style={{ 'backgroundColor': a.color }} >
           {currentLang == "en_CA" ?
             <span aria-hidden="true" className="align-self-center">{a.nameEN.charAt(0)}</span>
-          :
+            :
             <span aria-hidden="true" className="align-self-center">{a.nameFR.charAt(0)}</span>
           }
         </div>
       }
       <div className="align-self-center ml-2">
         <div className="h6 mb-0">
-          {currentLang == "en_CA" ? 
-            a.nameEN 
-          :
+          {currentLang == "en_CA" ?
+            a.nameEN
+            :
             a.nameFR
           }
         </div>
         <small className="text-muted">
-          {currentLang == "en_CA" ? 
-            a.descEN 
-          :
+          {currentLang == "en_CA" ?
+            a.descEN
+            :
             a.descFR
           }
         </small>
@@ -133,14 +133,14 @@ const AppListDropdown = (props) => {
   ));
 
   let copy = {}
-  if(currentLang == "en_CA"){
+  if (currentLang == "en_CA") {
     copy = {
       "apps": "Apps",
       "welcome": "Welcome to the GCTools!",
       "opensource": "A free and open suite of digital collaboration tools.",
       "login": "Log-in to get full access to the apps you need.",
       "try": "Haven’t tried it out yet? ",
-      "register":"Register for a free account."
+      "register": "Register for a free account."
     }
   } else {
     copy = {
@@ -155,7 +155,7 @@ const AppListDropdown = (props) => {
 
   return (
     <div>
-      <MediaQuery query="(min-width: 768px)">
+      <MediaQuery query="(min-width: 769px)">
         <UncontrolledDropdown direction="left">
           <DropdownToggle className="gn-dd-btn d-flex">
             <div className="align-self-center">
@@ -165,7 +165,7 @@ const AppListDropdown = (props) => {
               {copy.apps}
             </div>
           </DropdownToggle>
-          <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false }}}>
+          <DropdownMenu modifiers={{ computeStyle: { gpuAcceleration: false } }}>
             {listComponent}
           </DropdownMenu>
         </UncontrolledDropdown>

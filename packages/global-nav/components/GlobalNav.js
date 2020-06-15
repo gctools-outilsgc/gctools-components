@@ -78,7 +78,7 @@ class GlobalNav extends React.Component {
 
     return (
       <div>
-        <MediaQuery query="(min-width: 768px)">
+        <MediaQuery query="(min-width: 769px)">
           <div className="gn-nav">
             <div className="gn-skip-to">
               <a className="sr-only sr-only-focusable" href="#gn-main">
@@ -154,27 +154,27 @@ class GlobalNav extends React.Component {
               ) : this.props.minimized ? (
                 ""
               ) : (
-                <MediaQuery query="(min-width: 1024px)">
-                  <div className="gn-not-logged-cta">
-                    <div>{copy.welcome}</div>
-                    <div>{copy.opensource}</div>
-                    <div>
-                      {copy.try}
-                      <a href="https://account.gccollab.ca/register">
-                        {copy.register}
-                      </a>
-                    </div>
-                  </div>
-                </MediaQuery>
-              )}
+                    <MediaQuery query="(min-width: 1024px)">
+                      <div className="gn-not-logged-cta">
+                        <div>{copy.welcome}</div>
+                        <div>{copy.opensource}</div>
+                        <div>
+                          {copy.try}
+                          <a href="https://account.gccollab.ca/register">
+                            {copy.register}
+                          </a>
+                        </div>
+                      </div>
+                    </MediaQuery>
+                  )}
 
               <div className="gn-holder-foot">
                 <MediaQuery query="(min-width: 1024px)">
                   {this.props.minimized ? (
                     ""
                   ) : (
-                    <a href={copy.termslink}>{copy.terms}</a>
-                  )}
+                      <a href={copy.termslink}>{copy.terms}</a>
+                    )}
                 </MediaQuery>
                 <img src={Canada} alt="Canada" className="float-right" />
               </div>
@@ -217,7 +217,7 @@ class GlobalNav extends React.Component {
 
 GlobalNav.defaultProps = {
   currentLang: "en_CA",
-  onLanguageResultClick: () => {},
+  onLanguageResultClick: () => { },
   currentUser: null,
   currentApp: {},
   accessToken: "",
@@ -230,9 +230,9 @@ GlobalNav.defaultProps = {
     post_logout_redirect_uri: "http://localhost:8081/#!logout",
     silent_redirect_uri: "http://localhost:8081/#!silent"
   },
-  doLogin: () => {},
+  doLogin: () => { },
   minimized: false,
-  onToggleResultClick: () => {},
+  onToggleResultClick: () => { },
   search: "",
   hamburgerMenu: true,
   searchComponent: null
