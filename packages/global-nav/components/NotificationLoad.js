@@ -9,32 +9,32 @@ class NotificationLoad extends React.Component {
     constructor() {
         super();
         this.state = {
-          modal: false,
-          hideHeader: false,
+            modal: false,
+            hideHeader: false,
         };
-    
+
         this.toggle = this.toggle.bind(this);
         this.closeEverything = this.closeEverything.bind(this);
     };
 
     toggle() {
         this.setState(prevState => ({
-          modal: !prevState.modal
+            modal: !prevState.modal
         }));
-      }
+    }
 
     closeEverything() {
         this.toggle();
         this.props.closeAll();
         this.setState(prevState => ({
             hideHeader: !prevState.hideHeader
-          }));
+        }));
     }
 
-    render(){
+    render() {
 
         let copy = {}
-        if(this.props.currentLang == "en_CA"){
+        if (this.props.currentLang == "en_CA") {
             copy = {
                 "loading": "loading"
             }
@@ -44,9 +44,9 @@ class NotificationLoad extends React.Component {
             }
         }
 
-        return(
+        return (
             <div>
-                <MediaQuery query="(min-width: 768px)">
+                <MediaQuery query="(min-width: 769px)">
                     <div className="gn-dd-btn d-flex">
                         <div className="align-self-center">
                             <FontAwesomeIcon icon={faSpinner} spin />
@@ -59,15 +59,15 @@ class NotificationLoad extends React.Component {
                 </MediaQuery>
 
                 <MediaQuery query="(max-width: 768px)">
-                        <button className="gn-grid-btn btn btn-secondary">
-                            <div className="btn-align">
-                                <FontAwesomeIcon icon={faSpinner} spin />
-                                <span className="sr-only">{copy.loading}</span>
-                                <div>
-                                    Notifications
+                    <button className="gn-grid-btn btn btn-secondary">
+                        <div className="btn-align">
+                            <FontAwesomeIcon icon={faSpinner} spin />
+                            <span className="sr-only">{copy.loading}</span>
+                            <div>
+                                Notifications
                                 </div>
-                            </div>
-                        </button>
+                        </div>
+                    </button>
                 </MediaQuery>
             </div>
         );
@@ -77,7 +77,7 @@ class NotificationLoad extends React.Component {
 NotificationLoad.defaultProps = {
     currentLang: 'en_CA',
 };
-  
+
 NotificationLoad.propTypes = {
     currentLang: PropTypes.string
 };

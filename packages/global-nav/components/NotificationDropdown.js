@@ -156,7 +156,7 @@ const NotificationDropdown = props => {
               );
             return (
               <div className="query-maybe-it-might-get-mad">
-                <MediaQuery query="(min-width: 768px)">
+                <MediaQuery query="(min-width: 769px)">
                   <Button className="gn-dd-btn d-flex" onClick={toggleModal}>
                     <div className="align-self-center">
                       <FontAwesomeIcon icon={faBell} />

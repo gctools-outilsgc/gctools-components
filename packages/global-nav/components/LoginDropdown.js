@@ -43,7 +43,7 @@ const LoginDropdown = (props) => {
 
   return (
     <div>
-      <MediaQuery query="(min-width: 768px)">
+      <MediaQuery query="(min-width: 769px)">
         {userObject ? (
           <UncontrolledDropdown direction="left">
             <DropdownToggle className="gn-dd-btn d-flex">

@@ -37,7 +37,7 @@ const TopNavBar = props => {
 
   return (
     <div>
-      <MediaQuery query="(min-width: 768px)">
+      <MediaQuery query="(min-width: 769px)">
         <nav className="top_bar shadow-sm">
           <div className="containerGoC align-self-center">
             <img className="flag" src={flag} alt={flagAlt} />
@@ -77,8 +77,8 @@ const TopNavBar = props => {
               <span className="sr-only">Menu</span>
             </button>
           ) : (
-            ""
-          )}
+              ""
+            )}
           <a className="gn-app-brand d-flex" href={currentApp.home}>
             <img
               src={currentApp.logo}
@@ -122,8 +122,8 @@ TopNavBar.defaultProps = {
     home: "#",
     logo: ""
   },
-  onMobileMenuClick: () => {},
-  onLanguageResultClick: () => {},
+  onMobileMenuClick: () => { },
+  onLanguageResultClick: () => { },
   searchComponent: null,
   unreadNotification: [],
   readNotification: []
