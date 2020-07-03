@@ -25,7 +25,7 @@ const mocks = {
 const FakeSearch = () => <div><input type="text" /></div>;
 
 const accessToken = "e56ecadd47a94afab6037ecebb64326a";
-const notificationURL = "http://10.0.0.226:4000/graphql";
+const notificationURL = "https://naas.gccollab.ca";
 
 const typeDefs = `
   type OnlineInfo {
