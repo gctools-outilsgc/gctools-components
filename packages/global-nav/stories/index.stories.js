@@ -24,6 +24,9 @@ const mocks = {
 
 const FakeSearch = () => <div><input type="text" /></div>;
 
+const accessToken = "e56ecadd47a94afab6037ecebb64326a";
+const notificationURL = "http://10.0.0.226:4000/graphql";
+
 const typeDefs = `
   type OnlineInfo {
     titleEn: String,
@@ -91,6 +94,8 @@ storiesOf('GlobalNav', module)
               picture: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
+          accessToken={accessToken}
+          notificationURL={notificationURL}
           searchComponent={<FakeSearch />}
         />
       </div>
@@ -113,6 +118,8 @@ storiesOf('GlobalNav', module)
               picture: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurly&accessoriesType=Blank&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Pink&eyeType=Hearts&eyebrowType=UpDownNatural&mouthType=Serious&skinColor=Yellow',
             }
           }
+          accessToken={accessToken}
+          notificationURL={notificationURL}
           searchComponent={<FakeSearch />}
         />
       </div>
@@ -142,6 +149,8 @@ storiesOf('GlobalNav', module)
               logo: 'https://github.com/gctools-outilsgc/gcconnex/blob/master/mod/wet4/graphics/gc_connex_icon.gif?raw=true',
             }
           }
+          accessToken={accessToken}
+          notificationURL={notificationURL}
         />
       </div>
     ))
@@ -182,6 +191,8 @@ storiesOf('GlobalNav', module)
               id: '2',
             }
           }
+          accessToken={accessToken}
+          notificationURL={notificationURL}
           searchComponent={<FakeSearch />}
         />
       </div>

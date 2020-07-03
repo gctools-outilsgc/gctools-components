@@ -22,12 +22,8 @@ const TopNavBar = props => {
     accessToken,
     onLanguageResultClick,
     hamburgerMenu,
-    count,
-    updateCount,
-    unreadNotification,
-    readNotification,
-    updateNotifications,
-    searchComponent
+    searchComponent,
+    notificationURL
   } = props;
 
   const status = minimized ? false : true;
@@ -101,12 +97,8 @@ const TopNavBar = props => {
               onLanguageResultClick={e => {
                 onLanguageResultClick(e);
               }}
-              count={count}
-              updateCount={updateCount}
-              unreadNotification={unreadNotification}
-              readNotification={readNotification}
-              updateNotifications={updateNotifications}
               searchComponent={searchComponent}
+              notificationURL={notificationURL}
             />
           </div>
         </nav>

@@ -26,7 +26,7 @@ class MobileMenu extends React.Component {
     this.state = {
       modal: false,
       closeAll: false,
-      collapse: false
+      collapse: false,
     };
 
     this.toggle = this.toggle.bind(this);
@@ -86,16 +86,6 @@ class MobileMenu extends React.Component {
       };
     }
 
-    const notifBadge =
-      this.props.count < 1 ? (
-        ""
-      ) : (
-        <Badge color="danger" className="align-self-center">
-          {this.props.count}
-          <span className="sr-only">{copy.unread}</span>
-        </Badge>
-      );
-
     const closeBtn = (
       <button className="close" onClick={this.toggle}>
         &times;<span className="sr-only">{copy.closenav}</span>
@@ -112,7 +102,6 @@ class MobileMenu extends React.Component {
             alt=""
             style={{ width: "30px", height: "30px" }}
           />{" "}
-          {notifBadge}
         </Button>
         <Modal
           wrapClassName="gn-modal"
@@ -137,11 +126,8 @@ class MobileMenu extends React.Component {
               closeAll={this.toggle}
               userObject={this.props.userObject}
               accessToken={this.props.accessToken}
-              count={this.props.count}
-              updateCount={this.props.updateCount}
-              unreadNotification={this.props.unreadNotification}
-              readNotification={this.props.readNotification}
-              updateNotifications={this.props.updateNotifications}
+              updateCount={this.updateCount}
+              notificationURL={this.props.notificationURL}
             />
             <MobileAppList
               currentLang={this.props.currentLang}

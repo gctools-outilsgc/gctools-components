@@ -111,6 +111,11 @@
   border: none;
 }
 
+.modal-open .modal-overflow {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .gn-mobile-menu .modal-header {
   height: 66px;
   background: white;
@@ -350,13 +355,14 @@
 }
 
 #gn-notif-modal .modal-body {
-  padding: 0.5rem;
+  padding: 0;
 }
 
 #gn-notif-modal ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  max-height: 400px;
 }
 
 #gn-notif-modal ul li {
@@ -365,7 +371,8 @@
 
 #gn-notif-modal .modal-content,
 .sub-notif-modal .modal-content {
-  height: 575px;
+  height: 100vh;
+  max-height: 565px;
 }
 
 .gn-notif-btn-item {
@@ -386,7 +393,7 @@
   overflow: auto;
   max-height: 400px;
   width: 100%;
-  padding: 10px 0;
+  padding: 0;
 }
 
 .gn-notif-container > .dropdown-item {

@@ -89,11 +89,11 @@ class MobileNotifications extends React.Component {
       this.props.count < 1 ? (
         ""
       ) : (
-        <Badge color="danger">
-          {this.props.count}
-          <span className="sr-only">{copy.unread}</span>
-        </Badge>
-      );
+          <Badge color="danger">
+            {this.props.count}
+            <span className="sr-only">{copy.unread}</span>
+          </Badge>
+        );
 
     const closeBtn = (
       <button className="close" onClick={this.closeEverything}>
@@ -173,8 +173,8 @@ class MobileNotifications extends React.Component {
             >
               <TabPane tabId="1">
                 <ul className="gn-notifications-list">
-                  {this.props.unreadNotification.length > 0 ? (
-                    this.props.unreadNotification.map(notif => (
+                  {this.props.unread.length > 0 ? (
+                    this.props.unread.map(notif => (
                       <Mutation
                         key={notif.id}
                         mutation={this.props.mutation}
@@ -201,15 +201,15 @@ class MobileNotifications extends React.Component {
                       </Mutation>
                     ))
                   ) : (
-                    <li className="pl-2">{copy.noUnread}</li>
-                  )}
+                      <li className="pl-2">{copy.noUnread}</li>
+                    )}
                 </ul>
               </TabPane>
 
               <TabPane tabId="2">
                 <ul className="gn-notifications-list">
-                  {this.props.readNotification.length > 0 ? (
-                    this.props.readNotification.map(notif => (
+                  {this.props.read.length > 0 ? (
+                    this.props.read.map(notif => (
                       <NotificationItem
                         key={notif.id}
                         mobile={true}
@@ -218,8 +218,8 @@ class MobileNotifications extends React.Component {
                       />
                     ))
                   ) : (
-                    <li className="pl-2">{copy.noRead}</li>
-                  )}
+                      <li className="pl-2">{copy.noRead}</li>
+                    )}
                 </ul>
               </TabPane>
             </TabContent>
@@ -239,7 +239,7 @@ class MobileNotifications extends React.Component {
 MobileNotifications.defaultProps = {
   currentLang: "en_CA",
   data: null,
-  closeAll: () => {},
+  closeAll: () => { },
   unreadNotification: [],
   readNotification: []
 };

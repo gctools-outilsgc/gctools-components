@@ -56,10 +56,10 @@ const NotificationItem = props => {
         {notification.online.viewed ? (
           <div className="gn-read align-self-center" />
         ) : (
-          <div className="gn-unread align-self-center">
-            <span className="sr-only">{copy.unread}</span>
-          </div>
-        )}
+            <div className="gn-unread align-self-center">
+              <span className="sr-only">{copy.unread}</span>
+            </div>
+          )}
         <div
           className="gn-applist-logo align-self-center d-flex"
           style={{ backgroundColor: "#754f8b" }}
@@ -69,13 +69,17 @@ const NotificationItem = props => {
               D
             </span>
           ) : (
-            <span aria-hidden="true" className="align-self-center">
-              R
-            </span>
-          )}
+              <span aria-hidden="true" className="align-self-center">
+                R
+              </span>
+            )}
         </div>
-        <div style={{ maxWidth: "250px" }} className="align-self-center ml-2">
-          {copy.title}
+        <div style={{ maxWidth: "375px" }} className="align-self-center ml-2">
+          <p className="mb-0" style={{
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden"
+          }}>{copy.title}</p>
           <p className="mb-0">
             <small>
               <Moment format="YYYY-MM-DD HH:mm" unix>
@@ -111,8 +115,8 @@ const NotificationItem = props => {
               </a>
             </div>
           ) : (
-            ""
-          )}
+              ""
+            )}
         </ModalBody>
         <ModalFooter>
           <Button size="sm" color="secondary" onClick={toggleModal}>
