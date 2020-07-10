@@ -16,5 +16,6 @@ export const MobileHelp = require('./MobileHelp').default;
 export const MobileLang = require('./MobileLang').default;
 export const MobileLogin = require('./MobileLogin').default;
 export const MobileNotifications = require('./MobileNotifications').default;
+export const DesktopNotifications = require('./DesktopNotifications').default;
 export const MobileSearch = require('./MobileSearch').default;
 export default require('./GlobalNav').default;

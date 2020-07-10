@@ -25,26 +25,6 @@ import Canada from "../assets/wmms-spl.svg";
 class GlobalNav extends React.Component {
   constructor() {
     super();
-    this.state = {
-      count: 0,
-      unreadNotification: [],
-      readNotification: []
-    };
-    this.updateCount = this.updateCount.bind(this);
-    this.updateNotifications = this.updateNotifications.bind(this);
-  }
-
-  updateCount(number) {
-    this.setState({
-      count: number
-    });
-  }
-
-  updateNotifications(unread, read) {
-    this.setState({
-      unreadNotification: unread,
-      readNotification: read
-    });
   }
 
   render() {
@@ -120,12 +100,9 @@ class GlobalNav extends React.Component {
               <NotificationDropdown
                 userObject={this.props.currentUser}
                 accessToken={this.props.accessToken}
-                count={this.state.count}
                 updateCount={this.updateCount}
-                unreadNotification={this.state.unreadNotification}
-                readNotification={this.state.readNotification}
-                updateNotifications={this.updateNotifications}
                 currentLang={this.props.currentLang}
+                notificationURL={this.props.notificationURL}
               />
               <AppListDropdown
                 currentApp={this.props.currentApp}
@@ -201,12 +178,8 @@ class GlobalNav extends React.Component {
               onLanguageResultClick={e => {
                 this.props.onLanguageResultClick(e);
               }}
-              count={this.state.count}
-              updateCount={this.updateCount}
-              unreadNotification={this.state.unreadNotification}
-              readNotification={this.state.readNotification}
-              updateNotifications={this.updateNotifications}
               searchComponent={this.props.searchComponent}
+              notificationURL={this.props.notificationURL}
             />
           </div>
         </MediaQuery>
@@ -235,7 +208,8 @@ GlobalNav.defaultProps = {
   onToggleResultClick: () => { },
   search: "",
   hamburgerMenu: true,
-  searchComponent: null
+  searchComponent: null,
+  notificationURL: "https://naas.gccollab.ca"
 };
 
 GlobalNav.propTypes = {
@@ -278,7 +252,9 @@ GlobalNav.propTypes = {
   /** Status of the hamburger menu */
   hamburgerMenu: PropTypes.bool,
   /** A React component that handles searching */
-  searchComponent: PropTypes.element
+  searchComponent: PropTypes.element,
+  /** URL for NaaS */
+  notificationURL: PropTypes.string
 };
 
 export default GlobalNav;
