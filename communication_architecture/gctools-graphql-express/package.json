@@ -26,7 +26,7 @@
     "graphql-subscriptions": "^0.5.5",
     "graphql-voyager": "^1.0.0-rc.10",
     "kafka-node": "^2.3.0",
-    "request": "^2.83.0",
+    "request": "^2.88.0",
     "subscriptions-transport-ws": "^0.9.1"
   },
   "devDependencies": {
