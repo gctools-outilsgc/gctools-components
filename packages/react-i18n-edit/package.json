@@ -10,11 +10,12 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "copyfiles css/style.css dist && babel index.js -d dist --copy-files",
-    "prepare": "npm run clean && npm run build",
+    "prepare": "yarn run snyk-protect && npm run clean && npm run build",
     "lint": "eslint .",
     "test": "jest --rootDir . --config ./node_modules/@gctools-components/jest-config/index.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "snyk-protect": "snyk protect"
   },
   "keywords": [
     "gctools",
@@ -68,7 +69,8 @@
     "react-test-renderer": "^16.5.2",
     "reactstrap": "^6.4.0",
     "semantic-ui-css": "^2.3.1",
-    "semantic-ui-react": "^0.79.0"
+    "semantic-ui-react": "^0.79.0",
+    "snyk": "^1.316.1"
   },
   "babel": {
     "presets": [
@@ -89,5 +91,6 @@
   "eslintConfig": {
     "extends": "@gctools-components",
     "root": true
-  }
+  },
+  "snyk": true
 }
