@@ -13,7 +13,9 @@
     "new": "node ./utils/cli-helper.js",
     "postinstall": "node ./utils/linker.js",
     "testall": "lerna run test",
-    "lintall": "lerna run lint"
+    "lintall": "lerna run lint",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
     "argparse": "^1.0.9",
@@ -30,9 +32,11 @@
     }
   },
   "dependencies": {
-    "@storybook/cli": "^3.3.15"
+    "@storybook/cli": "^3.3.15",
+    "snyk": "^1.316.1"
   },
   "resolutions": {
     "**/event-stream": "^4.0.1"
-  }
+  },
+  "snyk": true
 }
