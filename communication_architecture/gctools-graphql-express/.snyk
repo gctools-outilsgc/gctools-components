@@ -1,0 +1,55 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - graphql-cli > request > extend:
+        patched: '2020-10-02T13:18:59.928Z'
+  'npm:hoek:20180212':
+    - graphql-cli > request > hawk > hoek:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > request > hawk > boom > hoek:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > request > hawk > sntp > hoek:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > request > hawk > cryptiles > boom > hoek:
+        patched: '2020-10-02T13:18:59.928Z'
+  SNYK-JS-LODASH-567746:
+    - graphql-cli > graphql-config > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-schema-linter > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-cli-prepare > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > apollo-codegen > graphql-config > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-config > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-config-extension-graphcool > graphql-config > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-config-extension-prisma > graphql-config > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > tmp-graphql-config-extension-openapi > graphql-config > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-config-extension-graphcool > graphcool-yml > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > apollo-codegen > graphql-config > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-cli-prepare > graphql-static-binding > cucumber-html-reporter > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-config-extension-graphcool > graphql-config > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-config-extension-prisma > graphql-config > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > tmp-graphql-config-extension-openapi > graphql-config > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-playground-middleware-express > graphql-playground-html > graphql-config > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-playground-middleware-express > graphql-playground-html > graphql-config > graphql-import > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+    - graphql-cli > graphql-cli-prepare > lodash:
+        patched: '2020-10-02T13:18:59.928Z'
+  'npm:stringstream:20180511':
+    - graphql-cli > request > stringstream:
+        patched: '2020-10-02T13:18:59.928Z'
