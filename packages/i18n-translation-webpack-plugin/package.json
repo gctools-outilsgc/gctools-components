@@ -28,7 +28,7 @@
     "object-assign": "^4.1.1",
     "po-loader": "~0.4.1",
     "virtualenv": "git+https://github.com/phanoix/node-virtualenv.git",
-    "webpack": "^4.16.1",
+    "webpack": "^5.0.0",
     "snyk": "^1.370.0"
   },
   "devDependencies": {
