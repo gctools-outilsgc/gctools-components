@@ -19,7 +19,7 @@
     "graphql-anywhere": "^4.0.2",
     "graphql-tag": "^2.6.1",
     "json-pretty": "~0.0.1",
-    "jsrsasign": "^8.0.4",
+    "jsrsasign": "^10.1.13",
     "material-ui": "^0.19.4",
     "object-assign": "^4.1.1",
     "promise": "8.0.1",
