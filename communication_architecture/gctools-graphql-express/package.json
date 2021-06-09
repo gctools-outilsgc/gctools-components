@@ -29,7 +29,7 @@
     "graphql-voyager": "^1.0.0-rc.10",
     "kafka-node": "^2.3.0",
     "request": "^2.88.0",
-    "subscriptions-transport-ws": "^0.9.1",
+    "subscriptions-transport-ws": "^0.9.19",
     "snyk": "^1.406.0"
   },
   "devDependencies": {
