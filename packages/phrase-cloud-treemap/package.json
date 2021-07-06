@@ -60,7 +60,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "d3": "^4.10.0",
+    "d3": "^7.0.0",
     "deep-equal": "^1.0.1",
     "fontfaceobserver": "^2.0.13",
     "material-ui": "^0.19.4",
