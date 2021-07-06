@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "css-loader": "^0.28.8",
-    "d3": "^4.10.0",
+    "d3": "^7.0.0",
     "deep-equal": "^1.0.1",
     "fontfaceobserver": "^2.0.13",
     "prop-types": "^15.6.0",
