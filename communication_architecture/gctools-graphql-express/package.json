@@ -30,7 +30,7 @@
     "kafka-node": "^2.3.0",
     "request": "^2.88.0",
     "subscriptions-transport-ws": "^0.9.1",
-    "snyk": "^1.406.0"
+    "snyk": "^1.667.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
