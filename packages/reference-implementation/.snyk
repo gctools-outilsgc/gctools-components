@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - '@gctools-components/i18n-translation-webpack-plugin > node-virtualenv > glob > minimatch':
+        patched: '2021-09-02T19:11:30.685Z'
